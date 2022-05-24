@@ -10,6 +10,8 @@ import {
   textColor,
   textDecoration,
 } from 'classnames/tailwind'
+import Navbar from 'components/Navbar'
+import Root from 'components/Root'
 
 const section = classnames(
   backgroundImage('bg-gradient-to-br'),
@@ -42,7 +44,8 @@ const Link: React.FC<{ href: string }> = ({ href, children }) => (
 
 const App = () => {
   return (
-    <>
+    <Root>
+      <Navbar />
       <Section
         gradientClassName={gradientColorStops('from-pink-600', 'to-purple-600')}
       >
@@ -88,7 +91,7 @@ const App = () => {
       >
         <Link href="mailto:hi@bwl.gg">Shoot us an email</Link>
       </Section>
-    </>
+    </Root>
   )
 }
 
