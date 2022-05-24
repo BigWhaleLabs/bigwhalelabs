@@ -62,6 +62,9 @@ module.exports = {
       borderRadius: {
         '4xl': '2.5rem',
       },
+      strokeWidth: {
+        '5/2': '0.15rem',
+      },
     },
   },
 }

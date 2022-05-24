@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
 import Button from 'components/Button'
+import Logo from 'components/Logo'
 import Twitter from 'icons/Twitter'
 import classnames, {
   alignItems,
@@ -58,13 +59,21 @@ export default function () {
     <nav className={navbar(backgroundVisible)}>
       <>
         <div className={logoContainer}>
-          {/* <LogoText>SealCred</LogoText> */}
+          <Logo />
         </div>
       </>
       <>
         <div className={buttonsContainer}>
-          <Button>Dosu</Button>
-          <Button>SealCred</Button>
+          <Button>
+            <a href="https://dosu.io" target="_blank">
+              Dosu
+            </a>
+          </Button>
+          <Button>
+            <a href="https://sealcred.xyz" target="_blank">
+              SealCred
+            </a>
+          </Button>
           <Button>Blog</Button>
           <Button>
             <Twitter />
