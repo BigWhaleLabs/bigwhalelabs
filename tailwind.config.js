@@ -35,6 +35,7 @@ module.exports = {
         'primary-dimmed': '#3a00d6',
         'primary-semi-dimmed': '#4b61d5',
         'primary-background': '#1a0259',
+        'tertiary-dark': '#00cb91',
 
         'accent-semi-transparent': 'rgba(254, 216, 35, 0.4)',
         'primary-semi-transparent': 'rgba(21, 161, 252, 0.5)',

@@ -12,6 +12,7 @@ import classnames, {
   outlineStyle,
   padding,
   textColor,
+  textDecoration,
   width,
 } from 'classnames/tailwind'
 
@@ -24,7 +25,7 @@ const commonClasses = () =>
     width('w-fit')
   )
 
-const fontClasses = ({ outlined, small }: ButtonProps) =>
+const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
   outlined
     ? classnames(
         backgroundColor('bg-tertiary'),
@@ -39,25 +40,32 @@ const fontClasses = ({ outlined, small }: ButtonProps) =>
     : classnames(
         fontWeight('font-normal'),
         fontSize('text-base'),
-        textColor('text-formal-accent')
+        textColor(
+          icon ? 'active:text-tertiary-dark' : 'active:text-primary',
+          icon ? 'hover:text-tertiary' : undefined,
+          'text-formal-accent'
+        ),
+        textDecoration('hover:underline')
       )
 
-const button = ({ outlined, small }: ButtonProps) =>
-  classnames(commonClasses(), fontClasses({ outlined, small }))
+const button = ({ outlined, small, icon }: ButtonProps) =>
+  classnames(commonClasses(), fontClasses({ outlined, small, icon }))
 
 interface ButtonProps {
   outlined?: boolean
   small?: boolean
+  icon?: boolean
 }
 
 export default function ({
   outlined,
   children,
   small,
+  icon,
   ...rest
 }: React.HTMLAttributes<HTMLButtonElement> & ButtonProps) {
   return (
-    <button className={button({ outlined, small })} {...rest}>
+    <button className={button({ outlined, small, icon })} {...rest}>
       {typeof children === 'string' ? <span>{children}</span> : children}
     </button>
   )
