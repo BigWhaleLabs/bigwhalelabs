@@ -276,6 +276,9 @@ export type TBackgroundColor =
   | 'bg-rose-700'
   | 'bg-rose-800'
   | 'bg-rose-900'
+  | 'bg-tertiary'
+  | 'bg-formal-accent'
+  | 'bg-primary-dark'
 
 export type TBackgroundPosition =
   | 'bg-bottom'
@@ -977,6 +980,15 @@ export type TGradientColorStops =
   | 'from-rose-900'
   | 'via-rose-900'
   | 'to-rose-900'
+  | 'from-tertiary'
+  | 'via-tertiary'
+  | 'to-tertiary'
+  | 'from-formal-accent'
+  | 'via-formal-accent'
+  | 'to-formal-accent'
+  | 'from-primary-dark'
+  | 'via-primary-dark'
+  | 'to-primary-dark'
 
 export type TBackgrounds =
   | TBackgroundAttachment
@@ -2579,6 +2591,21 @@ export type TBorderColor =
   | 'border-l-rose-900'
   | 'border-x-rose-900'
   | 'border-y-rose-900'
+  | 'border-tertiary'
+  | 'border-t-tertiary'
+  | 'border-r-tertiary'
+  | 'border-b-tertiary'
+  | 'border-l-tertiary'
+  | 'border-formal-accent'
+  | 'border-t-formal-accent'
+  | 'border-r-formal-accent'
+  | 'border-b-formal-accent'
+  | 'border-l-formal-accent'
+  | 'border-primary-dark'
+  | 'border-t-primary-dark'
+  | 'border-r-primary-dark'
+  | 'border-b-primary-dark'
+  | 'border-l-primary-dark'
 
 export type TBorderOpacity =
   | 'border-opacity-0'
@@ -2679,6 +2706,15 @@ export type TBorderRadius =
   | 'rounded-br-full'
   | 'rounded-bl-full'
   | 'rounded-full'
+  | 'rounded-t-4xl'
+  | 'rounded-r-4xl'
+  | 'rounded-b-4xl'
+  | 'rounded-l-4xl'
+  | 'rounded-tr-4xl'
+  | 'rounded-tl-4xl'
+  | 'rounded-br-4xl'
+  | 'rounded-bl-4xl'
+  | 'rounded-4xl'
 
 export type TBorderWidth =
   | 'border-t-0'
@@ -3192,6 +3228,18 @@ export type TRingColor =
   | 'ring-rose-700'
   | 'ring-rose-800'
   | 'ring-rose-900'
+  | 'ring-tertiary-50'
+  | 'ring-tertiary-100'
+  | 'ring-tertiary-200'
+  | 'ring-tertiary-300'
+  | 'ring-tertiary-400'
+  | 'ring-tertiary-500'
+  | 'ring-tertiary-600'
+  | 'ring-tertiary-700'
+  | 'ring-tertiary-800'
+  | 'ring-tertiary-900'
+  | 'ring-formal-accent'
+  | 'ring-primary-dark'
 
 export type TRingWidth =
   | 'ring-0'
@@ -3200,7 +3248,7 @@ export type TRingWidth =
   | 'ring-4'
   | 'ring-8'
   | 'ring'
-  | 'inset'
+  | 'ring-inset'
 
 export type TRingOpacity =
   | 'ring-opacity-0'
@@ -3446,6 +3494,9 @@ export type TRingOffsetColor =
   | 'ring-offset-rose-700'
   | 'ring-offset-rose-800'
   | 'ring-offset-rose-900'
+  | 'ring-offset-tertiary'
+  | 'ring-offset-formal-accent'
+  | 'ring-offset-primary-dark'
 
 export type TRingOffsetWidth =
   | 'ring-offset-0'
@@ -3694,6 +3745,9 @@ export type TOutlineColor =
   | 'outline-rose-700'
   | 'outline-rose-800'
   | 'outline-rose-900'
+  | 'outline-tertiary'
+  | 'outline-formal-accent'
+  | 'outline-primary-dark'
 
 export type TBorders =
   | TBorderStyle
@@ -3766,6 +3820,7 @@ export type TBoxShadow =
   | 'shadow-2xl'
   | 'shadow-inner'
   | 'shadow-none'
+  | 'shadow-button'
 
 export type TBoxShadowColor =
   | 'shadow-inherit'
@@ -3993,6 +4048,9 @@ export type TBoxShadowColor =
   | 'shadow-rose-700'
   | 'shadow-rose-800'
   | 'shadow-rose-900'
+  | 'shadow-tertiary'
+  | 'shadow-formal-accent'
+  | 'shadow-primary-dark'
 
 export type TOpacity =
   | 'opacity-0'
@@ -5531,6 +5589,9 @@ export type TCaretColor =
   | 'caret-rose-700'
   | 'caret-rose-800'
   | 'caret-rose-900'
+  | 'caret-tertiary'
+  | 'caret-formal-accent'
+  | 'caret-primary-dark'
 
 export type TWillChange =
   | 'will-change-auto'
@@ -5765,6 +5826,9 @@ export type TAccentColor =
   | 'accent-rose-800'
   | 'accent-rose-900'
   | 'accent-auto'
+  | 'accent-tertiary'
+  | 'accent-formal-accent'
+  | 'accent-primary-dark'
 
 export type TScrollPadding =
   | 'scroll-p-0'
@@ -6990,6 +7054,9 @@ export type TFill =
   | 'fill-fuchsia'
   | 'fill-pink'
   | 'fill-rose'
+  | 'fill-tertiary'
+  | 'fill-formal-accent'
+  | 'fill-primary-dark'
 
 export type TStroke =
   | 'stroke-inherit'
@@ -7019,6 +7086,9 @@ export type TStroke =
   | 'stroke-fuchsia'
   | 'stroke-pink'
   | 'stroke-rose'
+  | 'stroke-tertiary'
+  | 'stroke-formal-accent'
+  | 'stroke-primary-dark'
 
 export type TStrokeWidth = 'stroke-0' | 'stroke-1' | 'stroke-2'
 
@@ -7247,7 +7317,12 @@ export type TTextDecorationStyle =
   | 'decoration-dashed'
   | 'decoration-wavy'
 
-export type TFontFamily = 'font-sans' | 'font-serif' | 'font-mono'
+export type TFontFamily =
+  | 'font-sans'
+  | 'font-serif'
+  | 'font-mono'
+  | 'font-primary'
+  | 'font-secondary'
 
 export type TFontSize =
   | 'text-xs'
@@ -7527,6 +7602,9 @@ export type TPlaceholderColor =
   | 'placeholder-rose-700'
   | 'placeholder-rose-800'
   | 'placeholder-rose-900'
+  | 'placeholder-tertiary'
+  | 'placeholder-formal-accent'
+  | 'placeholder-primary-dark'
 
 export type TPlaceholderOpacity =
   | 'placeholder-opacity-0'
@@ -7771,6 +7849,9 @@ export type TTextColor =
   | 'text-rose-700'
   | 'text-rose-800'
   | 'text-rose-900'
+  | 'text-tertiary'
+  | 'text-formal-accent'
+  | 'text-primary-dark'
 
 export type TTextOpacity =
   | 'text-opacity-0'
@@ -8054,6 +8135,9 @@ export type TTextDecorationColor =
   | 'decoration-rose-700'
   | 'decoration-rose-800'
   | 'decoration-rose-900'
+  | 'decoration-tertiary'
+  | 'decoration-formal-accent'
+  | 'decoration-primary-dark'
 
 export type TTextDecorationThickness =
   | 'decoration-0'
