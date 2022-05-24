@@ -9,8 +9,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        primary: ['"Space Grotesk"', 'sans-serif'],
-        secondary: ['"JetBrains Mono"', 'sans-serif'],
+        secondary: ['"Space Grotesk"', 'sans-serif'],
       },
       colors: {
         tertiary: '#01feb6',
@@ -18,7 +17,7 @@ module.exports = {
         'primary-dark': '#0d0030',
       },
       boxShadow: {
-        button: '0px 0px 26px 0px rgba(1, 254, 182, 1)',
+        button: '0rem 0rem 1.625rem 0rem rgba(1, 254, 182, 1)',
       },
       borderRadius: {
         '4xl': '2.5rem',

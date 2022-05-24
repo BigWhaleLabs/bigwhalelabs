@@ -7321,7 +7321,6 @@ export type TFontFamily =
   | 'font-sans'
   | 'font-serif'
   | 'font-mono'
-  | 'font-primary'
   | 'font-secondary'
 
 export type TFontSize =

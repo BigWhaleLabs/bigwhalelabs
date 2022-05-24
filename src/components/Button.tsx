@@ -24,39 +24,40 @@ const commonClasses = () =>
     width('w-fit')
   )
 
-const fontClasses = ({ outlined }: ButtonProps) =>
+const fontClasses = ({ outlined, small }: ButtonProps) =>
   outlined
     ? classnames(
         backgroundColor('bg-tertiary'),
         borderRadius('rounded-4xl'),
         boxShadow('shadow-button'),
-        padding('py-4', 'px-6'),
+        padding(small ? 'py-2' : 'py-4', small ? 'px-4' : 'px-6'),
         fontWeight('font-bold'),
-        fontFamily('font-primary'),
-        fontSize('text-lg'),
+        fontFamily('font-secondary'),
+        fontSize(small ? 'text-sm' : 'text-lg'),
         textColor('text-primary-dark')
       )
     : classnames(
         fontWeight('font-normal'),
-        fontFamily('font-secondary'),
         fontSize('text-base'),
         textColor('text-formal-accent')
       )
 
-const button = ({ outlined }: ButtonProps) =>
-  classnames(commonClasses(), fontClasses({ outlined }))
+const button = ({ outlined, small }: ButtonProps) =>
+  classnames(commonClasses(), fontClasses({ outlined, small }))
 
 interface ButtonProps {
   outlined?: boolean
+  small?: boolean
 }
 
 export default function ({
   outlined,
   children,
+  small,
   ...rest
 }: React.HTMLAttributes<HTMLButtonElement> & ButtonProps) {
   return (
-    <button className={button({ outlined })} {...rest}>
+    <button className={button({ outlined, small })} {...rest}>
       {typeof children === 'string' ? <span>{children}</span> : children}
     </button>
   )
