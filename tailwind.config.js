@@ -41,12 +41,13 @@ module.exports = {
         'secondary-semi-transparent': 'rgba(255, 123, 237, 0.5)',
         'tertiary-semi-transparent': 'rgba(1, 254, 182, 0.4)',
         'formal-accent-semi-transparent': 'rgba(239, 236, 214, 0.4)',
+        navbar: 'rgba(13, 0, 48, 0.3)',
       },
       boxShadow: {
         '2xl': '0rem 0.25rem 2.75rem 0rem rgb(0 0 0 / 0.25)',
         lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
         md: '0rem 0rem 0.375rem 0rem rgb(0 0 0 / 0.25)',
-        button: '0rem 0rem 1.625rem rgb(0 0 0 / 1)',
+        button: '0rem 0rem 1.625rem 0rem rgba(1, 254, 182, 1)',
       },
       dropShadow: {
         accent: '0rem 0rem 0.625rem #fed823',
@@ -55,22 +56,8 @@ module.exports = {
         primary: '0rem 0rem 1.313rem #0A84FF',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
       },
-    },
-    extend: {
       padding: {
         25: '6.125rem',
-      },
-      fontFamily: {
-        secondary: ['"Space Grotesk"', 'sans-serif'],
-      },
-      colors: {
-        tertiary: '#01feb6',
-        'formal-accent': '#efecd6',
-        'primary-dark': '#0d0030',
-        navbar: 'rgba(13, 0, 48, 0.3)',
-      },
-      boxShadow: {
-        button: '0rem 0rem 1.625rem 0rem rgba(1, 254, 182, 1)',
       },
       borderRadius: {
         '4xl': '2.5rem',

@@ -32,7 +32,7 @@ const fontClasses = ({ outlined, small }: ButtonProps) =>
         boxShadow('shadow-button'),
         padding(small ? 'py-2' : 'py-4', small ? 'px-4' : 'px-6'),
         fontWeight('font-bold'),
-        fontFamily('font-secondary'),
+        fontFamily('font-primary'),
         fontSize(small ? 'text-sm' : 'text-lg'),
         textColor('text-primary-dark')
       )
