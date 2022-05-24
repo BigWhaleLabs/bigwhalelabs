@@ -1,8 +1,10 @@
 import ChildrenProp from 'models/ChildrenProp'
 import classnames, {
   display,
+  dropShadow,
   fontSize,
   fontWeight,
+  lineHeight,
   textAlign,
   textColor,
 } from 'classnames/tailwind'
@@ -10,9 +12,10 @@ import classnames, {
 const logoText = classnames(
   textColor('text-primary'),
   fontWeight('font-bold'),
-  fontSize('text-xl'),
+  fontSize('text-2xl'),
   display('flex'),
-  textAlign('text-right')
+  textAlign('text-right'),
+  lineHeight('leading-6')
 )
 // eslint-disable-next-line import/prefer-default-export
 export function LogoText({ children }: ChildrenProp) {

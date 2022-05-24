@@ -46,51 +46,6 @@ const App = () => {
   return (
     <Root>
       <Navbar />
-      <Section
-        gradientClassName={gradientColorStops('from-pink-600', 'to-purple-600')}
-      >
-        We are Big Whale Labs 🐳
-      </Section>
-      <Section
-        gradientClassName={gradientColorStops('from-gray-700', 'to-gray-900')}
-      >
-        Breaking:{' '}
-        <Link href="https://blog.bigwhalelabs.com/big-whale-labs-pre-seed-announcement">
-          we've raised our pre-seed
-        </Link>{' '}
-        from Slow, Samsung, NFT Investment, 1inch, and more
-      </Section>
-      <Section
-        gradientClassName={gradientColorStops('from-purple-600', 'to-blue-600')}
-      >
-        While everybody lives in the past we build the future
-      </Section>
-      <Section
-        gradientClassName={gradientColorStops('from-blue-600', 'to-green-600')}
-      >
-        Dosu — pseudonymous web 3 platform to share your thoughts with the
-        world, <Link href="https://dosu.io">join the waitlist</Link>
-      </Section>
-      <Section
-        gradientClassName={gradientColorStops(
-          'from-green-600',
-          'to-yellow-600'
-        )}
-      >
-        SealCred — anonymized decentralized social credit system based on NFT
-        ownership, <Link href="https://blog.bwl.gg">stay tuned</Link>
-      </Section>
-      <Section
-        gradientClassName={gradientColorStops('from-yellow-600', 'to-red-600')}
-      >
-        SocialGraph — portable on-chain list of connections owned by users not
-        by corporations, <Link href="https://blog.bwl.gg">stay tuned</Link>
-      </Section>
-      <Section
-        gradientClassName={gradientColorStops('from-red-600', 'to-purple-600')}
-      >
-        <Link href="mailto:hi@bwl.gg">Shoot us an email</Link>
-      </Section>
     </Root>
   )
 }
