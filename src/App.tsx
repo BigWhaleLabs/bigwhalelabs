@@ -10,6 +10,7 @@ import {
   textColor,
   textDecoration,
 } from 'classnames/tailwind'
+import Footer from 'components/Footer'
 
 const section = classnames(
   backgroundImage('bg-gradient-to-br'),
@@ -88,6 +89,7 @@ const App = () => {
       >
         <Link href="mailto:hi@bwl.gg">Shoot us an email</Link>
       </Section>
+      <Footer />
     </>
   )
 }
