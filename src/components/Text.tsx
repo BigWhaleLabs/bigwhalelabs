@@ -96,26 +96,31 @@ export function BodyText({
   return <p className={bodyText(small, bold)}>{children}</p>
 }
 
-const accentText = (color: TTextColor, primary?: boolean) =>
-  classnames(textColor(color), primaryAccentText(primary))
-const primaryAccentText = (primary?: boolean) =>
-  primary
-    ? classnames(
-        fontFamily('font-primary'),
-        fontWeight('font-bold'),
-        lineHeight('leading-11'),
-        fontSize('text-4xl')
-      )
-    : undefined
-export function AccentText({
+const primaryAccentText = (color: TTextColor) =>
+  classnames(
+    textColor(color),
+    fontFamily('font-primary'),
+    fontWeight('font-bold'),
+    lineHeight('leading-11'),
+    fontSize('text-4xl')
+  )
+export function PrimaryAccentText({
   color,
-  primary,
   children,
 }: ChildrenProp & {
   color: TTextColor
-  primary?: boolean
 }) {
-  return <span className={accentText(color, primary)}>{children}</span>
+  return <h3 className={primaryAccentText(color)}>{children}</h3>
+}
+
+const accentText = (color: TTextColor) => classnames(textColor(color))
+export function AccentText({
+  color,
+  children,
+}: ChildrenProp & {
+  color: TTextColor
+}) {
+  return <span className={accentText(color)}>{children}</span>
 }
 
 const headerText = (small?: boolean) =>
@@ -162,7 +167,7 @@ export function ExtraBoldText({
   return <span className={extraBoldText(extraLeading)}>{children}</span>
 }
 
-const bladeText = classnames(
+const retroText = classnames(
   fontFamily('font-primary'),
   fontWeight('font-bold'),
   fontSize('text-7xl', 'md:text-10xl'),
@@ -170,10 +175,10 @@ const bladeText = classnames(
   textAlign('text-center'),
   textColor('text-transparent'),
   backgroundClip('bg-clip-text'),
-  backgroundImage('bg-blade'),
+  backgroundImage('bg-retro'),
   textTransform('uppercase'),
-  dropShadow('drop-shadow-blade')
+  dropShadow('drop-shadow-retro')
 )
-export function BladeText({ children }: ChildrenProp) {
-  return <div className={bladeText}>{children}</div>
+export function RetroText({ children }: ChildrenProp) {
+  return <div className={retroText}>{children}</div>
 }

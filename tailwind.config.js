@@ -68,10 +68,10 @@ module.exports = {
         tertiary: '0rem 0rem 0.625rem #01fed6',
         primary: '0rem 0rem 1.313rem #0A84FF',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
-        blade: '0 0 4rem rgba(10, 132, 255, 0.7)',
+        retro: '0 0 4rem rgba(10, 132, 255, 0.7)',
       },
       backgroundImage: {
-        blade:
+        retro:
           'linear-gradient(180deg, #FF7BED 20.43%, #E0E5CE 25.48%, #E0E5CE 41.4%, #4300F5 46.3%, #263DB4 61.69%, #15A1FC 77.42%)',
       },
     },

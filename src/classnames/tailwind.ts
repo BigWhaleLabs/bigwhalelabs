@@ -316,7 +316,7 @@ export type TBackgroundImage =
   | 'bg-gradient-to-bl'
   | 'bg-gradient-to-l'
   | 'bg-gradient-to-tl'
-  | 'bg-blade'
+  | 'bg-retro'
 
 export type TGradientColorStops =
   | 'from-inherit'
@@ -4338,7 +4338,7 @@ export type TDropShadow =
   | 'drop-shadow-tertiary'
   | 'drop-shadow-primary'
   | 'drop-shadow-formal-accent'
-  | 'drop-shadow-blade'
+  | 'drop-shadow-retro'
 
 export type TGrayscale = 'grayscale-0' | 'grayscale'
 
