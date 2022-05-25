@@ -175,5 +175,5 @@ const bladeText = classnames(
   dropShadow('drop-shadow-blade')
 )
 export function BladeText({ children }: ChildrenProp) {
-  return <h1 className={bladeText}>{children}</h1>
+  return <div className={bladeText}>{children}</div>
 }
