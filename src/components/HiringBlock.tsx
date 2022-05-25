@@ -26,7 +26,7 @@ const hiringWrapper = classnames(
   width('w-full'),
   margin('mx-auto')
 )
-const primaryTextWrapper = classnames(
+const lineBlockWrapper = classnames(
   display('flex'),
   alignItems('items-center'),
   justifyContent('justify-center'),
@@ -48,7 +48,7 @@ export default function () {
     <div className={hiringWrapper}>
       <RetroText>WE’RE</RetroText>
       <RetroText>BUILDING</RetroText>
-      <div className={primaryTextWrapper}>
+      <div className={lineBlockWrapper}>
         <Line />
         <ExtraBoldText extraLeading>
           <AccentText color="text-secondary">THE</AccentText>
