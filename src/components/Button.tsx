@@ -17,14 +17,13 @@ import classnames, {
   width,
 } from 'classnames/tailwind'
 
-const commonClasses = () =>
-  classnames(
-    display('flex'),
-    flexDirection('flex-row'),
-    alignItems('items-center'),
-    outlineStyle('focus:outline-none'),
-    width('w-fit')
-  )
+const commonClasses = classnames(
+  display('flex'),
+  flexDirection('flex-row'),
+  alignItems('items-center'),
+  outlineStyle('focus:outline-none'),
+  width('w-fit')
+)
 
 const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
   outlined
@@ -51,7 +50,7 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
       )
 
 const button = ({ outlined, small, icon }: ButtonProps) =>
-  classnames(commonClasses(), fontClasses({ outlined, small, icon }))
+  classnames(commonClasses, fontClasses({ outlined, small, icon }))
 
 interface ButtonProps {
   outlined?: boolean

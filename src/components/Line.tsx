@@ -5,14 +5,20 @@ import classnames, {
   width,
 } from 'classnames/tailwind'
 
-const line = (toLeft?: boolean) =>
+const line = (gradientDirection: 'to-left' | 'to-right') =>
   classnames(
     height('h-px'),
     width('w-36'),
-    backgroundImage(toLeft ? 'bg-gradient-to-l' : 'bg-gradient-to-r'),
+    backgroundImage(
+      gradientDirection === 'to-left' ? 'bg-gradient-to-l' : 'bg-gradient-to-r'
+    ),
     gradientColorStops('from-primary-dark', 'to-secondary')
   )
 
-export default ({ toLeft }: { toLeft?: boolean }) => {
-  return <div className={line(toLeft)} />
+export default ({
+  gradientDirection = 'to-right',
+}: {
+  gradientDirection?: 'to-left' | 'to-right'
+}) => {
+  return <div className={line(gradientDirection)} />
 }

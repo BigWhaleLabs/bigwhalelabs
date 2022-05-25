@@ -1,3 +1,3 @@
-export default function (list: (string | undefined | null)[]): string {
-  return list.filter((s) => !!s).join(' ')
+export default function (...classNames: (string | undefined | null)[]): string {
+  return classNames.filter((s) => !!s).join(' ')
 }

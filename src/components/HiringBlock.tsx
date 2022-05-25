@@ -53,7 +53,7 @@ export default function () {
         <ExtraBoldText extraLeading>
           <AccentText color="text-secondary">THE</AccentText>
         </ExtraBoldText>
-        <Line toLeft />
+        <Line gradientDirection="to-left" />
       </div>
       <RetroText>FUTURE</RetroText>
       <div className={bottomWrapper}>

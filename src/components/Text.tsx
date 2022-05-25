@@ -48,10 +48,10 @@ export function LargeStrokeText({
 }: ChildrenProp & { small?: boolean }) {
   return (
     <h1
-      className={classNamesToString([
+      className={classNamesToString(
         largeStrokeTextAccent,
-        small ? 'strokeTextSmall' : 'strokeText',
-      ])}
+        small ? 'strokeTextSmall' : 'strokeText'
+      )}
     >
       {children}
     </h1>
