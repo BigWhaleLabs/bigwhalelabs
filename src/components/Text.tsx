@@ -15,7 +15,8 @@ const logoText = classnames(
   fontSize('text-2xl'),
   display('flex'),
   textAlign('text-right'),
-  lineHeight('leading-6')
+  lineHeight('leading-6'),
+  dropShadow('drop-shadow-primary')
 )
 // eslint-disable-next-line import/prefer-default-export
 export function LogoText({ children }: ChildrenProp) {

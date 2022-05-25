@@ -1,4 +1,8 @@
-import classnames, { stroke, strokeWidth } from 'classnames/tailwind'
+import classnames, {
+  dropShadow,
+  stroke,
+  strokeWidth,
+} from 'classnames/tailwind'
 
 const mainStroke = classnames(
   stroke('stroke-primary'),
@@ -17,6 +21,7 @@ export default function () {
       height="55"
       viewBox="0 0 62 55"
       fill="none"
+      className={dropShadow('drop-shadow-primary')}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
