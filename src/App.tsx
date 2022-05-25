@@ -10,6 +10,7 @@ import {
   textColor,
   textDecoration,
 } from 'classnames/tailwind'
+import HiringBlock from 'components/HiringBlock'
 
 const section = classnames(
   backgroundImage('bg-gradient-to-br'),
@@ -43,6 +44,7 @@ const Link: React.FC<{ href: string }> = ({ href, children }) => (
 const App = () => {
   return (
     <>
+      <HiringBlock />
       <Section
         gradientClassName={gradientColorStops('from-pink-600', 'to-purple-600')}
       >
