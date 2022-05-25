@@ -19,6 +19,7 @@ import {
 } from 'classnames/tailwind'
 import ChildrenProp from 'models/ChildrenProp'
 import classNamesToString from 'helpers/classNamesToString'
+import useBreakpoints from 'hooks/useBreakpoints'
 
 const logoText = classnames(
   textColor('text-primary'),
@@ -163,20 +164,22 @@ export function ExtraBoldText({
   return <span className={extraBoldText(extraLeading)}>{children}</span>
 }
 
-const retroText = classnames(
-  fontFamily('font-primary'),
-  fontWeight('font-bold'),
-  fontSize('text-7xl', 'md:text-10xl'),
-  lineHeight('leading-11.5', 'md:leading-15'),
-  textAlign('text-center'),
-  textColor('text-transparent'),
-  backgroundClip('bg-clip-text'),
-  backgroundImage('bg-retro'),
-  textTransform('uppercase'),
-  dropShadow('drop-shadow-retro')
-)
+const retroText = (extraSmall?: boolean) =>
+  classnames(
+    fontFamily('font-primary'),
+    fontWeight('font-bold'),
+    fontSize(extraSmall ? 'text-6xl' : 'text-7xl', 'md:text-9xl'),
+    lineHeight('leading-11.5', 'md:leading-15'),
+    textAlign('text-center'),
+    textColor('text-transparent'),
+    backgroundClip('bg-clip-text'),
+    backgroundImage('bg-retro'),
+    textTransform('uppercase'),
+    dropShadow('drop-shadow-retro')
+  )
 export function RetroText({ children }: ChildrenProp) {
-  return <h1 className={retroText}>{children}</h1>
+  const { xs } = useBreakpoints()
+  return <h1 className={retroText(xs)}>{children}</h1>
 }
 
 const linkText = (tertiary?: boolean) =>
