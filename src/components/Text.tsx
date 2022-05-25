@@ -1,5 +1,4 @@
 import {
-  TGradientColorStops,
   TTextColor,
   backgroundClip,
   backgroundImage,
@@ -19,40 +18,18 @@ import {
 import ChildrenProp from 'models/ChildrenProp'
 import classNamesToString from 'helpers/classNamesToString'
 
-const foldText = (
-  color?: TTextColor,
-  gradientFrom?: TGradientColorStops,
-  gradientTo?: TGradientColorStops
-) =>
-  classnames(
-    fontFamily('font-primary'),
-    fontSize('text-2xl', 'md:text-3xl'),
-    lineHeight('leading-8', 'md:leading-10'),
-    fontWeight('font-bold'),
-    textColor(
-      gradientFrom && gradientTo ? 'text-transparent' : color || 'text-accent'
-    ),
-    backgroundImage(
-      gradientFrom && gradientTo ? 'bg-gradient-to-r' : undefined
-    ),
-    backgroundClip(gradientFrom && gradientTo ? 'bg-clip-text' : undefined),
-    gradientColorStops(gradientFrom, gradientTo)
-  )
-export function FoldText({
-  color,
-  gradientFrom,
-  gradientTo,
-  children,
-}: ChildrenProp & {
-  color?: TTextColor
-  gradientFrom?: TGradientColorStops
-  gradientTo?: TGradientColorStops
-}) {
-  return (
-    <span className={foldText(color, gradientFrom, gradientTo)}>
-      {children}
-    </span>
-  )
+const foldText = classnames(
+  fontFamily('font-primary'),
+  fontSize('text-2xl', 'md:text-3xl'),
+  lineHeight('leading-8', 'md:leading-10'),
+  fontWeight('font-bold'),
+  textColor('text-transparent'),
+  backgroundImage('bg-gradient-to-r'),
+  backgroundClip('bg-clip-text'),
+  gradientColorStops('from-secondary', 'to-accent')
+)
+export function FoldText({ children }: ChildrenProp) {
+  return <span className={foldText}>{children}</span>
 }
 
 const largeStrokeTextAccent = classnames(
