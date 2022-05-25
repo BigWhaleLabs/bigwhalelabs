@@ -16,7 +16,6 @@ import classnames, {
   textDecoration,
   width,
 } from 'classnames/tailwind'
-import useBreakpoints from 'hooks/useBreakpoints'
 
 const commonClasses = classnames(
   display('flex'),
@@ -68,9 +67,7 @@ export default function ({
   url,
   onClick,
   ...rest
-}: React.HTMLAttributes<HTMLButtonElement> & ButtonProps) {
-  const { md } = useBreakpoints()
-
+}: Omit<React.HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
   return (
     <button
       className={button({ outlined, small, icon })}
