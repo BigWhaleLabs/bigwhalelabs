@@ -10,6 +10,7 @@ import {
   textColor,
   textDecoration,
 } from 'classnames/tailwind'
+import Footer from 'components/Footer'
 import HiringBlock from 'components/HiringBlock'
 
 const section = classnames(
@@ -90,6 +91,7 @@ const App = () => {
       >
         <Link href="mailto:hi@bwl.gg">Shoot us an email</Link>
       </Section>
+      <Footer />
     </>
   )
 }
