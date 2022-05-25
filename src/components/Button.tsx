@@ -65,17 +65,15 @@ export default function ({
   small,
   icon,
   url,
-  onClick,
   ...rest
 }: Omit<React.HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
   return (
     <button
       className={button({ outlined, small, icon })}
-      onClick={(...args) => {
+      onClick={() => {
         if (url) {
           window.open(url, '_blank')
         }
-        onClick?.(...args)
       }}
       {...rest}
     >
