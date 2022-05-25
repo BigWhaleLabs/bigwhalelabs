@@ -63,29 +63,31 @@ export function LargeStrokeText({
 }: ChildrenProp & { small?: boolean }) {
   return (
     <h1
-      className={classNamesToString([
+      className={classNamesToString(
         largeStrokeTextAccent,
-        small ? 'strokeTextSmall' : 'strokeText',
-      ])}
+        small ? 'stroke-text-small' : 'stroke-text'
+      )}
     >
       {children}
     </h1>
   )
 }
 
-const bodyText = (small?: boolean, bold?: boolean) =>
+const bodyText = (small?: boolean, bold?: boolean, center?: boolean) =>
   classnames(
     textColor('text-formal-accent'),
     lineHeight(small ? 'leading-5' : 'leading-6'),
     fontSize(small ? 'text-sm' : 'text-base'),
-    fontWeight(bold ? 'font-bold' : 'font-normal')
+    fontWeight(bold ? 'font-bold' : 'font-normal'),
+    textAlign(center ? 'text-center' : 'text-left')
   )
 export function BodyText({
   bold,
   small,
+  center,
   children,
-}: ChildrenProp & { bold?: boolean; small?: boolean }) {
-  return <p className={bodyText(small, bold)}>{children}</p>
+}: ChildrenProp & { bold?: boolean; small?: boolean; center?: boolean }) {
+  return <p className={bodyText(small, bold, center)}>{children}</p>
 }
 
 const primaryAccentText = (color: TTextColor) =>
@@ -115,19 +117,21 @@ export function AccentText({
   return <span className={accentText(color)}>{children}</span>
 }
 
-const headerText = (small?: boolean) =>
+const headerText = (small?: boolean, center?: boolean) =>
   classnames(
     fontFamily('font-primary'),
     fontWeight('font-bold'),
     textColor('text-formal-accent'),
     fontSize(small ? 'text-2xl' : 'text-4xl'),
-    lineHeight(small ? 'leading-8' : 'leading-11')
+    lineHeight(small ? 'leading-8' : 'leading-11'),
+    textAlign(center ? 'text-center' : undefined)
   )
 export function HeaderText({
   small,
+  center,
   children,
-}: ChildrenProp & { small?: boolean }) {
-  return <h2 className={headerText(small)}>{children}</h2>
+}: ChildrenProp & { small?: boolean; center?: boolean }) {
+  return <h2 className={headerText(small, center)}>{children}</h2>
 }
 
 const plainText = classnames(
@@ -145,8 +149,8 @@ const extraBoldText = (extraLeading?: boolean) =>
     fontWeight('font-bold', 'md:font-extrabold'),
     fontSize(extraLeading ? 'text-2.5xl' : 'text-xl', 'md:text-2.5xl'),
     lineHeight(
-      extraLeading ? 'leading-11.5' : 'leading-7',
-      extraLeading ? 'md:leading-11.5' : 'md:leading-8'
+      extraLeading ? 'leading-8' : 'leading-7',
+      extraLeading ? 'md:leading-10' : 'md:leading-8'
     ),
     textColor('text-primary-dark'),
     textTransform('uppercase'),
@@ -163,7 +167,7 @@ const retroText = classnames(
   fontFamily('font-primary'),
   fontWeight('font-bold'),
   fontSize('text-7xl', 'md:text-10xl'),
-  lineHeight('leading-13', 'md:leading-14'),
+  lineHeight('leading-11.5', 'md:leading-15'),
   textAlign('text-center'),
   textColor('text-transparent'),
   backgroundClip('bg-clip-text'),
@@ -172,7 +176,7 @@ const retroText = classnames(
   dropShadow('drop-shadow-retro')
 )
 export function RetroText({ children }: ChildrenProp) {
-  return <div className={retroText}>{children}</div>
+  return <h1 className={retroText}>{children}</h1>
 }
 
 const linkText = (tertiary?: boolean) =>

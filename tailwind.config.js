@@ -6,11 +6,8 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
-      screens: {
-        fold: '17.5rem',
-        tiny: '22.5rem',
-        sm: '28.125rem',
-        md: '37.5rem',
+      maxWidth: {
+        400: '25rem',
       },
       fontSize: {
         '2.5xl': '1.625rem',
@@ -33,7 +30,8 @@ module.exports = {
         11.5: '4.5rem',
         12: '5.938rem',
         13: '6.061rem',
-        14: '11.644rem',
+        14: '6.5rem',
+        15: '10.438rem',
       },
       screens: {
         fold: '17.5rem',
@@ -48,6 +46,7 @@ module.exports = {
         secondary: '#ff7bed',
         tertiary: '#01feb6',
         'formal-accent': '#efecd6',
+        'tertiary-dark': '#00cb91',
 
         'primary-dark': '#0d0030',
         'primary-light': '#bff5fa',
@@ -77,6 +76,9 @@ module.exports = {
         primary: '0rem 0rem 1.5rem #15A1FC',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
         retro: '0 0 4rem rgba(10, 132, 255, 0.7)',
+      },
+      borderRadius: {
+        '4xl': '2.5rem',
       },
       backgroundImage: {
         retro:
