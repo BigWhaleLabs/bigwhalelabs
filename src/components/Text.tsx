@@ -21,17 +21,21 @@ import ChildrenProp from 'models/ChildrenProp'
 import classNamesToString from 'helpers/classNamesToString'
 import useBreakpoints from 'hooks/useBreakpoints'
 
-const logoText = classnames(
-  textColor('text-primary'),
-  fontWeight('font-bold'),
-  fontSize('text-2xl'),
-  display('flex'),
-  textAlign('text-right'),
-  lineHeight('leading-6'),
-  dropShadow('drop-shadow-primary')
-)
-export function LogoText({ children }: ChildrenProp) {
-  return <span className={logoText}>{children}</span>
+const logoText = (large?: boolean) =>
+  classnames(
+    textColor('text-primary'),
+    fontWeight('font-bold'),
+    fontSize(large ? 'text-6xl' : 'text-2xl'),
+    display('flex'),
+    textAlign('text-right'),
+    lineHeight(large ? 'leading-11' : 'leading-6'),
+    dropShadow('drop-shadow-primary')
+  )
+export default function LogoText({
+  children,
+  large,
+}: ChildrenProp & { large?: boolean }) {
+  return <span className={logoText(large)}>{children}</span>
 }
 
 const foldText = classnames(

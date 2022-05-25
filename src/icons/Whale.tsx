@@ -1,4 +1,9 @@
-import classnames, { fill, stroke, strokeWidth } from 'classnames/tailwind'
+import classnames, {
+  dropShadow,
+  fill,
+  stroke,
+  strokeWidth,
+} from 'classnames/tailwind'
 
 const mainStroke = classnames(stroke('stroke-primary'), strokeWidth('stroke-2'))
 
@@ -7,15 +12,15 @@ const secondaryStroke = classnames(
   strokeWidth('stroke-2')
 )
 
-const circleFill = classnames(fill('fill-primary'))
-
-export default function () {
+export default function ({ large }: { large?: boolean }) {
+  const circleFill = classnames(fill('fill-primary'))
   return (
     <svg
-      width="62"
-      height="55"
+      width={large ? '158' : '62'}
+      height={large ? '144' : '55'}
       viewBox="0 0 62 55"
       fill="none"
+      className={dropShadow('drop-shadow-primary')}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
