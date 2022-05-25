@@ -35,11 +35,11 @@ body {
 }
 
 /* Large text with stroke */
-.strokeText {
+.stroke-text {
   -webkit-text-stroke: 1px rgba(255, 123, 237, 0.5);
   text-shadow: 0 -1rem 0 #15a1fc;
 }
-.strokeTextSmall {
+.stroke-text-small {
   -webkit-text-stroke: 1px rgba(255, 123, 237, 0.5);
   text-shadow: 0 -0.5rem 0 #15a1fc;
 }
