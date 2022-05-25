@@ -50,7 +50,7 @@ export function LargeStrokeText({
     <h1
       className={classNamesToString(
         largeStrokeTextAccent,
-        small ? 'strokeTextSmall' : 'strokeText'
+        small ? 'stroke-text-small' : 'stroke-text'
       )}
     >
       {children}
