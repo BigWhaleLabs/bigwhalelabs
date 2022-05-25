@@ -16,9 +16,9 @@ const line = (gradientDirection: 'to-left' | 'to-right') =>
   )
 
 export default ({
-  gradientDirection = 'to-right',
+  gradientDirection,
 }: {
-  gradientDirection?: 'to-left' | 'to-right'
+  gradientDirection: 'to-left' | 'to-right'
 }) => {
   return <div className={line(gradientDirection)} />
 }
