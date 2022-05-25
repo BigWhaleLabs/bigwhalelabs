@@ -13,6 +13,7 @@ import {
   lineHeight,
   textAlign,
   textColor,
+  textDecoration,
   textOverflow,
   textTransform,
 } from 'classnames/tailwind'
@@ -25,7 +26,8 @@ const logoText = classnames(
   fontSize('text-2xl'),
   display('flex'),
   textAlign('text-right'),
-  lineHeight('leading-6')
+  lineHeight('leading-6'),
+  dropShadow('drop-shadow-primary')
 )
 export function LogoText({ children }: ChildrenProp) {
   return <span className={logoText}>{children}</span>
@@ -171,4 +173,26 @@ const retroText = classnames(
 )
 export function RetroText({ children }: ChildrenProp) {
   return <div className={retroText}>{children}</div>
+}
+
+const linkText = (tertiary?: boolean) =>
+  classnames(
+    lineHeight('leading-6'),
+    fontSize('text-base'),
+    textDecoration('no-underline', 'hover:underline'),
+    textColor(
+      tertiary ? 'hover:text-tertiary' : 'text-formal-accent',
+      tertiary ? 'focus:text-tertiary-dark' : 'focus:text-primary'
+    )
+  )
+export function LinkText({
+  url,
+  tertiary,
+  children,
+}: ChildrenProp & { url: string; tertiary?: boolean }) {
+  return (
+    <a className={linkText(tertiary)} href={url} target="_blank">
+      {children}
+    </a>
+  )
 }

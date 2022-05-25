@@ -6,6 +6,12 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
+      screens: {
+        fold: '17.5rem',
+        tiny: '22.5rem',
+        sm: '28.125rem',
+        md: '37.5rem',
+      },
       fontSize: {
         '2.5xl': '1.625rem',
         '3xl': '2rem',
@@ -68,7 +74,7 @@ module.exports = {
         accent: '0rem 0rem 0.625rem #fed823',
         secondary: '0rem 0rem 0.625rem #ff7bed',
         tertiary: '0rem 0rem 0.625rem #01fed6',
-        primary: '0rem 0rem 1.313rem #0A84FF',
+        primary: '0rem 0rem 1.5rem #15A1FC',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
         retro: '0 0 4rem rgba(10, 132, 255, 0.7)',
       },

@@ -15,15 +15,15 @@ import classnames, {
   textDecoration,
   width,
 } from 'classnames/tailwind'
+import useBreakpoints from 'hooks/useBreakpoints'
 
-const commonClasses = () =>
-  classnames(
-    display('flex'),
-    flexDirection('flex-row'),
-    alignItems('items-center'),
-    outlineStyle('focus:outline-none'),
-    width('w-fit')
-  )
+const commonClasses = classnames(
+  display('flex'),
+  flexDirection('flex-row'),
+  alignItems('items-center'),
+  outlineStyle('focus:outline-none'),
+  width('w-fit')
+)
 
 const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
   outlined
@@ -49,7 +49,7 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
       )
 
 const button = ({ outlined, small, icon }: ButtonProps) =>
-  classnames(commonClasses(), fontClasses({ outlined, small, icon }))
+  classnames(commonClasses, fontClasses({ outlined, small, icon }))
 
 interface ButtonProps {
   outlined?: boolean
@@ -64,8 +64,13 @@ export default function ({
   icon,
   ...rest
 }: React.HTMLAttributes<HTMLButtonElement> & ButtonProps) {
+  const { md } = useBreakpoints()
+
   return (
-    <button className={button({ outlined, small, icon })} {...rest}>
+    <button
+      className={button({ outlined, small: small || !md, icon })}
+      {...rest}
+    >
       {typeof children === 'string' ? <span>{children}</span> : children}
     </button>
   )
