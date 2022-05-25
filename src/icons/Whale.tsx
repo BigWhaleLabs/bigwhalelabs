@@ -1,14 +1,13 @@
-import classnames, { stroke, strokeWidth } from 'classnames/tailwind'
+import classnames, { fill, stroke, strokeWidth } from 'classnames/tailwind'
 
-const mainStroke = classnames(
-  stroke('stroke-primary'),
-  strokeWidth('stroke-5/2')
-)
+const mainStroke = classnames(stroke('stroke-primary'), strokeWidth('stroke-2'))
 
 const secondaryStroke = classnames(
   stroke('stroke-secondary'),
-  strokeWidth('stroke-5/2')
+  strokeWidth('stroke-2')
 )
+
+const circleFill = classnames(fill('fill-primary'))
 
 export default function () {
   return (
@@ -37,7 +36,7 @@ export default function () {
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-      <circle cx="17.8986" cy="24.1426" r="1.57043" fill="#15A1FC" />
+      <circle cx="17.8986" cy="24.1426" r="1.57043" className={circleFill} />
       <path
         d="M30.5156 24.6246C32.983 27.078 37.6884 28.7643 40.6844 28.7643C44.8964 28.7643 52.8505 25.4311 52.8505 21.3194C52.8505 17.3632 45.1649 14.1277 40.8559 13.8886"
         className={mainStroke}
