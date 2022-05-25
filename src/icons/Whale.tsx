@@ -16,8 +16,8 @@ export default function ({ large }: { large?: boolean }) {
   const circleFill = classnames(fill('fill-primary'))
   return (
     <svg
-      width={large ? '124' : '62'}
-      height={large ? '110' : '55'}
+      width={large ? '158' : '62'}
+      height={large ? '144' : '55'}
       viewBox="0 0 62 55"
       fill="none"
       className={dropShadow('drop-shadow-primary')}

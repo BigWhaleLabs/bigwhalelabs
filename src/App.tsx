@@ -8,8 +8,8 @@ const App = () => {
   return (
     <Root>
       <Navbar />
-      <LogoFooter />
       <HiringBlock />
+      <LogoFooter />
       <Footer />
     </Root>
   )

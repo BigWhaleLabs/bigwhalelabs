@@ -24,10 +24,10 @@ const logoText = (large?: boolean) =>
   classnames(
     textColor('text-primary'),
     fontWeight('font-bold'),
-    fontSize(large ? 'text-3xl' : 'text-2xl'),
+    fontSize(large ? 'text-6xl' : 'text-2xl'),
     display('flex'),
     textAlign('text-right'),
-    lineHeight(large ? 'leading-8' : 'leading-6'),
+    lineHeight(large ? 'leading-11' : 'leading-6'),
     dropShadow('drop-shadow-primary')
   )
 export default function LogoText({
