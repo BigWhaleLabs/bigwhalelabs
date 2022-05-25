@@ -95,6 +95,7 @@ module.exports = {
       },
       inset: {
         '-6': '-1.5rem',
+        '-60': '-15rem',
       },
     },
   },

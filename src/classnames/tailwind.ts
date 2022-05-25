@@ -7028,6 +7028,13 @@ export type TInset =
   | '-right-6'
   | '-bottom-6'
   | '-left-6'
+  | '-inset-60'
+  | '-inset-x-60'
+  | '-inset-y-60'
+  | '-top-60'
+  | '-right-60'
+  | '-bottom-60'
+  | '-left-60'
 
 export type TZIndex =
   | 'z-0'
