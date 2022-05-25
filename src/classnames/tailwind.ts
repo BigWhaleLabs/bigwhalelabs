@@ -318,6 +318,7 @@ export type TBackgroundImage =
   | 'bg-gradient-to-bl'
   | 'bg-gradient-to-l'
   | 'bg-gradient-to-tl'
+  | 'bg-retro'
 
 export type TGradientColorStops =
   | 'from-inherit'
@@ -4366,11 +4367,13 @@ export type TDropShadow =
   | 'drop-shadow-xl'
   | 'drop-shadow-2xl'
   | 'drop-shadow-none'
+  | 'drop-shadow-text-fill-primary'
   | 'drop-shadow-accent'
   | 'drop-shadow-secondary'
   | 'drop-shadow-tertiary'
   | 'drop-shadow-primary'
   | 'drop-shadow-formal-accent'
+  | 'drop-shadow-retro'
 
 export type TGrayscale = 'grayscale-0' | 'grayscale'
 
@@ -7641,6 +7644,8 @@ export type TFontSize =
   | 'text-7xl'
   | 'text-8xl'
   | 'text-9xl'
+  | 'text-2.5xl'
+  | 'text-10xl'
 
 export type TFontWeight =
   | 'font-thin'
@@ -7660,6 +7665,7 @@ export type TLetterSpacing =
   | 'tracking-wide'
   | 'tracking-wider'
   | 'tracking-widest'
+  | 'tracking-extra'
 
 export type TLineHeight =
   | 'leading-3'
@@ -7671,12 +7677,16 @@ export type TLineHeight =
   | 'leading-9'
   | 'leading-10'
   | 'leading-11'
+  | 'leading-12'
+  | 'leading-13'
+  | 'leading-14'
   | 'leading-none'
   | 'leading-tight'
   | 'leading-snug'
   | 'leading-normal'
   | 'leading-relaxed'
   | 'leading-loose'
+  | 'leading-11.5'
 
 export type TListStyleType = 'list-none' | 'list-disc' | 'list-decimal'
 
