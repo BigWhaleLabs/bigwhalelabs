@@ -5,6 +5,7 @@ import classnames, {
   borderRadius,
   boxShadow,
   display,
+  dropShadow,
   flexDirection,
   fontFamily,
   fontSize,
@@ -15,15 +16,15 @@ import classnames, {
   textDecoration,
   width,
 } from 'classnames/tailwind'
+import useBreakpoints from 'hooks/useBreakpoints'
 
-const commonClasses = () =>
-  classnames(
-    display('flex'),
-    flexDirection('flex-row'),
-    alignItems('items-center'),
-    outlineStyle('focus:outline-none'),
-    width('w-fit')
-  )
+const commonClasses = classnames(
+  display('flex'),
+  flexDirection('flex-row'),
+  alignItems('items-center'),
+  outlineStyle('focus:outline-none'),
+  width('w-fit')
+)
 
 const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
   outlined
@@ -31,6 +32,7 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         backgroundColor('bg-tertiary'),
         borderRadius('rounded-4xl'),
         boxShadow('shadow-button'),
+        dropShadow('drop-shadow-tertiary'),
         padding(small ? 'py-2' : 'py-4', small ? 'px-4' : 'px-6'),
         fontWeight('font-bold'),
         fontFamily('font-primary'),
@@ -49,7 +51,7 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
       )
 
 const button = ({ outlined, small, icon }: ButtonProps) =>
-  classnames(commonClasses(), fontClasses({ outlined, small, icon }))
+  classnames(commonClasses, fontClasses({ outlined, small, icon }))
 
 interface ButtonProps {
   outlined?: boolean
@@ -67,6 +69,8 @@ export default function ({
   onClick,
   ...rest
 }: React.HTMLAttributes<HTMLButtonElement> & ButtonProps) {
+  const { md } = useBreakpoints()
+
   return (
     <button
       className={button({ outlined, small, icon })}
