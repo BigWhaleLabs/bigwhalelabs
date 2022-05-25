@@ -55,6 +55,7 @@ interface ButtonProps {
   outlined?: boolean
   small?: boolean
   icon?: boolean
+  url?: string
 }
 
 export default function ({
@@ -62,10 +63,21 @@ export default function ({
   children,
   small,
   icon,
+  url,
+  onClick,
   ...rest
 }: React.HTMLAttributes<HTMLButtonElement> & ButtonProps) {
   return (
-    <button className={button({ outlined, small, icon })} {...rest}>
+    <button
+      className={button({ outlined, small, icon })}
+      onClick={(...args) => {
+        if (url) {
+          window.open(url, '_blank')
+        }
+        onClick?.(...args)
+      }}
+      {...rest}
+    >
       {typeof children === 'string' ? <span>{children}</span> : children}
     </button>
   )

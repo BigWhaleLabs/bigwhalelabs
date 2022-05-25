@@ -14,12 +14,13 @@ const secondaryStroke = classnames(
   strokeWidth('stroke-5/2')
 )
 
-export default function () {
+export default function ({ large }: { large?: boolean }) {
+  console.log(large)
   return (
     <svg
-      width="62"
-      height="55"
-      viewBox="0 0 62 55"
+      width={large ? '124' : '62'}
+      height={large ? '110' : '55'}
+      viewBox={large ? '0 0 124 110' : '0 0 62 55'}
       fill="none"
       className={dropShadow('drop-shadow-primary')}
       xmlns="http://www.w3.org/2000/svg"
