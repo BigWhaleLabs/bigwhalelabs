@@ -16,7 +16,6 @@ import classnames, {
   textDecoration,
   width,
 } from 'classnames/tailwind'
-import useBreakpoints from 'hooks/useBreakpoints'
 
 const commonClasses = classnames(
   display('flex'),
@@ -57,6 +56,7 @@ interface ButtonProps {
   outlined?: boolean
   small?: boolean
   icon?: boolean
+  url?: string
 }
 
 export default function ({
@@ -64,13 +64,19 @@ export default function ({
   children,
   small,
   icon,
+  url,
+  onClick,
   ...rest
-}: React.HTMLAttributes<HTMLButtonElement> & ButtonProps) {
-  const { md } = useBreakpoints()
-
+}: Omit<React.HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
   return (
     <button
-      className={button({ outlined, small: small || !md, icon })}
+      className={button({ outlined, small, icon })}
+      onClick={(...args) => {
+        if (url) {
+          window.open(url, '_blank')
+        }
+        onClick?.(...args)
+      }}
       {...rest}
     >
       {typeof children === 'string' ? <span>{children}</span> : children}
