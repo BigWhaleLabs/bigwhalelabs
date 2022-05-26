@@ -6,6 +6,10 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
+      screens: {
+        fold: '20rem',
+        md: '37.5rem',
+      },
       maxWidth: {
         400: '25rem',
       },
