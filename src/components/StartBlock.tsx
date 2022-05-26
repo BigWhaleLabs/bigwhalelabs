@@ -17,7 +17,6 @@ import classnames, {
   width,
   wordBreak,
 } from 'classnames/tailwind'
-import useBreakpoints from 'hooks/useBreakpoints'
 
 const wrapper = classnames(
   position('relative'),
@@ -40,7 +39,8 @@ const textBlock = classnames(
   flexDirection('flex-col'),
   alignItems('md:items-start', 'items-center'),
   wordBreak('break-words'),
-  textAlign('text-center')
+  textAlign('md:text-left', 'text-center'),
+  width('lg:w-max', 'w-80')
 )
 const imageStyles = classnames(
   height('sm:h-auto', 'h-max'),
@@ -51,8 +51,6 @@ const imageStyles = classnames(
 )
 
 export default function () {
-  const { md, lg } = useBreakpoints()
-
   return (
     <div className={wrapper}>
       <img src="/img/colorful-whale.webp" className={imageStyles} />
@@ -60,14 +58,7 @@ export default function () {
         <div className={futureBox}>
           <DownArrows />
           <div className={textBlock}>
-            {md && !lg ? (
-              <>
-                <FoldText>We’re building</FoldText>
-                <FoldText>the future</FoldText>
-              </>
-            ) : (
-              <FoldText>We’re building the future</FoldText>
-            )}
+            <FoldText>We’re building the future</FoldText>
             <FoldText>of pseudonymity</FoldText>
           </div>
         </div>
