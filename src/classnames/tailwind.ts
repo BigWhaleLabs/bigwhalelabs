@@ -5435,6 +5435,7 @@ export type TSpace =
   | 'space-x-1.5'
   | 'space-x-2.5'
   | 'space-x-3.5'
+  | '-space-x-2'
   | 'space-x-reverse'
   | 'space-y-0'
   | 'space-y-1'
@@ -5471,6 +5472,7 @@ export type TSpace =
   | 'space-y-1.5'
   | 'space-y-2.5'
   | 'space-y-3.5'
+  | '-space-y-2'
   | 'space-y-reverse'
 
 export type TSpacing = TPadding | TMargin | TSpace
@@ -6965,6 +6967,13 @@ export type TInset =
   | 'right-full'
   | 'bottom-full'
   | 'left-full'
+  | '-inset-28'
+  | '-inset-x-28'
+  | '-inset-y-28'
+  | '-top-28'
+  | '-right-28'
+  | '-bottom-28'
+  | '-left-28'
 
 export type TZIndex =
   | 'z-0'
