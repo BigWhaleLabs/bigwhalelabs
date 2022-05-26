@@ -53,6 +53,7 @@ module.exports = {
         'primary-dimmed': '#3a00d6',
         'primary-semi-dimmed': '#4b61d5',
         'primary-background': '#1a0259',
+        'tertiary-dark': '#00cb91',
 
         'accent-semi-transparent': 'rgba(254, 216, 35, 0.4)',
         'primary-semi-transparent': 'rgba(21, 161, 252, 0.5)',
@@ -64,7 +65,7 @@ module.exports = {
         '2xl': '0rem 0.25rem 2.75rem 0rem rgb(0 0 0 / 0.25)',
         lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
         md: '0rem 0rem 0.375rem 0rem rgb(0 0 0 / 0.25)',
-        button: '0rem 0rem 1.625rem rgb(0 0 0 / 1)',
+        button: '0rem 0rem 1.625rem 0rem rgba(1, 254, 182, 1)',
       },
       dropShadow: {
         'text-fill-primary': '0rem -1rem 0rem #15A1FC',
@@ -81,6 +82,9 @@ module.exports = {
       backgroundImage: {
         retro:
           'linear-gradient(180deg, #FF7BED 20.43%, #E0E5CE 25.48%, #E0E5CE 41.4%, #4300F5 46.3%, #263DB4 61.69%, #15A1FC 77.42%)',
+      },
+      borderRadius: {
+        '4xl': '2.5rem',
       },
     },
   },
