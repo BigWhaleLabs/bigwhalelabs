@@ -6,6 +6,12 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
+      space: {
+        '-2': '-0.5rem',
+      },
+      inset: {
+        '-28': '-7rem',
+      },
       maxWidth: {
         400: '25rem',
       },
