@@ -55,7 +55,7 @@ export default function () {
 
   return (
     <div className={wrapper}>
-      <img width="933" src="/img/colorful-whale.webp" className={imageStyles} />
+      <img src="/img/colorful-whale.webp" className={imageStyles} />
       <div className={futureBoxWrapper}>
         <div className={futureBox}>
           <DownArrows />
