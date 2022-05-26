@@ -19,7 +19,12 @@ import classnames, {
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 
-const wrapperBox = classnames(
+const outerWrapper = classnames(
+  display('flex'),
+  flexDirection('flex-col'),
+  alignItems('items-center')
+)
+const wrapper = classnames(
   position('relative'),
   overflow('md:overflow-visible', 'overflow-hidden'),
   width('md:w-fit', 'w-screen')
@@ -54,21 +59,27 @@ export default function () {
   const { md, lg } = useBreakpoints()
 
   return (
-    <div className={wrapperBox}>
-      <img width="933" src="/img/colorful-whale.webp" className={imageStyles} />
-      <div className={futureBoxWrapper}>
-        <div className={futureBox}>
-          <DownArrows />
-          <div className={textBlock}>
-            {md && !lg ? (
-              <>
-                <FoldText>We’re building</FoldText>
-                <FoldText>the future</FoldText>
-              </>
-            ) : (
-              <FoldText>We’re building the future</FoldText>
-            )}
-            <FoldText>of pseudonymity</FoldText>
+    <div className={outerWrapper}>
+      <div className={wrapper}>
+        <img
+          width="933"
+          src="/img/colorful-whale.webp"
+          className={imageStyles}
+        />
+        <div className={futureBoxWrapper}>
+          <div className={futureBox}>
+            <DownArrows />
+            <div className={textBlock}>
+              {md && !lg ? (
+                <>
+                  <FoldText>We’re building</FoldText>
+                  <FoldText>the future</FoldText>
+                </>
+              ) : (
+                <FoldText>We’re building the future</FoldText>
+              )}
+              <FoldText>of pseudonymity</FoldText>
+            </div>
           </div>
         </div>
       </div>
