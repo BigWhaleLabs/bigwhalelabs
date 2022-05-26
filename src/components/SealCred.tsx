@@ -10,6 +10,7 @@ import classnames, {
   display,
   flexDirection,
   justifyContent,
+  margin,
   maxWidth,
   space,
 } from 'classnames/tailwind'
@@ -20,7 +21,8 @@ const sealCredBlock = classnames(
   display('flex'),
   flexDirection('flex-col', 'lg:flex-row'),
   justifyContent('justify-between'),
-  space('space-y-32')
+  space('space-y-32'),
+  margin('mb-72')
 )
 
 export default function () {
