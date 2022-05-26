@@ -13,12 +13,14 @@ import classnames, {
   position,
   scale,
   space,
+  textAlign,
   width,
+  wordBreak,
 } from 'classnames/tailwind'
 
 const wrapperBox = classnames(
   position('relative'),
-  overflow('overflow-hidden'),
+  overflow('md:overflow-visible', 'overflow-hidden'),
   width('md:w-fit', 'w-screen')
 )
 const futureBoxWrapper = classnames(
@@ -35,7 +37,9 @@ const futureBox = classnames(
 const textBlock = classnames(
   display('flex'),
   flexDirection('flex-col'),
-  alignItems('md:items-start', 'items-center')
+  alignItems('md:items-start', 'items-center'),
+  wordBreak('break-words'),
+  textAlign('text-center')
 )
 const imageStyles = classnames(
   height('sm:h-auto', 'h-max'),
