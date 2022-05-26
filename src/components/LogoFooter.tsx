@@ -9,7 +9,7 @@ import classnames, {
   space,
 } from 'classnames/tailwind'
 
-const container = classnames(
+const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
   justifyContent('justify-center'),
@@ -21,9 +21,10 @@ const linksContainer = classnames(
   flexDirection('flex-row'),
   space('space-x-8')
 )
+
 export default function () {
   return (
-    <div className={container}>
+    <div className={wrapper}>
       <Logo large />
       <Button outlined url="https://discord.gg/FW5w67yA">
         Join our Discord

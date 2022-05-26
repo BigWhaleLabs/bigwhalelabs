@@ -1,4 +1,4 @@
-import React from 'react'
+import { HTMLAttributes } from 'react'
 import classnames, {
   alignItems,
   backgroundColor,
@@ -66,14 +66,12 @@ export default function ({
   icon,
   url,
   ...rest
-}: Omit<React.HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
+}: Omit<HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
   return (
     <button
       className={button({ outlined, small, icon })}
       onClick={() => {
-        if (url) {
-          window.open(url, '_blank')
-        }
+        if (url) window.open(url, '_blank')
       }}
       {...rest}
     >

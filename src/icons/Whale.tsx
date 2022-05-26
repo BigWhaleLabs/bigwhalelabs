@@ -16,9 +16,9 @@ const svgClasses = classnames(
   dropShadow('drop-shadow-primary'),
   scale('scale-75', 'sm:scale-100')
 )
+const circleFill = fill('fill-primary')
 
 export default function ({ large }: { large?: boolean }) {
-  const circleFill = classnames(fill('fill-primary'))
   return (
     <svg
       width={large ? '158' : '62'}

@@ -64,11 +64,7 @@ export default function () {
       <div className={buttonsContainer}>
         {md && <NavbarLinks />}
 
-        <Button
-          outlined
-          small={!md}
-          onClick={() => window.open('https://discord.gg/UtFAnyATNR', '_blank')}
-        >
+        <Button outlined small={!md} url="https://discord.gg/UtFAnyATNR">
           Join our Discord
         </Button>
         {!md && (
