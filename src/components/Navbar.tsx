@@ -29,7 +29,7 @@ const navbar = (visible?: boolean) =>
     alignItems('items-center'),
     justifyContent('justify-between'),
     padding('py-2', 'px-4', 'md:py-8', 'lg:px-25'),
-    zIndex('z-50'),
+    zIndex('z-10'),
     backgroundClip('bg-clip-padding'),
     backgroundColor(visible ? 'bg-navbar' : undefined),
     backdropBlur(visible ? 'backdrop-blur-3xl' : undefined)
@@ -37,7 +37,8 @@ const navbar = (visible?: boolean) =>
 const buttonsContainer = classnames(
   display('flex'),
   alignItems('items-center'),
-  space('space-x-4', 'lg:space-x-10')
+  space('space-x-4', 'lg:space-x-10'),
+  zIndex('z-20')
 )
 
 export default function () {
