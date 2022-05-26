@@ -1,24 +1,30 @@
-import classnames, {
-  backgroundImage,
-  gradientColorStops,
-  height,
-  width,
-} from 'classnames/tailwind'
+import Color from 'models/Color'
+import classnames, { backgroundImage, height, width } from 'classnames/tailwind'
+import colorsToGradientColorStops from 'helpers/colorsToGradientColorStops'
 
-const line = (gradientDirection: 'to-left' | 'to-right') =>
+const line = (gradientDirection: 'to-left' | 'to-right', small?: boolean) =>
   classnames(
     height('h-px'),
-    width('w-36'),
+    width(small ? 'w-20' : 'w-36'),
     backgroundImage(
       gradientDirection === 'to-left' ? 'bg-gradient-to-l' : 'bg-gradient-to-r'
-    ),
-    gradientColorStops('from-primary-dark', 'to-secondary')
+    )
   )
 
 export default ({
+  color = 'secondary',
   gradientDirection,
+  fromLight,
+  small,
 }: {
+  color: Color
   gradientDirection: 'to-left' | 'to-right'
+  fromLight?: boolean
+  small?: boolean
 }) => {
-  return <div className={line(gradientDirection)} />
+  const gradient = colorsToGradientColorStops(color, fromLight)
+
+  return (
+    <div className={classnames(line(gradientDirection, small), gradient)} />
+  )
 }
