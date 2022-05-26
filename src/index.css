@@ -48,7 +48,7 @@ body {
 /* Animated footer */
 
 .grid-wrapper {
-  width: 90vw;
+  width: 100vw;
   height: 50vh;
   position: relative;
   perspective: 180px;
