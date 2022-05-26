@@ -1,16 +1,16 @@
 import Footer from 'components/Footer'
 import HiringBlock from 'components/HiringBlock'
-import InnerBody from 'components/InnerBody'
+import Root from 'components/Root'
 import StartBlock from 'components/StartBlock'
 
 const App = () => {
   return (
-    <InnerBody>
+    <Root>
       <StartBlock />
 
       <HiringBlock />
       <Footer />
-    </InnerBody>
+    </Root>
   )
 }
 
