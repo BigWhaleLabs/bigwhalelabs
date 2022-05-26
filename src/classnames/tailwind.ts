@@ -5436,6 +5436,7 @@ export type TSpace =
   | 'space-x-2.5'
   | 'space-x-3.5'
   | '-space-x-2'
+  | '-space-x-11'
   | 'space-x-reverse'
   | 'space-y-0'
   | 'space-y-1'
@@ -5473,6 +5474,7 @@ export type TSpace =
   | 'space-y-2.5'
   | 'space-y-3.5'
   | '-space-y-2'
+  | '-space-y-11'
   | 'space-y-reverse'
 
 export type TSpacing = TPadding | TMargin | TSpace
@@ -7139,6 +7141,7 @@ export type TMaxWidth =
   | 'max-w-screen-2xl'
   | 'max-w-screen-fold'
   | 'max-w-screen-tiny'
+  | 'max-w-screen-tablet'
 
 export type THeight =
   | 'h-0'
@@ -8544,6 +8547,7 @@ export type TPseudoClassVariants =
   | '2xl:'
   | 'fold:'
   | 'tiny:'
+  | 'tablet:'
 
 //////////// Utility Function generic type
 

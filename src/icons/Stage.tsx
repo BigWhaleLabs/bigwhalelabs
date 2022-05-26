@@ -1,6 +1,9 @@
-import { stroke } from 'classnames/tailwind'
+import { scale, stroke } from 'classnames/tailwind'
+import useBreakpoints from 'hooks/useBreakpoints'
 
 export default function () {
+  const { xs } = useBreakpoints()
+
   return (
     <svg
       width="258"
@@ -8,6 +11,7 @@ export default function () {
       viewBox="0 0 258 77"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={scale(xs ? 'scale-75' : 'scale-100')}
     >
       <ellipse
         cx="129"

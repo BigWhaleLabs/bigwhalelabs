@@ -12,6 +12,7 @@ import classnames, {
   margin,
   space,
 } from 'classnames/tailwind'
+import useBreakpoints from 'hooks/useBreakpoints'
 
 const wrapper = classnames(
   display('flex'),
@@ -24,21 +25,22 @@ const firstStage = classnames(display('flex'))
 const spheresBlock = classnames(
   display('flex'),
   flexDirection('flex-col'),
-  margin('mb-auto', 'mt-16'),
+  margin('mb-auto', 'mt-4', 'tablet:mt-16'),
   space('space-y-4')
 )
 const personWithStage = classnames(
   display('flex'),
   flexDirection('flex-col'),
   justifyContent('justify-center'),
-  alignItems('items-center')
+  alignItems('items-center'),
+  space('-space-y-11')
 )
 
 const nftLine = classnames(
   display('flex'),
   flexDirection('flex-row'),
   alignItems('items-center'),
-  space('space-x-4')
+  space('space-x-2', 'tablet:space-x-4')
 )
 const nftSphereIcon = classnames(
   display('flex'),
@@ -86,13 +88,15 @@ const PairOfNfts = ({ colors, left }: { colors: Color[]; left?: boolean }) => {
 }
 
 export default function () {
+  const { tablet } = useBreakpoints()
+
   return (
     <div className={wrapper}>
       <div className={firstStage}>
         <div className={personWithStage}>
           <div className={personWithSpheres}>
             <PairOfNfts left colors={['primary', 'tertiary']} />
-            <Person large />
+            <Person large={!tablet} />
             <PairOfNfts colors={['accent', 'secondary']} />
           </div>
           <Stage />

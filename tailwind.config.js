@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       space: {
         '-2': '-0.5rem',
+        '-11': '-2.75rem',
       },
       inset: {
         '-28': '-7rem',
@@ -43,6 +44,7 @@ module.exports = {
         fold: '17.5rem',
         tiny: '22.5rem',
         sm: '28.125rem',
+        tablet: '31.25rem',
         md: '37.5rem',
       },
       colors: {
