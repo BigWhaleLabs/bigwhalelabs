@@ -4401,6 +4401,7 @@ export type TDropShadow =
   | 'drop-shadow-primary'
   | 'drop-shadow-formal-accent'
   | 'drop-shadow-retro'
+  | 'drop-shadow-orb'
 
 export type TGrayscale = 'grayscale-0' | 'grayscale'
 

@@ -97,6 +97,7 @@ module.exports = {
         primary: '0rem 0rem 1.5rem #15A1FC',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
         retro: '0 0 4rem rgba(10, 132, 255, 0.7)',
+        orb: '0 0 11rem #FFFFFF',
       },
       borderRadius: {
         '4xl': '2.5rem',

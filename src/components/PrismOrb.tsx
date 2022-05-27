@@ -1,3 +1,17 @@
+import classnames, {
+  dropShadow,
+  scale,
+  stroke,
+  strokeWidth,
+} from 'classnames/tailwind'
+
+const mainStroke = classnames(stroke('stroke-primary'), strokeWidth('stroke-2'))
+
+const svgClasses = classnames(
+  dropShadow('drop-shadow-primary'),
+  scale('scale-50', 'sm:scale-75')
+)
+
 export default function () {
   return (
     <svg
@@ -5,12 +19,12 @@ export default function () {
       height="283"
       viewBox="0 0 260 283"
       fill="none"
+      className={svgClasses}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M2 223.856H130H194H258L130 175.675L2 223.856Z"
-        stroke="#15A1FC"
-        stroke-width="2"
+        className={mainStroke}
       />
       <g filter="url(#filter0_d_81_856)">
         <mask
@@ -106,8 +120,7 @@ export default function () {
       </g>
       <path
         d="M130 2L258 223.855L130 281M130 2L2 223.855L130 281M130 2V281"
-        stroke="#15A1FC"
-        stroke-width="2"
+        className={mainStroke}
       />
       <defs>
         <filter
