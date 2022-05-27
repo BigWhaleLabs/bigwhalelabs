@@ -11,9 +11,11 @@ import classnames, {
   textColor,
   transitionProperty,
   width,
+  zIndex,
 } from 'classnames/tailwind'
 import colorToBackground from 'helpers/colorToBackground'
 import colorToDropShadow from 'helpers/colorToDropShadow'
+import useScrollPercent from 'hooks/useScrollPercent'
 
 const sphereStyles = classnames(
   display('flex'),
@@ -24,7 +26,8 @@ const sphereStyles = classnames(
   display('inline-block'),
   borderRadius('rounded-full'),
   textAlign('text-center'),
-  transitionProperty('transition-all')
+  transitionProperty('transition-all'),
+  zIndex('z-10')
 )
 const sphereSize = (small?: boolean) =>
   classnames(height(small ? 'h-4' : 'h-7'), width(small ? 'w-4' : 'w-7'))
@@ -33,16 +36,30 @@ export default function ({
   color,
   small,
   text,
+  onLeft,
 }: {
   color: Color
   small?: boolean
   text?: string
+  onLeft?: boolean
 }) {
   const bgColor = colorToBackground(color)
   const shadowColor = colorToDropShadow(color)
+  const scroll = useScrollPercent()
+  const zkText = scroll > 0.4 ? 'ZK' || text : ''
 
   return (
     <div
+      style={{
+        animationName: onLeft ? 'sphereAnimationLeft' : 'sphereAnimationRight',
+        animationTimingFunction: 'ease-in-out',
+        animationDuration: '1s',
+        animationDirection: 'linear',
+        animationPlayState: 'paused',
+        animationDelay: `calc(${scroll} * -1s)`,
+        animationIterationCount: 1,
+        animationFillMode: 'both',
+      }}
       className={classnames(
         sphereSize(small),
         sphereStyles,
@@ -50,7 +67,7 @@ export default function ({
         shadowColor
       )}
     >
-      <SphereText>{text}</SphereText>
+      <SphereText>{zkText}</SphereText>
     </div>
   )
 }

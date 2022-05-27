@@ -13,6 +13,7 @@ import classnames, {
   whitespace,
   width,
 } from 'classnames/tailwind'
+import useScrollPercent from 'hooks/useScrollPercent'
 
 const wrapper = classnames(
   display('flex'),
@@ -57,6 +58,8 @@ const separator = classnames(
 )
 
 export default function () {
+  const scroll = useScrollPercent()
+
   return (
     <div className={wrapper}>
       <PlainText position="text-right">
@@ -67,13 +70,49 @@ export default function () {
       <div className={progress}>
         <div className={progressBarWrapper}>
           <div className={progressBar}>
-            <div className={bar}></div>
+            <div
+              className={bar}
+              style={{
+                animationName: 'progressAnimation',
+                animationTimingFunction: 'ease-in-out',
+                animationDuration: '1s',
+                animationDirection: 'linear',
+                animationPlayState: 'paused',
+                animationDelay: `calc(${scroll} * -1s)`,
+                animationIterationCount: 1,
+                animationFillMode: 'both',
+              }}
+            ></div>
           </div>
           <div className={progressBar}>
-            <div className={bar}></div>
+            <div
+              className={bar}
+              style={{
+                animationName: 'progressAnimation',
+                animationTimingFunction: 'ease-in-out',
+                animationDuration: '1s',
+                animationDirection: 'linear',
+                animationPlayState: 'paused',
+                animationDelay: `calc(${scroll} * -1s)`,
+                animationIterationCount: 1,
+                animationFillMode: 'both',
+              }}
+            ></div>
           </div>
         </div>
-        <div className={textBlockWrapper}>
+        <div
+          className={textBlockWrapper}
+          style={{
+            animationName: 'progressAnimationComplete',
+            animationTimingFunction: 'ease-in-out',
+            animationDuration: '1s',
+            animationDirection: 'linear',
+            animationPlayState: 'paused',
+            animationDelay: `calc(${scroll} * -1s)`,
+            animationIterationCount: 1,
+            animationFillMode: 'both',
+          }}
+        >
           <PlainText>100% you / verified</PlainText>
           <PlainText>100% anonymous</PlainText>
         </div>

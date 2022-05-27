@@ -23,8 +23,10 @@ import classnames, {
   position,
   space,
   width,
+  zIndex,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
+import useScrollPercent from 'hooks/useScrollPercent'
 
 const wrapper = classnames(
   display('flex'),
@@ -74,7 +76,8 @@ const secondStage = classnames(
 const superOrbBlock = classnames(
   width('w-20'),
   height('h-20'),
-  margin('mt-14', 'mb-44')
+  margin('mt-14', 'mb-44'),
+  zIndex('z-50')
 )
 const thirdStage = classnames(
   display('flex'),
@@ -95,6 +98,8 @@ const spheresWrapper = classnames(
   position('absolute'),
   inset('bottom-36', 'left-14'),
   flexDirection('flex-col'),
+  height('h-48'),
+  width('w-11'),
   space('space-y-3'),
   padding('p-2'),
   borderRadius('rounded-4xl'),
@@ -104,21 +109,23 @@ const spheresWrapper = classnames(
 
 const NftBlock = ({
   color,
-  postion,
+  position,
+  small,
 }: {
   color: Color
-  postion: 'left' | 'right'
+  position: 'left' | 'right'
+  small?: boolean
 }) => {
   return (
     <div className={nftSphereIcon}>
-      {postion === 'left' && (
+      {position === 'left' && (
         <div className={nftLine}>
           <PlainText>NFT</PlainText>
           <Line small fromLight gradientDirection="to-right" color={color} />
         </div>
       )}
-      <Sphere small color={color} />
-      {postion === 'right' && (
+      <Sphere small={small} color={color} onLeft={position === 'left'} />
+      {position === 'right' && (
         <div className={nftLine}>
           <Line small fromLight gradientDirection="to-left" color={color} />
           <PlainText>NFT</PlainText>
@@ -128,11 +135,19 @@ const NftBlock = ({
   )
 }
 
-const PairOfNfts = ({ colors, left }: { colors: Color[]; left?: boolean }) => {
+const PairOfNfts = ({
+  colors,
+  left,
+  small,
+}: {
+  colors: Color[]
+  left?: boolean
+  small?: boolean
+}) => {
   return (
     <div className={spheresBlock}>
       {colors.map((color) =>
-        NftBlock({ color, postion: left ? 'left' : 'right' })
+        NftBlock({ color, position: left ? 'left' : 'right', small })
       )}
     </div>
   )
@@ -140,42 +155,82 @@ const PairOfNfts = ({ colors, left }: { colors: Color[]; left?: boolean }) => {
 
 export default function () {
   const { tablet } = useBreakpoints()
+  const scroll = useScrollPercent()
+  console.log(scroll)
 
   return (
     <div className={wrapper}>
       <div className={firstStage}>
         <div className={personWithStage}>
           <div className={personWithSpheres}>
-            <PairOfNfts left colors={['primary', 'tertiary']} />
+            <PairOfNfts
+              left
+              colors={['primary', 'tertiary']}
+              small={scroll < 0.4}
+            />
             <Person large={!tablet} />
-            <PairOfNfts colors={['accent', 'secondary']} />
+            <PairOfNfts colors={['accent', 'secondary']} small={scroll < 0.4} />
           </div>
           <Stage />
         </div>
-        <PlainText>
-          Wallet NFT collection: <AccentText color="text-accent">04</AccentText>
-        </PlainText>
+        <div
+          style={{
+            animationName: 'walletAnimation',
+            animationTimingFunction: 'ease-in-out',
+            animationDuration: '1s',
+            animationDirection: 'linear',
+            animationPlayState: 'paused',
+            animationDelay: `calc(${scroll} * -1s)`,
+            animationIterationCount: 1,
+            animationFillMode: 'both',
+          }}
+        >
+          <PlainText>
+            Wallet NFT collection:{' '}
+            <AccentText color="text-accent">04</AccentText>
+          </PlainText>
+        </div>
       </div>
       <div className={secondStage}>
         <div className={superOrbBlock}>
           <SuperOrb />
         </div>
-        <PlainText>Generating zk proof...</PlainText>
+        <div
+          style={{
+            animationName: 'generatingHideAnimation',
+            animationTimingFunction: 'ease-in-out',
+            animationDuration: '1s',
+            animationDirection: 'linear',
+            animationPlayState: 'paused',
+            animationDelay: `calc(${scroll} * -1s)`,
+            animationIterationCount: 1,
+            animationFillMode: 'both',
+          }}
+        >
+          <PlainText>Generating zk proof...</PlainText>
+        </div>
       </div>
       <div className={thirdStage}>
-        <div className={happySuit}>
+        <div
+          className={happySuit}
+          style={{
+            animationName: 'suitAnimation',
+            animationTimingFunction: 'ease-in-out',
+            animationDuration: '1s',
+            animationDirection: 'linear',
+            animationPlayState: 'paused',
+            animationDelay: `calc(${scroll} * -1s)`,
+            animationIterationCount: 1,
+            animationFillMode: 'both',
+          }}
+        >
           <div className={happyFacePosition}>
             <HappyFace />
           </div>
           <Suit />
         </div>
         <SuitReady />
-        <div className={spheresWrapper}>
-          <Sphere color="accent" text="Zk" />
-          <Sphere color="primary" text="Zk" />
-          <Sphere color="secondary" text="Zk" />
-          <Sphere color="tertiary" text="Zk" />
-        </div>
+        <div className={spheresWrapper}></div>
       </div>
     </div>
   )
