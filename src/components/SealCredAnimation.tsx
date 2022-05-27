@@ -1,16 +1,28 @@
 import { AccentText, PlainText } from 'components/Text'
 import Color from 'models/Color'
+import HappyFace from 'icons/HappyFace'
 import Line from 'components/Line'
 import Person from 'icons/Person'
 import Sphere from 'icons/Sphere'
 import Stage from 'icons/Stage'
+import Suit from 'icons/Suit'
+import SuitReady from 'components/SuitReady'
+import SuperOrb from 'icons/SuperOrb'
 import classnames, {
   alignItems,
+  borderColor,
+  borderRadius,
+  borderWidth,
   display,
   flexDirection,
+  height,
+  inset,
   justifyContent,
   margin,
+  padding,
+  position,
   space,
+  width,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 
@@ -18,9 +30,14 @@ const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
   alignItems('items-center'),
+  space('space-y-44')
+)
+const firstStage = classnames(
+  display('flex'),
+  flexDirection('flex-col'),
+  alignItems('items-center'),
   space('space-y-7')
 )
-const firstStage = classnames(display('flex'))
 
 const spheresBlock = classnames(
   display('flex'),
@@ -48,8 +65,42 @@ const nftSphereIcon = classnames(
   alignItems('items-center'),
   space('space-x-2')
 )
-
+const secondStage = classnames(
+  display('flex'),
+  flexDirection('flex-col'),
+  alignItems('items-center'),
+  space('space-y-7')
+)
+const superOrbBlock = classnames(
+  width('w-20'),
+  height('h-20'),
+  margin('mt-14', 'mb-44')
+)
+const thirdStage = classnames(
+  display('flex'),
+  position('relative'),
+  flexDirection('flex-col'),
+  alignItems('items-center'),
+  space('space-y-6')
+)
+const happyFacePosition = classnames(position('absolute'), inset('-top-3'))
+const happySuit = classnames(
+  display('flex'),
+  position('relative'),
+  justifyContent('justify-center')
+)
 const personWithSpheres = classnames(display('flex'))
+const spheresWrapper = classnames(
+  display('flex'),
+  position('absolute'),
+  inset('bottom-36', 'left-14'),
+  flexDirection('flex-col'),
+  space('space-y-3'),
+  padding('p-2'),
+  borderRadius('rounded-4xl'),
+  borderColor('border-primary-semi-dimmed'),
+  borderWidth('border')
+)
 
 const NftBlock = ({
   color,
@@ -66,7 +117,7 @@ const NftBlock = ({
           <Line small fromLight gradientDirection="to-right" color={color} />
         </div>
       )}
-      <Sphere color={color} />
+      <Sphere small color={color} />
       {postion === 'right' && (
         <div className={nftLine}>
           <Line small fromLight gradientDirection="to-left" color={color} />
@@ -101,10 +152,31 @@ export default function () {
           </div>
           <Stage />
         </div>
+        <PlainText>
+          Wallet NFT collection: <AccentText color="text-accent">04</AccentText>
+        </PlainText>
       </div>
-      <PlainText>
-        Wallet NFT collection: <AccentText color="text-accent">04</AccentText>
-      </PlainText>
+      <div className={secondStage}>
+        <div className={superOrbBlock}>
+          <SuperOrb />
+        </div>
+        <PlainText>Generating zk proof...</PlainText>
+      </div>
+      <div className={thirdStage}>
+        <div className={happySuit}>
+          <div className={happyFacePosition}>
+            <HappyFace />
+          </div>
+          <Suit />
+        </div>
+        <SuitReady />
+        <div className={spheresWrapper}>
+          <Sphere color="accent" text="Zk" />
+          <Sphere color="primary" text="Zk" />
+          <Sphere color="secondary" text="Zk" />
+          <Sphere color="tertiary" text="Zk" />
+        </div>
+      </div>
     </div>
   )
 }

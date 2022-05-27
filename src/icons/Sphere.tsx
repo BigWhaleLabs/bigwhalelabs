@@ -1,22 +1,56 @@
+import { SphereText } from 'components/Text'
 import Color from 'models/Color'
-import classnames from 'classnames/tailwind'
+import classnames, {
+  alignItems,
+  borderRadius,
+  display,
+  fontWeight,
+  height,
+  justifyContent,
+  textAlign,
+  textColor,
+  transitionProperty,
+  width,
+} from 'classnames/tailwind'
+import colorToBackground from 'helpers/colorToBackground'
 import colorToDropShadow from 'helpers/colorToDropShadow'
-import colorToFillColor from 'helpers/colorToFillColor'
 
-export default function ({ color }: { color: Color }) {
-  const fillColor = colorToFillColor(color)
-  const dropShadow = colorToDropShadow(color)
+const sphereStyles = classnames(
+  display('flex'),
+  alignItems('items-center'),
+  justifyContent('justify-center'),
+  fontWeight('font-bold'),
+  textColor('text-primary-dark'),
+  display('inline-block'),
+  borderRadius('rounded-full'),
+  textAlign('text-center'),
+  transitionProperty('transition-all')
+)
+const sphereSize = (small?: boolean) =>
+  classnames(height(small ? 'h-4' : 'h-7'), width(small ? 'w-4' : 'w-7'))
+
+export default function ({
+  color,
+  small,
+  text,
+}: {
+  color: Color
+  small?: boolean
+  text?: string
+}) {
+  const bgColor = colorToBackground(color)
+  const shadowColor = colorToDropShadow(color)
 
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
-      fill="none"
-      className={dropShadow}
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      className={classnames(
+        sphereSize(small),
+        sphereStyles,
+        bgColor,
+        shadowColor
+      )}
     >
-      <circle cx="9" cy="9" r="9" className={classnames(fillColor)} />
-    </svg>
+      <SphereText>{text}</SphereText>
+    </div>
   )
 }
