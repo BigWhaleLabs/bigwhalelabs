@@ -8,7 +8,6 @@ import Button from 'components/Button'
 import Line from 'components/Line'
 import classnames, {
   alignItems,
-  container,
   display,
   flexDirection,
   justifyContent,
@@ -22,7 +21,6 @@ import classnames, {
 const hiringWrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
-  container('container'),
   width('w-full'),
   margin('mx-auto')
 )

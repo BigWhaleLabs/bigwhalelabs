@@ -3,6 +3,7 @@ import {
   backgroundClip,
   backgroundImage,
   classnames,
+  display,
   dropShadow,
   fontFamily,
   fontSize,
@@ -12,11 +13,36 @@ import {
   lineHeight,
   textAlign,
   textColor,
+  textDecoration,
   textOverflow,
   textTransform,
 } from 'classnames/tailwind'
 import ChildrenProp from 'models/ChildrenProp'
 import classNamesToString from 'helpers/classNamesToString'
+import useBreakpoints from 'hooks/useBreakpoints'
+
+const logoText = (large?: boolean) =>
+  classnames(
+    textColor('text-primary'),
+    fontWeight('font-bold'),
+    fontSize(
+      large ? 'text-5xl' : 'text-xl',
+      large ? 'sm:text-6xl' : 'sm:text-xl'
+    ),
+    display('flex'),
+    textAlign('text-right'),
+    lineHeight(
+      large ? 'leading-10' : 'leading-5',
+      large ? 'sm:leading-11' : 'sm:leading-5'
+    ),
+    dropShadow('drop-shadow-primary')
+  )
+export default function LogoText({
+  children,
+  large,
+}: ChildrenProp & { large?: boolean }) {
+  return <span className={logoText(large)}>{children}</span>
+}
 
 const foldText = classnames(
   fontFamily('font-primary'),
@@ -148,18 +174,42 @@ export function ExtraBoldText({
   return <span className={extraBoldText(extraLeading)}>{children}</span>
 }
 
-const retroText = classnames(
-  fontFamily('font-primary'),
-  fontWeight('font-bold'),
-  fontSize('text-7xl', 'md:text-10xl'),
-  lineHeight('leading-11.5', 'md:leading-15'),
-  textAlign('text-center'),
-  textColor('text-transparent'),
-  backgroundClip('bg-clip-text'),
-  backgroundImage('bg-retro'),
-  textTransform('uppercase'),
-  dropShadow('drop-shadow-retro')
-)
+const retroText = (extraSmall?: boolean) =>
+  classnames(
+    fontFamily('font-primary'),
+    fontWeight('font-bold'),
+    fontSize(extraSmall ? 'text-6xl' : 'text-7xl', 'md:text-9xl'),
+    lineHeight('leading-11.5', 'md:leading-15'),
+    textAlign('text-center'),
+    textColor('text-transparent'),
+    backgroundClip('bg-clip-text'),
+    backgroundImage('bg-retro'),
+    textTransform('uppercase'),
+    dropShadow('drop-shadow-retro')
+  )
 export function RetroText({ children }: ChildrenProp) {
-  return <h1 className={retroText}>{children}</h1>
+  const { xs } = useBreakpoints()
+  return <h1 className={retroText(xs)}>{children}</h1>
+}
+
+const linkText = (tertiary?: boolean) =>
+  classnames(
+    lineHeight('leading-6'),
+    fontSize('text-base'),
+    textDecoration('no-underline', 'hover:underline'),
+    textColor(
+      tertiary ? 'hover:text-tertiary' : 'text-formal-accent',
+      tertiary ? 'focus:text-tertiary-dark' : 'focus:text-primary'
+    )
+  )
+export function LinkText({
+  url,
+  tertiary,
+  children,
+}: ChildrenProp & { url: string; tertiary?: boolean }) {
+  return (
+    <a className={linkText(tertiary)} href={url} target="_blank">
+      {children}
+    </a>
+  )
 }
