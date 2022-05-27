@@ -5467,6 +5467,7 @@ export type TSpace =
   | 'space-x-1.5'
   | 'space-x-2.5'
   | 'space-x-3.5'
+  | '-space-x-2'
   | 'space-x-reverse'
   | 'space-y-0'
   | 'space-y-1'
@@ -5504,6 +5505,7 @@ export type TSpace =
   | 'space-y-1.5'
   | 'space-y-2.5'
   | 'space-y-3.5'
+  | '-space-y-2'
   | 'space-y-reverse'
 
 export type TSpacing = TPadding | TMargin | TSpace

@@ -10,6 +10,12 @@ module.exports = {
         fold: '20rem',
         md: '37.5rem',
       },
+      space: {
+        '-2': '-0.5rem',
+      },
+      inset: {
+        '-28': '-7rem',
+      },
       maxWidth: {
         400: '25rem',
       },
