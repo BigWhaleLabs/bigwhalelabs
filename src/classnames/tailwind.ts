@@ -7486,7 +7486,12 @@ export type TStroke =
   | 'stroke-formal-accent-semi-transparent'
   | 'stroke-navbar'
 
-export type TStrokeWidth = 'stroke-0' | 'stroke-1' | 'stroke-2' | 'stroke-5/2'
+export type TStrokeWidth =
+  | 'stroke-0'
+  | 'stroke-1'
+  | 'stroke-2'
+  | 'stroke-4'
+  | 'stroke-5/2'
 
 export type TSVG = TFill | TStroke | TStrokeWidth
 
