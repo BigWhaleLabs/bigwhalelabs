@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "vite",
+    "start": "yarn generate-css-types && vite",
     "build": "cross-env NODE_ENV=production tsc && vite build",
     "pretty": "prettier --check src",
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
@@ -31,7 +31,6 @@
   "devDependencies": {
     "@preact/preset-vite": "^2.2.0",
     "@types/node": "^17.0.31",
-    "@types/react": "^17.0.43",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "autoprefixer": "^10.4.7",
