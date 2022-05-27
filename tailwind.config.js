@@ -12,6 +12,13 @@ module.exports = {
       },
       space: {
         '-2': '-0.5rem',
+        '-44': '-11rem',
+      },
+      width: {
+        500: '31.25rem',
+      },
+      height: {
+        500: '31.25rem',
       },
       maxWidth: {
         400: '25rem',
@@ -65,6 +72,7 @@ module.exports = {
         'primary-semi-dimmed': '#4b61d5',
         'primary-background': '#1a0259',
         'tertiary-dark': '#00cb91',
+        'tertiary-light': '#01F5FF',
 
         'accent-semi-transparent': 'rgba(254, 216, 35, 0.4)',
         'primary-semi-transparent': 'rgba(21, 161, 252, 0.5)',
@@ -100,16 +108,28 @@ module.exports = {
       padding: {
         25: '6.125rem',
       },
+      margin: {
+        22.5: '5.625rem',
+      },
       borderRadius: {
         '4xl': '2.5rem',
       },
       strokeWidth: {
         '5/2': '0.15rem',
+        4: '0.25rem',
       },
       inset: {
         '-6': '-1.5rem',
+        '-9': '-2.25rem',
+        '-11': '-2.75rem',
         '-28': '-7rem',
+        '-44': '-11rem',
         '-60': '-15rem',
+        '-96': '-24rem',
+        '-1/4': '-25%',
+      },
+      scale: {
+        300: '3.0',
       },
     },
   },

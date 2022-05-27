@@ -3998,7 +3998,7 @@ __metadata:
     eslint-plugin-sort-imports-es6-autofix: ^0.6.0
     eslint-plugin-valtio: ^0.4.4
     postcss: ^8.4.13
-    preact: ^10.7.2
+    preact: "https://github.com/preactjs/preact#43d79c0e8f727e9ac745a50c3a61868adb2dcfe7"
     prettier: ^2.6.2
     react-scripts: ^5.0.1
     rollup-plugin-visualizer: ^5.6.0
@@ -10756,10 +10756,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:^10.7.2":
+"preact@https://github.com/preactjs/preact#43d79c0e8f727e9ac745a50c3a61868adb2dcfe7":
   version: 10.7.2
-  resolution: "preact@npm:10.7.2"
-  checksum: 2f0655e0430f1c6927b40cb4abffb2c0ee4fe63e3201d44e37d0992c0ab534346f206cf23c0405572b70908e3eba2f7f60ab8e4531f409ebcbc35af06920cd60
+  resolution: "preact@https://github.com/preactjs/preact.git#commit=43d79c0e8f727e9ac745a50c3a61868adb2dcfe7"
+  checksum: 208e285b602e685e26b5c4b6939bf631eedc82b53184eccd5ed3736fa57986afbc7b1897729cd3a0aff13dbc463cbc3c29fccf483b527524add2b64cf66fa4f8
   languageName: node
   linkType: hard
 

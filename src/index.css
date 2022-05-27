@@ -12,6 +12,7 @@ html {
       #1a0259 0
     )
     0 0/3rem 3rem;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -19,9 +20,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'JetBrains Mono', monospace;
   color: #efecd6;
-  scroll-behavior: smooth;
   min-height: 100vh;
   width: 100vw;
+  background-image: url('/img/blurry-shadows-lg.webp');
+  background-size: cover;
 }
 /* Grid for mobiles */
 @media screen and (max-width: 600px) {
@@ -32,6 +34,9 @@ body {
         #1a0259 0
       )
       0 0/2rem 2rem;
+  }
+  body {
+    background-image: url('/img/blurry-shadows-sm.webp');
   }
 }
 
