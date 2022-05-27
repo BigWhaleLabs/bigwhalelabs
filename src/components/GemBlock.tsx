@@ -36,8 +36,8 @@ const wrapperBoldText = classnames(
 )
 const boldTextWrapper = classnames(
   alignItems('items-center'),
-  padding('px-1', 'py-0', 'md:px-2', 'md:py-2'),
-  margin('ml-22.5', 'mt-auto', 'md:mx-auto', 'md:my-auto'),
+  padding('px-1', 'py-0', 'md:p-2'),
+  margin('ml-22.5', 'mt-auto', 'md:m-auto'),
   borderRadius('rounded-md'),
   width('w-fit'),
   backgroundImage('bg-gradient-to-r'),
