@@ -1,7 +1,9 @@
 import { FoldText } from 'components/Text'
 import DownArrows from 'components/DownArrows'
+import IronSphere from 'icons/IronSphere'
 import classnames, {
   alignItems,
+  blur,
   display,
   flexDirection,
   height,
@@ -10,6 +12,7 @@ import classnames, {
   margin,
   maxWidth,
   overflow,
+  padding,
   position,
   scale,
   space,
@@ -21,7 +24,8 @@ import classnames, {
 const wrapper = classnames(
   position('relative'),
   overflow('md:overflow-visible', 'overflow-hidden'),
-  width('md:w-fit', 'w-screen')
+  width('md:w-fit', 'w-screen'),
+  margin('mx-auto')
 )
 const futureBoxWrapper = classnames(
   position('md:absolute'),
@@ -50,12 +54,34 @@ const imageStyles = classnames(
   scale('md:scale-100', 'scale-125')
 )
 
+const parallaxLayer = classnames(
+  position('absolute'),
+  blur('blur-sm'),
+  width('w-fit'),
+  height('h-fit')
+)
+const leftGem = classnames(parallaxLayer, inset('top-1/3'))
+const leftGemZAxis = { transform: 'translateZ(200px)' }
+const rightGem = classnames(parallaxLayer, inset('top-12'))
+const rightGemZAxis = { transform: 'translateZ(100px) scale(0.5)' }
+const sphereStyles = classnames(
+  parallaxLayer,
+  inset('right-1/2', 'left-1/2', 'bottom-3/4')
+)
+const sphereZAxis = { transform: 'translateZ(50px) scale(0.75)' }
+
 export default function () {
   return (
     <div className={wrapper}>
+      <img src="/img/gem.webp" className={leftGem} style={leftGemZAxis} />
+      <img src="/img/gem.webp" className={rightGem} style={rightGemZAxis} />
+      <div className={sphereStyles} style={sphereZAxis}>
+        <IronSphere />
+      </div>
       <img src="/img/colorful-whale.webp" className={imageStyles} />
+
       <div className={futureBoxWrapper}>
-        <div className={futureBox}>
+        <div className={futureBox} style={rightGemZAxis}>
           <DownArrows />
           <div className={textBlock}>
             <FoldText>We’re building the future</FoldText>
