@@ -15,6 +15,10 @@ module.exports = {
       },
       maxWidth: {
         400: '25rem',
+        535: '33.5rem',
+      },
+      maxHeight: {
+        636: '39.75rem',
       },
       fontSize: {
         '2.5xl': '1.625rem',
@@ -68,12 +72,14 @@ module.exports = {
         'tertiary-semi-transparent': 'rgba(1, 254, 182, 0.4)',
         'formal-accent-semi-transparent': 'rgba(239, 236, 214, 0.4)',
         navbar: 'rgba(13, 0, 48, 0.3)',
+        card: 'rgba(13, 0, 48, 0.8)',
       },
       boxShadow: {
         '2xl': '0rem 0.25rem 2.75rem 0rem rgb(0 0 0 / 0.25)',
         lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
         md: '0rem 0rem 0.375rem 0rem rgb(0 0 0 / 0.25)',
         button: '0rem 0rem 1.625rem rgba(1, 254, 182, 1)',
+        card: '0rem 1rem 11rem rgba(21, 161, 252, 0.15)',
       },
       dropShadow: {
         'text-fill-primary': '0rem -1rem 0rem #15A1FC',

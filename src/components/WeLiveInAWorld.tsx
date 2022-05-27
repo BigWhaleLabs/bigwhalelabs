@@ -1,21 +1,23 @@
 import { AccentText, BodyText, HeaderText } from 'components/Text'
-import PyramidSphere from 'components/PyramidSphere'
-import classnames, { maxWidth, space } from 'classnames/tailwind'
+import { space } from 'classnames/tailwind'
+import Card from 'components/Card'
+import PrismOrb from 'components/PrismOrb'
 
-const card = classnames(space('space-y-2'), maxWidth('max-w-400'))
 const cardBody = space('space-y-6')
 
 export default function () {
   return (
-    <div className={card}>
+    <Card tall nospace>
       <div className={cardBody}>
         <HeaderText>
           We live in a world where privacy is limited and our digital footprints
           are not ours to control.
         </HeaderText>
-        <AccentText color="text-accent">We're changing that.</AccentText>
+        <BodyText bold large>
+          <AccentText color="text-primary">We're changing that.</AccentText>
+        </BodyText>
       </div>
-      <PyramidSphere />
-    </div>
+      <PrismOrb />
+    </Card>
   )
 }

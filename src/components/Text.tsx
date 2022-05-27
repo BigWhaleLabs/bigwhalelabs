@@ -84,21 +84,32 @@ export function LargeStrokeText({
   )
 }
 
-const bodyText = (small?: boolean, bold?: boolean, center?: boolean) =>
+const bodyText = (
+  small?: boolean,
+  large?: boolean,
+  bold?: boolean,
+  center?: boolean
+) =>
   classnames(
     textColor('text-formal-accent'),
     lineHeight(small ? 'leading-5' : 'leading-6'),
-    fontSize(small ? 'text-sm' : 'text-base'),
+    fontSize(small ? 'text-sm' : large ? 'text-lg' : 'text-base'),
     fontWeight(bold ? 'font-bold' : 'font-normal'),
     textAlign(center ? 'text-center' : 'text-left')
   )
 export function BodyText({
-  bold,
   small,
+  large,
+  bold,
   center,
   children,
-}: ChildrenProp & { bold?: boolean; small?: boolean; center?: boolean }) {
-  return <p className={bodyText(small, bold, center)}>{children}</p>
+}: ChildrenProp & {
+  bold?: boolean
+  small?: boolean
+  large?: boolean
+  center?: boolean
+}) {
+  return <p className={bodyText(small, large, bold, center)}>{children}</p>
 }
 
 const primaryAccentText = (color: TTextColor) =>

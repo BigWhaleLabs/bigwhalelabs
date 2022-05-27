@@ -294,6 +294,7 @@ export type TBackgroundColor =
   | 'bg-tertiary-semi-transparent'
   | 'bg-formal-accent-semi-transparent'
   | 'bg-navbar'
+  | 'bg-card'
 
 export type TBackgroundPosition =
   | 'bg-bottom'
@@ -1050,6 +1051,9 @@ export type TGradientColorStops =
   | 'from-navbar'
   | 'via-navbar'
   | 'to-navbar'
+  | 'from-card'
+  | 'via-card'
+  | 'to-card'
 
 export type TBackgrounds =
   | TBackgroundAttachment
@@ -2742,6 +2746,11 @@ export type TBorderColor =
   | 'border-r-navbar'
   | 'border-b-navbar'
   | 'border-l-navbar'
+  | 'border-card'
+  | 'border-t-card'
+  | 'border-r-card'
+  | 'border-b-card'
+  | 'border-l-card'
 
 export type TBorderOpacity =
   | 'border-opacity-0'
@@ -3391,6 +3400,7 @@ export type TRingColor =
   | 'ring-tertiary-semi-transparent'
   | 'ring-formal-accent-semi-transparent'
   | 'ring-navbar'
+  | 'ring-card'
 
 export type TRingWidth =
   | 'ring-0'
@@ -3663,6 +3673,7 @@ export type TRingOffsetColor =
   | 'ring-offset-tertiary-semi-transparent'
   | 'ring-offset-formal-accent-semi-transparent'
   | 'ring-offset-navbar'
+  | 'ring-offset-card'
 
 export type TRingOffsetWidth =
   | 'ring-offset-0'
@@ -3929,6 +3940,7 @@ export type TOutlineColor =
   | 'outline-tertiary-semi-transparent'
   | 'outline-formal-accent-semi-transparent'
   | 'outline-navbar'
+  | 'outline-card'
 
 export type TBorders =
   | TBorderStyle
@@ -4002,6 +4014,7 @@ export type TBoxShadow =
   | 'shadow-inner'
   | 'shadow-none'
   | 'shadow-button'
+  | 'shadow-card'
 
 export type TBoxShadowColor =
   | 'shadow-inherit'
@@ -4247,6 +4260,7 @@ export type TBoxShadowColor =
   | 'shadow-tertiary-semi-transparent'
   | 'shadow-formal-accent-semi-transparent'
   | 'shadow-navbar'
+  | 'shadow-card'
 
 export type TOpacity =
   | 'opacity-0'
@@ -5832,6 +5846,7 @@ export type TCaretColor =
   | 'caret-tertiary-semi-transparent'
   | 'caret-formal-accent-semi-transparent'
   | 'caret-navbar'
+  | 'caret-card'
 
 export type TWillChange =
   | 'will-change-auto'
@@ -6084,6 +6099,7 @@ export type TAccentColor =
   | 'accent-tertiary-semi-transparent'
   | 'accent-formal-accent-semi-transparent'
   | 'accent-navbar'
+  | 'accent-card'
 
 export type TScrollPadding =
   | 'scroll-p-0'
@@ -7186,6 +7202,7 @@ export type TMinWidth =
 export type TMaxWidth =
   | 'max-w-0'
   | 'max-w-400'
+  | 'max-w-535'
   | 'max-w-none'
   | 'max-w-xs'
   | 'max-w-sm'
@@ -7310,6 +7327,7 @@ export type TMaxHeight =
   | 'max-h-72'
   | 'max-h-80'
   | 'max-h-96'
+  | 'max-h-636'
   | 'max-h-px'
   | 'max-h-0.5'
   | 'max-h-1.5'
@@ -7375,6 +7393,7 @@ export type TFill =
   | 'fill-tertiary-semi-transparent'
   | 'fill-formal-accent-semi-transparent'
   | 'fill-navbar'
+  | 'fill-card'
 
 export type TStroke =
   | 'stroke-inherit'
@@ -7422,6 +7441,7 @@ export type TStroke =
   | 'stroke-tertiary-semi-transparent'
   | 'stroke-formal-accent-semi-transparent'
   | 'stroke-navbar'
+  | 'stroke-card'
 
 export type TStrokeWidth = 'stroke-0' | 'stroke-1' | 'stroke-2' | 'stroke-5/2'
 
@@ -7959,6 +7979,7 @@ export type TPlaceholderColor =
   | 'placeholder-tertiary-semi-transparent'
   | 'placeholder-formal-accent-semi-transparent'
   | 'placeholder-navbar'
+  | 'placeholder-card'
 
 export type TPlaceholderOpacity =
   | 'placeholder-opacity-0'
@@ -8221,6 +8242,7 @@ export type TTextColor =
   | 'text-tertiary-semi-transparent'
   | 'text-formal-accent-semi-transparent'
   | 'text-navbar'
+  | 'text-card'
 
 export type TTextOpacity =
   | 'text-opacity-0'
@@ -8523,6 +8545,7 @@ export type TTextDecorationColor =
   | 'decoration-tertiary-semi-transparent'
   | 'decoration-formal-accent-semi-transparent'
   | 'decoration-navbar'
+  | 'decoration-card'
 
 export type TTextDecorationThickness =
   | 'decoration-0'
