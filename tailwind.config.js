@@ -110,6 +110,7 @@ module.exports = {
       },
       strokeWidth: {
         '5/2': '0.15rem',
+        4: '0.25rem',
       },
       inset: {
         '-6': '-1.5rem',
