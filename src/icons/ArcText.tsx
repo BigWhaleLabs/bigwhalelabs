@@ -4,10 +4,8 @@ import classnames, {
   fontWeight,
   height,
   margin,
-  padding,
   scale,
   textTransform,
-  width,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 
@@ -17,31 +15,26 @@ const textStyle = classnames(
   fontWeight('font-semibold'),
   fontSize('text-xl')
 )
-const svgBox = (mobile?: boolean) =>
-  classnames(
-    height('md:h-64', 'h-44'),
-    margin('mx-auto'),
-    scale('scale-150', 'md:scale-300'),
-    mobile ? padding('pr-2.5', 'md:pr-0') : undefined
-  )
+const svgBox = classnames(
+  height('md:h-64', 'h-44'),
+  margin('mx-auto'),
+  scale('scale-150', 'md:scale-300')
+)
 
 interface ArcTextProps {
   text: string
 }
 
 export default function ({ text }: ArcTextProps) {
-  const { xxs, sm, md } = useBreakpoints()
-  const mobile = (xxs || sm) && !md
-  const radius = mobile ? 85 : 110
+  const { tablet } = useBreakpoints()
+  const radius = tablet ? 85 : 110
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      viewBox={
-        mobile ? '0 0 475 475' : xxs && !md ? '0 0 450 450' : '0 0 500 500'
-      }
-      className={svgBox(mobile)}
+      viewBox={tablet ? '0 0 475 475' : '0 0 500 500'}
+      className={svgBox}
     >
       <title>{text}</title>
       <defs>
