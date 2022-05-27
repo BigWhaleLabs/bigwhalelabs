@@ -65,7 +65,11 @@ export default function () {
       <div className={buttonsContainer}>
         {md && <NavbarLinks />}
 
-        <Button outlined small={!md} url="https://discord.gg/UtFAnyATNR">
+        <Button
+          outlined
+          small={!md}
+          url="https://discordapp.com/channels/885322567693512754/955852267557367819/974663929294913576"
+        >
           Join our Discord
         </Button>
         {!md && (
