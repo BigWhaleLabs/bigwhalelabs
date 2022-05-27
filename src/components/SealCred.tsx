@@ -5,6 +5,7 @@ import {
   PrimaryAccentText,
 } from 'components/Text'
 import Button from 'components/Button'
+import SealCredAnimation from 'components/SealCredAnimation'
 import SealCredLogo from 'icons/SealCredLogo'
 import classnames, {
   display,
@@ -14,7 +15,6 @@ import classnames, {
   maxWidth,
   space,
 } from 'classnames/tailwind'
-import SealCredAnimation from 'components/SealCredAnimation'
 
 const card = classnames(space('space-y-2'), maxWidth('max-w-400'))
 const sealCredBlock = classnames(

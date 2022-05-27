@@ -47,11 +47,11 @@ export default function () {
       <RetroText>WE’RE</RetroText>
       <RetroText>BUILDING</RetroText>
       <div className={lineBlockWrapper}>
-        <Line gradientDirection="to-right" />
+        <Line color="secondary" gradientDirection="to-right" />
         <ExtraBoldText extraLeading>
           <AccentText color="text-secondary">THE</AccentText>
         </ExtraBoldText>
-        <Line gradientDirection="to-left" />
+        <Line color="secondary" gradientDirection="to-left" />
       </div>
       <RetroText>FUTURE</RetroText>
       <div className={bottomWrapper}>
