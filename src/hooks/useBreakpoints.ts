@@ -24,6 +24,7 @@ export default function () {
     xxs: width > xsSize,
     xs: width > xsSize && width < smSize,
     sm: width > smSize,
+    tablet: width > xsSize && width < mdSize,
     md: width > mdSize,
     lg: width > lgSize,
   }

@@ -155,12 +155,15 @@ export function PlainText({ children }: ChildrenProp) {
   return <span className={plainText}>{children}</span>
 }
 
-const extraBoldText = (extraLeading?: boolean) =>
+const extraBoldText = (small?: boolean, extraLeading?: boolean) =>
   classnames(
     fontWeight('font-bold', 'md:font-extrabold'),
-    fontSize(extraLeading ? 'text-2.5xl' : 'text-xl', 'md:text-2.5xl'),
+    fontSize(
+      extraLeading ? 'text-2.5xl' : small ? 'text-xs' : 'text-xl',
+      'md:text-2.5xl'
+    ),
     lineHeight(
-      extraLeading ? 'leading-8' : 'leading-7',
+      extraLeading ? 'leading-8' : small ? 'leading-3' : 'leading-7',
       extraLeading ? 'md:leading-10' : 'md:leading-8'
     ),
     textColor('text-primary-dark'),
@@ -168,10 +171,11 @@ const extraBoldText = (extraLeading?: boolean) =>
     letterSpacing('tracking-extra')
   )
 export function ExtraBoldText({
+  small,
   extraLeading,
   children,
-}: ChildrenProp & { extraLeading?: boolean }) {
-  return <span className={extraBoldText(extraLeading)}>{children}</span>
+}: ChildrenProp & { small?: boolean; extraLeading?: boolean }) {
+  return <span className={extraBoldText(small, extraLeading)}>{children}</span>
 }
 
 const retroText = (extraSmall?: boolean) =>
