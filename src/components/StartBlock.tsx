@@ -25,8 +25,7 @@ import classnames, {
 const wrapper = classnames(
   position('relative'),
   overflow('md:overflow-visible', 'overflow-hidden'),
-  width('md:w-fit', 'w-screen'),
-  margin('mx-auto')
+  width('md:w-fit', 'w-screen')
 )
 const futureBoxWrapper = classnames(
   position('md:absolute'),
@@ -64,7 +63,7 @@ const leftGem = classnames(
 )
 const rightGem = classnames(
   bgImage,
-  inset('md:top-12', 'md:-right-1/4', '-bottom-11', 'left-64'),
+  inset('md:top-12', 'md:-right-1/4', '-bottom-11', '-right-44'),
   scale('scale-50'),
   brightness('brightness-75')
 )
