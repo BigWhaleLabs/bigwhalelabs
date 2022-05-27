@@ -1,4 +1,4 @@
-import React from 'react'
+import { HTMLAttributes } from 'react'
 import classnames, {
   alignItems,
   backgroundColor,
@@ -56,6 +56,7 @@ interface ButtonProps {
   outlined?: boolean
   small?: boolean
   icon?: boolean
+  url?: string
 }
 
 export default function ({
@@ -63,10 +64,17 @@ export default function ({
   children,
   small,
   icon,
+  url,
   ...rest
-}: React.HTMLAttributes<HTMLButtonElement> & ButtonProps) {
+}: Omit<HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
   return (
-    <button className={button({ outlined, small, icon })} {...rest}>
+    <button
+      className={button({ outlined, small, icon })}
+      onClick={() => {
+        if (url) window.open(url, '_blank')
+      }}
+      {...rest}
+    >
       {typeof children === 'string' ? <span>{children}</span> : children}
     </button>
   )

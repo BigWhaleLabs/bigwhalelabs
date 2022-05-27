@@ -6,11 +6,12 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
+      screens: {
+        fold: '20rem',
+        md: '37.5rem',
+      },
       space: {
         '-2': '-0.5rem',
-      },
-      inset: {
-        '-28': '-7rem',
       },
       maxWidth: {
         400: '25rem',
@@ -66,19 +67,20 @@ module.exports = {
         'secondary-semi-transparent': 'rgba(255, 123, 237, 0.5)',
         'tertiary-semi-transparent': 'rgba(1, 254, 182, 0.4)',
         'formal-accent-semi-transparent': 'rgba(239, 236, 214, 0.4)',
+        navbar: 'rgba(13, 0, 48, 0.3)',
       },
       boxShadow: {
         '2xl': '0rem 0.25rem 2.75rem 0rem rgb(0 0 0 / 0.25)',
         lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
         md: '0rem 0rem 0.375rem 0rem rgb(0 0 0 / 0.25)',
-        button: '0rem 0rem 1.625rem 0rem rgba(1, 254, 182, 1)',
+        button: '0rem 0rem 1.625rem rgba(1, 254, 182, 1)',
       },
       dropShadow: {
         'text-fill-primary': '0rem -1rem 0rem #15A1FC',
         accent: '0rem 0rem 0.625rem #fed823',
         secondary: '0rem 0rem 0.625rem #ff7bed',
         tertiary: '0rem 0rem 0.625rem #01fed6',
-        primary: '0rem 0rem 1.313rem #0A84FF',
+        primary: '0rem 0rem 1.5rem #15A1FC',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
         retro: '0 0 4rem rgba(10, 132, 255, 0.7)',
       },
@@ -89,8 +91,19 @@ module.exports = {
         retro:
           'linear-gradient(180deg, #FF7BED 20.43%, #E0E5CE 25.48%, #E0E5CE 41.4%, #4300F5 46.3%, #263DB4 61.69%, #15A1FC 77.42%)',
       },
+      padding: {
+        25: '6.125rem',
+      },
       borderRadius: {
         '4xl': '2.5rem',
+      },
+      strokeWidth: {
+        '5/2': '0.15rem',
+      },
+      inset: {
+        '-6': '-1.5rem',
+        '-28': '-7rem',
+        '-60': '-15rem',
       },
     },
   },
