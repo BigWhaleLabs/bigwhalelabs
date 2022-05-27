@@ -1,3 +1,4 @@
+import Dosu from 'components/Dosu'
 import Footer from 'components/Footer'
 import HiringBlock from 'components/HiringBlock'
 import LogoFooter from 'components/LogoFooter'
@@ -15,6 +16,8 @@ const App = () => {
       <PrivacyWorld />
 
       <SealCred />
+
+      <Dosu />
 
       <HiringBlock />
       <LogoFooter />
