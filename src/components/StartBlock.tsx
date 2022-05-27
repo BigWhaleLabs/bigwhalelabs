@@ -17,8 +17,10 @@ import classnames, {
   scale,
   space,
   textAlign,
+  visibility,
   width,
   wordBreak,
+  zIndex,
 } from 'classnames/tailwind'
 
 const wrapper = classnames(
@@ -46,7 +48,7 @@ const textBlock = classnames(
   textAlign('md:text-left', 'text-center'),
   width('lg:w-max', 'w-80')
 )
-const imageStyles = classnames(
+const bigWhaleStyles = classnames(
   height('sm:h-auto', 'h-max'),
   maxWidth('md:max-w-full', 'max-w-2xl'),
   overflow('overflow-clip'),
@@ -55,16 +57,27 @@ const imageStyles = classnames(
 )
 
 const bgImage = classnames(position('absolute'), blur('blur-sm'))
-const leftGem = classnames(bgImage, inset('top-1/3', '-left-96'))
+const leftGem = classnames(
+  bgImage,
+  inset('md:top-1/3', 'md:-left-96'),
+  brightness('brightness-75'),
+  visibility('md:visible', 'invisible')
+)
 const rightGem = classnames(
   bgImage,
-  inset('top-12', '-right-1/4'),
+  inset('md:top-12', 'md:-right-1/4', '-bottom-11', 'left-64'),
   scale('scale-50'),
   brightness('brightness-75')
 )
 const ironSphere = classnames(
   bgImage,
-  inset('right-1/2', 'left-1/2', 'bottom-3/4')
+  inset(
+    'md:right-1/2',
+    'md:left-1/2',
+    'md:bottom-3/4',
+    'bottom-1/4',
+    'left-1/4'
+  )
 )
 
 export default function () {
@@ -76,7 +89,7 @@ export default function () {
         <IronSphere />
       </div>
 
-      <img src="/img/colorful-whale.webp" className={imageStyles} />
+      <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />
 
       <div className={futureBoxWrapper}>
         <div className={futureBox}>
