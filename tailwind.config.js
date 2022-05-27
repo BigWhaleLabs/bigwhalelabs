@@ -13,9 +13,6 @@ module.exports = {
       space: {
         '-2': '-0.5rem',
       },
-      inset: {
-        '-28': '-7rem',
-      },
       maxWidth: {
         400: '25rem',
       },
@@ -105,6 +102,7 @@ module.exports = {
       },
       inset: {
         '-6': '-1.5rem',
+        '-28': '-7rem',
         '-60': '-15rem',
       },
     },
