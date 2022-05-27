@@ -20,7 +20,6 @@ import classnames, {
   visibility,
   width,
   wordBreak,
-  zIndex,
 } from 'classnames/tailwind'
 
 const wrapper = classnames(
