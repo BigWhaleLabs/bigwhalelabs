@@ -7,7 +7,7 @@ const cardBody = space('space-y-6')
 
 export default function () {
   return (
-    <Card tall nospace>
+    <Card tall nospace orb>
       <div className={cardBody}>
         <HeaderText>
           We live in a world where privacy is limited and our digital footprints
