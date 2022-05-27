@@ -1,7 +1,10 @@
 import { FoldText } from 'components/Text'
 import DownArrows from 'components/DownArrows'
+import IronSphere from 'icons/IronSphere'
 import classnames, {
   alignItems,
+  blur,
+  brightness,
   display,
   flexDirection,
   height,
@@ -14,6 +17,7 @@ import classnames, {
   scale,
   space,
   textAlign,
+  visibility,
   width,
   wordBreak,
 } from 'classnames/tailwind'
@@ -42,7 +46,7 @@ const textBlock = classnames(
   textAlign('md:text-left', 'text-center'),
   width('lg:w-max', 'w-80')
 )
-const imageStyles = classnames(
+const bigWhaleStyles = classnames(
   height('sm:h-auto', 'h-max'),
   maxWidth('md:max-w-full', 'max-w-2xl'),
   overflow('overflow-clip'),
@@ -50,10 +54,41 @@ const imageStyles = classnames(
   scale('md:scale-100', 'scale-125')
 )
 
+const bgImage = classnames(position('absolute'), blur('blur-sm'))
+const leftGem = classnames(
+  bgImage,
+  inset('md:top-1/3', 'md:-left-96'),
+  brightness('brightness-75'),
+  visibility('md:visible', 'invisible')
+)
+const rightGem = classnames(
+  bgImage,
+  inset('md:top-12', 'md:-right-1/4', '-bottom-11', '-right-44'),
+  scale('scale-50'),
+  brightness('brightness-75')
+)
+const ironSphere = classnames(
+  bgImage,
+  inset(
+    'md:right-1/2',
+    'md:left-1/2',
+    'md:bottom-3/4',
+    'bottom-1/4',
+    'left-1/4'
+  )
+)
+
 export default function () {
   return (
     <div className={wrapper}>
-      <img src="/img/colorful-whale.webp" className={imageStyles} />
+      <img src="/img/gem.webp" className={leftGem} />
+      <img src="/img/gem.webp" className={rightGem} />
+      <div className={ironSphere}>
+        <IronSphere />
+      </div>
+
+      <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />
+
       <div className={futureBoxWrapper}>
         <div className={futureBox}>
           <DownArrows />
