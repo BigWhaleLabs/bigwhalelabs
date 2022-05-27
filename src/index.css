@@ -101,23 +101,17 @@ body {
   0% {
     transform: translate(0, 0rem);
   }
-  20% {
+  23% {
     transform: translate(0, 0rem);
   }
-  25% {
-    transform: translate(0, 0rem);
-  }
-  30% {
+  35% {
     transform: translate(0, 34.688rem);
   }
-  40% {
-    transform: translate(0, 34.688rem);
-  }
-  40.1% {
+  38.5% {
     transform: translate(0, 34.688rem) scale(1);
     opacity: 1;
   }
-  45% {
+  40% {
     transform: translate(0, 50.688rem) scale(1);
     opacity: 1;
   }
@@ -143,98 +137,108 @@ body {
     opacity: 0.5;
   }
 }
+@keyframes slideDownCard {
+  0% {
+    transform: translate(0, 0rem);
+  }
+  23% {
+    transform: translate(0, 0rem);
+  }
+  35% {
+    transform: translate(0, 34.688rem);
+  }
+  38.5% {
+    transform: translate(0, 34.688rem);
+  }
+  40% {
+    transform: translate(0, 50.688rem);
+  }
+  50% {
+    transform: translate(0, 82.5rem);
+  }
+  60% {
+    transform: translate(0, 82.5rem);
+  }
+  64% {
+    transform: translate(0, 82.5rem);
+  }
+  65% {
+    transform: translate(0, 82.5rem);
+  }
+
+  100% {
+    transform: translate(0, 82.5rem);
+  }
+}
 /* Animation for spheres icon */
 @keyframes sphereAnimationLeft {
   0% {
     transform: translate(0, 0rem);
   }
-  20% {
+  23% {
     transform: translate(0, 0rem);
   }
-  25% {
-    transform: translate(0, 0rem);
-  }
-  30% {
+  35% {
     transform: translate(0, 34.688rem);
-    opacity: 1;
   }
-  33% {
+  36% {
     transform: translate(6.5rem, 34.688rem);
     opacity: 1;
   }
-  40% {
+  38.5% {
     transform: translate(6.5rem, 34.688rem);
     opacity: 0;
   }
-  45% {
-    transform: translate(-4.35rem, 91.5rem);
+  40% {
+    transform: translate(-4.35rem, 92.25rem);
     opacity: 0;
   }
   50% {
-    transform: translate(-4.35rem, 91.5rem);
+    transform: translate(-4.35rem, 92.25rem);
     opacity: 1;
   }
-  60% {
-    transform: translate(-4.35rem, 91.5rem);
-  }
-  64% {
-    transform: translate(-4.35rem, 91.5rem);
-  }
-  65% {
-    transform: translate(-4.35rem, 91.5rem);
-  }
   100% {
-    transform: translate(-4.35rem, 91.5rem);
+    transform: translate(-4.35rem, 92.25rem);
   }
 }
 @keyframes sphereAnimationRight {
   0% {
     transform: translate(0, 0rem);
   }
-  25% {
+  23% {
     transform: translate(0, 0rem);
   }
-  30% {
+  35% {
     transform: translate(0, 34.688rem);
-    opacity: 1;
   }
-  33% {
+  36% {
     transform: translate(-6.5rem, 34.688rem);
     opacity: 1;
   }
-  40% {
+  38.5% {
     transform: translate(-6.5rem, 34.688rem);
     opacity: 0;
   }
-  45% {
-    transform: translate(-17.85rem, 97.2rem);
+  40% {
+    transform: translate(-17.88rem, 97.65rem);
     opacity: 0;
   }
   50% {
-    transform: translate(-17.85rem, 97.2rem);
+    transform: translate(-17.88rem, 97.65rem);
     opacity: 1;
   }
-  60% {
-    transform: translate(-17.85rem, 97.2rem);
-  }
-  64% {
-    transform: translate(-17.85rem, 97.2rem);
-  }
-  65% {
-    transform: translate(-17.85rem, 97.2rem);
-  }
   100% {
-    transform: translate(-17.85rem, 97.2rem);
+    transform: translate(-17.88rem, 97.65rem);
   }
 }
 @keyframes stageAnimation {
   0% {
     opacity: 1;
   }
-  20% {
+  23% {
     opacity: 1;
   }
-  35% {
+  25% {
     opacity: 0;
   }
   100% {
@@ -245,11 +249,13 @@ body {
   0% {
     opacity: 1;
   }
-  20% {
+  23% {
     opacity: 1;
+    transform: translate(0, 0);
   }
-  30% {
+  24% {
     opacity: 0;
+    transform: translate(0, -1rem);
   }
   100% {
     opacity: 0;
@@ -259,14 +265,11 @@ body {
   0% {
     opacity: 1;
   }
-  20% {
-    opacity: 1;
-  }
-  40% {
+  37.5% {
     opacity: 1;
     transform: translate(0, 0);
   }
-  41.5% {
+  38.75% {
     opacity: 0;
     transform: translate(0, -1rem);
   }
@@ -278,13 +281,10 @@ body {
   0% {
     width: 0;
   }
-  50% {
+  49% {
     width: 0;
   }
-  51% {
-    width: 65%;
-  }
-  52% {
+  50.5% {
     width: 100%;
   }
   100% {
@@ -295,10 +295,10 @@ body {
   0% {
     opacity: 0;
   }
-  52% {
+  50.5% {
     opacity: 0;
   }
-  52.5% {
+  50.75% {
     opacity: 1;
   }
   100% {

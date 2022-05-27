@@ -15,6 +15,8 @@ import classnames, {
   maxWidth,
   space,
 } from 'classnames/tailwind'
+import useBreakpoints from 'hooks/useBreakpoints'
+import useScrollPercent from 'hooks/useScrollPercent'
 
 const card = classnames(space('space-y-2'), maxWidth('max-w-400'))
 const sealCredBlock = classnames(
@@ -25,10 +27,24 @@ const sealCredBlock = classnames(
   margin('mb-72')
 )
 
+const cardStyles = (scroll: number) => ({
+  animationName: 'slideDownCard',
+  animationTimingFunction: 'ease-in-out',
+  animationDuration: '1s',
+  animationDirection: 'linear',
+  animationPlayState: 'paused',
+  animationDelay: `calc(${scroll} * -1s)`,
+  animationIterationCount: 1,
+  animationFillMode: 'both',
+})
+
 export default function () {
+  const { tablet } = useBreakpoints()
+  const scroll = useScrollPercent()
+
   return (
     <div className={sealCredBlock}>
-      <div className={card}>
+      <div className={card} style={!tablet ? cardStyles(scroll) : ''}>
         <div className={space('space-y-4')}>
           <SealCredLogo />
           <PrimaryAccentText color="text-accent">SealCred</PrimaryAccentText>
