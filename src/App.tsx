@@ -9,17 +9,19 @@ import StartBlock from 'components/StartBlock'
 
 const App = () => {
   return (
-    <Root>
+    <>
       <Navbar />
-      <StartBlock />
-      <PrivacyWorld />
+      <Root>
+        <StartBlock />
+        <PrivacyWorld />
 
-      <SealCred />
+        <SealCred />
 
-      <HiringBlock />
-      <LogoFooter />
-      <Footer />
-    </Root>
+        <HiringBlock />
+        <LogoFooter />
+        <Footer />
+      </Root>
+    </>
   )
 }
 
