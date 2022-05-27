@@ -4,6 +4,7 @@ import IronSphere from 'icons/IronSphere'
 import classnames, {
   alignItems,
   blur,
+  brightness,
   display,
   flexDirection,
   height,
@@ -58,7 +59,8 @@ const leftGem = classnames(bgImage, inset('top-1/3', '-left-96'))
 const rightGem = classnames(
   bgImage,
   inset('top-12', '-right-1/4'),
-  scale('scale-50')
+  scale('scale-50'),
+  brightness('brightness-75')
 )
 const ironSphere = classnames(
   bgImage,
