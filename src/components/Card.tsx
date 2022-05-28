@@ -4,6 +4,9 @@ import {
   borderRadius,
   boxShadow,
   classnames,
+  display,
+  flex,
+  flexDirection,
   maxHeight,
   maxWidth,
   padding,
@@ -14,13 +17,13 @@ import ChildrenProp from 'models/ChildrenProp'
 
 interface CardProps {
   tall?: boolean
-  nospace?: boolean
-  orb?: boolean
+  bigSpace?: boolean
 }
 
-const cardContainer = (tall?: boolean, nospace?: boolean, orb?: boolean) => {
+const cardContainer = (tall?: boolean, bigSpace?: boolean) => {
   return classnames(
-    space(nospace ? undefined : 'space-y-2'),
+    display(tall ? undefined : 'flex'),
+    flexDirection(tall ? undefined : 'flex-col'),
     maxWidth(tall ? 'max-w-535' : undefined),
     maxHeight(tall ? 'max-h-636' : undefined),
     padding('p-12'),
@@ -29,15 +32,14 @@ const cardContainer = (tall?: boolean, nospace?: boolean, orb?: boolean) => {
     boxShadow('shadow-card'),
     wordBreak('break-words'),
     backdropBlur('backdrop-blur-lg'),
-    space(orb ? 'space-x-52' : undefined)
+    space(tall ? 'space-x-52' : bigSpace ? 'space-x-7' : 'space-x-5')
   )
 }
 
 export default function ({
   tall,
-  nospace,
-  orb,
+  bigSpace,
   children,
 }: ChildrenProp & CardProps) {
-  return <div className={cardContainer(tall, nospace, orb)}>{children}</div>
+  return <div className={cardContainer(tall, bigSpace)}>{children}</div>
 }
