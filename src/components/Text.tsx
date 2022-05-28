@@ -133,21 +133,27 @@ export function AccentText({
   return <span className={accentText(color)}>{children}</span>
 }
 
-const headerText = (small?: boolean, center?: boolean) =>
+const headerText = (textSize?: string, center?: boolean) =>
   classnames(
     fontFamily('font-primary'),
     fontWeight('font-bold'),
     textColor('text-formal-accent'),
-    fontSize(small ? 'text-2xl' : 'text-4xl'),
-    lineHeight(small ? 'leading-8' : 'leading-11'),
+    fontSize(
+      textSize === 'small'
+        ? 'text-2xl'
+        : textSize === 'base'
+        ? 'text-3xl'
+        : 'text-4xl'
+    ),
+    lineHeight(textSize === 'small' ? 'leading-8' : 'leading-11'),
     textAlign(center ? 'text-center' : undefined)
   )
 export function HeaderText({
-  small,
+  textSize,
   center,
   children,
-}: ChildrenProp & { small?: boolean; center?: boolean }) {
-  return <h2 className={headerText(small, center)}>{children}</h2>
+}: ChildrenProp & { textSize?: string; center?: boolean }) {
+  return <h2 className={headerText(textSize, center)}>{children}</h2>
 }
 
 const plainText = classnames(

@@ -1,16 +1,24 @@
 import SocializePseudonymously from 'components/SocializePseudonymously'
 import VerifyNFTOwnership from 'components/VerifyNFTOwnership'
 import WeLiveInAWorld from 'components/WeLiveInAWorld'
-import classnames, { display, flexDirection, space } from 'classnames/tailwind'
+import classnames, {
+  alignItems,
+  display,
+  flexDirection,
+  justifyContent,
+  space,
+} from 'classnames/tailwind'
 
 const cardsTogether = classnames(
   display('flex'),
-  flexDirection('flex-col'),
-  space('space-y-6')
+  flexDirection('flex-row'),
+  space('space-x-6'),
+  alignItems('items-center', 'lg:items-stretch'),
+  justifyContent('lg:justify-center')
 )
 const cardsOnRight = classnames(
   display('flex'),
-  flexDirection('flex-row'),
+  flexDirection('flex-col'),
   space('space-y-6')
 )
 

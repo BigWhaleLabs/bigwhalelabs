@@ -23,10 +23,10 @@ interface CardProps {
 const cardContainer = (tall?: boolean, bigSpace?: boolean) => {
   return classnames(
     display(tall ? undefined : 'flex'),
-    flexDirection(tall ? undefined : 'flex-col'),
-    maxWidth(tall ? 'max-w-535' : undefined),
-    maxHeight(tall ? 'max-h-636' : undefined),
-    padding('p-12'),
+    flexDirection(tall ? undefined : 'flex-row'),
+    maxWidth(tall ? 'max-w-535' : 'max-w-758'),
+    maxHeight(tall ? 'max-h-620' : 'max-h-298'),
+    padding(bigSpace ? undefined : 'p-12'),
     borderRadius('rounded-2xl'),
     backgroundColor('bg-card'),
     boxShadow('shadow-card'),

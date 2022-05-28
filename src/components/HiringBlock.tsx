@@ -55,7 +55,7 @@ export default function () {
       </div>
       <RetroText>FUTURE</RetroText>
       <div className={bottomWrapper}>
-        <HeaderText small center>
+        <HeaderText textSize="small" center>
           Interested in joining the team or want to reach out?
         </HeaderText>
         <Button outlined>Message us</Button>

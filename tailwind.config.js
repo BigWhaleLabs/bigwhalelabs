@@ -23,9 +23,11 @@ module.exports = {
       maxWidth: {
         400: '25rem',
         535: '33.5rem',
+        758: '47.375rem',
       },
       maxHeight: {
-        636: '39.75rem',
+        298: '18.625rem',
+        620: '38.75rem',
       },
       fontSize: {
         '2.5xl': '1.625rem',

@@ -11,7 +11,7 @@ export default function () {
     <Card>
       <OrbSeal />
       <div className={cardBody}>
-        <HeaderText small>
+        <HeaderText textSize="base">
           Verify NFT ownership while remaining anonymous
         </HeaderText>
         <Button outlined>Do this with SealCred</Button>
