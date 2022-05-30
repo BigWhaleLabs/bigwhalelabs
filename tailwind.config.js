@@ -15,9 +15,10 @@ module.exports = {
         '-44': '-11rem',
       },
       width: {
+        286: '17.875rem',
+        300: '18.75rem',
+        334: '20.875rem',
         500: '31.25rem',
-        'thin-mobile': '10.75rem',
-        'thin-card': '11.688rem',
         card: '24.875rem',
         'mobile-card': '92%',
       },
@@ -120,12 +121,14 @@ module.exports = {
         25: '6.125rem',
       },
       margin: {
+        19.5: '4.875rem',
         22.5: '5.625rem',
       },
       borderRadius: {
         '4xl': '2.5rem',
       },
       strokeWidth: {
+        1.5: '0.09375rem',
         '5/2': '0.15rem',
         4: '0.25rem',
       },

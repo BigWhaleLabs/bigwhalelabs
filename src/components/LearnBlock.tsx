@@ -13,7 +13,7 @@ const cardsTogether = classnames(
   display('flex'),
   flexDirection('flex-row'),
   space('space-x-6'),
-  alignItems('items-center', 'lg:items-stretch'),
+  alignItems('items-stretch'),
   justifyContent('lg:justify-center')
 )
 const cardsOnRight = classnames(

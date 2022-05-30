@@ -1,3 +1,7 @@
+import classnames, { dropShadow } from 'classnames/tailwind'
+
+const svgClasses = classnames(dropShadow('drop-shadow-primary'))
+
 export default function () {
   return (
     <svg
@@ -5,6 +9,7 @@ export default function () {
       height="307"
       viewBox="0 0 334 307"
       fill="none"
+      className={svgClasses}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

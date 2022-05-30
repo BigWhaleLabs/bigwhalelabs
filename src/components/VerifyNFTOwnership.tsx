@@ -1,10 +1,14 @@
 import { HeaderText } from 'components/Text'
-import { space } from 'classnames/tailwind'
 import Button from 'components/Button'
 import Card from 'components/Card'
 import OrbSeal from 'components/OrbSeal'
+import classnames, { margin, space, width } from 'classnames/tailwind'
 
-const cardBody = space('space-y-6')
+const cardBody = classnames(
+  space('space-y-6'),
+  width('w-334'),
+  margin('ml-19.5', 'my-12', 'mr-12')
+)
 
 export default function () {
   return (
