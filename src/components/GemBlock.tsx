@@ -1,7 +1,6 @@
 import { ExtraBoldText } from 'components/Text'
 import ArcText from 'icons/ArcText'
 import Building from 'icons/Building'
-import Gem from 'icons/Gem'
 import classnames, {
   alignItems,
   backgroundImage,
@@ -16,6 +15,7 @@ import classnames, {
   padding,
   position,
   space,
+  verticalAlign,
   width,
   zIndex,
 } from 'classnames/tailwind'
@@ -46,7 +46,7 @@ const boldTextWrapper = classnames(
 )
 const diamondWrapper = classnames(
   position('absolute'),
-  inset('left-0', 'right-0', 'top-auto')
+  inset('md:left-12', 'top-auto')
 )
 
 export default function () {
@@ -73,7 +73,7 @@ export default function () {
             <ExtraBoldText small={tablet}>Coming soon</ExtraBoldText>
           </div>
           <div className={diamondWrapper}>
-            <Gem />
+            <img src="/img/gem.webp" />
           </div>
         </div>
       </div>
