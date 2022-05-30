@@ -113,6 +113,8 @@ module.exports = {
       backgroundImage: {
         retro:
           'linear-gradient(180deg, #FF7BED 20.43%, #E0E5CE 25.48%, #E0E5CE 41.4%, #4300F5 46.3%, #263DB4 61.69%, #15A1FC 77.42%)',
+        metallic:
+          'linear-gradient(180deg, #26306e 0%, #cce5e4 15.1%, #25306a 34.9%, #a9cbd2 50%, #36426c 66.15%, #cad9e3 100%) ',
       },
       padding: {
         25: '6.125rem',
@@ -139,6 +141,12 @@ module.exports = {
       },
       scale: {
         300: '3.0',
+      },
+      zIndex: {
+        '-10': '-10',
+      },
+      content: {
+        retro: 'attr(data-text)',
       },
     },
   },

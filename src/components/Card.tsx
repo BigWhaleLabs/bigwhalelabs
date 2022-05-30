@@ -5,7 +5,6 @@ import {
   boxShadow,
   classnames,
   display,
-  flex,
   flexDirection,
   maxHeight,
   maxWidth,
