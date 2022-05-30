@@ -19,12 +19,16 @@ import PseudoSuit from 'icons/PseudoSuit'
 
 const cardWrapper = classnames(
   display('flex'),
-  flexDirection('flex-row'),
-  justifyContent('justify-between'),
-  width('w-3/4'),
-  margin('mr-72')
+  flexDirection('md:flex-row', 'flex-col'),
+  justifyContent('md:justify-between'),
+  width('md:w-3/4', 'w-full'),
+  margin('md:mr-72')
 )
-const card = classnames(space('space-y-2'), maxWidth('max-w-400'))
+const card = classnames(
+  margin('mx-4'),
+  space('space-y-2'),
+  maxWidth('max-w-400')
+)
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
 
