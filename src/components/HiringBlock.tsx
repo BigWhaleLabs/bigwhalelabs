@@ -49,7 +49,9 @@ export default function () {
       <div className={lineBlockWrapper}>
         <Line gradientDirection="to-right" />
         <ExtraBoldText extraLeading>
-          <AccentText color="text-secondary">THE</AccentText>
+          <AccentText color="text-secondary" shadow="drop-shadow-secondary">
+            THE
+          </AccentText>
         </ExtraBoldText>
         <Line gradientDirection="to-left" />
       </div>

@@ -70,7 +70,9 @@ export default function () {
           </div>
 
           <div className={boldTextWrapper}>
-            <ExtraBoldText small={tablet}>Coming soon</ExtraBoldText>
+            <ExtraBoldText small={tablet} trackingExtra>
+              Coming soon
+            </ExtraBoldText>
           </div>
           <div className={diamondWrapper}>
             <Gem />
