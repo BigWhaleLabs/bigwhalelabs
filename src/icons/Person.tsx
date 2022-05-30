@@ -1,5 +1,5 @@
 import classnames, { fill, stroke, zIndex } from 'classnames/tailwind'
-import useScrollPercent from 'hooks/useScrollPercent'
+import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 
 const personClasses = classnames(
   fill('fill-primary-dark'),
@@ -10,20 +10,10 @@ const personClasses = classnames(
 export default function ({ large }: { large?: boolean }) {
   const width = large ? '188' : '90'
   const height = large ? '307' : '146'
-  const scroll = useScrollPercent()
 
   return (
     <svg
-      style={{
-        animationName: 'personAnimation',
-        animationTimingFunction: 'ease-in-out',
-        animationDuration: '1s',
-        animationDirection: 'linear',
-        animationPlayState: 'paused',
-        animationDelay: `calc(${scroll} * -1s)`,
-        animationIterationCount: 1,
-        animationFillMode: 'both',
-      }}
+      style={scrollAnimationProvider('personAnimation')}
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}

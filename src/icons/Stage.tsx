@@ -1,23 +1,13 @@
 import { scale, stroke } from 'classnames/tailwind'
+import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 import useBreakpoints from 'hooks/useBreakpoints'
-import useScrollPercent from 'hooks/useScrollPercent'
 
 export default function () {
   const { xs } = useBreakpoints()
-  const scroll = useScrollPercent()
 
   return (
     <svg
-      style={{
-        animationName: 'stageAnimation',
-        animationTimingFunction: 'ease-in-out',
-        animationDuration: '1s',
-        animationDirection: 'linear',
-        animationPlayState: 'paused',
-        animationDelay: `calc(${scroll} * -1s)`,
-        animationIterationCount: 1,
-        animationFillMode: 'both',
-      }}
+      style={scrollAnimationProvider('stageAnimation')}
       width="258"
       height="77"
       viewBox="0 0 258 77"
