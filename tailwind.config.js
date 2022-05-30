@@ -107,6 +107,9 @@ module.exports = {
         '-28': '-7rem',
         '-60': '-15rem',
       },
+      zIndex: {
+        '-10': '-10',
+      },
       content: {
         retro: 'attr(data-text)',
       },

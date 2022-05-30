@@ -7054,6 +7054,7 @@ export type TZIndex =
   | 'z-40'
   | 'z-50'
   | 'z-auto'
+  | '-z-10'
 
 export type TAspectRatio = 'aspect-auto' | 'aspect-square' | 'aspect-video'
 
