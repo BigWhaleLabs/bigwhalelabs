@@ -7,13 +7,16 @@ import {
   classnames,
   display,
   flexDirection,
+  margin,
   maxHeight,
   maxWidth,
   padding,
   space,
+  width,
   wordBreak,
 } from 'classnames/tailwind'
 import ChildrenProp from 'models/ChildrenProp'
+import useBreakpoints from 'helpers/useBreakpoints'
 
 interface CardProps {
   tall?: boolean
@@ -21,19 +24,28 @@ interface CardProps {
 }
 
 const cardContainer = (tall?: boolean, bigSpace?: boolean) => {
+  const { twoXl } = useBreakpoints()
+
   return classnames(
     display(tall ? undefined : 'flex'),
-    flexDirection(tall ? undefined : 'flex-row'),
-    maxWidth(tall ? 'max-w-535' : 'max-w-758'),
-    maxHeight(tall ? 'max-h-620' : 'max-h-298'),
-    padding(tall ? 'p-12' : undefined),
+    flexDirection(
+      'flex-row',
+      tall ? undefined : '2xl:flex-row',
+      bigSpace ? 'flex-col-reverse' : 'flex-col'
+    ),
+    maxWidth(tall ? '2xl:max-w-535' : '2xl:max-w-758', 'max-w-535'),
+    maxHeight(tall ? '2xl:max-h-620' : '2xl:max-h-298'),
+
+    width(twoXl ? undefined : 'w-mobile-card'),
+    padding(tall ? '2xl:p-12' : '2xl:p-0', 'p-6'),
+    margin(twoXl ? undefined : 'mx-auto'),
     borderRadius('rounded-2xl'),
     backgroundColor('bg-card'),
     boxShadow('shadow-card'),
     wordBreak('break-words'),
     backdropBlur('backdrop-blur-lg'),
-    space(tall ? 'space-x-52' : bigSpace ? 'space-x-7' : undefined),
-    space(tall ? 'space-y-7' : undefined),
+    space(tall ? '2xl:space-x-52' : bigSpace ? '2xl:space-x-7' : undefined),
+    space(tall ? '2xl:space-y-7' : undefined),
     alignItems('items-center')
   )
 }

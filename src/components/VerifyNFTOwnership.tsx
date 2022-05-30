@@ -6,8 +6,8 @@ import classnames, { margin, space, width } from 'classnames/tailwind'
 
 const cardBody = classnames(
   space('space-y-6'),
-  width('w-334'),
-  margin('ml-19.5', 'my-12', 'mr-12')
+  width('2xl:w-334'),
+  margin('2xl:ml-19.5', '2xl:my-12', '2xl:mr-12')
 )
 
 export default function () {

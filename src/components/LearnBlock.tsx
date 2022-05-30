@@ -5,16 +5,15 @@ import classnames, {
   alignItems,
   display,
   flexDirection,
-  justifyContent,
   space,
 } from 'classnames/tailwind'
 
 const cardsTogether = classnames(
   display('flex'),
-  flexDirection('flex-row'),
-  space('space-x-6'),
-  alignItems('items-stretch'),
-  justifyContent('lg:justify-center')
+  flexDirection('2xl:flex-row', 'flex-col'),
+  space('2xl:space-x-6'),
+  space('space-y-6', '2xl:space-y-0'),
+  alignItems('items-stretch')
 )
 const cardsOnRight = classnames(
   display('flex'),

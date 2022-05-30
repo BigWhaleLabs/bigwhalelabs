@@ -1,5 +1,6 @@
 import classnames, {
-  dropShadow,
+  margin,
+  scale,
   stroke,
   strokeWidth,
 } from 'classnames/tailwind'
@@ -12,7 +13,10 @@ const accentStroke = classnames(
   stroke('stroke-accent'),
   strokeWidth('stroke-1.5')
 )
-const svgClasses = classnames(dropShadow('drop-shadow-primary'))
+const svgClasses = classnames(
+  scale('scale-75', 'sm:scale-90', '2xl:scale-100'),
+  margin('mx-auto')
+)
 
 export default function () {
   return (

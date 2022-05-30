@@ -19,15 +19,14 @@ module.exports = {
         300: '18.75rem',
         334: '20.875rem',
         500: '31.25rem',
-        card: '24.875rem',
         'mobile-card': '92%',
       },
       height: {
         500: '31.25rem',
         'mobile-card': '22.813rem',
-        card: '31.75rem',
       },
       maxWidth: {
+        358: '22.375rem',
         400: '25rem',
         535: '33.5rem',
         758: '47.375rem',

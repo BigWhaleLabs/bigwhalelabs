@@ -4,7 +4,11 @@ import Card from 'components/Card'
 import DosuCity from 'icons/DosuCity'
 import classnames, { margin, space, width } from 'classnames/tailwind'
 
-const cardBody = classnames(space('space-y-6'), width('w-334'), margin('m-12'))
+const cardBody = classnames(
+  space('space-y-6'),
+  width('2xl:w-334'),
+  margin('2xl:m-12')
+)
 
 export default function () {
   return (
