@@ -7,6 +7,7 @@ import {
 import Button from 'components/Button'
 import SealCredLogo from 'icons/SealCredLogo'
 import classnames, {
+  alignItems,
   display,
   flexDirection,
   height,
@@ -16,6 +17,25 @@ import classnames, {
   space,
   width,
 } from 'classnames/tailwind'
+import useBreakpoints from 'hooks/useBreakpoints'
+
+const phoneButtonWrapper = classnames(
+  display('flex'),
+  flexDirection('flex-col'),
+  alignItems('items-center'),
+  space('space-y-4'),
+  margin('mt-4')
+)
+const PhoneGetStarted = () => (
+  <div className={phoneButtonWrapper}>
+    <BodyText center>
+      With SealCred, you can build your pseudonymous wallet.
+    </BodyText>
+    <Button outlined url="https://sealcred.xyz/">
+      Get started
+    </Button>
+  </div>
+)
 
 const cardWrapper = classnames(
   display('flex'),
@@ -39,6 +59,8 @@ const pseudoSuitWrapper = classnames(
 )
 
 export default function () {
+  const { onlyPhones } = useBreakpoints()
+
   return (
     <div className={cardWrapper}>
       <div className={card}>
@@ -63,6 +85,7 @@ export default function () {
       </div>
       <div className={pseudoSuitWrapper}>
         <img src="/img/fullAnimationStatic.webp" />
+        {onlyPhones && <PhoneGetStarted />}
       </div>
     </div>
   )
