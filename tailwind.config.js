@@ -16,9 +16,15 @@ module.exports = {
       },
       width: {
         500: '31.25rem',
+        'thin-mobile': '10.75rem',
+        'thin-card': '11.688rem',
+        card: '24.875rem',
+        'mobile-card': '92%',
       },
       height: {
         500: '31.25rem',
+        'mobile-card': '22.813rem',
+        card: '31.75rem',
       },
       maxWidth: {
         400: '25rem',
