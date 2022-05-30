@@ -55,6 +55,7 @@ body {
 .grid-wrapper {
   width: 100vw;
   height: 50vh;
+  margin-top: -15vh;
   position: relative;
   perspective: 180px;
   perspective-origin: 50% 20%;

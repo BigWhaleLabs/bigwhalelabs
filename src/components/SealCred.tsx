@@ -22,7 +22,7 @@ const cardWrapper = classnames(
   flexDirection('md:flex-row', 'flex-col'),
   justifyContent('md:justify-between'),
   width('md:w-3/4', 'w-full'),
-  margin('md:mr-72')
+  margin('md:mr-72', 'md:mt-80', 'mt-36')
 )
 const card = classnames(
   margin('mx-4'),

@@ -22,7 +22,7 @@ const wrapper = classnames(
   flexDirection('flex-col', 'lg:flex-row'),
   justifyContent('justify-between'),
   space('space-y-32'),
-  margin('mb-72')
+  margin('md:mt-64', 'mt-56', 'mx-4')
 )
 
 export default function () {

@@ -133,6 +133,9 @@ module.exports = {
       content: {
         retro: 'attr(data-text)',
       },
+      margin: {
+        116: '29rem',
+      },
     },
   },
 }

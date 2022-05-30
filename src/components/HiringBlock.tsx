@@ -22,7 +22,7 @@ const hiringWrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
   width('w-full'),
-  margin('mx-auto')
+  margin('mx-auto', 'md:mt-96', 'mt-44')
 )
 const lineBlockWrapper = classnames(
   display('flex'),
