@@ -9,13 +9,11 @@ import classnames, {
   gradientColorStops,
   height,
   inset,
-  justifyContent,
   margin,
   overflow,
   padding,
   position,
   space,
-  verticalAlign,
   width,
   zIndex,
 } from 'classnames/tailwind'
@@ -28,7 +26,6 @@ const wrapperBoldText = classnames(
   position('absolute', 'md:relative'),
   inset('right-8', 'md:right-0'),
   alignItems('items-center'),
-  justifyContent('justify-start'),
   margin('mt-20', 'md:mt-0'),
   width('md:w-96'),
   height('md:h-96'),
@@ -43,6 +40,10 @@ const boldTextWrapper = classnames(
   backgroundImage('bg-gradient-to-r'),
   gradientColorStops('from-tertiary-light', 'to-tertiary'),
   zIndex('z-10')
+)
+const arcTextWrapper = classnames(
+  position('absolute'),
+  inset('-top-20', 'md:top-auto', 'md:left-0', 'right-8', 'md:right-0')
 )
 const diamondWrapper = classnames(
   position('absolute'),
@@ -61,11 +62,7 @@ export default function () {
       )}
       <div className={diamonTextWrapper}>
         <div className={wrapperBoldText}>
-          <div
-            className={
-              'absolute -top-20 -right-6 md:top-auto md:left-0 md:right-0'
-            }
-          >
+          <div className={arcTextWrapper}>
             <ArcText text="We are hard at work • Stay tuned!" />
           </div>
 

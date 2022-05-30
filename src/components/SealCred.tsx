@@ -9,20 +9,21 @@ import SealCredLogo from 'icons/SealCredLogo'
 import classnames, {
   display,
   flexDirection,
+  height,
   justifyContent,
   margin,
   maxWidth,
   space,
   width,
 } from 'classnames/tailwind'
-import PseudoSuit from 'icons/PseudoSuit'
 
 const cardWrapper = classnames(
   display('flex'),
   flexDirection('md:flex-row', 'flex-col'),
   justifyContent('md:justify-between'),
   width('md:w-3/4', 'w-full'),
-  margin('md:mr-72', 'md:mt-80', 'mt-36')
+  margin('md:mr-72', 'md:mt-80', 'mt-36'),
+  space('md:space-y-0', 'space-y-32')
 )
 const card = classnames(
   margin('mx-4'),
@@ -31,6 +32,11 @@ const card = classnames(
 )
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
+const pseudoSuitWrapper = classnames(
+  width('w-auto'),
+  height('h-auto'),
+  margin('md:mt-0', 'mt-32')
+)
 
 export default function () {
   return (
@@ -55,7 +61,9 @@ export default function () {
           </Button>
         </div>
       </div>
-      <PseudoSuit />
+      <div className={pseudoSuitWrapper}>
+        <img src="/img/suitWithStats.webp" />
+      </div>
     </div>
   )
 }
