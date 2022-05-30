@@ -95,3 +95,11 @@ body {
     background-position: 0% 115%;
   }
 }
+
+.retro-text {
+  -webkit-text-fill-color: transparent !important;
+}
+
+.retro-text::before {
+  -webkit-text-stroke: 4px transparent !important;
+}

@@ -320,6 +320,7 @@ export type TBackgroundImage =
   | 'bg-gradient-to-l'
   | 'bg-gradient-to-tl'
   | 'bg-retro'
+  | 'bg-metallic'
 
 export type TGradientColorStops =
   | 'from-inherit'
@@ -7112,6 +7113,7 @@ export type TZIndex =
   | 'z-40'
   | 'z-50'
   | 'z-auto'
+  | '-z-10'
 
 export type TAspectRatio = 'aspect-auto' | 'aspect-square' | 'aspect-video'
 
@@ -8312,7 +8314,7 @@ export type TTextOpacity =
   | 'text-opacity-95'
   | 'text-opacity-100'
 
-export type TContent = 'content-none'
+export type TContent = 'content-none' | 'content-retro'
 
 export type TTextIndent =
   | 'indent-0'
