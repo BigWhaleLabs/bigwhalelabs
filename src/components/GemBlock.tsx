@@ -14,6 +14,7 @@ import classnames, {
   padding,
   position,
   space,
+  translate,
   width,
   zIndex,
 } from 'classnames/tailwind'
@@ -36,18 +37,19 @@ const boldTextWrapper = classnames(
   padding('px-1', 'py-0', 'md:p-2'),
   margin('ml-22.5', 'mt-auto', 'md:m-auto'),
   borderRadius('rounded-md'),
-  width('w-fit'),
+  margin('mr-8'),
   backgroundImage('bg-gradient-to-r'),
   gradientColorStops('from-tertiary-light', 'to-tertiary'),
   zIndex('z-10')
 )
 const arcTextWrapper = classnames(
   position('absolute'),
-  inset('-top-20', 'md:top-auto', 'md:left-0', 'right-8', 'md:right-0')
+  inset('-top-20', 'md:top-auto', 'md:left-0', 'right-3', 'md:right-0')
 )
-const diamondWrapper = classnames(
+const diamondImage = classnames(
   position('absolute'),
-  inset('md:left-12', 'top-auto')
+  inset('md:left-12', 'top-auto'),
+  padding('md:pr-8', 'pr-8')
 )
 
 export default function () {
@@ -69,9 +71,7 @@ export default function () {
           <div className={boldTextWrapper}>
             <ExtraBoldText small={tablet}>Coming soon</ExtraBoldText>
           </div>
-          <div className={diamondWrapper}>
-            <img src="/img/gem.webp" />
-          </div>
+          <img src="/img/gem.webp" className={diamondImage} />
         </div>
       </div>
     </div>
