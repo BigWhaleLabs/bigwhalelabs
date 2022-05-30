@@ -62,7 +62,7 @@ export default function () {
         </div>
       </div>
       <div className={pseudoSuitWrapper}>
-        <img src="/img/suitWithStats.webp" />
+        <img src="/img/fullAnimationStatic.webp" />
       </div>
     </div>
   )
