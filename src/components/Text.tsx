@@ -1,4 +1,5 @@
 import {
+  TDropShadow,
   TTextColor,
   backgroundClip,
   backgroundImage,
@@ -126,14 +127,17 @@ export function PrimaryAccentText({
   return <h3 className={primaryAccentText(color)}>{children}</h3>
 }
 
-const accentText = (color: TTextColor) => classnames(textColor(color))
+const accentText = (color: TTextColor, shadow?: TDropShadow) =>
+  classnames(textColor(color), dropShadow(shadow))
 export function AccentText({
   color,
+  shadow,
   children,
 }: ChildrenProp & {
   color: TTextColor
+  shadow?: TDropShadow
 }) {
-  return <span className={accentText(color)}>{children}</span>
+  return <span className={accentText(color, shadow)}>{children}</span>
 }
 
 const headerText = (textSize?: string, center?: boolean) =>
@@ -175,7 +179,11 @@ export function PlainText({ children }: ChildrenProp) {
   return <span className={plainText}>{children}</span>
 }
 
-const extraBoldText = (small?: boolean, extraLeading?: boolean) =>
+const extraBoldText = (
+  small?: boolean,
+  extraLeading?: boolean,
+  trackingExtra?: boolean
+) =>
   classnames(
     fontWeight('font-bold', 'md:font-extrabold'),
     fontSize(
@@ -188,14 +196,23 @@ const extraBoldText = (small?: boolean, extraLeading?: boolean) =>
     ),
     textColor('text-primary-dark'),
     textTransform('uppercase'),
-    letterSpacing('tracking-extra')
+    letterSpacing(trackingExtra ? 'tracking-extra' : undefined)
   )
 export function ExtraBoldText({
   small,
   extraLeading,
+  trackingExtra,
   children,
-}: ChildrenProp & { small?: boolean; extraLeading?: boolean }) {
-  return <span className={extraBoldText(small, extraLeading)}>{children}</span>
+}: ChildrenProp & {
+  small?: boolean
+  extraLeading?: boolean
+  trackingExtra?: boolean
+}) {
+  return (
+    <span className={extraBoldText(small, extraLeading, trackingExtra)}>
+      {children}
+    </span>
+  )
 }
 
 const retroText = (extraSmall?: boolean) =>
