@@ -27,6 +27,7 @@ import classnames, {
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 import useScrollPercent from 'hooks/useScrollPercent'
+import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 
 const wrapper = classnames(
   display('flex'),
@@ -107,15 +108,14 @@ const spheresWrapper = classnames(
   borderWidth('border')
 )
 
-const NftBlock = ({
-  color,
-  position,
-  small,
-}: {
+type SpherePosition = 'left' | 'right'
+interface NftBlockProps {
+  position: SpherePosition
+  small: boolean
   color: Color
-  position: 'left' | 'right'
-  small?: boolean
-}) => {
+}
+
+const NftBlock = ({ position, small, color }: NftBlockProps) => {
   return (
     <div className={nftSphereIcon}>
       {position === 'left' && (
@@ -135,28 +135,22 @@ const NftBlock = ({
   )
 }
 
-const PairOfNfts = ({
-  colors,
-  left,
-  small,
-}: {
+interface PairOfNftsProps {
+  position: SpherePosition
+  small: boolean
   colors: Color[]
-  left?: boolean
-  small?: boolean
-}) => {
+}
+const PairOfNfts = ({ colors, position, small }: PairOfNftsProps) => {
   return (
     <div className={spheresBlock}>
-      {colors.map((color) =>
-        NftBlock({ color, position: left ? 'left' : 'right', small })
-      )}
+      {colors.map((color) => NftBlock({ position, small, color }))}
     </div>
   )
 }
 
 export default function () {
   const { tablet } = useBreakpoints()
-  const scroll = useScrollPercent()
-  console.log(scroll)
+  const { beforeSuperOrb } = useScrollPercent()
 
   return (
     <div className={wrapper}>
@@ -164,27 +158,20 @@ export default function () {
         <div className={personWithStage}>
           <div className={personWithSpheres}>
             <PairOfNfts
-              left
+              position="left"
               colors={['primary', 'tertiary']}
-              small={scroll < 0.4}
+              small={beforeSuperOrb}
             />
             <Person large={!tablet} />
-            <PairOfNfts colors={['accent', 'secondary']} small={scroll < 0.4} />
+            <PairOfNfts
+              position="right"
+              colors={['accent', 'secondary']}
+              small={beforeSuperOrb}
+            />
           </div>
           <Stage />
         </div>
-        <div
-          style={{
-            animationName: 'walletAnimation',
-            animationTimingFunction: 'ease-in-out',
-            animationDuration: '1s',
-            animationDirection: 'linear',
-            animationPlayState: 'paused',
-            animationDelay: `calc(${scroll} * -1s)`,
-            animationIterationCount: 1,
-            animationFillMode: 'both',
-          }}
-        >
+        <div style={scrollAnimationProvider('walletAnimation')}>
           <PlainText>
             Wallet NFT collection:{' '}
             <AccentText color="text-accent">04</AccentText>
@@ -195,34 +182,14 @@ export default function () {
         <div className={superOrbBlock}>
           <SuperOrb />
         </div>
-        <div
-          style={{
-            animationName: 'generatingHideAnimation',
-            animationTimingFunction: 'ease-in-out',
-            animationDuration: '1s',
-            animationDirection: 'linear',
-            animationPlayState: 'paused',
-            animationDelay: `calc(${scroll} * -1s)`,
-            animationIterationCount: 1,
-            animationFillMode: 'both',
-          }}
-        >
+        <div style={scrollAnimationProvider('generatingHideAnimation')}>
           <PlainText>Generating zk proof...</PlainText>
         </div>
       </div>
       <div className={thirdStage}>
         <div
           className={happySuit}
-          style={{
-            animationName: 'suitAnimation',
-            animationTimingFunction: 'ease-in-out',
-            animationDuration: '1s',
-            animationDirection: 'linear',
-            animationPlayState: 'paused',
-            animationDelay: `calc(${scroll} * -1s)`,
-            animationIterationCount: 1,
-            animationFillMode: 'both',
-          }}
+          style={scrollAnimationProvider('suitAnimation')}
         >
           <div className={happyFacePosition}>
             <HappyFace />

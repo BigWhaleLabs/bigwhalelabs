@@ -16,6 +16,7 @@ import classnames, {
 import colorToBackground from 'helpers/colorToBackground'
 import colorToDropShadow from 'helpers/colorToDropShadow'
 import useScrollPercent from 'hooks/useScrollPercent'
+import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 
 const sphereStyles = classnames(
   display('flex'),
@@ -45,21 +46,14 @@ export default function ({
 }) {
   const bgColor = colorToBackground(color)
   const shadowColor = colorToDropShadow(color)
-  const scroll = useScrollPercent()
-  const zkText = scroll > 0.4 ? 'ZK' || text : ''
+  const { beforeSuperOrb } = useScrollPercent()
+  const zkText = !beforeSuperOrb ? 'ZK' || text : ''
 
   return (
     <div
-      style={{
-        animationName: onLeft ? 'sphereAnimationLeft' : 'sphereAnimationRight',
-        animationTimingFunction: 'ease-in-out',
-        animationDuration: '1s',
-        animationDirection: 'linear',
-        animationPlayState: 'paused',
-        animationDelay: `calc(${scroll} * -1s)`,
-        animationIterationCount: 1,
-        animationFillMode: 'both',
-      }}
+      style={scrollAnimationProvider(
+        onLeft ? 'sphereAnimationLeft' : 'sphereAnimationRight'
+      )}
       className={classnames(
         sphereSize(small),
         sphereStyles,
