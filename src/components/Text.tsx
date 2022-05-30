@@ -4,6 +4,7 @@ import {
   backgroundClip,
   backgroundImage,
   classnames,
+  content,
   display,
   dropShadow,
   fontFamily,
@@ -12,11 +13,13 @@ import {
   gradientColorStops,
   letterSpacing,
   lineHeight,
+  position,
   textAlign,
   textColor,
   textDecoration,
   textOverflow,
   textTransform,
+  zIndex,
 } from 'classnames/tailwind'
 import ChildrenProp from 'models/ChildrenProp'
 import classNamesToString from 'helpers/classNamesToString'
@@ -192,14 +195,24 @@ const retroText = (extraSmall?: boolean) =>
     lineHeight('leading-11.5', 'md:leading-15'),
     textAlign('text-center'),
     textColor('text-transparent'),
-    backgroundClip('bg-clip-text'),
-    backgroundImage('bg-retro'),
+    backgroundClip('bg-clip-text', 'before:bg-clip-text'),
+    backgroundImage('bg-retro', 'before:bg-metallic'),
     textTransform('uppercase'),
-    dropShadow('drop-shadow-retro')
+    zIndex('before:-z-10'),
+    position('before:absolute'),
+    content('before:content-retro'),
+    dropShadow('before:drop-shadow-retro')
   )
 export function RetroText({ children }: ChildrenProp) {
   const { xs } = useBreakpoints()
-  return <h1 className={retroText(xs)}>{children}</h1>
+  return (
+    <h1
+      data-text={children}
+      className={classNamesToString(retroText(xs), 'retro-text')}
+    >
+      {children}
+    </h1>
+  )
 }
 
 const linkText = (tertiary?: boolean) =>
