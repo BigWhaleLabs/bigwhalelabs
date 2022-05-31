@@ -26,6 +26,7 @@ module.exports = {
         'mobile-card': '22.813rem',
       },
       maxWidth: {
+        270: '16.875rem',
         358: '22.375rem',
         400: '25rem',
         535: '33.5rem',

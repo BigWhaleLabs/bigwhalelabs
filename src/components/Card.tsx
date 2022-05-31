@@ -33,7 +33,11 @@ const cardContainer = (tall?: boolean, bigSpace?: boolean) => {
       tall ? undefined : '2xl:flex-row',
       bigSpace ? 'flex-col-reverse' : 'flex-col'
     ),
-    maxWidth(tall ? '2xl:max-w-535' : '2xl:max-w-758', 'max-w-535'),
+    maxWidth(
+      tall ? '2xl:!max-w-535' : '2xl:!max-w-758',
+      'sm:max-w-535',
+      'max-w-270'
+    ),
     maxHeight(tall ? '2xl:max-h-620' : '2xl:max-h-298'),
 
     width(twoXl ? undefined : 'w-mobile-card'),

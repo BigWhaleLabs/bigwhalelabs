@@ -1,7 +1,6 @@
 import classnames, {
   dropShadow,
   height,
-  margin,
   stroke,
   strokeWidth,
   width,
