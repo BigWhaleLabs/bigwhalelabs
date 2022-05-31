@@ -65,7 +65,7 @@ const rightGem = classnames(
   bgImage,
   inset(
     'xl:top-12',
-    'xl:!-right-1/4',
+    'xl:!-right-1/5',
     'md:right-2/3',
     '-bottom-11',
     '-right-44'
