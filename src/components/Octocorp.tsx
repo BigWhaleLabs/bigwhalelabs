@@ -19,7 +19,7 @@ const textCard = classnames(
 const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col', 'md:flex-row'),
-  margin('ml-3')
+  margin('ml-3', 'md:mt-116', 'mt-64')
 )
 
 export default function () {

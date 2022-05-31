@@ -104,9 +104,6 @@ module.exports = {
       padding: {
         25: '6.125rem',
       },
-      margin: {
-        22.5: '5.625rem',
-      },
       borderRadius: {
         '4xl': '2.5rem',
       },
@@ -118,6 +115,7 @@ module.exports = {
         '-6': '-1.5rem',
         '-9': '-2.25rem',
         '-11': '-2.75rem',
+        '-20': '-5rem',
         '-28': '-7rem',
         '-44': '-11rem',
         '-60': '-15rem',
@@ -132,6 +130,10 @@ module.exports = {
       },
       content: {
         retro: 'attr(data-text)',
+      },
+      margin: {
+        116: '29rem',
+        22.5: '5.625rem',
       },
     },
   },
