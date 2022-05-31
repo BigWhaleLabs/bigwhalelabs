@@ -13,10 +13,10 @@ import useBreakpoints from 'hooks/useBreakpoints'
 
 const container = classnames(
   display('flex'),
-  flexDirection('flex-row'),
+  flexDirection('flex-col', 'md:flex-row'),
   justifyContent('justify-center'),
   alignItems('items-center'),
-  space('space-x-12')
+  space('md:space-x-12', 'space-y-12', 'md:space-y-0')
 )
 const textAndButton = space('space-y-6')
 export default function ({

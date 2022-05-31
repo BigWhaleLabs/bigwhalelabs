@@ -13,7 +13,7 @@ import ChildrenProp from 'models/ChildrenProp'
 
 const cardContainer = classnames(
   display('flex'),
-  padding('p-6'),
+  padding('p-10'),
   borderRadius('rounded-2xl'),
   backgroundColor('bg-card'),
   boxShadow('shadow-card'),
