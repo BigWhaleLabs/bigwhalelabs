@@ -20,7 +20,6 @@ const App = () => {
         <LearnBlock />
         <SealCred />
         <Dosu />
-
         <HiringBlock />
         <Octocorp />
         <LogoFooter />
