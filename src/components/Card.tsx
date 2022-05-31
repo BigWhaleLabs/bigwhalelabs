@@ -44,7 +44,7 @@ const cardContainer = (tall?: boolean, bigSpace?: boolean) => {
     boxShadow('shadow-card'),
     wordBreak('break-words'),
     backdropBlur('backdrop-blur-lg'),
-    space(tall ? '2xl:space-x-52' : bigSpace ? '2xl:space-x-7' : undefined),
+    space(tall ? 'space-x-52' : bigSpace ? '2xl:space-x-7' : undefined),
     space(tall ? '2xl:space-y-7' : undefined),
     alignItems('items-center')
   )
