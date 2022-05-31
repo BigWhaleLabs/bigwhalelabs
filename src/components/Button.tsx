@@ -44,7 +44,8 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         fontWeight('font-bold'),
         fontFamily('font-primary'),
         fontSize(small ? 'text-sm' : 'text-lg'),
-        textColor('text-primary-dark')
+        textColor('text-primary-dark'),
+        brightness('hover:brightness-75', 'active:brightness-50')
       )
     : classnames(
         fontWeight('font-normal'),

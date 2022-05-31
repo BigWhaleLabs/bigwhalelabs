@@ -203,7 +203,7 @@ const retroText = (extraSmall?: boolean) =>
     fontFamily('font-primary'),
     fontWeight('font-bold'),
     fontSize(extraSmall ? 'text-6xl' : 'text-7xl', 'md:text-9xl'),
-    lineHeight('leading-11.5', 'md:leading-15'),
+    lineHeight('leading-12', 'md:leading-15'),
     textAlign('text-center'),
     textColor('text-transparent'),
     backgroundClip('bg-clip-text', 'before:bg-clip-text'),
@@ -217,12 +217,12 @@ const retroText = (extraSmall?: boolean) =>
 export function RetroText({ children }: ChildrenProp) {
   const { xs } = useBreakpoints()
   return (
-    <h1
+    <span
       data-text={children}
       className={classNamesToString(retroText(xs), 'retro-text')}
     >
       {children}
-    </h1>
+    </span>
   )
 }
 

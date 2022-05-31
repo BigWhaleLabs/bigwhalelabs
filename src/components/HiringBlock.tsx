@@ -11,6 +11,7 @@ import classnames, {
   display,
   flexDirection,
   justifyContent,
+  lineHeight,
   margin,
   maxWidth,
   padding,
@@ -36,7 +37,7 @@ const bottomWrapper = classnames(
   alignItems('items-center'),
   margin('mx-auto'),
   maxWidth('max-w-400'),
-  padding('pt-4'),
+  padding('pt-4', 'px-3'),
   width('w-full', 'md:w-4/6'),
   space('space-y-6')
 )
@@ -50,7 +51,7 @@ export default function () {
         <Line gradientDirection="to-right" />
         <ExtraBoldText extraLeading>
           <AccentText color="text-secondary" shadow="drop-shadow-secondary">
-            THE
+            <span className={lineHeight('leading-10')}>THE</span>
           </AccentText>
         </ExtraBoldText>
         <Line gradientDirection="to-left" />
