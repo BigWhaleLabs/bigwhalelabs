@@ -37,7 +37,7 @@ const bottomWrapper = classnames(
   alignItems('items-center'),
   margin('mx-auto'),
   maxWidth('max-w-400'),
-  padding('pt-4'),
+  padding('pt-4', 'px-3'),
   width('w-full', 'md:w-4/6'),
   space('space-y-6')
 )
