@@ -72,7 +72,6 @@ body {
   width: 100vw;
   position: relative;
   perspective: 180px;
-  perspective-origin: 50% 20%;
   overflow: hidden;
 }
 .grid {
