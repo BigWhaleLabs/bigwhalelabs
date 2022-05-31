@@ -104,9 +104,6 @@ module.exports = {
       padding: {
         25: '6.125rem',
       },
-      margin: {
-        22.5: '5.625rem',
-      },
       borderRadius: {
         '4xl': '2.5rem',
       },
@@ -136,6 +133,7 @@ module.exports = {
       },
       margin: {
         116: '29rem',
+        22.5: '5.625rem',
       },
     },
   },
