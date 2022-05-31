@@ -4,7 +4,6 @@
 
 html {
   background-color: #0d0030;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   /* Grid and blurry background */
   background: url('/img/blurry-shadows-lg.webp') top / cover,
