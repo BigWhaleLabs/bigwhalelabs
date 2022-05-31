@@ -38,10 +38,7 @@ export default function () {
             pseudonymous social network where you can share your thoughts with
             the world.
           </BodyText>
-          <Button
-            outlined
-            url="https://discordapp.com/channels/885322567693512754/955852267557367819/974663929294913576"
-          >
+          <Button outlined url="https://discord.gg/7frxHQdR">
             Join Discord for updates
           </Button>
         </div>
