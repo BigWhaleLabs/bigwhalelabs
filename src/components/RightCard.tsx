@@ -1,7 +1,7 @@
+import { ComponentChild } from 'preact'
 import { HeaderText } from 'components/Text'
 import Button from 'components/Button'
 import Card from 'components/Card'
-import OrbSeal from 'components/OrbSeal'
 import classnames, {
   alignItems,
   display,
@@ -19,19 +19,32 @@ const container = classnames(
   space('space-x-12')
 )
 const textAndButton = space('space-y-6')
-export default function () {
+export default function ({
+  reverse,
+  icon,
+  text,
+  buttonText,
+  url,
+}: {
+  reverse?: boolean
+  icon: ComponentChild
+  text: string
+  buttonText: string
+  url: string
+}) {
   const { lg } = useBreakpoints()
 
   return (
     <Card>
       <div className={container}>
-        <OrbSeal />
+        {!reverse && icon}
         <div className={textAndButton}>
-          <HeaderText textSize={lg ? 'base' : 'small'}>
-            Verify NFT ownership while remaining anonymous
-          </HeaderText>
-          <Button outlined>Do this with SealCred</Button>
+          <HeaderText textSize={lg ? 'base' : 'small'}>{text}</HeaderText>
+          <Button outlined url={url}>
+            {buttonText}
+          </Button>
         </div>
+        {reverse && icon}
       </div>
     </Card>
   )

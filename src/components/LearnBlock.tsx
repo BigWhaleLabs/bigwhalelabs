@@ -1,5 +1,6 @@
-import SocializePseudonymously from 'components/SocializePseudonymously'
-import VerifyNFTOwnership from 'components/VerifyNFTOwnership'
+import DosuCity from 'icons/DosuCity'
+import OrbSeal from 'components/OrbSeal'
+import RightCard from 'components/RightCard'
 import WeLiveInAWorld from 'components/WeLiveInAWorld'
 import classnames, {
   alignItems,
@@ -29,8 +30,19 @@ export default function () {
     <div className={cardsTogether}>
       <WeLiveInAWorld />
       <div className={cardsOnRight}>
-        <VerifyNFTOwnership />
-        <SocializePseudonymously />
+        <RightCard
+          icon={<OrbSeal />}
+          text="Verify NFT ownership while remaining anonymous"
+          buttonText="Do this with SealCred"
+          url="https://sealcred.xyz"
+        />
+        <RightCard
+          reverse
+          icon={<DosuCity />}
+          text="Socialize pseudonymously using ZK badges"
+          buttonText="Learn about Dosu"
+          url="https://dosu.io"
+        />
       </div>
     </div>
   )
