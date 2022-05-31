@@ -1,16 +1,7 @@
-import classnames, {
-  dropShadow,
-  scale,
-  stroke,
-  strokeWidth,
-} from 'classnames/tailwind'
+import classnames, { scale, stroke, strokeWidth } from 'classnames/tailwind'
 
 const mainStroke = classnames(stroke('stroke-primary'), strokeWidth('stroke-2'))
-
-const svgClasses = classnames(
-  dropShadow('drop-shadow-primary'),
-  scale('scale-75', 'lg:scale-90')
-)
+const svgClasses = scale('scale-75', 'lg:scale-90')
 
 export default function () {
   return (
