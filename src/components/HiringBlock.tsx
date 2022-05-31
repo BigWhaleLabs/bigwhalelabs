@@ -11,6 +11,7 @@ import classnames, {
   display,
   flexDirection,
   justifyContent,
+  lineHeight,
   margin,
   maxWidth,
   padding,
@@ -50,7 +51,7 @@ export default function () {
         <Line gradientDirection="to-right" />
         <ExtraBoldText extraLeading>
           <AccentText color="text-secondary" shadow="drop-shadow-secondary">
-            THE
+            <span className={lineHeight('leading-10')}>THE</span>
           </AccentText>
         </ExtraBoldText>
         <Line gradientDirection="to-left" />
