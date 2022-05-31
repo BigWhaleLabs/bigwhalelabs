@@ -36,15 +36,14 @@ const futureBox = classnames(
   flexDirection('md:flex-row', 'flex-col-reverse'),
   alignItems('items-center'),
   justifyContent('justify-end'),
-  space('space-x-4')
+  space('md:space-x-4')
 )
 const textBlock = classnames(
   display('flex'),
   flexDirection('flex-col'),
   alignItems('md:items-start', 'items-center'),
   wordBreak('break-words'),
-  textAlign('md:text-left', 'text-center'),
-  width('lg:w-max', 'w-80')
+  textAlign('md:text-left', 'text-center')
 )
 const bigWhaleStyles = classnames(
   height('sm:h-auto', 'h-max'),
