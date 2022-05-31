@@ -74,7 +74,7 @@ export default function () {
           <PrimaryAccentText color="text-accent">SealCred</PrimaryAccentText>
         </div>
         <div className={cardBody}>
-          <HeaderText small>
+          <HeaderText>
             Verify NFT ownership while remaining anonymous with ZK badges.
           </HeaderText>
           <BodyText>

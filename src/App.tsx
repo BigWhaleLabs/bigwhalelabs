@@ -1,6 +1,7 @@
 import Dosu from 'components/Dosu'
 import Footer from 'components/Footer'
 import HiringBlock from 'components/HiringBlock'
+import LearnBlock from 'components/LearnBlock'
 import LogoFooter from 'components/LogoFooter'
 import Navbar from 'components/Navbar'
 import Octocorp from 'components/Octocorp'
@@ -16,10 +17,9 @@ const App = () => {
       <Root>
         <StartBlock />
         <PrivacyWorld />
-
+        <LearnBlock />
         <SealCred />
         <Dosu />
-
         <HiringBlock />
         <Octocorp />
         <LogoFooter />

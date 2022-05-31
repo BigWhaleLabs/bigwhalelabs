@@ -88,21 +88,26 @@ export function LargeStrokeText({
   )
 }
 
-const bodyText = (small?: boolean, bold?: boolean, center?: boolean) =>
+const bodyText = (large?: boolean, bold?: boolean, center?: boolean) =>
   classnames(
     textColor('text-formal-accent'),
-    lineHeight(small ? 'leading-5' : 'leading-6'),
-    fontSize(small ? 'text-sm' : 'text-base'),
+    lineHeight('leading-6'),
+    fontSize(large ? 'text-lg' : 'text-base'),
     fontWeight(bold ? 'font-bold' : 'font-normal'),
     textAlign(center ? 'text-center' : 'text-left')
   )
 export function BodyText({
+  large,
   bold,
-  small,
   center,
   children,
-}: ChildrenProp & { bold?: boolean; small?: boolean; center?: boolean }) {
-  return <p className={bodyText(small, bold, center)}>{children}</p>
+}: ChildrenProp & {
+  large?: boolean
+  bold?: boolean
+  textSize?: string
+  center?: boolean
+}) {
+  return <p className={bodyText(large, bold, center)}>{children}</p>
 }
 
 const primaryAccentText = (color: TTextColor) =>
@@ -135,21 +140,33 @@ export function AccentText({
   return <span className={accentText(color, shadow)}>{children}</span>
 }
 
-const headerText = (small?: boolean, center?: boolean) =>
+const headerText = (textSize?: string, center?: boolean) =>
   classnames(
     fontFamily('font-primary'),
     fontWeight('font-bold'),
     textColor('text-formal-accent'),
-    fontSize(small ? 'text-2xl' : 'text-4xl'),
-    lineHeight(small ? 'leading-8' : 'leading-11'),
+    fontSize(
+      textSize === 'small'
+        ? 'text-2xl'
+        : textSize === 'base'
+        ? 'text-3xl'
+        : 'text-4xl'
+    ),
+    lineHeight(
+      textSize === 'small'
+        ? 'leading-8'
+        : textSize === 'base'
+        ? 'leading-10'
+        : 'leading-11'
+    ),
     textAlign(center ? 'text-center' : undefined)
   )
 export function HeaderText({
-  small,
+  textSize,
   center,
   children,
-}: ChildrenProp & { small?: boolean; center?: boolean }) {
-  return <h2 className={headerText(small, center)}>{children}</h2>
+}: ChildrenProp & { textSize?: string; center?: boolean }) {
+  return <h2 className={headerText(textSize, center)}>{children}</h2>
 }
 
 const plainText = classnames(

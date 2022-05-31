@@ -28,7 +28,9 @@ export default function () {
       <Octocorp />
       <div className={textCard}>
         <PrimaryAccentText color="text-secondary">OCTO-CORP</PrimaryAccentText>
-        <HeaderText small>The antithesis of Big Whale Labs.</HeaderText>
+        <HeaderText textSize="small">
+          The antithesis of Big Whale Labs.
+        </HeaderText>
         <BodyText>
           In a world where OCTO-CORP succeeds, your freedom of privacy is
           stifled. Zero Knowledge Proof and all of its benefits would be

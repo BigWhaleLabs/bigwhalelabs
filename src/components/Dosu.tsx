@@ -32,7 +32,9 @@ export default function () {
       <div className={card}>
         <PrimaryAccentText color="text-primary">Dosu</PrimaryAccentText>
         <div className={cardBody}>
-          <HeaderText small>Socialize pseudonymously with ZK badges</HeaderText>
+          <HeaderText textSize="small">
+            Socialize pseudonymously with ZK badges
+          </HeaderText>
           <BodyText>
             <AccentText color="text-primary">Dosu</AccentText> will be a
             pseudonymous social network where you can share your thoughts with
