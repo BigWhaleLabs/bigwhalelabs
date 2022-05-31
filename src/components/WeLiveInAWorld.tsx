@@ -1,7 +1,7 @@
 import { AccentText, BodyText, HeaderText } from 'components/Text'
 import { space } from 'classnames/tailwind'
 import Card from 'components/Card'
-import PrismOrb from 'components/PrismOrb'
+import PrismOrb from 'icons/PrismOrb'
 import useBreakpoints from 'helpers/useBreakpoints'
 
 const cardBody = space('space-y-6')
