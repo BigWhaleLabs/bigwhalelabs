@@ -40,7 +40,9 @@ export default function () {
         </BodyText>
         <Button
           outlined
-          url="http://twitter.com/share?url=Check%20out%20the%20future%20of%20pseudonymity%20using%20Zero%20Knowledge%20Proofs%20at%20Big%20Whale%20Labs.%20Power%20up%20your%20pseudonymous%20wallet%20with%20their%20new%20app%2C%20SealCred%20bwl.gg"
+          url={`http://twitter.com/share?url=${encodeURIComponent(
+            'Check out the future of pseudonymity using #zk proofs at @bigwhalelabs 🐋 Power up your pseudonymous wallet with their new app @sealcred 🦭'
+          )}`}
         >
           Endorse now
         </Button>
