@@ -1,5 +1,5 @@
 import classNamesToString from 'helpers/classNamesToString'
-import classnames, { margin, stroke, strokeWidth } from 'classnames/tailwind'
+import classnames, { stroke, strokeWidth } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 
 const mainStroke = classnames(
