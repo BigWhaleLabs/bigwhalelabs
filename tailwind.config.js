@@ -2,12 +2,20 @@
 module.exports = {
   content: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
+    screens: {
+      fold: '20rem',
+      mobile: '25rem',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     fontFamily: {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
       screens: {
-        fold: '20rem',
         md: '37.5rem',
       },
       space: {
@@ -122,6 +130,7 @@ module.exports = {
         25: '6.125rem',
       },
       margin: {
+        '-4': '-1rem',
         '-52': '-13rem',
         19.5: '4.875rem',
         22.5: '5.625rem',

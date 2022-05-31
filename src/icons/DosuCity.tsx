@@ -14,15 +14,16 @@ const accentStroke = classnames(
   strokeWidth('stroke-1.5')
 )
 const svgClasses = classnames(
-  scale('scale-75', 'sm:scale-90', '2xl:scale-100'),
-  margin('mx-auto')
+  scale('scale-90', 'mobile:scale-125', '2xl:scale-150'),
+  margin('mx-auto', '2xl:ml-24'),
+  margin('mb-0', 'mobile:mb-8', '2xl:-mb-4')
 )
 
 export default function () {
   return (
     <svg
-      width="334"
-      height="307"
+      width="200"
+      height="200"
       viewBox="0 0 334 307"
       fill="none"
       className={svgClasses}

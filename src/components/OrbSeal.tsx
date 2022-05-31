@@ -3,14 +3,14 @@ import classnames, { margin, scale, strokeWidth } from 'classnames/tailwind'
 const mainStroke = classnames(strokeWidth('stroke-1.5'))
 
 const svgClasses = classnames(
-  margin('2xl:ml-8', 'mx-auto'),
-  scale('scale-75', '2xl:scale-100')
+  margin('mx-auto', '2xl:ml-16'),
+  scale('scale-100', '2xl:scale-125')
 )
 
 export default function () {
   return (
     <svg
-      width="262"
+      width="200"
       height="191"
       viewBox="0 0 262 191"
       fill="none"
