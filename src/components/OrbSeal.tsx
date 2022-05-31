@@ -1,20 +1,18 @@
-import classnames, { margin, scale, strokeWidth } from 'classnames/tailwind'
+import classNamesToString from 'helpers/classNamesToString'
+import classnames, { strokeWidth } from 'classnames/tailwind'
+import useBreakpoints from 'hooks/useBreakpoints'
 
 const mainStroke = classnames(strokeWidth('stroke-1.5'))
 
-const svgClasses = classnames(
-  margin('mx-auto', '2xl:ml-16'),
-  scale('scale-100', '2xl:scale-125')
-)
-
 export default function () {
+  const { lg } = useBreakpoints()
   return (
     <svg
-      width="200"
-      height="191"
+      width={lg ? '471.6' : '262'}
+      height={lg ? '343.8' : '191'}
       viewBox="0 0 262 191"
       fill="none"
-      className={svgClasses}
+      className={classNamesToString(lg ? '-my-12' : undefined)}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

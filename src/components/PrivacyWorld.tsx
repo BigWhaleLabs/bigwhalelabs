@@ -2,7 +2,7 @@ import { LargeStrokeText } from 'components/Text'
 import classnames, { margin, maxWidth, wordBreak } from 'classnames/tailwind'
 
 const privacyWorld = classnames(
-  margin('md:mt-60', 'mt-32'),
+  margin('md:my-60', 'my-32'),
   wordBreak('break-words'),
   maxWidth('max-w-full')
 )

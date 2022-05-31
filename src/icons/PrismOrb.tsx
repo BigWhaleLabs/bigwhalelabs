@@ -13,7 +13,7 @@ const prismStroke = classnames(
 )
 const svgClasses = classnames(
   height('h-auto'),
-  width('w-40', '2xl:w-fit'),
+  width('w-40'),
   dropShadow('drop-shadow-formal-accent'),
   margin('mt-4')
 )

@@ -6,16 +6,17 @@ import classnames, {
   display,
   flexDirection,
   margin,
+  maxWidth,
   space,
 } from 'classnames/tailwind'
 
 const cardsTogether = classnames(
   display('flex'),
-  flexDirection('2xl:flex-row', 'flex-col'),
-  space('2xl:space-x-6'),
-  space('space-y-6', '2xl:space-y-0'),
+  flexDirection('flex-col', 'lg:flex-row'),
+  space('lg:space-x-6', 'space-y-6', 'lg:space-y-0'),
   alignItems('items-stretch'),
-  margin('md:mt-64', 'mt-32')
+  maxWidth('max-w-2xl', 'lg:max-w-6xl'),
+  margin('mx-6', 'lg:mx-0')
 )
 const cardsOnRight = classnames(
   display('flex'),
