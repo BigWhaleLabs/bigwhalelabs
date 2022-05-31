@@ -7,18 +7,17 @@ import classnames, {
   scale,
   textTransform,
 } from 'classnames/tailwind'
-import useBreakpoints from 'hooks/useBreakpoints'
 
 const textStyle = classnames(
   fill('fill-tertiary'),
   textTransform('uppercase'),
   fontWeight('font-semibold'),
-  fontSize('text-xl')
+  fontSize('text-3xl', 'md:text-xl')
 )
 const svgBox = classnames(
-  height('md:h-64', 'h-44'),
+  height('md:h-80', 'h-44'),
   margin('mx-auto'),
-  scale('scale-150', 'md:scale-300')
+  scale('scale-150')
 )
 
 interface ArcTextProps {
@@ -26,14 +25,15 @@ interface ArcTextProps {
 }
 
 export default function ({ text }: ArcTextProps) {
-  const { tablet } = useBreakpoints()
-  const radius = tablet ? 85 : 110
+  const radius = 65
+  const size = 500
+  const labelSize = size * 0.4
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      viewBox={tablet ? '0 0 475 475' : '0 0 500 500'}
+      viewBox={`0 0 ${size} ${size}`}
       className={svgBox}
     >
       <title>{text}</title>
@@ -64,6 +64,20 @@ export default function ({ text }: ArcTextProps) {
       >
         <textPath xlinkHref="#textcircle">{text}</textPath>
       </text>
+      <image
+        x={size / 4}
+        y={size / 4}
+        width={size / 2}
+        height={size / 2}
+        href="/img/gem.webp"
+      />
+      <image
+        x={(size - labelSize) / 2}
+        y={(size - labelSize) / 2}
+        width={labelSize}
+        height={labelSize}
+        href="/img/comming-soon.svg"
+      />
     </svg>
   )
 }
