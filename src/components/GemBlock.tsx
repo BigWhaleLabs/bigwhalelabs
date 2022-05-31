@@ -14,7 +14,6 @@ import classnames, {
   padding,
   position,
   space,
-  translate,
   width,
   zIndex,
 } from 'classnames/tailwind'
