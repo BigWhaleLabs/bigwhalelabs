@@ -4,6 +4,7 @@ import classnames, {
   backgroundColor,
   borderRadius,
   boxShadow,
+  boxShadowColor,
   brightness,
   display,
   dropShadow,
@@ -32,6 +33,12 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         backgroundColor('bg-tertiary'),
         borderRadius('rounded-4xl'),
         boxShadow('shadow-button'),
+        boxShadowColor(
+          'shadow-tertiary',
+          'hover:shadow-tertiary',
+          'active:shadow-tertiary'
+        ),
+        brightness('hover:brightness-75', 'active:brightness-50'),
         dropShadow('drop-shadow-tertiary'),
         padding(small ? 'py-2' : 'py-3', small ? 'px-4' : 'px-6'),
         fontWeight('font-bold'),
