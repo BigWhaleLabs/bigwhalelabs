@@ -26,6 +26,7 @@ module.exports = {
         'mobile-card': '22.813rem',
       },
       maxWidth: {
+        270: '16.875rem',
         358: '22.375rem',
         400: '25rem',
         535: '33.5rem',
@@ -33,6 +34,7 @@ module.exports = {
       },
       maxHeight: {
         298: '18.625rem',
+        450: '30rem',
         620: '38.75rem',
       },
       fontSize: {
@@ -120,8 +122,10 @@ module.exports = {
         25: '6.125rem',
       },
       margin: {
+        '-52': '-13rem',
         19.5: '4.875rem',
         22.5: '5.625rem',
+        116: '29rem',
       },
       borderRadius: {
         '4xl': '2.5rem',
@@ -135,11 +139,12 @@ module.exports = {
         '-6': '-1.5rem',
         '-9': '-2.25rem',
         '-11': '-2.75rem',
+        '-20': '-5rem',
         '-28': '-7rem',
         '-44': '-11rem',
         '-60': '-15rem',
         '-96': '-24rem',
-        '-1/4': '-25%',
+        '-1/5': '-20%',
       },
       scale: {
         300: '3.0',
