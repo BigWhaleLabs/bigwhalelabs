@@ -152,7 +152,13 @@ const headerText = (textSize?: string, center?: boolean) =>
         ? 'text-3xl'
         : 'text-4xl'
     ),
-    lineHeight(textSize === 'small' ? 'leading-8' : 'leading-11'),
+    lineHeight(
+      textSize === 'small'
+        ? 'leading-8'
+        : textSize === 'base'
+        ? 'leading-10'
+        : 'leading-11'
+    ),
     textAlign(center ? 'text-center' : undefined)
   )
 export function HeaderText({

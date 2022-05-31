@@ -5237,6 +5237,7 @@ export type TMargin =
   | 'm-1.5'
   | 'm-2.5'
   | 'm-3.5'
+  | 'm-19.5'
   | 'm-22.5'
   | 'my-0'
   | 'my-1'
@@ -5276,6 +5277,7 @@ export type TMargin =
   | 'my-1.5'
   | 'my-2.5'
   | 'my-3.5'
+  | 'my-19.5'
   | 'my-22.5'
   | 'mx-0'
   | 'mx-1'
@@ -5315,6 +5317,7 @@ export type TMargin =
   | 'mx-1.5'
   | 'mx-2.5'
   | 'mx-3.5'
+  | 'mx-19.5'
   | 'mx-22.5'
   | 'mt-0'
   | 'mt-1'
@@ -5354,6 +5357,7 @@ export type TMargin =
   | 'mt-1.5'
   | 'mt-2.5'
   | 'mt-3.5'
+  | 'mt-19.5'
   | 'mt-22.5'
   | 'mr-0'
   | 'mr-1'
@@ -5393,6 +5397,7 @@ export type TMargin =
   | 'mr-1.5'
   | 'mr-2.5'
   | 'mr-3.5'
+  | 'mr-19.5'
   | 'mr-22.5'
   | 'mb-0'
   | 'mb-1'
@@ -5432,6 +5437,7 @@ export type TMargin =
   | 'mb-1.5'
   | 'mb-2.5'
   | 'mb-3.5'
+  | 'mb-19.5'
   | 'mb-22.5'
   | 'ml-0'
   | 'ml-1'
@@ -5471,6 +5477,7 @@ export type TMargin =
   | 'ml-1.5'
   | 'ml-2.5'
   | 'ml-3.5'
+  | 'ml-19.5'
   | 'ml-22.5'
 
 export type TSpace =
@@ -7230,6 +7237,9 @@ export type TWidth =
   | 'w-72'
   | 'w-80'
   | 'w-96'
+  | 'w-286'
+  | 'w-300'
+  | 'w-334'
   | 'w-500'
   | 'w-auto'
   | 'w-px'
@@ -7268,6 +7278,7 @@ export type TWidth =
   | 'w-min'
   | 'w-max'
   | 'w-fit'
+  | 'w-mobile-card'
 
 export type TMinWidth =
   | 'min-w-0'
@@ -7278,6 +7289,7 @@ export type TMinWidth =
 
 export type TMaxWidth =
   | 'max-w-0'
+  | 'max-w-358'
   | 'max-w-400'
   | 'max-w-535'
   | 'max-w-758'
@@ -7365,6 +7377,7 @@ export type THeight =
   | 'h-min'
   | 'h-max'
   | 'h-fit'
+  | 'h-mobile-card'
 
 export type TMinHeight =
   | 'min-h-0'
@@ -7530,6 +7543,7 @@ export type TStrokeWidth =
   | 'stroke-1'
   | 'stroke-2'
   | 'stroke-4'
+  | 'stroke-1.5'
   | 'stroke-5/2'
 
 export type TSVG = TFill | TStroke | TStrokeWidth

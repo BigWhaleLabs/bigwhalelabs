@@ -15,12 +15,18 @@ module.exports = {
         '-44': '-11rem',
       },
       width: {
+        286: '17.875rem',
+        300: '18.75rem',
+        334: '20.875rem',
         500: '31.25rem',
+        'mobile-card': '92%',
       },
       height: {
         500: '31.25rem',
+        'mobile-card': '22.813rem',
       },
       maxWidth: {
+        358: '22.375rem',
         400: '25rem',
         535: '33.5rem',
         758: '47.375rem',
@@ -88,8 +94,8 @@ module.exports = {
         '2xl': '0rem 0.25rem 2.75rem 0rem rgb(0 0 0 / 0.25)',
         lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
         md: '0rem 0rem 0.375rem 0rem rgb(0 0 0 / 0.25)',
+        button: '0rem 0rem 1.625rem rgba(1, 254, 182, 1)',
         card: '0rem 1rem 11rem rgba(21, 161, 252, 0.15)',
-        button: '0px 0px 1rem #01feb650',
       },
       dropShadow: {
         'text-fill-primary': '0rem -1rem 0rem #15A1FC',
@@ -98,8 +104,8 @@ module.exports = {
         tertiary: '0rem 0rem 0.625rem #01fed6',
         primary: '0rem 0rem 1.5rem #15A1FC',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
+        retro: '0 0 4rem rgba(10, 132, 255, 0.7)',
         orb: '0 0 11rem #FFFFFF',
-        retro: '0rem 0rem 4rem rgb(10, 132, 255)',
       },
       borderRadius: {
         '4xl': '2.5rem',
@@ -113,10 +119,15 @@ module.exports = {
       padding: {
         25: '6.125rem',
       },
+      margin: {
+        19.5: '4.875rem',
+        22.5: '5.625rem',
+      },
       borderRadius: {
         '4xl': '2.5rem',
       },
       strokeWidth: {
+        1.5: '0.09375rem',
         '5/2': '0.15rem',
         4: '0.25rem',
       },

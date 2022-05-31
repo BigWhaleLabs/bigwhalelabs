@@ -9,7 +9,7 @@ const mainStroke = classnames(stroke('stroke-primary'), strokeWidth('stroke-2'))
 
 const svgClasses = classnames(
   dropShadow('drop-shadow-primary'),
-  scale('scale-50', 'sm:scale-90')
+  scale('scale-75', 'lg:scale-90')
 )
 
 export default function () {

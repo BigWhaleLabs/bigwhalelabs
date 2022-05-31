@@ -1,3 +1,23 @@
+import classnames, {
+  margin,
+  scale,
+  stroke,
+  strokeWidth,
+} from 'classnames/tailwind'
+
+const mainStroke = classnames(
+  stroke('stroke-primary-semi-dimmed'),
+  strokeWidth('stroke-1.5')
+)
+const accentStroke = classnames(
+  stroke('stroke-accent'),
+  strokeWidth('stroke-1.5')
+)
+const svgClasses = classnames(
+  scale('scale-75', 'sm:scale-90', '2xl:scale-100'),
+  margin('mx-auto')
+)
+
 export default function () {
   return (
     <svg
@@ -5,6 +25,7 @@ export default function () {
       height="307"
       viewBox="0 0 334 307"
       fill="none"
+      className={svgClasses}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -13,8 +34,7 @@ export default function () {
       />
       <path
         d="M189.391 180.069L191.03 178.487H196.439M189.391 180.069H182.179L185.621 183.393H211.52L209.389 181.335H203.488L201.848 178.487H196.439M189.391 180.069H196.439V178.487"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <rect
@@ -23,8 +43,7 @@ export default function () {
         rx="1.40175"
         transform="matrix(-1 0 0 1 211.52 177.085)"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <rect
@@ -33,8 +52,7 @@ export default function () {
         rx="1.40175"
         transform="matrix(-1 0 0 1 211.52 179.188)"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <line
@@ -80,71 +98,61 @@ export default function () {
           rx="79.9278"
           ry="80.189"
           fill="url(#paint2_linear_94_2851)"
-          stroke="#FED823"
-          stroke-width="1.5"
+          className={accentStroke}
           stroke-linejoin="round"
         />
         <path
           d="M9.82324 196.156H24.6223L24.6223 318.647H9.82324L9.82324 196.156Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M244.758 36.5463H246.608V55.7242H244.758V36.5463Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M258.328 6.8512H260.178V50.7748H258.328V6.8512Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M270.656 27.885L270.656 29.7409L260.174 29.7409L260.174 27.885L270.656 27.885Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M268.808 19.2239H270.658V29.7408H268.808V19.2239Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M243.522 52.6307H247.839V73.0459H243.522V52.6307Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M255.244 47.6815H263.26V68.0967H255.244V47.6815Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M242.295 57.58H249.078V77.9952H242.295V57.58Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M252.773 52.6307H265.723V73.0459H252.773V52.6307Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
@@ -153,176 +161,151 @@ export default function () {
         />
         <path
           d="M112.188 144.19H126.988M112.188 144.19L112.188 318.647H126.988L126.988 144.19M112.188 144.19L126.988 133.982V144.19"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M304.571 215.952H319.37V318.028H304.571V215.952Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M63.4688 110.783H83.2008L83.2008 318.647H63.4687L63.4688 110.783Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M150.416 232.656H180.631V318.647H150.416V232.656Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M180.633 232.965L190.653 220.902H200.673H220.714V318.647H180.633L180.633 232.965Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M190.651 220.902L180.631 232.656H150.416L162.44 220.902H190.651Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M143.634 183.783H153.5L153.5 318.647H143.634L143.634 183.783Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M153.492 183.783H163.358L163.358 318.647H153.492L153.492 183.783Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M236.127 134.292H278.674V318.647H236.127L236.127 134.292Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M257.7 134.292H278.666V318.647H257.7L257.7 134.292Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M229.96 77.4782C229.96 71.9553 234.437 67.4781 239.96 67.4781L274.84 67.4781C280.363 67.4781 284.84 71.9553 284.84 77.4782V118.825H229.96V77.4782Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M229.96 191.825H284.84L278.674 203.579H236.126L229.96 191.825Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M222.564 159.037H292.243L284.414 174.503H230.394L222.564 159.037Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M292.243 134.292L257.404 148.52L222.564 134.292L230.393 118.826L284.414 118.826L292.243 134.292Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M73.334 85.4188H85.0499V110.783H73.334V85.4188Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M61.6201 102.741L73.336 85.4188V110.783H61.6201L61.6201 102.741Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M153.507 171.41H159.056V183.783H153.507V171.41Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M147.339 179.86L153.505 171.41V183.783H147.339V179.86Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M313.208 203.58H307.658V215.953H313.208V203.58Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M319.376 212.03L313.21 203.58V215.953H319.376V212.03Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M321.218 203.58H315.668V215.953H321.218V203.58Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M327.386 212.03L321.219 203.58V215.953H327.386V212.03Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M24.6211 196.156L33.8705 185.639H41.27L41.27 318.647H24.6211L24.6211 196.156Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M126.98 124.703L136.23 136.766H143.629L143.629 318.647H126.98L126.98 124.703Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M319.362 215.952L327.687 215.952L336.011 209.697V318.028H319.362V215.952Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <line
@@ -330,8 +313,7 @@ export default function () {
           y1="268.619"
           x2="334.143"
           y2="268.619"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -340,8 +322,7 @@ export default function () {
           y1="272.203"
           x2="334.143"
           y2="272.203"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -350,8 +331,7 @@ export default function () {
           y1="275.787"
           x2="334.143"
           y2="275.787"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -360,8 +340,7 @@ export default function () {
           y1="279.371"
           x2="334.143"
           y2="279.371"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -370,8 +349,7 @@ export default function () {
           y1="257.868"
           x2="334.143"
           y2="257.868"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -380,8 +358,7 @@ export default function () {
           y1="261.452"
           x2="334.143"
           y2="261.452"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -390,8 +367,7 @@ export default function () {
           y1="265.036"
           x2="334.143"
           y2="265.036"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -400,8 +376,7 @@ export default function () {
           y1="268.619"
           x2="334.143"
           y2="268.619"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -410,8 +385,7 @@ export default function () {
           y1="247.116"
           x2="334.143"
           y2="247.116"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -420,8 +394,7 @@ export default function () {
           y1="250.7"
           x2="334.143"
           y2="250.7"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -430,8 +403,7 @@ export default function () {
           y1="254.284"
           x2="334.143"
           y2="254.284"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -440,8 +412,7 @@ export default function () {
           y1="257.868"
           x2="334.143"
           y2="257.868"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -450,8 +421,7 @@ export default function () {
           y1="236.365"
           x2="334.143"
           y2="236.365"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -460,8 +430,7 @@ export default function () {
           y1="239.948"
           x2="334.143"
           y2="239.948"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -470,8 +439,7 @@ export default function () {
           y1="243.532"
           x2="334.143"
           y2="243.532"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -480,8 +448,7 @@ export default function () {
           y1="247.116"
           x2="334.143"
           y2="247.116"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -490,8 +457,7 @@ export default function () {
           y1="225.613"
           x2="334.143"
           y2="225.613"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -500,8 +466,7 @@ export default function () {
           y1="229.197"
           x2="334.143"
           y2="229.197"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -510,8 +475,7 @@ export default function () {
           y1="232.781"
           x2="334.143"
           y2="232.781"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -520,8 +484,7 @@ export default function () {
           y1="236.365"
           x2="334.143"
           y2="236.365"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -531,22 +494,19 @@ export default function () {
         />
         <path
           d="M24.6223 196.156L24.6223 318.647M24.6223 196.156L33.8717 185.639H20.3059L9.82324 196.156H24.6223Z"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M32.0166 253.69H46.8157L46.8157 284.622H32.0166L32.0166 253.69Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M46.8145 253.698L56.0639 248.122H63.4634L63.4634 318.647H46.8145L46.8145 253.698Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
@@ -555,43 +515,37 @@ export default function () {
         />
         <path
           d="M46.8157 253.698L46.8157 318.647M46.8157 253.698L56.0651 248.122H42.4993L32.0166 253.698H46.8157Z"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M24.6143 284.622H46.8129L46.8129 318.647H24.6143L24.6143 284.622Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M38.1777 284.622H46.8105L46.8105 318.647H38.1777L38.1777 284.622Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M233.979 209.34H281.31V213.819H233.979V209.34Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M278.059 253.69H292.858V284.622H278.059V253.69Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M292.856 253.699L302.106 248.122H309.505V318.647H292.856V253.699Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
@@ -600,106 +554,91 @@ export default function () {
         />
         <path
           d="M292.858 253.699V318.647M292.858 253.699L302.107 248.122H288.541L278.059 253.699H292.858Z"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M270.656 284.622H292.855V318.647H270.656V284.622Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M284.227 284.622H292.859V318.648H284.227V284.622Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M102.631 215.952H117.43L117.43 318.647H102.631L102.631 215.952Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M92.1481 224.072L97.9718 215.952H102.631L102.631 318.647H83.207L83.207 271.36L92.1481 247.716L92.1481 224.072Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M225.027 113.876L290.39 113.876V118.825L225.027 118.825V113.876Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M192.898 103.616L299.171 103.616V108.991L192.898 108.991V103.616Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M199.129 243.791H236.127V251.215H199.129V243.791Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M199.129 265.444H236.127V272.868H199.129V265.444Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M207.759 241.317H205.292V253.69H207.759V241.317Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M207.759 262.969H205.292V275.342H207.759V262.969Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M217.624 241.317H215.158V253.69H217.624V241.317Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M217.624 262.969H215.158V275.342H217.624V262.969Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M227.49 241.317H225.024V253.69H227.49V241.317Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
           d="M227.49 262.969H225.024V275.342H227.49V262.969Z"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <path
@@ -708,8 +647,7 @@ export default function () {
         />
         <path
           d="M186.358 46.505L184.262 44.4818H177.347M186.358 46.505H195.577L191.177 50.7536H158.069L160.793 48.1235H168.337L170.432 44.4818H177.347M186.358 46.505H177.347V44.4818"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <rect
@@ -719,8 +657,7 @@ export default function () {
           height="3.58387"
           rx="1.79193"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <rect
@@ -730,8 +667,7 @@ export default function () {
           height="3.58387"
           rx="1.79193"
           fill="#0D0030"
-          stroke="#4B61D5"
-          stroke-width="1.5"
+          className={mainStroke}
           stroke-linejoin="round"
         />
         <line
@@ -758,392 +694,336 @@ export default function () {
       <path
         d="M278.631 289.081L278.631 290.873L275.059 290.873L275.059 289.081L278.631 289.081Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M278.631 295.352L278.631 297.144L275.059 297.144L275.059 295.352L278.631 295.352Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M143.278 142.644L137.081 148.862"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 147.518L139.706 151.102"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 163.143L137.081 169.36"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 168.017L139.706 171.6"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 173.392L137.081 179.61"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 178.266L139.706 181.85"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 183.642L137.081 189.859"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 188.515L139.706 192.099"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 193.891L137.081 200.109"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 198.765L139.706 202.349"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 204.141L137.081 210.358"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 209.014L139.706 212.598"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 214.39L137.081 220.607"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 219.264L139.706 222.847"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 234.889L137.081 241.106"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 239.762L139.706 243.346"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 245.138L137.081 251.355"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 250.012L139.706 253.595"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 255.387L137.081 261.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 260.261L139.706 263.845"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 265.637L137.081 271.854"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 270.51L139.706 274.094"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 275.886L137.081 282.104"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 280.76L139.706 284.344"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 286.135L137.081 292.353"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M143.278 291.009L139.706 294.593"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 281.017L133.903 287.234"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 285.891L131.278 289.474"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 261.306L133.903 267.523"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 266.179L131.278 269.763"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 251.45L133.903 257.667"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 256.324L131.278 259.908"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 241.594L133.903 247.812"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 246.468L131.278 250.052"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 231.739L133.903 237.956"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 236.612L131.278 240.196"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 221.883L133.903 228.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 226.757L131.278 230.341"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 212.028L133.903 218.245"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 216.901L131.278 220.485"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 202.172L133.903 208.389"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 207.046L131.278 210.629"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 182.461L133.903 188.678"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 187.334L131.278 190.918"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 172.605L133.903 178.822"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 177.479L131.278 181.063"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 162.749L133.903 168.967"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 167.623L131.278 171.207"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 152.894L133.903 159.111"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 157.767L131.278 161.351"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 143.038L133.903 149.256"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 147.912L131.278 151.496"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 133.182L133.903 139.4"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.706 138.056L131.278 141.64"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1152,8 +1032,7 @@ export default function () {
         y1="249.512"
         x2="28.4346"
         y2="252.94"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1162,8 +1041,7 @@ export default function () {
         y1="256.68"
         x2="28.4346"
         y2="260.108"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1172,8 +1050,7 @@ export default function () {
         y1="263.848"
         x2="28.4346"
         y2="267.275"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1182,8 +1059,7 @@ export default function () {
         y1="271.015"
         x2="28.4346"
         y2="274.443"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1192,380 +1068,326 @@ export default function () {
         y1="278.183"
         x2="28.4346"
         y2="281.611"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M57.1553 110.783L116.096 110.783V115.263L57.1553 115.263V110.783Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M34.8291 257.722H42.8665V262.202H34.8291V257.722Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M34.8291 265.786H42.8665V270.265H34.8291V265.786Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M307.209 219.195H316.139V223.675H307.209V219.195Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M307.209 227.259H316.139V231.739H307.209V227.259Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M307.209 235.323H316.139V239.802H307.209V235.323Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M307.209 243.386H316.139V247.866H307.209V243.386Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M242.016 218.299L242.016 224.571L239.336 224.571L239.336 218.299L242.016 218.299Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M242.016 178.877L242.016 185.148L239.336 185.148L239.336 178.877L242.016 178.877Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M242.016 146.622L242.016 152.894L239.336 152.894L239.336 146.622L242.016 146.622Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M242.016 231.739L242.016 238.011L239.336 238.011L239.336 231.739L242.016 231.739Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M242.016 245.178L242.016 251.45L239.336 251.45L239.336 245.178L242.016 245.178Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M242.016 258.618L242.016 264.89L239.336 264.89L239.336 258.618L242.016 258.618Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M242.016 272.057L242.016 278.329L239.336 278.329L239.336 272.057L242.016 272.057Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M242.016 285.497L242.016 291.769L239.336 291.769L239.336 285.497L242.016 285.497Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M249.16 218.299L249.16 228.155L244.695 228.155L244.695 218.299L249.16 218.299Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M249.16 178.877L249.16 188.732L244.695 188.732L244.695 178.877L249.16 178.877Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M249.16 146.622L249.16 156.478L244.695 156.478L244.695 146.622L249.16 146.622Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M249.16 231.739L249.16 241.595L244.695 241.595L244.695 231.739L249.16 231.739Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M249.16 245.178L249.16 255.034L244.695 255.034L244.695 245.178L249.16 245.178Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M249.16 258.618L249.16 268.473L244.695 268.473L244.695 258.618L249.16 258.618Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M249.16 272.057L249.16 281.913L244.695 281.913L244.695 272.057L249.16 272.057Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M249.16 285.497L249.16 295.352L244.695 295.352L244.695 285.497L249.16 285.497Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M254.519 218.299L254.519 224.571L251.839 224.571L251.839 218.299L254.519 218.299Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M254.519 178.877L254.519 185.148L251.839 185.148L251.839 178.877L254.519 178.877Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M254.519 147.518L254.519 152.894L251.839 152.894L251.839 146.622L254.519 147.518Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M269.7 218.299L269.7 220.091L266.128 220.091L266.128 218.299L269.7 218.299Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M264.342 222.779L264.342 224.571L260.77 224.571L260.77 222.779L264.342 222.779Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M275.059 226.363L275.059 228.155L271.486 228.155L271.486 226.363L275.059 226.363Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M269.7 230.843L269.7 232.635L266.128 232.635L266.128 230.843L269.7 230.843Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M264.342 235.323L264.342 237.115L260.77 237.115L260.77 235.323L264.342 235.323Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M275.059 238.906L275.059 240.698L271.486 240.698L271.486 238.906L275.059 238.906Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M269.7 177.981L269.7 179.773L266.128 179.773L266.128 177.981L269.7 177.981Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M264.342 182.461L264.342 184.253L260.77 184.253L260.77 182.461L264.342 182.461Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M275.059 186.044L275.059 187.836L271.486 187.836L271.486 186.044L275.059 186.044Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M269.7 146.622L269.7 148.414L266.128 148.414L266.128 146.622L269.7 146.622Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M264.342 151.102L264.342 152.894L260.77 152.894L260.77 151.102L264.342 151.102Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M275.059 154.686L275.059 156.478L271.486 156.478L271.486 154.686L275.059 154.686Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M269.7 243.386L269.7 245.178L266.128 245.178L266.128 243.386L269.7 243.386Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M264.342 247.866L264.342 249.658L260.77 249.658L260.77 247.866L264.342 247.866Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M275.059 251.45L275.059 253.242L271.486 253.242L271.486 251.45L275.059 251.45Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M269.7 255.93L269.7 257.722L266.128 257.722L266.128 255.93L269.7 255.93Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M264.342 260.41L264.342 262.202L260.77 262.202L260.77 260.41L264.342 260.41Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M275.059 263.994L275.059 265.785L271.486 265.785L271.486 263.994L275.059 263.994Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M269.7 268.473L269.7 270.265L266.128 270.265L266.128 268.473L269.7 268.473Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M264.342 272.953L264.342 274.745L260.77 274.745L260.77 272.953L264.342 272.953Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M275.059 276.537L275.059 278.329L271.486 278.329L271.486 276.537L275.059 276.537Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M254.519 231.739L254.519 238.011L251.839 238.011L251.839 231.739L254.519 231.739Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M254.519 245.178L254.519 251.45L251.839 251.45L251.839 245.178L254.519 245.178Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M254.519 258.618L254.519 264.89L251.839 264.89L251.839 258.618L254.519 258.618Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M254.519 272.057L254.519 278.329L251.839 278.329L251.839 272.057L254.519 272.057Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M254.519 285.497L254.519 291.769L251.839 291.769L251.839 285.497L254.519 285.497Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <path
         d="M34.8291 273.849H42.8665V278.329H34.8291V273.849Z"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <line
@@ -1573,8 +1395,7 @@ export default function () {
         y1="118.993"
         x2="79.6243"
         y2="118.993"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1583,8 +1404,7 @@ export default function () {
         y1="122.577"
         x2="79.6243"
         y2="122.577"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1593,8 +1413,7 @@ export default function () {
         y1="126.161"
         x2="79.6243"
         y2="126.161"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1603,8 +1422,7 @@ export default function () {
         y1="129.745"
         x2="79.6243"
         y2="129.745"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1613,8 +1431,7 @@ export default function () {
         y1="156.624"
         x2="79.6243"
         y2="156.624"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1623,8 +1440,7 @@ export default function () {
         y1="160.207"
         x2="79.6243"
         y2="160.207"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1633,8 +1449,7 @@ export default function () {
         y1="163.791"
         x2="79.6243"
         y2="163.791"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1643,8 +1458,7 @@ export default function () {
         y1="167.375"
         x2="79.6243"
         y2="167.375"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1653,8 +1467,7 @@ export default function () {
         y1="194.254"
         x2="79.6243"
         y2="194.254"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1663,8 +1476,7 @@ export default function () {
         y1="197.838"
         x2="79.6243"
         y2="197.838"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1673,8 +1485,7 @@ export default function () {
         y1="201.422"
         x2="79.6243"
         y2="201.422"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1683,8 +1494,7 @@ export default function () {
         y1="205.006"
         x2="79.6243"
         y2="205.006"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1693,8 +1503,7 @@ export default function () {
         y1="226.509"
         x2="215.368"
         y2="226.509"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1703,8 +1512,7 @@ export default function () {
         y1="230.093"
         x2="215.368"
         y2="230.093"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1713,8 +1521,7 @@ export default function () {
         y1="233.677"
         x2="215.368"
         y2="233.677"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1723,8 +1530,7 @@ export default function () {
         y1="237.261"
         x2="215.368"
         y2="237.261"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1733,8 +1539,7 @@ export default function () {
         y1="279.371"
         x2="215.368"
         y2="279.371"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1743,8 +1548,7 @@ export default function () {
         y1="282.955"
         x2="215.368"
         y2="282.955"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1753,8 +1557,7 @@ export default function () {
         y1="286.539"
         x2="215.368"
         y2="286.539"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1763,8 +1566,7 @@ export default function () {
         y1="290.123"
         x2="215.368"
         y2="290.123"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1773,8 +1575,7 @@ export default function () {
         y1="293.706"
         x2="215.368"
         y2="293.706"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1783,8 +1584,7 @@ export default function () {
         y1="297.29"
         x2="215.368"
         y2="297.29"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1793,8 +1593,7 @@ export default function () {
         y1="300.874"
         x2="215.368"
         y2="300.874"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1803,8 +1602,7 @@ export default function () {
         y1="304.458"
         x2="215.368"
         y2="304.458"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1813,8 +1611,7 @@ export default function () {
         y1="231.885"
         x2="79.6243"
         y2="231.885"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1823,8 +1620,7 @@ export default function () {
         y1="235.469"
         x2="79.6243"
         y2="235.469"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1833,8 +1629,7 @@ export default function () {
         y1="239.052"
         x2="79.6243"
         y2="239.052"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1843,8 +1638,7 @@ export default function () {
         y1="242.636"
         x2="79.6243"
         y2="242.636"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1853,8 +1647,7 @@ export default function () {
         y1="225.613"
         x2="113.56"
         y2="225.613"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1863,8 +1656,7 @@ export default function () {
         y1="232.781"
         x2="113.56"
         y2="232.781"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1873,8 +1665,7 @@ export default function () {
         y1="239.948"
         x2="113.56"
         y2="239.948"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1883,8 +1674,7 @@ export default function () {
         y1="247.116"
         x2="113.56"
         y2="247.116"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1893,8 +1683,7 @@ export default function () {
         y1="254.284"
         x2="113.56"
         y2="254.284"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1903,8 +1692,7 @@ export default function () {
         y1="261.452"
         x2="113.56"
         y2="261.452"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1913,8 +1701,7 @@ export default function () {
         y1="268.619"
         x2="113.56"
         y2="268.619"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1923,8 +1710,7 @@ export default function () {
         y1="275.787"
         x2="113.56"
         y2="275.787"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1933,8 +1719,7 @@ export default function () {
         y1="258.764"
         x2="288.598"
         y2="258.764"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1943,8 +1728,7 @@ export default function () {
         y1="265.932"
         x2="288.598"
         y2="265.932"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1953,8 +1737,7 @@ export default function () {
         y1="272.203"
         x2="288.598"
         y2="272.203"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1963,8 +1746,7 @@ export default function () {
         y1="279.371"
         x2="288.598"
         y2="279.371"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1973,8 +1755,7 @@ export default function () {
         y1="282.955"
         x2="113.56"
         y2="282.955"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1983,8 +1764,7 @@ export default function () {
         y1="290.123"
         x2="113.56"
         y2="290.123"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1993,8 +1773,7 @@ export default function () {
         y1="297.29"
         x2="113.56"
         y2="297.29"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2003,8 +1782,7 @@ export default function () {
         y1="269.515"
         x2="79.6243"
         y2="269.515"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2013,8 +1791,7 @@ export default function () {
         y1="273.099"
         x2="79.6243"
         y2="273.099"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2023,8 +1800,7 @@ export default function () {
         y1="276.683"
         x2="79.6243"
         y2="276.683"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2033,8 +1809,7 @@ export default function () {
         y1="280.267"
         x2="79.6243"
         y2="280.267"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2043,8 +1818,7 @@ export default function () {
         y1="137.808"
         x2="73.3734"
         y2="137.808"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2053,8 +1827,7 @@ export default function () {
         y1="141.392"
         x2="73.3734"
         y2="141.392"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2063,8 +1836,7 @@ export default function () {
         y1="144.976"
         x2="73.3734"
         y2="144.976"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2073,8 +1845,7 @@ export default function () {
         y1="148.56"
         x2="73.3734"
         y2="148.56"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2083,8 +1854,7 @@ export default function () {
         y1="81.3624"
         x2="274.309"
         y2="81.3624"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2093,8 +1863,7 @@ export default function () {
         y1="84.9463"
         x2="274.309"
         y2="84.9463"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2103,8 +1872,7 @@ export default function () {
         y1="88.53"
         x2="274.309"
         y2="88.53"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2113,8 +1881,7 @@ export default function () {
         y1="92.114"
         x2="274.309"
         y2="92.114"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2123,8 +1890,7 @@ export default function () {
         y1="156.624"
         x2="65.3352"
         y2="156.624"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2133,8 +1899,7 @@ export default function () {
         y1="160.207"
         x2="65.3352"
         y2="160.207"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2143,8 +1908,7 @@ export default function () {
         y1="163.791"
         x2="65.3352"
         y2="163.791"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2153,8 +1917,7 @@ export default function () {
         y1="167.375"
         x2="65.3352"
         y2="167.375"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2163,8 +1926,7 @@ export default function () {
         y1="142.892"
         x2="63.71"
         y2="166.927"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2173,8 +1935,7 @@ export default function () {
         y1="142.892"
         x2="56.5654"
         y2="166.927"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2183,8 +1944,7 @@ export default function () {
         y1="142.892"
         x2="52.9932"
         y2="166.927"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2193,8 +1953,7 @@ export default function () {
         y1="175.439"
         x2="73.3734"
         y2="175.439"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2203,8 +1962,7 @@ export default function () {
         y1="179.023"
         x2="73.3734"
         y2="179.023"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2213,8 +1971,7 @@ export default function () {
         y1="182.607"
         x2="73.3734"
         y2="182.607"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2223,8 +1980,7 @@ export default function () {
         y1="186.19"
         x2="73.3734"
         y2="186.19"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2233,8 +1989,7 @@ export default function () {
         y1="199.338"
         x2="38.2578"
         y2="202.766"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2243,8 +1998,7 @@ export default function () {
         y1="199.338"
         x2="34.9785"
         y2="202.766"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2253,8 +2007,7 @@ export default function () {
         y1="199.338"
         x2="31.7139"
         y2="202.766"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2263,8 +2016,7 @@ export default function () {
         y1="199.338"
         x2="28.4346"
         y2="202.766"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2273,8 +2025,7 @@ export default function () {
         y1="199.338"
         x2="22.1836"
         y2="202.766"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2283,8 +2034,7 @@ export default function () {
         y1="199.338"
         x2="18.9043"
         y2="202.766"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2293,8 +2043,7 @@ export default function () {
         y1="199.338"
         x2="15.6396"
         y2="202.766"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2303,8 +2052,7 @@ export default function () {
         y1="199.338"
         x2="12.3604"
         y2="202.766"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2313,8 +2061,7 @@ export default function () {
         y1="188.586"
         x2="150.489"
         y2="192.014"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2323,8 +2070,7 @@ export default function () {
         y1="188.586"
         x2="147.21"
         y2="192.014"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2333,8 +2079,7 @@ export default function () {
         y1="196.65"
         x2="150.489"
         y2="200.078"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2343,8 +2088,7 @@ export default function () {
         y1="196.65"
         x2="147.21"
         y2="200.078"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2353,8 +2097,7 @@ export default function () {
         y1="204.714"
         x2="150.489"
         y2="208.142"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2363,8 +2106,7 @@ export default function () {
         y1="204.714"
         x2="147.21"
         y2="208.142"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2373,8 +2115,7 @@ export default function () {
         y1="233.385"
         x2="150.489"
         y2="236.813"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2383,8 +2124,7 @@ export default function () {
         y1="233.385"
         x2="147.21"
         y2="236.813"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2393,8 +2133,7 @@ export default function () {
         y1="268.327"
         x2="150.489"
         y2="271.755"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2403,8 +2142,7 @@ export default function () {
         y1="268.328"
         x2="147.21"
         y2="271.755"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2413,8 +2151,7 @@ export default function () {
         y1="284.455"
         x2="150.489"
         y2="287.883"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2423,8 +2160,7 @@ export default function () {
         y1="284.455"
         x2="147.21"
         y2="287.883"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2433,8 +2169,7 @@ export default function () {
         y1="212.778"
         x2="150.489"
         y2="216.205"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2443,8 +2178,7 @@ export default function () {
         y1="212.778"
         x2="147.21"
         y2="216.205"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2453,8 +2187,7 @@ export default function () {
         y1="241.448"
         x2="150.489"
         y2="244.876"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2463,8 +2196,7 @@ export default function () {
         y1="241.448"
         x2="147.21"
         y2="244.876"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2473,8 +2205,7 @@ export default function () {
         y1="276.391"
         x2="150.489"
         y2="279.819"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2483,8 +2214,7 @@ export default function () {
         y1="276.391"
         x2="147.21"
         y2="279.819"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2493,8 +2223,7 @@ export default function () {
         y1="259.368"
         x2="299.628"
         y2="262.796"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2503,8 +2232,7 @@ export default function () {
         y1="259.368"
         x2="296.349"
         y2="262.796"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2513,8 +2241,7 @@ export default function () {
         y1="271.015"
         x2="305.879"
         y2="274.443"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2523,8 +2250,7 @@ export default function () {
         y1="271.015"
         x2="302.6"
         y2="274.443"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2533,8 +2259,7 @@ export default function () {
         y1="287.143"
         x2="299.628"
         y2="290.571"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2543,8 +2268,7 @@ export default function () {
         y1="287.143"
         x2="296.349"
         y2="290.571"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2553,8 +2277,7 @@ export default function () {
         y1="299.686"
         x2="305.879"
         y2="303.114"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2563,8 +2286,7 @@ export default function () {
         y1="299.686"
         x2="302.6"
         y2="303.114"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2573,8 +2295,7 @@ export default function () {
         y1="292.519"
         x2="150.489"
         y2="295.946"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2583,8 +2304,7 @@ export default function () {
         y1="292.519"
         x2="147.21"
         y2="295.947"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2593,8 +2313,7 @@ export default function () {
         y1="206.506"
         x2="22.1836"
         y2="209.934"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2603,8 +2322,7 @@ export default function () {
         y1="206.506"
         x2="18.9043"
         y2="209.934"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2613,8 +2331,7 @@ export default function () {
         y1="206.506"
         x2="15.6396"
         y2="209.934"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2623,8 +2340,7 @@ export default function () {
         y1="206.506"
         x2="12.3604"
         y2="209.934"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2633,8 +2349,7 @@ export default function () {
         y1="149.164"
         x2="123.391"
         y2="155.728"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2643,8 +2358,7 @@ export default function () {
         y1="149.164"
         x2="120.118"
         y2="155.728"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2653,8 +2367,7 @@ export default function () {
         y1="149.164"
         x2="116.847"
         y2="155.728"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2663,8 +2376,7 @@ export default function () {
         y1="130.349"
         x2="123.098"
         y2="144.08"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2673,8 +2385,7 @@ export default function () {
         y1="121.389"
         x2="116.847"
         y2="144.08"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2683,8 +2394,7 @@ export default function () {
         y1="159.916"
         x2="123.391"
         y2="166.479"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2693,8 +2403,7 @@ export default function () {
         y1="159.916"
         x2="120.118"
         y2="166.479"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2703,8 +2412,7 @@ export default function () {
         y1="159.916"
         x2="116.847"
         y2="166.479"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2713,8 +2421,7 @@ export default function () {
         y1="170.667"
         x2="123.391"
         y2="177.231"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2723,8 +2430,7 @@ export default function () {
         y1="170.667"
         x2="120.118"
         y2="177.231"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2733,8 +2439,7 @@ export default function () {
         y1="170.667"
         x2="116.847"
         y2="177.231"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2743,8 +2448,7 @@ export default function () {
         y1="181.419"
         x2="123.391"
         y2="187.982"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2753,8 +2457,7 @@ export default function () {
         y1="181.419"
         x2="120.118"
         y2="187.982"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2763,8 +2466,7 @@ export default function () {
         y1="181.419"
         x2="116.847"
         y2="187.982"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2773,8 +2475,7 @@ export default function () {
         y1="192.17"
         x2="123.391"
         y2="198.734"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2783,8 +2484,7 @@ export default function () {
         y1="192.17"
         x2="120.118"
         y2="198.734"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2793,8 +2493,7 @@ export default function () {
         y1="192.17"
         x2="116.847"
         y2="198.734"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2803,8 +2502,7 @@ export default function () {
         y1="202.922"
         x2="123.391"
         y2="209.486"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2813,8 +2511,7 @@ export default function () {
         y1="202.922"
         x2="120.118"
         y2="209.486"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2823,8 +2520,7 @@ export default function () {
         y1="202.922"
         x2="116.847"
         y2="209.486"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2833,8 +2529,7 @@ export default function () {
         y1="213.674"
         x2="123.391"
         y2="220.237"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2843,8 +2538,7 @@ export default function () {
         y1="213.674"
         x2="120.118"
         y2="220.237"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2853,8 +2547,7 @@ export default function () {
         y1="224.425"
         x2="123.391"
         y2="230.989"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2863,8 +2556,7 @@ export default function () {
         y1="224.425"
         x2="120.118"
         y2="230.989"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2873,8 +2565,7 @@ export default function () {
         y1="235.177"
         x2="123.391"
         y2="241.74"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2883,8 +2574,7 @@ export default function () {
         y1="235.177"
         x2="120.118"
         y2="241.74"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2893,8 +2583,7 @@ export default function () {
         y1="245.928"
         x2="123.391"
         y2="252.492"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2903,8 +2592,7 @@ export default function () {
         y1="245.928"
         x2="120.118"
         y2="252.492"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2913,8 +2601,7 @@ export default function () {
         y1="256.68"
         x2="123.391"
         y2="263.243"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2923,8 +2610,7 @@ export default function () {
         y1="256.68"
         x2="120.118"
         y2="263.244"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2933,8 +2619,7 @@ export default function () {
         y1="267.432"
         x2="123.391"
         y2="273.995"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2943,8 +2628,7 @@ export default function () {
         y1="267.432"
         x2="120.118"
         y2="273.995"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2953,8 +2637,7 @@ export default function () {
         y1="278.183"
         x2="123.391"
         y2="284.747"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2963,8 +2646,7 @@ export default function () {
         y1="278.183"
         x2="120.118"
         y2="284.747"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2973,8 +2655,7 @@ export default function () {
         y1="288.935"
         x2="123.391"
         y2="295.498"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2983,8 +2664,7 @@ export default function () {
         y1="288.935"
         x2="120.118"
         y2="295.498"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -2993,8 +2673,7 @@ export default function () {
         y1="213.674"
         x2="22.1836"
         y2="217.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3003,8 +2682,7 @@ export default function () {
         y1="213.674"
         x2="18.9043"
         y2="217.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3013,8 +2691,7 @@ export default function () {
         y1="213.674"
         x2="15.6396"
         y2="217.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3023,8 +2700,7 @@ export default function () {
         y1="213.674"
         x2="12.3604"
         y2="217.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3033,8 +2709,7 @@ export default function () {
         y1="220.841"
         x2="22.1836"
         y2="224.269"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3043,8 +2718,7 @@ export default function () {
         y1="220.841"
         x2="18.9043"
         y2="224.269"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3053,8 +2727,7 @@ export default function () {
         y1="220.841"
         x2="15.6396"
         y2="224.269"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3063,8 +2736,7 @@ export default function () {
         y1="220.841"
         x2="12.3604"
         y2="224.269"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3073,8 +2745,7 @@ export default function () {
         y1="228.009"
         x2="22.1836"
         y2="231.437"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3083,8 +2754,7 @@ export default function () {
         y1="228.009"
         x2="18.9043"
         y2="231.437"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3093,8 +2763,7 @@ export default function () {
         y1="228.009"
         x2="15.6396"
         y2="231.437"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3103,8 +2772,7 @@ export default function () {
         y1="228.009"
         x2="12.3604"
         y2="231.437"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3113,8 +2781,7 @@ export default function () {
         y1="235.177"
         x2="22.1836"
         y2="238.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3123,8 +2790,7 @@ export default function () {
         y1="235.177"
         x2="18.9043"
         y2="238.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3133,8 +2799,7 @@ export default function () {
         y1="235.177"
         x2="15.6396"
         y2="238.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3143,8 +2808,7 @@ export default function () {
         y1="235.177"
         x2="12.3604"
         y2="238.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3153,8 +2817,7 @@ export default function () {
         y1="242.344"
         x2="22.1836"
         y2="245.772"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3163,8 +2826,7 @@ export default function () {
         y1="242.344"
         x2="18.9043"
         y2="245.772"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3173,8 +2835,7 @@ export default function () {
         y1="242.344"
         x2="15.6396"
         y2="245.772"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3183,8 +2844,7 @@ export default function () {
         y1="242.344"
         x2="12.3604"
         y2="245.772"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3193,8 +2853,7 @@ export default function () {
         y1="249.512"
         x2="22.1836"
         y2="252.94"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3203,8 +2862,7 @@ export default function () {
         y1="249.512"
         x2="18.9043"
         y2="252.94"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3213,8 +2871,7 @@ export default function () {
         y1="249.512"
         x2="15.6396"
         y2="252.94"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3223,8 +2880,7 @@ export default function () {
         y1="249.512"
         x2="12.3604"
         y2="252.94"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3233,8 +2889,7 @@ export default function () {
         y1="256.68"
         x2="22.1836"
         y2="260.108"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3243,8 +2898,7 @@ export default function () {
         y1="256.68"
         x2="18.9043"
         y2="260.108"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3253,8 +2907,7 @@ export default function () {
         y1="256.68"
         x2="15.6396"
         y2="260.108"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3263,8 +2916,7 @@ export default function () {
         y1="256.68"
         x2="12.3604"
         y2="260.108"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3273,8 +2925,7 @@ export default function () {
         y1="263.848"
         x2="22.1836"
         y2="267.275"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3283,8 +2934,7 @@ export default function () {
         y1="263.848"
         x2="18.9043"
         y2="267.275"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3293,8 +2943,7 @@ export default function () {
         y1="263.848"
         x2="15.6396"
         y2="267.275"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3303,8 +2952,7 @@ export default function () {
         y1="263.848"
         x2="12.3604"
         y2="267.275"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3313,8 +2961,7 @@ export default function () {
         y1="271.015"
         x2="22.1836"
         y2="274.443"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3323,8 +2970,7 @@ export default function () {
         y1="271.015"
         x2="18.9043"
         y2="274.443"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3333,8 +2979,7 @@ export default function () {
         y1="271.015"
         x2="15.6396"
         y2="274.443"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3343,8 +2988,7 @@ export default function () {
         y1="271.015"
         x2="12.3604"
         y2="274.443"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3353,8 +2997,7 @@ export default function () {
         y1="278.183"
         x2="22.1836"
         y2="281.611"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3363,8 +3006,7 @@ export default function () {
         y1="278.183"
         x2="18.9043"
         y2="281.611"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3373,8 +3015,7 @@ export default function () {
         y1="278.183"
         x2="15.6396"
         y2="281.611"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3383,8 +3024,7 @@ export default function () {
         y1="278.183"
         x2="12.3604"
         y2="281.611"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3393,8 +3033,7 @@ export default function () {
         y1="285.351"
         x2="22.1836"
         y2="288.779"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3403,8 +3042,7 @@ export default function () {
         y1="285.351"
         x2="18.9043"
         y2="288.779"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3413,8 +3051,7 @@ export default function () {
         y1="285.351"
         x2="15.6396"
         y2="288.779"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3423,8 +3060,7 @@ export default function () {
         y1="285.351"
         x2="12.3604"
         y2="288.779"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3433,8 +3069,7 @@ export default function () {
         y1="292.519"
         x2="22.1836"
         y2="295.946"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3443,8 +3078,7 @@ export default function () {
         y1="292.519"
         x2="18.9043"
         y2="295.947"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3453,8 +3087,7 @@ export default function () {
         y1="292.519"
         x2="15.6396"
         y2="295.947"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3463,8 +3096,7 @@ export default function () {
         y1="292.519"
         x2="12.3604"
         y2="295.947"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3473,8 +3105,7 @@ export default function () {
         y1="238.761"
         x2="176.681"
         y2="242.188"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3483,8 +3114,7 @@ export default function () {
         y1="238.761"
         x2="170.137"
         y2="242.188"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3493,8 +3123,7 @@ export default function () {
         y1="238.761"
         x2="166.857"
         y2="242.188"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3503,8 +3132,7 @@ export default function () {
         y1="245.928"
         x2="176.681"
         y2="249.356"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3513,8 +3141,7 @@ export default function () {
         y1="245.928"
         x2="173.401"
         y2="249.356"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3523,8 +3150,7 @@ export default function () {
         y1="245.928"
         x2="170.137"
         y2="249.356"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3533,8 +3159,7 @@ export default function () {
         y1="245.928"
         x2="166.857"
         y2="249.356"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3543,8 +3168,7 @@ export default function () {
         y1="253.096"
         x2="176.681"
         y2="256.524"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3553,8 +3177,7 @@ export default function () {
         y1="253.096"
         x2="173.401"
         y2="256.524"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3563,8 +3186,7 @@ export default function () {
         y1="253.096"
         x2="166.857"
         y2="256.524"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3573,8 +3195,7 @@ export default function () {
         y1="260.264"
         x2="173.401"
         y2="263.692"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3583,8 +3204,7 @@ export default function () {
         y1="260.264"
         x2="170.129"
         y2="263.692"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3593,8 +3213,7 @@ export default function () {
         y1="260.264"
         x2="166.857"
         y2="263.692"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3603,8 +3222,7 @@ export default function () {
         y1="267.432"
         x2="176.681"
         y2="270.859"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3613,8 +3231,7 @@ export default function () {
         y1="267.432"
         x2="173.401"
         y2="270.859"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3623,8 +3240,7 @@ export default function () {
         y1="267.432"
         x2="170.137"
         y2="270.859"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3633,8 +3249,7 @@ export default function () {
         y1="267.432"
         x2="166.857"
         y2="270.859"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3643,8 +3258,7 @@ export default function () {
         y1="274.599"
         x2="176.681"
         y2="278.027"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3653,8 +3267,7 @@ export default function () {
         y1="274.599"
         x2="170.137"
         y2="278.027"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3663,8 +3276,7 @@ export default function () {
         y1="274.599"
         x2="166.857"
         y2="278.027"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3673,8 +3285,7 @@ export default function () {
         y1="281.767"
         x2="176.681"
         y2="285.195"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3683,8 +3294,7 @@ export default function () {
         y1="281.767"
         x2="173.401"
         y2="285.195"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3693,8 +3303,7 @@ export default function () {
         y1="281.767"
         x2="170.137"
         y2="285.195"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3703,8 +3312,7 @@ export default function () {
         y1="281.767"
         x2="166.857"
         y2="285.195"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3713,8 +3321,7 @@ export default function () {
         y1="288.935"
         x2="176.681"
         y2="292.363"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3723,8 +3330,7 @@ export default function () {
         y1="288.935"
         x2="173.401"
         y2="292.363"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3733,8 +3339,7 @@ export default function () {
         y1="288.935"
         x2="166.857"
         y2="292.363"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3743,8 +3348,7 @@ export default function () {
         y1="296.102"
         x2="176.681"
         y2="299.53"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3753,8 +3357,7 @@ export default function () {
         y1="296.102"
         x2="173.401"
         y2="299.53"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3763,8 +3366,7 @@ export default function () {
         y1="296.102"
         x2="170.137"
         y2="299.53"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3773,8 +3375,7 @@ export default function () {
         y1="295.504"
         x2="27.5383"
         y2="295.504"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3783,8 +3384,7 @@ export default function () {
         y1="292.221"
         x2="27.5383"
         y2="292.221"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3793,8 +3393,7 @@ export default function () {
         y1="288.935"
         x2="27.5383"
         y2="288.935"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3803,8 +3402,7 @@ export default function () {
         y1="299.686"
         x2="22.1836"
         y2="303.114"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3813,8 +3411,7 @@ export default function () {
         y1="299.686"
         x2="18.9043"
         y2="303.114"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3823,8 +3420,7 @@ export default function () {
         y1="299.686"
         x2="15.6396"
         y2="303.114"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3833,8 +3429,7 @@ export default function () {
         y1="299.686"
         x2="12.3604"
         y2="303.114"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3843,8 +3438,7 @@ export default function () {
         y1="298.79"
         x2="34.6865"
         y2="302.218"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3853,8 +3447,7 @@ export default function () {
         y1="269.223"
         x2="49.8682"
         y2="272.651"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3864,8 +3457,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 49.1182 270.713)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3874,8 +3466,7 @@ export default function () {
         y1="262.056"
         x2="49.8682"
         y2="265.484"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3885,8 +3476,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 49.1182 263.546)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3895,8 +3485,7 @@ export default function () {
         y1="276.391"
         x2="49.8682"
         y2="279.819"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3906,8 +3495,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 49.1182 277.881)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3916,8 +3504,7 @@ export default function () {
         y1="283.559"
         x2="49.8682"
         y2="286.987"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3927,8 +3514,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 49.1182 285.049)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3937,8 +3523,7 @@ export default function () {
         y1="290.727"
         x2="49.8682"
         y2="294.155"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3948,8 +3533,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 49.1182 292.217)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3958,8 +3542,7 @@ export default function () {
         y1="297.894"
         x2="49.8682"
         y2="301.322"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3969,8 +3552,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 49.1182 299.384)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3979,8 +3561,7 @@ export default function () {
         y1="269.223"
         x2="54.334"
         y2="272.651"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -3990,8 +3571,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 53.584 270.713)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4000,8 +3580,7 @@ export default function () {
         y1="276.391"
         x2="54.334"
         y2="279.819"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4011,8 +3590,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 53.584 277.881)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4021,8 +3599,7 @@ export default function () {
         y1="262.056"
         x2="54.334"
         y2="265.484"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4032,8 +3609,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 53.584 263.546)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4042,8 +3618,7 @@ export default function () {
         y1="253.992"
         x2="54.334"
         y2="257.42"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4053,8 +3628,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 53.584 255.482)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4063,8 +3637,7 @@ export default function () {
         y1="283.559"
         x2="54.334"
         y2="286.987"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4074,8 +3647,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 53.584 285.049)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4084,8 +3656,7 @@ export default function () {
         y1="290.727"
         x2="54.334"
         y2="294.155"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4095,8 +3666,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 53.584 292.217)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4105,8 +3675,7 @@ export default function () {
         y1="297.894"
         x2="54.334"
         y2="301.322"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4116,8 +3685,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 53.584 299.384)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4126,8 +3694,7 @@ export default function () {
         y1="276.391"
         x2="58.7988"
         y2="279.819"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4137,8 +3704,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 58.0488 277.881)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4147,8 +3713,7 @@ export default function () {
         y1="269.223"
         x2="58.7988"
         y2="272.651"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4158,8 +3723,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 58.0488 270.713)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4168,8 +3732,7 @@ export default function () {
         y1="262.056"
         x2="58.7988"
         y2="265.484"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4178,8 +3741,7 @@ export default function () {
         y1="253.992"
         x2="58.7988"
         y2="257.42"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4189,8 +3751,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 58.0488 263.546)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4200,8 +3761,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 58.0488 255.482)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4210,8 +3770,7 @@ export default function () {
         y1="283.559"
         x2="58.7988"
         y2="286.987"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4221,8 +3780,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 58.0488 285.049)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4231,8 +3789,7 @@ export default function () {
         y1="290.727"
         x2="58.7988"
         y2="294.155"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4242,8 +3799,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 58.0488 292.217)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4252,8 +3808,7 @@ export default function () {
         y1="297.894"
         x2="58.7988"
         y2="301.322"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4263,8 +3818,7 @@ export default function () {
         x2="3.04508"
         y2="-0.75"
         transform="matrix(0.705952 0.708259 -0.705952 0.708259 58.0488 299.384)"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4273,8 +3827,7 @@ export default function () {
         y1="298.79"
         x2="31.5605"
         y2="302.218"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4283,8 +3836,7 @@ export default function () {
         y1="298.79"
         x2="28.4346"
         y2="302.218"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4293,8 +3845,7 @@ export default function () {
         y1="206.506"
         x2="38.2578"
         y2="209.934"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4303,8 +3854,7 @@ export default function () {
         y1="206.506"
         x2="34.9785"
         y2="209.934"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4313,8 +3863,7 @@ export default function () {
         y1="206.506"
         x2="31.7139"
         y2="209.934"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4323,8 +3872,7 @@ export default function () {
         y1="206.506"
         x2="28.4346"
         y2="209.934"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4333,8 +3881,7 @@ export default function () {
         y1="213.674"
         x2="38.2578"
         y2="217.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4343,8 +3890,7 @@ export default function () {
         y1="213.674"
         x2="34.9785"
         y2="217.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4353,8 +3899,7 @@ export default function () {
         y1="213.674"
         x2="31.7139"
         y2="217.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4363,8 +3908,7 @@ export default function () {
         y1="213.674"
         x2="28.4346"
         y2="217.101"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4373,8 +3917,7 @@ export default function () {
         y1="220.841"
         x2="38.2578"
         y2="224.269"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4383,8 +3926,7 @@ export default function () {
         y1="220.841"
         x2="34.9785"
         y2="224.269"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4393,8 +3935,7 @@ export default function () {
         y1="220.841"
         x2="31.7139"
         y2="224.269"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4403,8 +3944,7 @@ export default function () {
         y1="220.841"
         x2="28.4346"
         y2="224.269"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4413,8 +3953,7 @@ export default function () {
         y1="228.009"
         x2="38.2578"
         y2="231.437"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4423,8 +3962,7 @@ export default function () {
         y1="228.009"
         x2="34.9785"
         y2="231.437"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4433,8 +3971,7 @@ export default function () {
         y1="228.009"
         x2="31.7139"
         y2="231.437"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4443,8 +3980,7 @@ export default function () {
         y1="228.009"
         x2="28.4346"
         y2="231.437"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4453,8 +3989,7 @@ export default function () {
         y1="235.177"
         x2="38.2578"
         y2="238.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4463,8 +3998,7 @@ export default function () {
         y1="235.177"
         x2="34.9785"
         y2="238.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4473,8 +4007,7 @@ export default function () {
         y1="235.177"
         x2="31.7139"
         y2="238.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4483,8 +4016,7 @@ export default function () {
         y1="235.177"
         x2="28.4346"
         y2="238.605"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4493,8 +4025,7 @@ export default function () {
         y1="242.344"
         x2="38.2578"
         y2="245.772"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4503,8 +4034,7 @@ export default function () {
         y1="242.344"
         x2="34.9785"
         y2="245.772"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4513,15 +4043,13 @@ export default function () {
         y1="242.344"
         x2="31.7139"
         y2="245.772"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M31.7031 249.434L31.7031 251.674"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4530,8 +4058,7 @@ export default function () {
         y1="242.344"
         x2="28.4346"
         y2="245.772"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4540,8 +4067,7 @@ export default function () {
         y1="213.07"
         x2="73.3734"
         y2="213.07"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4550,8 +4076,7 @@ export default function () {
         y1="216.653"
         x2="73.3734"
         y2="216.653"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4560,8 +4085,7 @@ export default function () {
         y1="220.237"
         x2="73.3734"
         y2="220.237"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4570,8 +4094,7 @@ export default function () {
         y1="223.821"
         x2="73.3734"
         y2="223.821"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4580,8 +4103,7 @@ export default function () {
         y1="250.7"
         x2="73.3734"
         y2="250.7"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4590,8 +4112,7 @@ export default function () {
         y1="254.284"
         x2="73.3734"
         y2="254.284"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4600,8 +4121,7 @@ export default function () {
         y1="257.868"
         x2="73.3734"
         y2="257.868"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4610,8 +4130,7 @@ export default function () {
         y1="261.452"
         x2="73.3734"
         y2="261.452"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4620,8 +4139,7 @@ export default function () {
         y1="288.331"
         x2="73.3734"
         y2="288.331"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4630,8 +4148,7 @@ export default function () {
         y1="291.914"
         x2="73.3734"
         y2="291.914"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4640,8 +4157,7 @@ export default function () {
         y1="295.498"
         x2="73.3734"
         y2="295.498"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4650,8 +4166,7 @@ export default function () {
         y1="299.082"
         x2="73.3734"
         y2="299.082"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4661,8 +4176,7 @@ export default function () {
         rx="3.57219"
         ry="3.58387"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <ellipse
@@ -4671,8 +4185,7 @@ export default function () {
         rx="3.57219"
         ry="3.58387"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <ellipse
@@ -4681,8 +4194,7 @@ export default function () {
         rx="3.57219"
         ry="3.58387"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <ellipse
@@ -4691,8 +4203,7 @@ export default function () {
         rx="1.7861"
         ry="1.79193"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <ellipse
@@ -4701,8 +4212,7 @@ export default function () {
         rx="1.7861"
         ry="1.79193"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <line
@@ -4710,8 +4220,7 @@ export default function () {
         y1="195.754"
         x2="157.033"
         y2="195.754"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4721,8 +4230,7 @@ export default function () {
         rx="2.23262"
         ry="2.23992"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <line
@@ -4730,8 +4238,7 @@ export default function () {
         y1="207.402"
         x2="157.033"
         y2="207.402"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4741,8 +4248,7 @@ export default function () {
         rx="2.23262"
         ry="2.23992"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <line
@@ -4750,8 +4256,7 @@ export default function () {
         y1="219.049"
         x2="157.033"
         y2="219.049"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4761,8 +4266,7 @@ export default function () {
         rx="2.23262"
         ry="2.23992"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <line
@@ -4770,8 +4274,7 @@ export default function () {
         y1="280.871"
         x2="157.033"
         y2="280.871"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4781,8 +4284,7 @@ export default function () {
         rx="2.23262"
         ry="2.23992"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <line
@@ -4790,8 +4292,7 @@ export default function () {
         y1="230.697"
         x2="157.033"
         y2="230.697"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4801,8 +4302,7 @@ export default function () {
         rx="2.23262"
         ry="2.23992"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <line
@@ -4810,8 +4310,7 @@ export default function () {
         y1="292.519"
         x2="157.033"
         y2="292.519"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -4821,8 +4320,7 @@ export default function () {
         rx="2.23262"
         ry="2.23992"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <ellipse
@@ -4831,8 +4329,7 @@ export default function () {
         rx="1.7861"
         ry="1.79193"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <ellipse
@@ -4841,8 +4338,7 @@ export default function () {
         rx="1.7861"
         ry="1.79193"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <ellipse
@@ -4851,8 +4347,7 @@ export default function () {
         rx="1.7861"
         ry="1.79193"
         fill="#0D0030"
-        stroke="#4B61D5"
-        stroke-width="1.5"
+        className={mainStroke}
         stroke-linejoin="round"
       />
       <defs>
