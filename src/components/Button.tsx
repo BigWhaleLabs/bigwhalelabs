@@ -32,7 +32,7 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         borderRadius('rounded-4xl'),
         boxShadow('shadow-button'),
         dropShadow('drop-shadow-tertiary'),
-        padding(small ? 'py-2' : 'py-4', small ? 'px-4' : 'px-6'),
+        padding(small ? 'py-2' : 'py-3', small ? 'px-4' : 'px-6'),
         fontWeight('font-bold'),
         fontFamily('font-primary'),
         fontSize(small ? 'text-sm' : 'text-lg'),

@@ -63,7 +63,13 @@ const leftGem = classnames(
 )
 const rightGem = classnames(
   bgImage,
-  inset('md:top-12', 'md:-right-1/4', '-bottom-11', '-right-44'),
+  inset(
+    'xl:top-12',
+    'xl:!-right-1/4',
+    'md:right-2/3',
+    '-bottom-11',
+    '-right-44'
+  ),
   scale('scale-50'),
   brightness('brightness-75')
 )

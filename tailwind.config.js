@@ -88,8 +88,8 @@ module.exports = {
         '2xl': '0rem 0.25rem 2.75rem 0rem rgb(0 0 0 / 0.25)',
         lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
         md: '0rem 0rem 0.375rem 0rem rgb(0 0 0 / 0.25)',
-        button: '0rem 0rem 1.625rem rgba(1, 254, 182, 1)',
         card: '0rem 1rem 11rem rgba(21, 161, 252, 0.15)',
+        button: '0px 0px 1rem #01feb650',
       },
       dropShadow: {
         'text-fill-primary': '0rem -1rem 0rem #15A1FC',
@@ -98,8 +98,8 @@ module.exports = {
         tertiary: '0rem 0rem 0.625rem #01fed6',
         primary: '0rem 0rem 1.5rem #15A1FC',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
-        retro: '0 0 4rem rgba(10, 132, 255, 0.7)',
         orb: '0 0 11rem #FFFFFF',
+        retro: '0rem 0rem 4rem rgb(10, 132, 255)',
       },
       borderRadius: {
         '4xl': '2.5rem',
@@ -107,12 +107,11 @@ module.exports = {
       backgroundImage: {
         retro:
           'linear-gradient(180deg, #FF7BED 20.43%, #E0E5CE 25.48%, #E0E5CE 41.4%, #4300F5 46.3%, #263DB4 61.69%, #15A1FC 77.42%)',
+        metallic:
+          'linear-gradient(180deg, #26306e 0%, #cce5e4 15.1%, #25306a 34.9%, #a9cbd2 50%, #36426c 66.15%, #cad9e3 100%) ',
       },
       padding: {
         25: '6.125rem',
-      },
-      margin: {
-        22.5: '5.625rem',
       },
       borderRadius: {
         '4xl': '2.5rem',
@@ -125,6 +124,7 @@ module.exports = {
         '-6': '-1.5rem',
         '-9': '-2.25rem',
         '-11': '-2.75rem',
+        '-20': '-5rem',
         '-28': '-7rem',
         '-44': '-11rem',
         '-60': '-15rem',
@@ -133,6 +133,16 @@ module.exports = {
       },
       scale: {
         300: '3.0',
+      },
+      zIndex: {
+        '-10': '-10',
+      },
+      content: {
+        retro: 'attr(data-text)',
+      },
+      margin: {
+        116: '29rem',
+        22.5: '5.625rem',
       },
     },
   },

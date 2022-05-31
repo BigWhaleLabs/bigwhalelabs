@@ -22,7 +22,7 @@ const hiringWrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
   width('w-full'),
-  margin('mx-auto')
+  margin('mx-auto', 'md:mt-96', 'mt-44')
 )
 const lineBlockWrapper = classnames(
   display('flex'),
@@ -49,7 +49,9 @@ export default function () {
       <div className={lineBlockWrapper}>
         <Line gradientDirection="to-right" />
         <ExtraBoldText extraLeading>
-          <AccentText color="text-secondary">THE</AccentText>
+          <AccentText color="text-secondary" shadow="drop-shadow-secondary">
+            THE
+          </AccentText>
         </ExtraBoldText>
         <Line gradientDirection="to-left" />
       </div>
@@ -58,7 +60,13 @@ export default function () {
         <HeaderText textSize="small" center>
           Interested in joining the team or want to reach out?
         </HeaderText>
-        <Button outlined>Message us</Button>
+        <Button
+          outlined
+          url="hi@bwl.gg"
+          onClick={() => window.open('mailto:hi@bwl.gg')}
+        >
+          Message us
+        </Button>
       </div>
     </div>
   )
