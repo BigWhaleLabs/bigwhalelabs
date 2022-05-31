@@ -4,7 +4,6 @@
 
 html {
   background-color: #0d0030;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   /* Grid and blurry background */
   background: url('/img/blurry-shadows-lg.webp') top / cover,
@@ -18,7 +17,6 @@ body {
   font-family: 'JetBrains Mono', monospace;
   color: #efecd6;
   min-height: 100vh;
-  width: 100vw;
 }
 
 @media screen and (max-width: 600px) {
@@ -59,7 +57,7 @@ body {
 .grid-wrapper {
   --grid-color: #ff7bed;
   height: 50vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
   perspective: 180px;
   overflow: hidden;
