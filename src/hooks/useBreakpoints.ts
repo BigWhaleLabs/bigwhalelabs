@@ -25,6 +25,8 @@ export default function () {
     xxs: width > xsSize,
     xs: width > xsSize && width < smSize,
     sm: width > smSize,
+    onlyPhones: width < mdSize,
+    tablet: width > xsSize && width < mdSize,
     mobile: width > mobileSize,
     md: width > mdSize,
     lg: width > lgSize,
