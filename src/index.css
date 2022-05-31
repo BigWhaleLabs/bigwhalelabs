@@ -52,48 +52,163 @@ body {
 
 /* Animated footer */
 
+/* Polyfill: https://stackoverflow.com/questions/46429913/css-custom-properties-polyfill-for-ie11 */
+/* Something like custom counter from 0 to 1 */
+@property --outrun {
+  syntax: '<number>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes outrun {
+  to {
+    --outrun: 1;
+  }
+}
+
 .grid-wrapper {
-  width: 100vw;
+  --grid-color: #ff7bed;
   height: 50vh;
+  width: 100vw;
   position: relative;
   perspective: 180px;
   perspective-origin: 50% 20%;
   overflow: hidden;
 }
-
-.grid-horizon {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 6px;
-  background-color: #ff7bed;
-}
-
 .grid {
   position: absolute;
-  width: 200%;
-  left: -50%;
-  height: 100%;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  filter: brightness(1.125);
+  animation: outrun 0.6s linear infinite;
 
-  /* first gradient - vertical lines; second - horizontal */
-  background-image: -webkit-linear-gradient(top, #ff7bed 6px, transparent 1px),
-    -webkit-linear-gradient(left, #ff7bed 6px, transparent 1px);
-  background-size: 50px 50px, 150px;
-  transform: rotateX(100deg);
+  /* Vertical lines */
+  --lgDepth: url('data:image/svg+xml;utf8,<svg width="1808" height="230" xmlns="http://www.w3.org/2000/svg"><path d="M904 -46 L-3616 230 M904 -46 L-3254.4 230 M904 -46 L-2892.8 230 M904 -46 L-2531.2000000000003 230 M904 -46 L-2169.6000000000004 230 M904 -46 L-1808 230 M904 -46 L-1446.4 230 M904 -46 L-1084.8000000000002 230 M904 -46 L-723.2 230 M904 -46 L-361.6 230 M904 -46 L0 230 M904 -46 L361.6 230 M904 -46 L723.2 230 M904 -46 L1084.8000000000002 230 M904 -46 L1446.4 230 M904 -46 L1808 230 M904 -46 L2169.6000000000004 230 M904 -46 L2531.2000000000003 230 M904 -46 L2892.8 230 M904 -46 L3254.4 230 M904 -46 L3616 230 M904 -46 L3977.6000000000004 230 M904 -46 L4339.200000000001 230 M904 -46 L4700.8 230 M904 -46 L5062.400000000001 230 M904 -46 L5424 230" stroke="%23FF7BED" stroke-width="2" vector-effect="non-scaling-stroke" /></svg>')
+    left bottom / 100% 40% no-repeat;
 
-  animation-name: grid-movement;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
+  /* Define each horizontal line animation using vars */
+  --outrun: 0;
+  --pos: var(--outrun, 0);
+  --distance: 0.5%;
+  --hor: 60%;
+  --l0: var(--hor) + 0 * 0 * var(--distance) +
+    (
+      ((0 + 1) * (0 + 1) * var(--distance) - 0 * 0 * var(--distance)) *
+        var(--pos)
+    );
+  --l1: var(--hor) + 1 * 1 * var(--distance) +
+    (
+      ((1 + 1) * (1 + 1) * var(--distance) - 1 * 1 * var(--distance)) *
+        var(--pos)
+    );
+  --l2: var(--hor) + 2 * 2 * var(--distance) +
+    (
+      ((2 + 1) * (2 + 1) * var(--distance) - 2 * 2 * var(--distance)) *
+        var(--pos)
+    );
+  --l3: var(--hor) + 3 * 3 * var(--distance) +
+    (
+      ((3 + 1) * (3 + 1) * var(--distance) - 3 * 3 * var(--distance)) *
+        var(--pos)
+    );
+  --l4: var(--hor) + 4 * 4 * var(--distance) +
+    (
+      ((4 + 1) * (4 + 1) * var(--distance) - 4 * 4 * var(--distance)) *
+        var(--pos)
+    );
+  --l5: var(--hor) + 5 * 5 * var(--distance) +
+    (
+      ((5 + 1) * (5 + 1) * var(--distance) - 5 * 5 * var(--distance)) *
+        var(--pos)
+    );
+  --l6: var(--hor) + 6 * 6 * var(--distance) +
+    (
+      ((6 + 1) * (6 + 1) * var(--distance) - 6 * 6 * var(--distance)) *
+        var(--pos)
+    );
+  --l7: var(--hor) + 7 * 7 * var(--distance) +
+    (
+      ((7 + 1) * (7 + 1) * var(--distance) - 7 * 7 * var(--distance)) *
+        var(--pos)
+    );
+  --l8: var(--hor) + 8 * 8 * var(--distance) +
+    (
+      ((8 + 1) * (8 + 1) * var(--distance) - 8 * 8 * var(--distance)) *
+        var(--pos)
+    );
+  --l9: var(--hor) + 9 * 9 * var(--distance) +
+    (
+      ((9 + 1) * (9 + 1) * var(--distance) - 9 * 9 * var(--distance)) *
+        var(--pos)
+    );
 
-@keyframes grid-movement {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 115%;
-  }
+  /* Horizon */
+  --lgh: linear-gradient(
+    transparent 0px var(--hor),
+    var(--grid-color) var(--hor) calc(var(--hor) + 2px),
+    transparent calc(var(--hor) + 2px)
+  );
+
+  /* Each horizontal line style */
+  --lg0: linear-gradient(
+    transparent 0px calc(var(--l0)),
+    var(--grid-color) calc(var(--l0)) calc(var(--l0) + 2px),
+    transparent calc(var(--l0) + 2px)
+  );
+  --lg1: linear-gradient(
+    transparent 0px calc(var(--l1)),
+    var(--grid-color) calc(var(--l1)) calc(var(--l1) + 2px),
+    transparent calc(var(--l1) + 2px)
+  );
+  --lg2: linear-gradient(
+    transparent 0px calc(var(--l2)),
+    var(--grid-color) calc(var(--l2)) calc(var(--l2) + 2px),
+    transparent calc(var(--l2) + 2px)
+  );
+  --lg3: linear-gradient(
+    transparent 0px calc(var(--l3)),
+    var(--grid-color) calc(var(--l3)) calc(var(--l3) + 2px),
+    transparent calc(var(--l3) + 2px)
+  );
+  --lg4: linear-gradient(
+    transparent 0px calc(var(--l4)),
+    var(--grid-color) calc(var(--l4)) calc(var(--l4) + 2px),
+    transparent calc(var(--l4) + 2px)
+  );
+  --lg5: linear-gradient(
+    transparent 0px calc(var(--l5)),
+    var(--grid-color) calc(var(--l5)) calc(var(--l5) + 2px),
+    transparent calc(var(--l5) + 2px)
+  );
+  --lg6: linear-gradient(
+    transparent 0px calc(var(--l6)),
+    var(--grid-color) calc(var(--l6)) calc(var(--l6) + 2px),
+    transparent calc(var(--l6) + 2px)
+  );
+  --lg7: linear-gradient(
+    transparent 0px calc(var(--l7)),
+    var(--grid-color) calc(var(--l7)) calc(var(--l7) + 2px),
+    transparent calc(var(--l7) + 2px)
+  );
+  --lg8: linear-gradient(
+    transparent 0px calc(var(--l8)),
+    var(--grid-color) calc(var(--l8)) calc(var(--l8) + 2px),
+    transparent calc(var(--l8) + 2px)
+  );
+  --lg9: linear-gradient(
+    transparent 0px calc(var(--l9)),
+    var(--grid-color) calc(var(--l9)) calc(var(--l9) + 2px),
+    transparent calc(var(--l9) + 2px)
+  );
+
+  /* Output comes here */
+  background: var(--lgDepth), var(--lgh), var(--lg0), var(--lg1), var(--lg2),
+    var(--lg3), var(--lg4), var(--lg5), var(--lg6), var(--lg7), var(--lg8),
+    var(--lg9), transparent 100%;
 }
 
 .retro-text {
