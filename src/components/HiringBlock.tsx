@@ -61,11 +61,7 @@ export default function () {
         <HeaderText small center>
           Interested in joining the team or want to reach out?
         </HeaderText>
-        <Button
-          outlined
-          url="hi@bwl.gg"
-          onClick={() => window.open('mailto:hi@bwl.gg')}
-        >
+        <Button outlined url="mailto:hi@bwl.gg">
           Message us
         </Button>
       </div>

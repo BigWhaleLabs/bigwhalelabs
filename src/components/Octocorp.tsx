@@ -41,7 +41,9 @@ export default function () {
         <Button
           outlined
           url={`http://twitter.com/share?url=${encodeURIComponent(
-            'Check out the future of pseudonymity using #zk proofs at @bigwhalelabs 🐋 Power up your pseudonymous wallet with their new app @sealcred 🦭'
+            `#zk identity is the future + privacy is a human right.
+
+Check out @bigwhalelabs and spin up a pseudonym with their new protocol @sealcred 🦭`
           )}`}
         >
           Endorse now
