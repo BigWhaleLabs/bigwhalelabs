@@ -120,8 +120,10 @@ module.exports = {
         25: '6.125rem',
       },
       margin: {
+        '-52': '-13rem',
         19.5: '4.875rem',
         22.5: '5.625rem',
+        116: '29rem',
       },
       borderRadius: {
         '4xl': '2.5rem',
@@ -150,10 +152,6 @@ module.exports = {
       },
       content: {
         retro: 'attr(data-text)',
-      },
-      margin: {
-        116: '29rem',
-        22.5: '5.625rem',
       },
     },
   },
