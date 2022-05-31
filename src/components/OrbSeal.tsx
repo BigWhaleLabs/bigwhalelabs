@@ -1,14 +1,8 @@
-import classnames, {
-  dropShadow,
-  margin,
-  scale,
-  strokeWidth,
-} from 'classnames/tailwind'
+import classnames, { margin, scale, strokeWidth } from 'classnames/tailwind'
 
 const mainStroke = classnames(strokeWidth('stroke-1.5'))
 
 const svgClasses = classnames(
-  dropShadow('drop-shadow-primary'),
   margin('2xl:ml-8', 'mx-auto'),
   scale('scale-75', '2xl:scale-100')
 )
