@@ -75,13 +75,13 @@ export default function () {
         </div>
         <div className={cardBody}>
           <HeaderText>
-            Verify NFT ownership while remaining anonymous with ZK badges.
+            Privacy-preserving social protocol built with ZK soul-bound NFTs
           </HeaderText>
           <BodyText>
             <AccentText color="text-accent">SealCred</AccentText> allows you to
-            experience the world pseudonymously with zero knowledge proof (zk
-            badges). This means you can prove ownership of an NFT without it
-            tracing back to you.
+            experience the world pseudonymously with zero knowledge verified
+            NFTs. This means you can prove credentials, ownership, or facts
+            without them tracing back to you.
           </BodyText>
           <Button outlined url="https://sealcred.xyz/">
             Get started

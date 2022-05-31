@@ -32,14 +32,14 @@ export default function () {
       <div className={cardsOnRight}>
         <RightCard
           icon={<OrbSeal />}
-          text="Verify NFT ownership while remaining anonymous"
+          text="Verify credentials through zk NFTs while remaining anonymous"
           buttonText="Do this with SealCred"
           url="https://sealcred.xyz"
         />
         <RightCard
           reverse
           icon={<DosuCity />}
-          text="Socialize pseudonymously using ZK badges"
+          text="Socialize pseudonymously using ZK NFT badges"
           buttonText="Learn about Dosu"
           url="https://dosu.io"
         />
