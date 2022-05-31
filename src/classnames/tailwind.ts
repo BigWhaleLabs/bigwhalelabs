@@ -7427,6 +7427,7 @@ export type TMaxHeight =
   | 'max-h-80'
   | 'max-h-96'
   | 'max-h-298'
+  | 'max-h-450'
   | 'max-h-620'
   | 'max-h-px'
   | 'max-h-0.5'

@@ -33,6 +33,7 @@ module.exports = {
       },
       maxHeight: {
         298: '18.625rem',
+        450: '30rem',
         620: '38.75rem',
       },
       fontSize: {

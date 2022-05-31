@@ -14,6 +14,7 @@ import classnames, {
   justifyContent,
   margin,
   maxWidth,
+  padding,
   space,
   width,
 } from 'classnames/tailwind'
@@ -24,7 +25,8 @@ const phoneButtonWrapper = classnames(
   flexDirection('flex-col'),
   alignItems('items-center'),
   space('space-y-4'),
-  margin('mt-4')
+  margin('mt-4'),
+  padding('px-3')
 )
 const PhoneGetStarted = () => (
   <div className={phoneButtonWrapper}>
@@ -39,12 +41,14 @@ const PhoneGetStarted = () => (
 
 const cardWrapper = classnames(
   display('flex'),
-  flexDirection('md:flex-row', 'flex-col'),
-  justifyContent('md:justify-between'),
-  width('md:w-3/4', 'w-full'),
-  margin('md:mr-72', 'md:mt-80', 'mt-36'),
-  space('md:space-y-0', 'space-y-32')
+  flexDirection('lg:flex-row', 'flex-col'),
+  justifyContent('lg:justify-between'),
+  width('lg:w-3/4', 'w-full'),
+  margin('lg:mt-80', 'mt-36'),
+  space('lg:space-y-0', 'space-y-32'),
+  alignItems('items-center')
 )
+
 const card = classnames(
   margin('mx-4'),
   space('space-y-2'),
@@ -54,8 +58,9 @@ const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
 const pseudoSuitWrapper = classnames(
   width('w-auto'),
+  maxWidth('max-w-400'),
   height('h-auto'),
-  margin('md:mt-0', 'mt-32')
+  margin('lg:mt-0', 'mt-32')
 )
 
 export default function () {
@@ -84,7 +89,7 @@ export default function () {
         </div>
       </div>
       <div className={pseudoSuitWrapper}>
-        <img src="/img/fullAnimationStatic.webp" />
+        <img src="/img/robot.webp" />
         {onlyPhones && <PhoneGetStarted />}
       </div>
     </div>
