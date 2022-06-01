@@ -16,6 +16,7 @@ import classnames, {
   padding,
   position,
   space,
+  willChange,
   zIndex,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
@@ -57,7 +58,11 @@ export default function () {
   useClickOutside(navbarRef, () => setIsMenuOpen(false))
 
   return (
-    <nav ref={navbarRef} className={navbar(scrollPosition > 20)}>
+    <nav
+      ref={navbarRef}
+      className={navbar(scrollPosition > 20)}
+      style={{ backfaceVisibility: 'hidden' }}
+    >
       <div className={navbarInternalContainer}>
         <Logo />
         <div className={buttonsContainer}>
@@ -78,4 +83,7 @@ export default function () {
       {!md && isMenuOpen && <NavbarLinks />}
     </nav>
   )
+}
+function transform(arg0: string): import('classnames/tailwind').TArg {
+  throw new Error('Function not implemented.')
 }
