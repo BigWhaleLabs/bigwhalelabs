@@ -69,6 +69,7 @@ body {
   left: -50%;
   height: 130%;
   bottom: -30%;
+  will-change: auto;
   background-image: -webkit-linear-gradient(
       top,
       var(--grid-color) 2px,

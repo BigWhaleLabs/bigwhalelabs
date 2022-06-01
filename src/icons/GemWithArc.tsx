@@ -6,6 +6,7 @@ import classnames, {
   margin,
   scale,
   textTransform,
+  willChange,
 } from 'classnames/tailwind'
 
 const textStyle = classnames(
@@ -17,7 +18,8 @@ const textStyle = classnames(
 const svgBox = classnames(
   height('md:h-80', 'h-44'),
   margin('mx-auto'),
-  scale('scale-150')
+  scale('scale-150'),
+  willChange('will-change-auto')
 )
 
 interface ArcTextProps {
