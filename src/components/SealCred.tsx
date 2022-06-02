@@ -12,14 +12,18 @@ import classnames, {
   display,
   flexDirection,
   height,
+  inset,
   justifyContent,
   margin,
   maxWidth,
   padding,
+  position,
   space,
   width,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
+import useScrollPosition from 'hooks/useScrollPosition'
+import useScrollPercent from 'hooks/useScrollPercent'
 
 const phoneButtonWrapper = classnames(
   display('flex'),
@@ -53,7 +57,9 @@ const cardWrapper = classnames(
 const card = classnames(
   margin('mx-4'),
   space('space-y-2'),
-  maxWidth('max-w-400')
+  maxWidth('max-w-400'),
+  position('sticky'),
+  inset('left-32', 'top-1/4')
 )
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
@@ -89,11 +95,11 @@ export default function () {
           </Button>
         </div>
       </div>
+
       <div className={pseudoSuitWrapper}>
-        <img src="/img/robot.webp" />
+        <SealCredAnimation />
         {onlyPhones && <PhoneGetStarted />}
       </div>
-      <SealCredAnimation />
     </div>
   )
 }

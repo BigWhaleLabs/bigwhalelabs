@@ -23,7 +23,6 @@ export default function () {
   }, [throttledCallback])
 
   return {
-    animStart: scroll > animationBreakpoints.animStart,
     beforeSuperOrb: scroll < animationBreakpoints.beforeSuperOrb,
     scroll,
   }

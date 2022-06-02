@@ -11,6 +11,7 @@ import classnames, {
   textColor,
   transitionProperty,
   width,
+  willChange,
   zIndex,
 } from 'classnames/tailwind'
 import colorToBackground from 'helpers/colorToBackground'
@@ -28,6 +29,7 @@ const sphereStyles = classnames(
   borderRadius('rounded-full'),
   textAlign('text-center'),
   transitionProperty('transition-all'),
+  willChange('will-change-transform'),
   zIndex('z-10')
 )
 const sphereSize = (small?: boolean) =>
