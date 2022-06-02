@@ -22,8 +22,6 @@ import classnames, {
   width,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
-import useScrollPosition from 'hooks/useScrollPosition'
-import useScrollPercent from 'hooks/useScrollPercent'
 
 const phoneButtonWrapper = classnames(
   display('flex'),
