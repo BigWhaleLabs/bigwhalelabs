@@ -59,7 +59,7 @@ const card = classnames(
   space('space-y-2'),
   maxWidth('max-w-400'),
   position('sticky'),
-  inset('left-32', 'top-1/4')
+  inset('left-32', 'top-32')
 )
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
