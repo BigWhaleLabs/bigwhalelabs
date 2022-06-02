@@ -57,7 +57,11 @@ export default function () {
   useClickOutside(navbarRef, () => setIsMenuOpen(false))
 
   return (
-    <nav ref={navbarRef} className={navbar(scrollPosition > 20)}>
+    <nav
+      ref={navbarRef}
+      className={navbar(scrollPosition > 20)}
+      style={{ backfaceVisibility: 'hidden' }}
+    >
       <div className={navbarInternalContainer}>
         <Logo />
         <div className={buttonsContainer}>
