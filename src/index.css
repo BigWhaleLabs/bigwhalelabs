@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 html {
-  background-color: #0d0030;
   scroll-behavior: smooth;
   /* Grid and blurry background */
   background: url('/img/blurry-shadows-lg.webp') top / cover,
@@ -39,21 +38,6 @@ body {
 }
 
 /* Animated footer */
-
-/* Polyfill: https://stackoverflow.com/questions/46429913/css-custom-properties-polyfill-for-ie11 */
-/* Something like custom counter from 0 to 1 */
-@property --outrun {
-  syntax: '<number>';
-  initial-value: 0;
-  inherits: false;
-}
-
-@keyframes outrun {
-  to {
-    --outrun: 1;
-  }
-}
-
 .grid-wrapper {
   --grid-color: #ff7bed;
   height: 50vh;
