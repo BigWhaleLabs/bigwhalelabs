@@ -3,16 +3,11 @@
 @tailwind utilities;
 
 html {
-  background-color: #0d0030;
-  overflow-x: hidden;
-  /* Grid */
-  background: conic-gradient(
-      from 90deg at 0.06rem 0.06rem,
-      #0d0030 90deg,
-      #1a0259 0
-    )
-    0 0/3rem 3rem;
   scroll-behavior: smooth;
+  /* Grid and blurry background */
+  background: url('/img/blurry-shadows-lg.webp') top / cover,
+    conic-gradient(from 90deg at 0.06rem 0.06rem, #0d0030 90deg, #1a0259 0) 0 0/3rem
+      3rem;
 }
 body {
   margin: 0;
@@ -21,22 +16,14 @@ body {
   font-family: 'JetBrains Mono', monospace;
   color: #efecd6;
   min-height: 100vh;
-  width: 100vw;
-  background-image: url('/img/blurry-shadows-lg.webp');
-  background-size: cover;
 }
-/* Grid for mobiles */
+
 @media screen and (max-width: 600px) {
   html {
-    background: conic-gradient(
-        from 90deg at 0.06rem 0.06rem,
-        #0d0030 90deg,
-        #1a0259 0
-      )
-      0 0/2rem 2rem;
-  }
-  body {
-    background-image: url('/img/blurry-shadows-sm.webp');
+    /* Grid and blurry background */
+    background: url('/img/blurry-shadows-sm.webp') top / cover,
+      conic-gradient(from 90deg at 0.06rem 0.06rem, #0d0030 90deg, #1a0259 0) 0
+        0/2rem 2rem;
   }
 }
 
@@ -51,48 +38,40 @@ body {
 }
 
 /* Animated footer */
-
 .grid-wrapper {
-  width: 100vw;
+  --grid-color: #ff7bed;
   height: 50vh;
+  width: 100%;
   position: relative;
   perspective: 180px;
-  perspective-origin: 50% 20%;
+  perspective-origin: 50% 40%;
   overflow: hidden;
 }
-
-.grid-horizon {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 6px;
-  background-color: #ff7bed;
-}
-
 .grid {
   position: absolute;
   width: 200%;
   left: -50%;
-  height: 100%;
-
-  /* first gradient - vertical lines; second - horizontal */
-  background-image: -webkit-linear-gradient(top, #ff7bed 6px, transparent 1px),
-    -webkit-linear-gradient(left, #ff7bed 6px, transparent 1px);
-  background-size: 50px 50px, 150px;
-  transform: rotateX(100deg);
-
-  animation-name: grid-movement;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  height: 130%;
+  bottom: -30%;
+  will-change: auto;
+  background-image: -webkit-linear-gradient(
+      top,
+      var(--grid-color) 2px,
+      transparent 2px
+    ),
+    -webkit-linear-gradient(left, var(--grid-color) 2px, transparent 2px);
+  background-size: 50px 50px, 80px 80px;
+  background-position: -1px -1px, -1px -1px;
+  transform: rotateX(85deg);
+  animation: moveUp 0.5s infinite linear;
 }
 
-@keyframes grid-movement {
+@keyframes moveUp {
   0% {
-    background-position: 0% 0%;
+    background-position: -1px -1px, -1px -1px;
   }
   100% {
-    background-position: 0% 115%;
+    background-position: -50px -50px, -1px -1px;
   }
 }
 

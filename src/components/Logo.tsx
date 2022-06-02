@@ -23,7 +23,7 @@ export default function ({ large }: { large?: boolean }) {
 
   return (
     <span className={container}>
-      {large || (!large && !xs) ? (
+      {large || !xs ? (
         <LogoText large={large}>{`big\nwhale\nlabs`}</LogoText>
       ) : null}
       <Whale large={large} />

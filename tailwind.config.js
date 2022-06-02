@@ -2,12 +2,20 @@
 module.exports = {
   content: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
+    screens: {
+      fold: '20rem',
+      mobile: '25rem',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     fontFamily: {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
       screens: {
-        fold: '20rem',
         md: '37.5rem',
       },
       space: {
@@ -16,13 +24,27 @@ module.exports = {
         '-44': '-11rem',
       },
       width: {
+        286: '17.875rem',
+        300: '18.75rem',
+        334: '20.875rem',
         500: '31.25rem',
+        'mobile-card': '92%',
       },
       height: {
         500: '31.25rem',
+        'mobile-card': '22.813rem',
       },
       maxWidth: {
+        270: '16.875rem',
+        358: '22.375rem',
         400: '25rem',
+        535: '33.5rem',
+        758: '47.375rem',
+      },
+      maxHeight: {
+        298: '18.625rem',
+        450: '30rem',
+        620: '38.75rem',
       },
       fontSize: {
         '2.5xl': '1.625rem',
@@ -78,12 +100,14 @@ module.exports = {
         'tertiary-semi-transparent': 'rgba(1, 254, 182, 0.4)',
         'formal-accent-semi-transparent': 'rgba(239, 236, 214, 0.4)',
         navbar: 'rgba(13, 0, 48, 0.3)',
+        card: 'rgba(13, 0, 48, 0.8)',
       },
       boxShadow: {
         '2xl': '0rem 0.25rem 2.75rem 0rem rgb(0 0 0 / 0.25)',
         lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
         md: '0rem 0rem 0.375rem 0rem rgb(0 0 0 / 0.25)',
         button: '0rem 0rem 1.625rem rgba(1, 254, 182, 1)',
+        card: '0rem 1rem 11rem rgba(21, 161, 252, 0.15)',
       },
       dropShadow: {
         'text-fill-primary': '0rem -1rem 0rem #15A1FC',
@@ -92,7 +116,8 @@ module.exports = {
         tertiary: '0rem 0rem 0.625rem #01fed6',
         primary: '0rem 0rem 1.5rem #15A1FC',
         'formal-accent': '0rem 0rem 0.625rem #efecd6',
-        retro: '0rem 0rem 4rem rgb(10, 132, 255)',
+        retro: '0 0 4rem rgba(10, 132, 255, 0.7)',
+        orb: '0 0 11rem #FFFFFF',
       },
       borderRadius: {
         '4xl': '2.5rem',
@@ -107,12 +132,17 @@ module.exports = {
         25: '6.125rem',
       },
       margin: {
+        '-4': '-1rem',
+        '-52': '-13rem',
+        19.5: '4.875rem',
         22.5: '5.625rem',
+        116: '29rem',
       },
       borderRadius: {
         '4xl': '2.5rem',
       },
       strokeWidth: {
+        1.5: '0.09375rem',
         '5/2': '0.15rem',
         4: '0.25rem',
       },
@@ -121,11 +151,12 @@ module.exports = {
         '-6': '-1.5rem',
         '-9': '-2.25rem',
         '-11': '-2.75rem',
+        '-20': '-5rem',
         '-28': '-7rem',
         '-44': '-11rem',
         '-60': '-15rem',
         '-96': '-24rem',
-        '-1/4': '-25%',
+        '-1/5': '-20%',
       },
       scale: {
         300: '3.0',

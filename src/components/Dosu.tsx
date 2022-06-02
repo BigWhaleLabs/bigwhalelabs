@@ -22,7 +22,7 @@ const wrapper = classnames(
   flexDirection('flex-col', 'lg:flex-row'),
   justifyContent('justify-between'),
   space('space-y-32'),
-  margin('mb-72')
+  margin('md:mt-64', 'mt-56', 'mx-4')
 )
 
 export default function () {
@@ -32,16 +32,15 @@ export default function () {
       <div className={card}>
         <PrimaryAccentText color="text-primary">Dosu</PrimaryAccentText>
         <div className={cardBody}>
-          <HeaderText small>Socialize pseudonymously with ZK badges</HeaderText>
+          <HeaderText textSize="small">
+            Socialize pseudonymously with ZK badges
+          </HeaderText>
           <BodyText>
             <AccentText color="text-primary">Dosu</AccentText> will be a
             pseudonymous social network where you can share your thoughts with
             the world.
           </BodyText>
-          <Button
-            outlined
-            url="https://discordapp.com/channels/885322567693512754/955852267557367819/974663929294913576"
-          >
+          <Button outlined url="https://discord.gg/7frxHQdR">
             Join Discord for updates
           </Button>
         </div>

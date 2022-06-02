@@ -295,6 +295,7 @@ export type TBackgroundColor =
   | 'bg-tertiary-semi-transparent'
   | 'bg-formal-accent-semi-transparent'
   | 'bg-navbar'
+  | 'bg-card'
 
 export type TBackgroundPosition =
   | 'bg-bottom'
@@ -1055,6 +1056,9 @@ export type TGradientColorStops =
   | 'from-navbar'
   | 'via-navbar'
   | 'to-navbar'
+  | 'from-card'
+  | 'via-card'
+  | 'to-card'
 
 export type TBackgrounds =
   | TBackgroundAttachment
@@ -2752,6 +2756,11 @@ export type TBorderColor =
   | 'border-r-navbar'
   | 'border-b-navbar'
   | 'border-l-navbar'
+  | 'border-card'
+  | 'border-t-card'
+  | 'border-r-card'
+  | 'border-b-card'
+  | 'border-l-card'
 
 export type TBorderOpacity =
   | 'border-opacity-0'
@@ -3402,6 +3411,7 @@ export type TRingColor =
   | 'ring-tertiary-semi-transparent'
   | 'ring-formal-accent-semi-transparent'
   | 'ring-navbar'
+  | 'ring-card'
 
 export type TRingWidth =
   | 'ring-0'
@@ -3675,6 +3685,7 @@ export type TRingOffsetColor =
   | 'ring-offset-tertiary-semi-transparent'
   | 'ring-offset-formal-accent-semi-transparent'
   | 'ring-offset-navbar'
+  | 'ring-offset-card'
 
 export type TRingOffsetWidth =
   | 'ring-offset-0'
@@ -3942,6 +3953,7 @@ export type TOutlineColor =
   | 'outline-tertiary-semi-transparent'
   | 'outline-formal-accent-semi-transparent'
   | 'outline-navbar'
+  | 'outline-card'
 
 export type TBorders =
   | TBorderStyle
@@ -4015,6 +4027,7 @@ export type TBoxShadow =
   | 'shadow-inner'
   | 'shadow-none'
   | 'shadow-button'
+  | 'shadow-card'
 
 export type TBoxShadowColor =
   | 'shadow-inherit'
@@ -4261,6 +4274,7 @@ export type TBoxShadowColor =
   | 'shadow-tertiary-semi-transparent'
   | 'shadow-formal-accent-semi-transparent'
   | 'shadow-navbar'
+  | 'shadow-card'
 
 export type TOpacity =
   | 'opacity-0'
@@ -4388,6 +4402,7 @@ export type TDropShadow =
   | 'drop-shadow-primary'
   | 'drop-shadow-formal-accent'
   | 'drop-shadow-retro'
+  | 'drop-shadow-orb'
 
 export type TGrayscale = 'grayscale-0' | 'grayscale'
 
@@ -5215,12 +5230,16 @@ export type TMargin =
   | 'm-72'
   | 'm-80'
   | 'm-96'
+  | 'm-116'
   | 'm-auto'
   | 'm-px'
   | 'm-0.5'
   | 'm-1.5'
   | 'm-2.5'
   | 'm-3.5'
+  | '-m-4'
+  | '-m-52'
+  | 'm-19.5'
   | 'm-22.5'
   | 'my-0'
   | 'my-1'
@@ -5253,12 +5272,16 @@ export type TMargin =
   | 'my-72'
   | 'my-80'
   | 'my-96'
+  | 'my-116'
   | 'my-auto'
   | 'my-px'
   | 'my-0.5'
   | 'my-1.5'
   | 'my-2.5'
   | 'my-3.5'
+  | '-my-4'
+  | '-my-52'
+  | 'my-19.5'
   | 'my-22.5'
   | 'mx-0'
   | 'mx-1'
@@ -5291,12 +5314,16 @@ export type TMargin =
   | 'mx-72'
   | 'mx-80'
   | 'mx-96'
+  | 'mx-116'
   | 'mx-auto'
   | 'mx-px'
   | 'mx-0.5'
   | 'mx-1.5'
   | 'mx-2.5'
   | 'mx-3.5'
+  | '-mx-4'
+  | '-mx-52'
+  | 'mx-19.5'
   | 'mx-22.5'
   | 'mt-0'
   | 'mt-1'
@@ -5329,12 +5356,16 @@ export type TMargin =
   | 'mt-72'
   | 'mt-80'
   | 'mt-96'
+  | 'mt-116'
   | 'mt-auto'
   | 'mt-px'
   | 'mt-0.5'
   | 'mt-1.5'
   | 'mt-2.5'
   | 'mt-3.5'
+  | '-mt-4'
+  | '-mt-52'
+  | 'mt-19.5'
   | 'mt-22.5'
   | 'mr-0'
   | 'mr-1'
@@ -5367,12 +5398,16 @@ export type TMargin =
   | 'mr-72'
   | 'mr-80'
   | 'mr-96'
+  | 'mr-116'
   | 'mr-auto'
   | 'mr-px'
   | 'mr-0.5'
   | 'mr-1.5'
   | 'mr-2.5'
   | 'mr-3.5'
+  | '-mr-4'
+  | '-mr-52'
+  | 'mr-19.5'
   | 'mr-22.5'
   | 'mb-0'
   | 'mb-1'
@@ -5405,12 +5440,16 @@ export type TMargin =
   | 'mb-72'
   | 'mb-80'
   | 'mb-96'
+  | 'mb-116'
   | 'mb-auto'
   | 'mb-px'
   | 'mb-0.5'
   | 'mb-1.5'
   | 'mb-2.5'
   | 'mb-3.5'
+  | '-mb-4'
+  | '-mb-52'
+  | 'mb-19.5'
   | 'mb-22.5'
   | 'ml-0'
   | 'ml-1'
@@ -5443,12 +5482,16 @@ export type TMargin =
   | 'ml-72'
   | 'ml-80'
   | 'ml-96'
+  | 'ml-116'
   | 'ml-auto'
   | 'ml-px'
   | 'ml-0.5'
   | 'ml-1.5'
   | 'ml-2.5'
   | 'ml-3.5'
+  | '-ml-4'
+  | '-ml-52'
+  | 'ml-19.5'
   | 'ml-22.5'
 
 export type TSpace =
@@ -5858,6 +5901,7 @@ export type TCaretColor =
   | 'caret-tertiary-semi-transparent'
   | 'caret-formal-accent-semi-transparent'
   | 'caret-navbar'
+  | 'caret-card'
 
 export type TWillChange =
   | 'will-change-auto'
@@ -6111,6 +6155,7 @@ export type TAccentColor =
   | 'accent-tertiary-semi-transparent'
   | 'accent-formal-accent-semi-transparent'
   | 'accent-navbar'
+  | 'accent-card'
 
 export type TScrollPadding =
   | 'scroll-p-0'
@@ -7078,6 +7123,13 @@ export type TInset =
   | '-right-11'
   | '-bottom-11'
   | '-left-11'
+  | '-inset-20'
+  | '-inset-x-20'
+  | '-inset-y-20'
+  | '-top-20'
+  | '-right-20'
+  | '-bottom-20'
+  | '-left-20'
   | '-inset-28'
   | '-inset-x-28'
   | '-inset-y-28'
@@ -7106,13 +7158,13 @@ export type TInset =
   | '-right-96'
   | '-bottom-96'
   | '-left-96'
-  | '-inset-1/4'
-  | '-inset-x-1/4'
-  | '-inset-y-1/4'
-  | '-top-1/4'
-  | '-right-1/4'
-  | '-bottom-1/4'
-  | '-left-1/4'
+  | '-inset-1/5'
+  | '-inset-x-1/5'
+  | '-inset-y-1/5'
+  | '-top-1/5'
+  | '-right-1/5'
+  | '-bottom-1/5'
+  | '-left-1/5'
 
 export type TZIndex =
   | 'z-0'
@@ -7208,6 +7260,9 @@ export type TWidth =
   | 'w-72'
   | 'w-80'
   | 'w-96'
+  | 'w-286'
+  | 'w-300'
+  | 'w-334'
   | 'w-500'
   | 'w-auto'
   | 'w-px'
@@ -7246,6 +7301,7 @@ export type TWidth =
   | 'w-min'
   | 'w-max'
   | 'w-fit'
+  | 'w-mobile-card'
 
 export type TMinWidth =
   | 'min-w-0'
@@ -7256,7 +7312,11 @@ export type TMinWidth =
 
 export type TMaxWidth =
   | 'max-w-0'
+  | 'max-w-270'
+  | 'max-w-358'
   | 'max-w-400'
+  | 'max-w-535'
+  | 'max-w-758'
   | 'max-w-none'
   | 'max-w-xs'
   | 'max-w-sm'
@@ -7274,12 +7334,13 @@ export type TMaxWidth =
   | 'max-w-max'
   | 'max-w-fit'
   | 'max-w-prose'
+  | 'max-w-screen-fold'
+  | 'max-w-screen-mobile'
   | 'max-w-screen-sm'
   | 'max-w-screen-md'
   | 'max-w-screen-lg'
   | 'max-w-screen-xl'
   | 'max-w-screen-2xl'
-  | 'max-w-screen-fold'
   | 'max-w-screen-tiny'
   | 'max-w-screen-tablet'
 
@@ -7342,6 +7403,7 @@ export type THeight =
   | 'h-min'
   | 'h-max'
   | 'h-fit'
+  | 'h-mobile-card'
 
 export type TMinHeight =
   | 'min-h-0'
@@ -7383,6 +7445,9 @@ export type TMaxHeight =
   | 'max-h-72'
   | 'max-h-80'
   | 'max-h-96'
+  | 'max-h-298'
+  | 'max-h-450'
+  | 'max-h-620'
   | 'max-h-px'
   | 'max-h-0.5'
   | 'max-h-1.5'
@@ -7449,6 +7514,7 @@ export type TFill =
   | 'fill-tertiary-semi-transparent'
   | 'fill-formal-accent-semi-transparent'
   | 'fill-navbar'
+  | 'fill-card'
 
 export type TStroke =
   | 'stroke-inherit'
@@ -7497,12 +7563,14 @@ export type TStroke =
   | 'stroke-tertiary-semi-transparent'
   | 'stroke-formal-accent-semi-transparent'
   | 'stroke-navbar'
+  | 'stroke-card'
 
 export type TStrokeWidth =
   | 'stroke-0'
   | 'stroke-1'
   | 'stroke-2'
   | 'stroke-4'
+  | 'stroke-1.5'
   | 'stroke-5/2'
 
 export type TSVG = TFill | TStroke | TStrokeWidth
@@ -8043,6 +8111,7 @@ export type TPlaceholderColor =
   | 'placeholder-tertiary-semi-transparent'
   | 'placeholder-formal-accent-semi-transparent'
   | 'placeholder-navbar'
+  | 'placeholder-card'
 
 export type TPlaceholderOpacity =
   | 'placeholder-opacity-0'
@@ -8306,6 +8375,7 @@ export type TTextColor =
   | 'text-tertiary-semi-transparent'
   | 'text-formal-accent-semi-transparent'
   | 'text-navbar'
+  | 'text-card'
 
 export type TTextOpacity =
   | 'text-opacity-0'
@@ -8609,6 +8679,7 @@ export type TTextDecorationColor =
   | 'decoration-tertiary-semi-transparent'
   | 'decoration-formal-accent-semi-transparent'
   | 'decoration-navbar'
+  | 'decoration-card'
 
 export type TTextDecorationThickness =
   | 'decoration-0'
@@ -8704,12 +8775,13 @@ export type TPseudoClassVariants =
   | 'print:'
   | 'ltr:'
   | 'rtl:'
+  | 'fold:'
+  | 'mobile:'
   | 'sm:'
   | 'md:'
   | 'lg:'
   | 'xl:'
   | '2xl:'
-  | 'fold:'
   | 'tiny:'
   | 'tablet:'
 

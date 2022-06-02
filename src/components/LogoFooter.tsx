@@ -6,6 +6,7 @@ import classnames, {
   display,
   flexDirection,
   justifyContent,
+  margin,
   space,
 } from 'classnames/tailwind'
 
@@ -14,7 +15,8 @@ const wrapper = classnames(
   flexDirection('flex-col'),
   justifyContent('justify-center'),
   alignItems('items-center'),
-  space('space-y-10')
+  space('space-y-10'),
+  margin('md:mt-116', 'mt-48')
 )
 const linksContainer = classnames(
   display('flex'),
@@ -26,10 +28,7 @@ export default function () {
   return (
     <div className={wrapper}>
       <Logo large />
-      <Button
-        outlined
-        url="https://discordapp.com/channels/885322567693512754/955852267557367819/974663929294913576"
-      >
+      <Button outlined url="https://discord.gg/7frxHQdR">
         Join our Discord
       </Button>
       <div className={linksContainer}>

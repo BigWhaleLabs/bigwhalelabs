@@ -4,6 +4,8 @@ import classnames, {
   backgroundColor,
   borderRadius,
   boxShadow,
+  boxShadowColor,
+  brightness,
   display,
   dropShadow,
   flexDirection,
@@ -31,12 +33,19 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         backgroundColor('bg-tertiary'),
         borderRadius('rounded-4xl'),
         boxShadow('shadow-button'),
+        boxShadowColor(
+          'shadow-tertiary',
+          'hover:shadow-tertiary',
+          'active:shadow-tertiary'
+        ),
+        brightness('hover:brightness-75', 'active:brightness-50'),
         dropShadow('drop-shadow-tertiary'),
-        padding(small ? 'py-2' : 'py-4', small ? 'px-4' : 'px-6'),
+        padding(small ? 'py-2' : 'py-3', small ? 'px-4' : 'px-6'),
         fontWeight('font-bold'),
         fontFamily('font-primary'),
         fontSize(small ? 'text-sm' : 'text-lg'),
-        textColor('text-primary-dark')
+        textColor('text-primary-dark'),
+        brightness('hover:brightness-75', 'active:brightness-50')
       )
     : classnames(
         fontWeight('font-normal'),

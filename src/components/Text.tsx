@@ -1,5 +1,6 @@
 import {
   TTextAlign,
+  TDropShadow,
   TTextColor,
   backgroundClip,
   backgroundImage,
@@ -88,21 +89,26 @@ export function LargeStrokeText({
   )
 }
 
-const bodyText = (small?: boolean, bold?: boolean, center?: boolean) =>
+const bodyText = (large?: boolean, bold?: boolean, center?: boolean) =>
   classnames(
     textColor('text-formal-accent'),
-    lineHeight(small ? 'leading-5' : 'leading-6'),
-    fontSize(small ? 'text-sm' : 'text-base'),
+    lineHeight('leading-6'),
+    fontSize(large ? 'text-lg' : 'text-base'),
     fontWeight(bold ? 'font-bold' : 'font-normal'),
     textAlign(center ? 'text-center' : 'text-left')
   )
 export function BodyText({
+  large,
   bold,
-  small,
   center,
   children,
-}: ChildrenProp & { bold?: boolean; small?: boolean; center?: boolean }) {
-  return <p className={bodyText(small, bold, center)}>{children}</p>
+}: ChildrenProp & {
+  large?: boolean
+  bold?: boolean
+  textSize?: string
+  center?: boolean
+}) {
+  return <p className={bodyText(large, bold, center)}>{children}</p>
 }
 
 const primaryAccentText = (color: TTextColor) =>
@@ -122,31 +128,46 @@ export function PrimaryAccentText({
   return <h3 className={primaryAccentText(color)}>{children}</h3>
 }
 
-const accentText = (color: TTextColor) => classnames(textColor(color))
+const accentText = (color: TTextColor, shadow?: TDropShadow) =>
+  classnames(textColor(color), dropShadow(shadow))
 export function AccentText({
   color,
+  shadow,
   children,
 }: ChildrenProp & {
   color: TTextColor
+  shadow?: TDropShadow
 }) {
-  return <span className={accentText(color)}>{children}</span>
+  return <span className={accentText(color, shadow)}>{children}</span>
 }
 
-const headerText = (small?: boolean, center?: boolean) =>
+const headerText = (textSize?: string, center?: boolean) =>
   classnames(
     fontFamily('font-primary'),
     fontWeight('font-bold'),
     textColor('text-formal-accent'),
-    fontSize(small ? 'text-2xl' : 'text-4xl'),
-    lineHeight(small ? 'leading-8' : 'leading-11'),
+    fontSize(
+      textSize === 'small'
+        ? 'text-2xl'
+        : textSize === 'base'
+        ? 'text-3xl'
+        : 'text-4xl'
+    ),
+    lineHeight(
+      textSize === 'small'
+        ? 'leading-8'
+        : textSize === 'base'
+        ? 'leading-10'
+        : 'leading-11'
+    ),
     textAlign(center ? 'text-center' : undefined)
   )
 export function HeaderText({
-  small,
+  textSize,
   center,
   children,
-}: ChildrenProp & { small?: boolean; center?: boolean }) {
-  return <h2 className={headerText(small, center)}>{children}</h2>
+}: ChildrenProp & { textSize?: string; center?: boolean }) {
+  return <h2 className={headerText(textSize, center)}>{children}</h2>
 }
 
 const plainText = (position: TTextAlign) =>
@@ -164,7 +185,11 @@ export function PlainText({
   return <span className={plainText(position)}>{children}</span>
 }
 
-const extraBoldText = (small?: boolean, extraLeading?: boolean) =>
+const extraBoldText = (
+  small?: boolean,
+  extraLeading?: boolean,
+  trackingExtra?: boolean
+) =>
   classnames(
     fontWeight('font-bold', 'md:font-extrabold'),
     fontSize(
@@ -177,14 +202,23 @@ const extraBoldText = (small?: boolean, extraLeading?: boolean) =>
     ),
     textColor('text-primary-dark'),
     textTransform('uppercase'),
-    letterSpacing('tracking-extra')
+    letterSpacing(trackingExtra ? 'tracking-extra' : undefined)
   )
 export function ExtraBoldText({
   small,
   extraLeading,
+  trackingExtra,
   children,
-}: ChildrenProp & { small?: boolean; extraLeading?: boolean }) {
-  return <span className={extraBoldText(small, extraLeading)}>{children}</span>
+}: ChildrenProp & {
+  small?: boolean
+  extraLeading?: boolean
+  trackingExtra?: boolean
+}) {
+  return (
+    <span className={extraBoldText(small, extraLeading, trackingExtra)}>
+      {children}
+    </span>
+  )
 }
 
 const retroText = (extraSmall?: boolean) =>
@@ -192,7 +226,7 @@ const retroText = (extraSmall?: boolean) =>
     fontFamily('font-primary'),
     fontWeight('font-bold'),
     fontSize(extraSmall ? 'text-6xl' : 'text-7xl', 'md:text-9xl'),
-    lineHeight('leading-11.5', 'md:leading-15'),
+    lineHeight('leading-12', 'md:leading-15'),
     textAlign('text-center'),
     textColor('text-transparent'),
     backgroundClip('bg-clip-text', 'before:bg-clip-text'),
@@ -206,12 +240,12 @@ const retroText = (extraSmall?: boolean) =>
 export function RetroText({ children }: ChildrenProp) {
   const { xs } = useBreakpoints()
   return (
-    <h1
+    <span
       data-text={children}
       className={classNamesToString(retroText(xs), 'retro-text')}
     >
       {children}
-    </h1>
+    </span>
   )
 }
 
