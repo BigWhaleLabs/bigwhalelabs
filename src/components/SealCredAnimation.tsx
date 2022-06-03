@@ -194,9 +194,7 @@ export default function () {
           <div className={happyFacePosition}>
             <HappyFace />
           </div>
-          {/* <div style={{ height: '688px', width: '512px' }}> */}
           <Suit />
-          {/* </div> */}
         </div>
         <SuitReady />
         <div className={spheresWrapper}></div>
