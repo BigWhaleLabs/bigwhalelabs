@@ -18,16 +18,20 @@ import classnames, {
   height,
   inset,
   justifyContent,
+  justifyItems,
   margin,
+  opacity,
   padding,
   position,
   space,
+  transitionProperty,
   width,
   zIndex,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 import useScrollPercent from 'hooks/useScrollPercent'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
+import { useInView } from 'react-intersection-observer'
 
 const wrapper = classnames(
   display('flex'),
@@ -94,19 +98,21 @@ const happySuit = classnames(
   justifyContent('justify-center')
 )
 const personWithSpheres = classnames(display('flex'))
-const spheresWrapper = classnames(
-  display('flex'),
-  position('absolute'),
-  inset('bottom-36', 'left-14'),
-  flexDirection('flex-col'),
-  height('h-48'),
-  width('w-11'),
-  space('space-y-3'),
-  padding('p-2'),
-  borderRadius('rounded-4xl'),
-  borderColor('border-primary-semi-dimmed'),
-  borderWidth('border')
-)
+const spheresWrapper = (visible: boolean) =>
+  classnames(
+    display('flex'),
+    position('absolute'),
+    inset('bottom-36', 'left-14'),
+    flexDirection('flex-col'),
+    width('w-11'),
+    space('space-y-3'),
+    padding('p-2'),
+    borderRadius('rounded-4xl'),
+    borderColor('border-primary-semi-dimmed'),
+    borderWidth('border'),
+    opacity(visible ? 'opacity-100' : 'opacity-0'),
+    transitionProperty('transition-opacity')
+  )
 
 type SpherePosition = 'left' | 'right'
 interface NftBlockProps {
@@ -151,6 +157,7 @@ const PairOfNfts = ({ colors, position, small }: PairOfNftsProps) => {
 export default function () {
   const { tablet } = useBreakpoints()
   const { beforeSuperOrb } = useScrollPercent()
+  const { ref, inView } = useInView()
 
   return (
     <div className={wrapper}>
@@ -197,7 +204,12 @@ export default function () {
           <Suit />
         </div>
         <SuitReady />
-        <div className={spheresWrapper}></div>
+        <div className={spheresWrapper(inView)} ref={ref}>
+          <Sphere animated={false} color="accent" text="ZK" />
+          <Sphere animated={false} color="primary" text="ZK" />
+          <Sphere animated={false} color="secondary" text="ZK" />
+          <Sphere animated={false} color="tertiary" text="ZK" />
+        </div>
       </div>
     </div>
   )

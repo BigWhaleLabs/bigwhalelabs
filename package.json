@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^1.3.2",
-    "preact": "https://github.com/preactjs/preact#43d79c0e8f727e9ac745a50c3a61868adb2dcfe7"
+    "preact": "https://github.com/preactjs/preact#43d79c0e8f727e9ac745a50c3a61868adb2dcfe7",
+    "react-intersection-observer": "^9.2.2"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.2.0",

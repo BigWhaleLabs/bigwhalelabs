@@ -56,8 +56,8 @@ const card = classnames(
   margin('mx-4'),
   space('space-y-2'),
   maxWidth('max-w-400'),
-  position('xl:sticky'),
-  inset('xl:left-0', 'xl:bottom-16', 'xl:top-32')
+  position('lg:sticky'),
+  inset('lg:left-0', 'lg:bottom-0', 'lg:top-32')
 )
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')

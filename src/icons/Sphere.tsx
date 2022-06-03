@@ -40,11 +40,13 @@ export default function ({
   small,
   text,
   onLeft,
+  animated = true,
 }: {
   color: Color
   small?: boolean
   text?: string
   onLeft?: boolean
+  animated?: boolean
 }) {
   const bgColor = colorToBackground(color)
   const shadowColor = colorToDropShadow(color)
@@ -53,9 +55,13 @@ export default function ({
 
   return (
     <div
-      style={scrollAnimationProvider(
-        onLeft ? 'sphereAnimationLeft' : 'sphereAnimationRight'
-      )}
+      style={
+        animated
+          ? scrollAnimationProvider(
+              onLeft ? 'sphereAnimationLeft' : 'sphereAnimationRight'
+            )
+          : undefined
+      }
       className={classnames(
         sphereSize(small),
         sphereStyles,

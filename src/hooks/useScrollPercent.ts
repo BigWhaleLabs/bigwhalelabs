@@ -2,8 +2,8 @@ import { useCallback, useMemo, useState } from 'react'
 import useThrottle from 'hooks/useThrottle'
 
 const animationBreakpoints = {
-  animStart: 0.3,
-  beforeSuperOrb: 0.4,
+  beforeSuperOrb: 0.42,
+  animEnd: 0.55,
 }
 
 export default function () {
@@ -26,6 +26,7 @@ export default function () {
 
   return {
     beforeSuperOrb: scroll < animationBreakpoints.beforeSuperOrb,
+    animationEnd: scroll >= animationBreakpoints.animEnd,
     scroll,
   }
 }
