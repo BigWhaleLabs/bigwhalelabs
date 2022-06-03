@@ -176,28 +176,12 @@ body {
     opacity: 0;
   }
 }
-@keyframes progressAnimation {
-  53% {
-    width: 0;
+@keyframes stageAnimation {
+  34% {
+    opacity: 100;
   }
-  54% {
-    width: 100%;
-  }
-}
-@keyframes progressAnimationComplete {
-  53% {
+  35% {
     opacity: 0;
-  }
-  54% {
-    opacity: 1;
-  }
-}
-@keyframes suitAnimation {
-  48% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
   }
 }
 

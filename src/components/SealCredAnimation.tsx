@@ -93,11 +93,15 @@ const thirdStage = classnames(
   space('space-y-6')
 )
 const happyFacePosition = classnames(position('absolute'), inset('-top-3'))
-const happySuit = classnames(
-  display('flex'),
-  position('relative'),
-  justifyContent('justify-center')
-)
+const happySuit = (visible: boolean) =>
+  classnames(
+    display('flex'),
+    position('relative'),
+    justifyContent('justify-center'),
+    opacity(visible ? 'opacity-100' : 'opacity-0'),
+    transitionDuration('duration-1000'),
+    transitionProperty('transition-opacity')
+  )
 const personWithSpheres = classnames(display('flex'))
 const spheresWrapper = (visible: boolean) =>
   classnames(
@@ -159,7 +163,8 @@ const PairOfNfts = ({ colors, position, small }: PairOfNftsProps) => {
 export default function () {
   const { tablet } = useBreakpoints()
   const { beforeSuperOrb } = useScrollPercent()
-  const { ref, inView } = useInView()
+  const { ref: zkWrapRef, inView: zkWrapVisible } = useInView()
+  const { ref: suitWrapRef, inView: suitWrapVisible } = useInView()
 
   return (
     <div className={wrapper}>
@@ -196,17 +201,14 @@ export default function () {
         </div>
       </div>
       <div className={thirdStage}>
-        <div
-          className={happySuit}
-          style={scrollAnimationProvider('suitAnimation')}
-        >
+        <div className={happySuit(suitWrapVisible)} ref={suitWrapRef}>
           <div className={happyFacePosition}>
             <HappyFace />
           </div>
           <Suit />
         </div>
         <SuitReady />
-        <div className={spheresWrapper(inView)} ref={ref}>
+        <div className={spheresWrapper(zkWrapVisible)} ref={zkWrapRef}>
           <Sphere animated={false} color="accent" text="ZK" />
           <Sphere animated={false} color="primary" text="ZK" />
           <Sphere animated={false} color="secondary" text="ZK" />

@@ -1,6 +1,7 @@
 import { AccentText, PlainText } from 'components/Text'
 import classnames, {
   alignItems,
+  animation,
   backgroundColor,
   borderColor,
   borderRadius,
@@ -8,12 +9,16 @@ import classnames, {
   display,
   flexDirection,
   height,
+  opacity,
   padding,
   space,
+  transitionDuration,
+  transitionProperty,
   whitespace,
   width,
 } from 'classnames/tailwind'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
+import { useInView } from 'react-intersection-observer'
 
 const wrapper = classnames(
   display('flex'),
@@ -27,11 +32,15 @@ const progress = classnames(
   alignItems('items-center'),
   space('space-x-2')
 )
-const textBlockWrapper = classnames(
-  display('flex'),
-  flexDirection('flex-col'),
-  space('space-y-2')
-)
+const textBlockWrapper = (visible: boolean) =>
+  classnames(
+    display('flex'),
+    flexDirection('flex-col'),
+    space('space-y-2'),
+    opacity(visible ? 'opacity-100' : 'opacity-0'),
+    transitionProperty('transition-opacity'),
+    transitionDuration('duration-1000')
+  )
 const progressBarWrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
@@ -45,11 +54,13 @@ const progressBar = classnames(
   height('h-4'),
   width('w-32')
 )
-const bar = classnames(
-  backgroundColor('bg-tertiary'),
-  width('w-full'),
-  height('h-full')
-)
+const bar = (visible: boolean) =>
+  classnames(
+    backgroundColor('bg-tertiary'),
+    animation(visible ? 'animate-expand' : undefined),
+    width('w-full'),
+    height('h-full')
+  )
 const separator = classnames(
   height('h-9'),
   width('w-0.5'),
@@ -58,6 +69,8 @@ const separator = classnames(
 )
 
 export default function () {
+  const { ref, inView } = useInView()
+
   return (
     <div className={wrapper}>
       <PlainText position="text-right">
@@ -68,22 +81,13 @@ export default function () {
       <div className={progress}>
         <div className={progressBarWrapper}>
           <div className={progressBar}>
-            <div
-              className={bar}
-              style={scrollAnimationProvider('progressAnimation')}
-            ></div>
+            <div className={bar(inView)} ref={ref}></div>
           </div>
           <div className={progressBar}>
-            <div
-              className={bar}
-              style={scrollAnimationProvider('progressAnimation')}
-            ></div>
+            <div className={bar(inView)}></div>
           </div>
         </div>
-        <div
-          className={textBlockWrapper}
-          style={scrollAnimationProvider('progressAnimationComplete')}
-        >
+        <div className={textBlockWrapper(inView)} ref={ref}>
           <PlainText>100% you / verified</PlainText>
           <PlainText>100% anonymous</PlainText>
         </div>
