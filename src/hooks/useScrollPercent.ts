@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from 'react'
 import useThrottle from 'hooks/useThrottle'
 
 const animationBreakpoints = {
-  animStart: 0.2,
+  animStart: 0.3,
   beforeSuperOrb: 0.4,
 }
 
@@ -21,6 +21,8 @@ export default function () {
 
     return () => window.removeEventListener('scroll', throttledCallback, true)
   }, [throttledCallback])
+
+  console.log(scroll)
 
   return {
     beforeSuperOrb: scroll < animationBreakpoints.beforeSuperOrb,

@@ -77,10 +77,10 @@ body {
 
 /* Animation for Person icon */
 @keyframes personAnimation {
-  23% {
+  31% {
     transform: translate(0, 0rem);
   }
-  35% {
+  36% {
     transform: translate(0, 34.688rem);
   }
   38.5% {
@@ -97,7 +97,7 @@ body {
   }
 }
 @keyframes slideDownCard {
-  23% {
+  31% {
     transform: translate(0, 0rem);
   }
   35% {
@@ -115,21 +115,18 @@ body {
 }
 /* Animation for spheres icon */
 @keyframes sphereAnimationLeft {
-  0% {
-    transform: translate(0, 0rem);
-  }
-  23% {
+  31% {
     transform: translate(0, 0rem);
   }
   35% {
-    transform: translate(0, 34.688rem);
+    transform: translate(0, 35.5rem);
   }
-  36% {
-    transform: translate(6.5rem, 34.688rem);
+  37% {
+    transform: translate(6.5rem, 35.5rem);
     opacity: 1;
   }
   38.5% {
-    transform: translate(6.5rem, 34.688rem);
+    transform: translate(6.5rem, 35.5rem);
     opacity: 0;
   }
   40% {
@@ -148,18 +145,18 @@ body {
   0% {
     transform: translate(0, 0rem);
   }
-  23% {
+  31% {
     transform: translate(0, 0rem);
   }
   35% {
-    transform: translate(0, 34.688rem);
+    transform: translate(0, 35.5rem);
   }
-  36% {
-    transform: translate(-6.5rem, 34.688rem);
+  37% {
+    transform: translate(-6.5rem, 35.5rem);
     opacity: 1;
   }
   38.5% {
-    transform: translate(-6.5rem, 34.688rem);
+    transform: translate(-6.5rem, 35.5rem);
     opacity: 0;
   }
   40% {
@@ -175,15 +172,15 @@ body {
   }
 }
 @keyframes stageAnimation {
-  23% {
+  31% {
     opacity: 1;
   }
-  25% {
+  32% {
     opacity: 0;
   }
 }
 @keyframes walletAnimation {
-  23% {
+  31% {
     opacity: 1;
     transform: translate(0, 0);
   }
