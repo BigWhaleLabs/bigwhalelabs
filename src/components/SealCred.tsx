@@ -42,7 +42,7 @@ const PhoneGetStarted = () => (
   </div>
 )
 
-const cardWrapper = classnames(
+const blockWrapper = classnames(
   display('flex'),
   flexDirection('lg:flex-row', 'flex-col'),
   justifyContent('lg:justify-between'),
@@ -57,7 +57,7 @@ const card = classnames(
   space('space-y-2'),
   maxWidth('max-w-400'),
   position('xl:sticky'),
-  inset('md:left-0', 'md:top-0', 'left-32', 'top-32')
+  inset('xl:left-0', 'xl:bottom-16', 'xl:top-32')
 )
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
@@ -72,7 +72,7 @@ export default function () {
   const { onlyPhones } = useBreakpoints()
 
   return (
-    <div className={cardWrapper}>
+    <div className={blockWrapper}>
       <div className={card}>
         <div className={cardHeader}>
           <SealCredLogo />
