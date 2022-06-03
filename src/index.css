@@ -184,7 +184,7 @@ body {
     opacity: 1;
     transform: translate(0, 0);
   }
-  24% {
+  32% {
     opacity: 0;
     transform: translate(0, -1rem);
   }
