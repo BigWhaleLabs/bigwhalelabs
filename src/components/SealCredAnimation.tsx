@@ -24,6 +24,7 @@ import classnames, {
   padding,
   position,
   space,
+  transitionDuration,
   transitionProperty,
   width,
   zIndex,
@@ -111,7 +112,8 @@ const spheresWrapper = (visible: boolean) =>
     borderColor('border-primary-semi-dimmed'),
     borderWidth('border'),
     opacity(visible ? 'opacity-100' : 'opacity-0'),
-    transitionProperty('transition-opacity')
+    transitionProperty('transition-opacity'),
+    transitionDuration('duration-1000')
   )
 
 type SpherePosition = 'left' | 'right'

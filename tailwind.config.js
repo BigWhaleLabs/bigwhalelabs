@@ -2,15 +2,6 @@
 module.exports = {
   content: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
-    animation: {
-      reveal: 'reveal 1s ease-in-out',
-    },
-    keyframes: {
-      reveal: {
-        '0%': { opacity: 0 },
-        '100%': { opacity: 100 },
-      },
-    },
     screens: {
       fold: '20rem',
       mobile: '25rem',

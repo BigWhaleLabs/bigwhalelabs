@@ -4336,7 +4336,12 @@ export type TTransitionDelay =
   | 'delay-700'
   | 'delay-1000'
 
-export type TAnimation = 'animate-reveal'
+export type TAnimation =
+  | 'animate-none'
+  | 'animate-spin'
+  | 'animate-ping'
+  | 'animate-pulse'
+  | 'animate-bounce'
 
 export type TTransitionsAndAnimations =
   | TTransitionProperty
