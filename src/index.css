@@ -156,15 +156,6 @@ body {
 }
 @keyframes superOrbTransformation {
 }
-
-@keyframes stageAnimation {
-  34% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 0;
-  }
-}
 @keyframes walletAnimation {
   34% {
     transform: translate(0, 0);
@@ -186,18 +177,18 @@ body {
   }
 }
 @keyframes progressAnimation {
-  54% {
+  53% {
     width: 0;
   }
-  55% {
+  54% {
     width: 100%;
   }
 }
 @keyframes progressAnimationComplete {
-  54% {
+  53% {
     opacity: 0;
   }
-  55% {
+  54% {
     opacity: 1;
   }
 }
