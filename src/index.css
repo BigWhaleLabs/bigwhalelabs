@@ -77,9 +77,6 @@ body {
 
 /* Animation for Person icon */
 @keyframes personAnimation {
-  0% {
-    transform: translate(0, 0rem);
-  }
   23% {
     transform: translate(0, 0rem);
   }
@@ -98,28 +95,8 @@ body {
     transform: translate(0, 73.5rem) scale(0.6);
     opacity: 0.75;
   }
-  60% {
-    transform: translate(0, 73.5rem) scale(0.6);
-    opacity: 0.5;
-  }
-  64% {
-    transform: translate(0, 73.5rem) scale(0.6);
-    opacity: 0.5;
-  }
-  65% {
-    transform: translate(0, 73.5rem) scale(0.6);
-    opacity: 0.5;
-  }
-
-  100% {
-    transform: translate(0, 73.5rem) scale(0.6);
-    opacity: 0.5;
-  }
 }
 @keyframes slideDownCard {
-  0% {
-    transform: translate(0, 0rem);
-  }
   23% {
     transform: translate(0, 0rem);
   }
@@ -133,19 +110,6 @@ body {
     transform: translate(0, 50.688rem);
   }
   50% {
-    transform: translate(0, 82.5rem);
-  }
-  60% {
-    transform: translate(0, 82.5rem);
-  }
-  64% {
-    transform: translate(0, 82.5rem);
-  }
-  65% {
-    transform: translate(0, 82.5rem);
-  }
-
-  100% {
     transform: translate(0, 82.5rem);
   }
 }
@@ -211,23 +175,14 @@ body {
   }
 }
 @keyframes stageAnimation {
-  0% {
-    opacity: 1;
-  }
   23% {
     opacity: 1;
   }
   25% {
     opacity: 0;
   }
-  100% {
-    opacity: 0;
-  }
 }
 @keyframes walletAnimation {
-  0% {
-    opacity: 1;
-  }
   23% {
     opacity: 1;
     transform: translate(0, 0);
@@ -236,14 +191,8 @@ body {
     opacity: 0;
     transform: translate(0, -1rem);
   }
-  100% {
-    opacity: 0;
-  }
 }
 @keyframes generatingHideAnimation {
-  0% {
-    opacity: 1;
-  }
   37.5% {
     opacity: 1;
     transform: translate(0, 0);
@@ -252,49 +201,28 @@ body {
     opacity: 0;
     transform: translate(0, -1rem);
   }
-  100% {
-    opacity: 0;
-  }
 }
 @keyframes progressAnimation {
-  0% {
-    width: 0;
-  }
   49% {
     width: 0;
   }
   50.5% {
     width: 100%;
   }
-  100% {
-    width: 100%;
-  }
 }
 @keyframes progressAnimationComplete {
-  0% {
-    opacity: 0;
-  }
   50.5% {
     opacity: 0;
   }
   50.75% {
     opacity: 1;
   }
-  100% {
-    opacity: 1;
-  }
 }
 @keyframes suitAnimation {
-  0% {
-    opacity: 0;
-  }
   46.5% {
     opacity: 0;
   }
   50% {
-    opacity: 1;
-  }
-  100% {
     opacity: 1;
   }
 }
