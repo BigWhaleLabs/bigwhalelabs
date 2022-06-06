@@ -3835,7 +3835,7 @@ __metadata:
     eslint-plugin-sort-imports-es6-autofix: ^0.6.0
     eslint-plugin-valtio: ^0.4.4
     postcss: ^8.4.14
-    preact: "https://github.com/preactjs/preact#43d79c0e8f727e9ac745a50c3a61868adb2dcfe7"
+    preact: ^10.7.3
     prettier: ^2.6.2
     react-intersection-observer: ^9.2.2
     react-scripts: ^5.0.1
@@ -10326,10 +10326,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@https://github.com/preactjs/preact#43d79c0e8f727e9ac745a50c3a61868adb2dcfe7":
-  version: 10.7.2
-  resolution: "preact@https://github.com/preactjs/preact.git#commit=43d79c0e8f727e9ac745a50c3a61868adb2dcfe7"
-  checksum: cd865be53326b37378de1c520c0736dbc06d6208911f578c6af3f3d7fa51d79e3704a03dc697875dc2c8f7913cbf068a665a38b0973ad9df7ff76e9efa4da3e1
+"preact@npm:^10.7.3":
+  version: 10.7.3
+  resolution: "preact@npm:10.7.3"
+  checksum: a0471da77528b9f9478c02bf60ae41754509655a19b65d9fea274a3c94c9583a7b1700e1329ee726ef6dd5307b73cf391d3f7f1b6a9ace43d71a70cd1be92737
   languageName: node
   linkType: hard
 
