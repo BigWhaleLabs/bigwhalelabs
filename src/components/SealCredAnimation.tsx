@@ -3,12 +3,12 @@ import { useInView } from 'react-intersection-observer'
 import Color from 'models/Color'
 import HappyFace from 'icons/HappyFace'
 import Line from 'components/Line'
+import OrbGenerator from 'icons/OrbGenerator'
 import Person from 'icons/Person'
 import Sphere from 'icons/Sphere'
 import Stage from 'icons/Stage'
 import Suit from 'icons/Suit'
 import SuitReady from 'components/SuitReady'
-import SuperOrb from 'icons/SuperOrb'
 import classnames, {
   alignItems,
   borderColor,
@@ -78,7 +78,7 @@ const secondStage = classnames(
   alignItems('items-center'),
   space('space-y-7')
 )
-const superOrbBlock = classnames(
+const orbGeneratorBlock = classnames(
   width('w-20'),
   height('h-20'),
   margin('mt-14', 'mb-44'),
@@ -192,8 +192,8 @@ export default function () {
         </div>
       </div>
       <div className={secondStage}>
-        <div className={superOrbBlock}>
-          <SuperOrb />
+        <div className={orbGeneratorBlock}>
+          <OrbGenerator />
         </div>
         <div style={scrollAnimationProvider('generatingHideAnimation')}>
           <PlainText>Generating zk proof...</PlainText>
