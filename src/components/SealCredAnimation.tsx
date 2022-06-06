@@ -91,7 +91,6 @@ const thirdStage = classnames(
   alignItems('items-center'),
   space('space-y-6')
 )
-const happyFacePosition = classnames(position('absolute'), inset('-top-3'))
 const happySuit = (visible: boolean) =>
   classnames(
     display('flex'),
@@ -201,9 +200,6 @@ export default function () {
       </div>
       <div className={thirdStage}>
         <div className={happySuit(suitWrapVisible)} ref={suitWrapRef}>
-          <div className={happyFacePosition}>
-            <HappyFace />
-          </div>
           <Suit />
         </div>
         <SuitReady />
