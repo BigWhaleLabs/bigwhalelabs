@@ -71,22 +71,21 @@ export default function () {
   const { ref, inView } = useInView()
 
   return (
-    <div className={wrapper}>
+    <div className={wrapper} ref={ref}>
       <PlainText position="text-right">
-        <AccentText color="text-tertiary">{`Pseudonymous
-        suit ready`}</AccentText>
+        <AccentText color="text-tertiary">Pseudonymous suit ready</AccentText>
       </PlainText>
-      <div className={separator}></div>
+      <div className={separator} />
       <div className={progress}>
         <div className={progressBarWrapper}>
           <div className={progressBar}>
-            <div className={bar(inView)} ref={ref}></div>
+            <div className={bar(inView)} />
           </div>
           <div className={progressBar}>
-            <div className={bar(inView)}></div>
+            <div className={bar(inView)} />
           </div>
         </div>
-        <div className={textBlockWrapper(inView)} ref={ref}>
+        <div className={textBlockWrapper(inView)}>
           <PlainText>100% you / verified</PlainText>
           <PlainText>100% anonymous</PlainText>
         </div>
