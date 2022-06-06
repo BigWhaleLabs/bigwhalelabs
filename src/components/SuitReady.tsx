@@ -1,4 +1,5 @@
 import { AccentText, PlainText } from 'components/Text'
+import { useInView } from 'react-intersection-observer'
 import classnames, {
   alignItems,
   animation,
@@ -17,7 +18,6 @@ import classnames, {
   whitespace,
   width,
 } from 'classnames/tailwind'
-import { useInView } from 'react-intersection-observer'
 
 const wrapper = classnames(
   display('flex'),

@@ -16,8 +16,8 @@ import classnames, {
 } from 'classnames/tailwind'
 import colorToBackground from 'helpers/colorToBackground'
 import colorToDropShadow from 'helpers/colorToDropShadow'
-import useScrollPercent from 'hooks/useScrollPercent'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
+import useScrollPercent from 'hooks/useScrollPercent'
 
 const sphereStyles = classnames(
   display('flex'),

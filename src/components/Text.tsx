@@ -1,6 +1,6 @@
 import {
-  TTextAlign,
   TDropShadow,
+  TTextAlign,
   TTextColor,
   backgroundClip,
   backgroundImage,

@@ -1,4 +1,5 @@
 import { AccentText, PlainText } from 'components/Text'
+import { useInView } from 'react-intersection-observer'
 import Color from 'models/Color'
 import HappyFace from 'icons/HappyFace'
 import Line from 'components/Line'
@@ -28,10 +29,9 @@ import classnames, {
   width,
   zIndex,
 } from 'classnames/tailwind'
+import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 import useBreakpoints from 'hooks/useBreakpoints'
 import useScrollPercent from 'hooks/useScrollPercent'
-import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
-import { useInView } from 'react-intersection-observer'
 
 const wrapper = classnames(
   display('flex'),
