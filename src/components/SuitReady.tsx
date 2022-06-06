@@ -17,7 +17,6 @@ import classnames, {
   whitespace,
   width,
 } from 'classnames/tailwind'
-import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 import { useInView } from 'react-intersection-observer'
 
 const wrapper = classnames(

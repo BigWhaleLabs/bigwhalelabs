@@ -18,7 +18,6 @@ import classnames, {
   height,
   inset,
   justifyContent,
-  justifyItems,
   margin,
   opacity,
   padding,
