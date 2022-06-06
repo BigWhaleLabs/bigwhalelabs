@@ -2,15 +2,6 @@
 module.exports = {
   content: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
-    animation: {
-      expand: 'expand 1s ease-in-out',
-    },
-    keyframes: {
-      expand: {
-        '0%': { width: '0%' },
-        '100%': { width: '100%' },
-      },
-    },
     screens: {
       fold: '20rem',
       mobile: '25rem',
@@ -24,6 +15,15 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
+      animation: {
+        expand: 'expand 1s ease-in-out',
+      },
+      keyframes: {
+        expand: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+      },
       screens: {
         md: '37.5rem',
       },

@@ -1,4 +1,5 @@
-import classnames, { fill, stroke } from 'classnames/tailwind'
+import classnames, { fill, stroke, transformOrigin } from 'classnames/tailwind'
+import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 
 const strokeAccent = stroke('stroke-accent')
 const strokeWhite = (isFill?: boolean) =>
@@ -8,6 +9,7 @@ const strokeWhite = (isFill?: boolean) =>
   )
 const fillOrb = fill('fill-orb')
 const fillCircle = fill('fill-gray')
+const centerLines = transformOrigin('origin-center')
 
 export default function () {
   return (
@@ -158,30 +160,35 @@ export default function () {
           fill="none"
         />
       </g>
-      <path
-        d="M102,68.86A23,23,0,0,1,85.65,29.7M102,22.86A23,23,0,0,1,118.39,62"
-        transform="translate(-48.02 -4.86)"
-        fill="none"
-        className={strokeWhite()}
-        stroke-linecap="round"
-        stroke-width="2"
-      />
-      <path
-        d="M87,45.86a15,15,0,0,1,25.54-10.67M117,45.86A15,15,0,0,1,91.48,56.53"
-        transform="translate(-48.02 -4.86)"
-        fill="none"
-        className={strokeWhite()}
-        stroke-linecap="round"
-        stroke-width="2"
-      />
-      <path
-        d="M102,38.86a7,7,0,0,1,5,11.92m-5,2.08a7,7,0,0,1-5-11.92"
-        transform="translate(-48.02 -4.86)"
-        fill="none"
-        className={strokeWhite()}
-        stroke-linecap="round"
-        stroke-width="2"
-      />
+      <g
+        className={centerLines}
+        style={scrollAnimationProvider('superOrbTransformation')}
+      >
+        <path
+          d="M102,68.86A23,23,0,0,1,85.65,29.7M102,22.86A23,23,0,0,1,118.39,62"
+          transform="translate(-48.02 -4.86)"
+          fill="none"
+          className={strokeWhite()}
+          stroke-linecap="round"
+          stroke-width="2"
+        />
+        <path
+          d="M87,45.86a15,15,0,0,1,25.54-10.67M117,45.86A15,15,0,0,1,91.48,56.53"
+          transform="translate(-48.02 -4.86)"
+          fill="none"
+          className={strokeWhite()}
+          stroke-linecap="round"
+          stroke-width="2"
+        />
+        <path
+          d="M102,38.86a7,7,0,0,1,5,11.92m-5,2.08a7,7,0,0,1-5-11.92"
+          transform="translate(-48.02 -4.86)"
+          fill="none"
+          className={strokeWhite()}
+          stroke-linecap="round"
+          stroke-width="2"
+        />
+      </g>
       <line
         x1="0.5"
         y1="46.5"
