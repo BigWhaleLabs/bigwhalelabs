@@ -1,7 +1,6 @@
 import { AccentText, PlainText } from 'components/Text'
 import { useInView } from 'react-intersection-observer'
 import Color from 'models/Color'
-import HappyFace from 'icons/HappyFace'
 import Line from 'components/Line'
 import OrbGenerator from 'icons/OrbGenerator'
 import Person from 'icons/Person'
@@ -81,7 +80,7 @@ const secondStage = classnames(
 const orbGeneratorBlock = classnames(
   width('w-20'),
   height('h-20'),
-  margin('mt-14', 'mb-44'),
+  margin('mt-14', 'sm:mb-44', 'mb-8'),
   zIndex('z-50')
 )
 const thirdStage = classnames(

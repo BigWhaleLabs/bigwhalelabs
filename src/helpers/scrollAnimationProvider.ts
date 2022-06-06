@@ -1,7 +1,11 @@
+import useBreakpoints from 'hooks/useBreakpoints'
 import useScrollPercent from 'hooks/useScrollPercent'
 
 export default function (animationName: string) {
   const { scroll } = useScrollPercent()
+  const { onlyPhones } = useBreakpoints()
+
+  if (onlyPhones) animationName = animationName + 'Mobile'
 
   return {
     animationName,
