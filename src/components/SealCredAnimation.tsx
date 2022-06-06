@@ -184,7 +184,7 @@ export default function () {
           </div>
           <Stage />
         </div>
-        <div style={scrollAnimationProvider('walletAnimation')}>
+        <div style={scrollAnimationProvider('walletAndStageAnimation')}>
           <PlainText>
             Wallet NFT collection:{' '}
             <AccentText color="text-accent">04</AccentText>

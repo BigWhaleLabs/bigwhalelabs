@@ -100,20 +100,6 @@ body {
     opacity: 0.75;
   }
 }
-@keyframes slideDownCard {
-  34% {
-    transform: translate(0, 0rem);
-  }
-  40% {
-    transform: translate(0, 34.688rem);
-  }
-  42% {
-    transform: translate(0, 50.688rem);
-  }
-  52% {
-    transform: translate(0, 82.5rem);
-  }
-}
 @keyframes sphereAnimationLeft {
   34% {
     transform: translate(0, 0rem);
@@ -162,7 +148,7 @@ body {
     transform: rotate(360deg);
   }
 }
-@keyframes walletAnimation {
+@keyframes walletAndStageAnimation {
   34% {
     transform: translate(0, 0);
     opacity: 1;
@@ -179,14 +165,6 @@ body {
   }
   42% {
     transform: translate(0, -1rem);
-    opacity: 0;
-  }
-}
-@keyframes stageAnimation {
-  34% {
-    opacity: 100;
-  }
-  35% {
     opacity: 0;
   }
 }

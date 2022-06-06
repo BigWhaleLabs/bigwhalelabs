@@ -7,7 +7,7 @@ export default function () {
 
   return (
     <svg
-      style={scrollAnimationProvider('stageAnimation')}
+      style={scrollAnimationProvider('walletAndStageAnimation')}
       width="258"
       height="77"
       viewBox="0 0 258 77"
