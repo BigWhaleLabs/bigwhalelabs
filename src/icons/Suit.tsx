@@ -1,4 +1,5 @@
 import classnames, {
+  height,
   maxWidth,
   stroke,
   strokeWidth,
@@ -7,7 +8,8 @@ import classnames, {
 
 const wrapperStyles = classnames(
   zIndex('z-10'),
-  maxWidth('md:max-w-max', 'max-w-270')
+  height('h-suit-mobile', 'md:h-suit'),
+  maxWidth('tiny:max-w-max', 'max-w-270')
 )
 const suitStyles = classnames(
   stroke('stroke-primary-semi-dimmed'),
@@ -21,11 +23,9 @@ const faceStyles = classnames(
 export default function () {
   return (
     <svg
-      width="512"
-      height="698"
       viewBox="0 0 512 698"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       className={wrapperStyles}
     >
       <g filter="url(#filter0_d_778_473)">

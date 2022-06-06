@@ -7335,7 +7335,6 @@ export type TMaxWidth =
   | 'max-w-max'
   | 'max-w-fit'
   | 'max-w-prose'
-  | 'max-w-screen-fold'
   | 'max-w-screen-mobile'
   | 'max-w-screen-sm'
   | 'max-w-screen-md'
@@ -7404,6 +7403,8 @@ export type THeight =
   | 'h-min'
   | 'h-max'
   | 'h-fit'
+  | 'h-suit'
+  | 'h-suit-mobile'
   | 'h-mobile-card'
 
 export type TMinHeight =
@@ -8776,7 +8777,6 @@ export type TPseudoClassVariants =
   | 'print:'
   | 'ltr:'
   | 'rtl:'
-  | 'fold:'
   | 'mobile:'
   | 'sm:'
   | 'md:'
