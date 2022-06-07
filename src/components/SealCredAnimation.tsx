@@ -29,7 +29,6 @@ import classnames, {
   zIndex,
 } from 'classnames/tailwind'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
-import useBreakpoints from 'hooks/useBreakpoints'
 
 const wrapper = classnames(
   display('flex'),
@@ -98,7 +97,8 @@ const happySuit = (visible: boolean) =>
     transitionDuration('duration-1000'),
     transitionProperty('transition-opacity')
   )
-const personWithSpheres = classnames(display('flex'))
+const personWithSpheres = display('flex')
+const personWrapper = width('w-44')
 const spheresWrapper = (visible: boolean) =>
   classnames(
     display('flex'),
@@ -157,7 +157,6 @@ const PairOfNfts = ({ colors, position, small }: PairOfNftsProps) => {
 }
 
 export default function () {
-  const { tablet } = useBreakpoints()
   const { ref: zkWrapRef, inView: zkWrapVisible } = useInView()
   const { ref: suitWrapRef, inView: suitWrapVisible } = useInView()
 
@@ -171,7 +170,9 @@ export default function () {
               colors={['primary', 'tertiary']}
               small={true}
             />
-            <Person large={!tablet} />
+            <div className={personWrapper}>
+              <Person />
+            </div>
             <PairOfNfts
               position="right"
               colors={['accent', 'secondary']}
