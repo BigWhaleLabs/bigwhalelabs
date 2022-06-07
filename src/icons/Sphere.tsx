@@ -17,7 +17,6 @@ import classnames, {
 import colorToBackground from 'helpers/colorToBackground'
 import colorToDropShadow from 'helpers/colorToDropShadow'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
-import useScrollPercent from 'hooks/useScrollPercent'
 
 const sphereStyles = classnames(
   display('flex'),
@@ -50,8 +49,6 @@ export default function ({
 }) {
   const bgColor = colorToBackground(color)
   const shadowColor = colorToDropShadow(color)
-  const { beforeSuperOrb } = useScrollPercent()
-  const zkText = !beforeSuperOrb ? 'ZK' || text : ''
 
   return (
     <div
@@ -69,7 +66,7 @@ export default function ({
         shadowColor
       )}
     >
-      <SphereText>{zkText}</SphereText>
+      <SphereText>{text}</SphereText>
     </div>
   )
 }

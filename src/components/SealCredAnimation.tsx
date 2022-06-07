@@ -30,7 +30,6 @@ import classnames, {
 } from 'classnames/tailwind'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 import useBreakpoints from 'hooks/useBreakpoints'
-import useScrollPercent from 'hooks/useScrollPercent'
 
 const wrapper = classnames(
   display('flex'),
@@ -159,7 +158,6 @@ const PairOfNfts = ({ colors, position, small }: PairOfNftsProps) => {
 
 export default function () {
   const { tablet } = useBreakpoints()
-  const { beforeSuperOrb } = useScrollPercent()
   const { ref: zkWrapRef, inView: zkWrapVisible } = useInView()
   const { ref: suitWrapRef, inView: suitWrapVisible } = useInView()
 
@@ -171,13 +169,13 @@ export default function () {
             <PairOfNfts
               position="left"
               colors={['primary', 'tertiary']}
-              small={beforeSuperOrb}
+              small={true}
             />
             <Person large={!tablet} />
             <PairOfNfts
               position="right"
               colors={['accent', 'secondary']}
-              small={beforeSuperOrb}
+              small={true}
             />
           </div>
           <Stage />
