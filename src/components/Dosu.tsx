@@ -40,7 +40,7 @@ export default function () {
             pseudonymous social network where you can share your thoughts with
             the world.
           </BodyText>
-          <Button outlined url="https://discord.gg/7frxHQdR">
+          <Button outlined url="https://discord.gg/NHk96pPZUV">
             Join Discord for updates
           </Button>
         </div>
