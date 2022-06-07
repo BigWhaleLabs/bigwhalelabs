@@ -26,7 +26,7 @@ const navbar = (backgroundVisible?: boolean) =>
   classnames(
     position('sticky'),
     inset('top-0'),
-    zIndex('z-10'),
+    zIndex('z-50'),
     backgroundClip('bg-clip-padding'),
     backgroundColor(backgroundVisible ? 'bg-navbar' : undefined),
     backdropBlur(backgroundVisible ? 'backdrop-blur-3xl' : undefined),

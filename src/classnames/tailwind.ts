@@ -4342,6 +4342,7 @@ export type TAnimation =
   | 'animate-ping'
   | 'animate-pulse'
   | 'animate-bounce'
+  | 'animate-expand'
 
 export type TTransitionsAndAnimations =
   | TTransitionProperty
@@ -5532,6 +5533,7 @@ export type TSpace =
   | 'space-x-2.5'
   | 'space-x-3.5'
   | '-space-x-2'
+  | '-space-x-11'
   | '-space-x-44'
   | 'space-x-reverse'
   | 'space-y-0'
@@ -5571,6 +5573,7 @@ export type TSpace =
   | 'space-y-2.5'
   | 'space-y-3.5'
   | '-space-y-2'
+  | '-space-y-11'
   | '-space-y-44'
   | 'space-y-reverse'
 
@@ -7325,7 +7328,6 @@ export type TMaxWidth =
   | 'max-w-max'
   | 'max-w-fit'
   | 'max-w-prose'
-  | 'max-w-screen-fold'
   | 'max-w-screen-mobile'
   | 'max-w-screen-sm'
   | 'max-w-screen-md'
@@ -7333,6 +7335,7 @@ export type TMaxWidth =
   | 'max-w-screen-xl'
   | 'max-w-screen-2xl'
   | 'max-w-screen-tiny'
+  | 'max-w-screen-tablet'
 
 export type THeight =
   | 'h-0'
@@ -7393,6 +7396,8 @@ export type THeight =
   | 'h-min'
   | 'h-max'
   | 'h-fit'
+  | 'h-suit'
+  | 'h-suit-mobile'
   | 'h-mobile-card'
 
 export type TMinHeight =
@@ -8765,7 +8770,6 @@ export type TPseudoClassVariants =
   | 'print:'
   | 'ltr:'
   | 'rtl:'
-  | 'fold:'
   | 'mobile:'
   | 'sm:'
   | 'md:'
@@ -8773,6 +8777,7 @@ export type TPseudoClassVariants =
   | 'xl:'
   | '2xl:'
   | 'tiny:'
+  | 'tablet:'
 
 //////////// Utility Function generic type
 
