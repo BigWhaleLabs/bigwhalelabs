@@ -81,7 +81,7 @@ const orbGeneratorBlock = classnames(
   width('w-20'),
   height('h-20'),
   margin('mt-14', 'sm:mb-44', 'mb-8'),
-  zIndex('z-50')
+  zIndex('z-40')
 )
 const thirdStage = classnames(
   display('flex'),

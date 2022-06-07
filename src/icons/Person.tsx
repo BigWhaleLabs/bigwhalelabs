@@ -7,7 +7,7 @@ const personClasses = classnames(
   zIndex('z-20')
 )
 
-export default function ({ large }: { large?: boolean }) {
+export default function ({ large = true }: { large: boolean }) {
   const width = large ? '188' : '90'
   const height = large ? '307' : '146'
 

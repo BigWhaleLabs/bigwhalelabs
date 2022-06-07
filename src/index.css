@@ -131,11 +131,20 @@ body {
   }
 }
 @keyframes superOrbTransformation {
+  36% {
+    transform: translate(0, 5rem);
+    opacity: 0;
+  }
   41% {
-    transform: rotate(0deg);
+    transform: translate(0, 0rem) rotate(0deg);
+    opacity: 100;
   }
   42% {
-    transform: rotate(360deg);
+    transform: translate(0, 0rem) rotate(360deg);
+  }
+  44% {
+    transform: translate(0, -5rem) rotate(360deg);
+    opacity: 0;
   }
 }
 @keyframes walletAndStageAnimation {
@@ -215,11 +224,20 @@ body {
   }
 }
 @keyframes superOrbTransformationMobile {
+  46% {
+    transform: translate(0, 5rem);
+    opacity: 0;
+  }
   52% {
-    transform: rotate(0deg);
+    transform: translate(0, 0rem) rotate(0deg);
+    opacity: 100;
   }
   53% {
-    transform: rotate(360deg);
+    transform: translate(0, 0rem) rotate(360deg);
+  }
+  56% {
+    transform: translate(0, -5rem) rotate(360deg);
+    opacity: 0;
   }
 }
 @keyframes walletAndStageAnimationMobile {
