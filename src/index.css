@@ -171,7 +171,7 @@ body {
 /* Mobile scroll animations, except fold */
 @keyframes personAnimationMobile {
   /* Animation begins after 1/2 of the page is scrolled */
-  44% {
+  46% {
     transform: translate(0, 0rem);
   }
   /* Move to SuperOrb */
@@ -184,42 +184,42 @@ body {
   }
   /* Move before suit */
   55% {
-    transform: translate(0, 50.688rem) scale(1);
+    transform: translate(0, 42rem) scale(0.8);
     opacity: 1;
   }
   /* Move into suit */
   59% {
-    transform: translate(0, 53rem) scale(0.8);
+    transform: translate(0, 58rem) scale(0.6);
     opacity: 0.75;
   }
 }
 @keyframes sphereAnimationLeftMobile {
-  44% {
+  46% {
     transform: translate(0, 0rem);
   }
   /* Before SuperOrb */
   49% {
-    transform: translate(0, 27rem);
+    transform: translate(0, 32rem);
     opacity: 1;
   }
   /* Collide into SuperOrb */
   51.5% {
-    transform: translate(2rem, 27rem);
+    transform: translate(2rem, 32rem);
     opacity: 0;
   }
 }
 @keyframes sphereAnimationRightMobile {
-  44% {
+  46% {
     transform: translate(0, 0rem);
   }
   /* Before SuperOrb */
   49% {
-    transform: translate(0, 27rem);
+    transform: translate(0, 32rem);
     opacity: 1;
   }
   /* Collide into SuperOrb */
   51.5% {
-    transform: translate(-2rem, 27rem);
+    transform: translate(-2rem, 32rem);
     opacity: 0;
   }
 }
@@ -229,23 +229,23 @@ body {
     opacity: 0;
   }
   52% {
-    transform: translate(0, 0rem) rotate(0deg);
+    transform: translate(0, -5rem) rotate(0deg);
     opacity: 100;
   }
   53% {
-    transform: translate(0, 0rem) rotate(360deg);
+    transform: translate(0, -5rem) rotate(360deg);
   }
   56% {
-    transform: translate(0, -5rem) rotate(360deg);
+    transform: translate(0, -10rem) rotate(360deg);
     opacity: 0;
   }
 }
 @keyframes walletAndStageAnimationMobile {
-  44% {
+  46% {
     transform: translate(0, 0);
     opacity: 1;
   }
-  45% {
+  47% {
     transform: translate(0, -1rem);
     opacity: 0;
   }
