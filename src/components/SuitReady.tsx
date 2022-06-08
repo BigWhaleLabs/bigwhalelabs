@@ -2,6 +2,7 @@ import { AccentText, PlainText } from 'components/Text'
 import { useInView } from 'react-intersection-observer'
 import classnames, {
   alignItems,
+  alignSelf,
   animation,
   backgroundColor,
   borderColor,
@@ -9,7 +10,9 @@ import classnames, {
   borderWidth,
   display,
   flexDirection,
+  flexWrap,
   height,
+  margin,
   opacity,
   padding,
   space,
@@ -25,33 +28,31 @@ const wrapper = classnames(
   whitespace('whitespace-pre-line'),
   space('space-x-3')
 )
-const progress = classnames(
-  display('flex'),
-  flexDirection('flex-row'),
-  alignItems('items-center'),
-  space('space-x-2')
-)
-const textBlockWrapper = (visible: boolean) =>
+const textBlockReveal = (visible: boolean) =>
   classnames(
-    display('flex'),
-    flexDirection('flex-col'),
-    space('space-y-2'),
     opacity(visible ? 'opacity-100' : 'opacity-0'),
     transitionProperty('transition-opacity'),
     transitionDuration('duration-1000')
   )
-const progressBarWrapper = classnames(
+const rightBlockWrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
   space('space-y-2')
 )
-const progressBar = classnames(
+const barAndStatusWrapper = classnames(
+  display('flex'),
+  flexDirection('flex-row'),
+  flexWrap('flex-wrap'),
+  space('space-y-2', 'sm:space-x-2', 'sm:space-y-0')
+)
+const barBox = classnames(
   borderColor('border-primary-semi-dimmed'),
   borderWidth('border'),
   borderRadius('rounded-sm'),
   padding('p-1'),
   height('h-4'),
-  width('w-32')
+  width('w-32'),
+  margin('mr-2')
 )
 const bar = (visible: boolean) =>
   classnames(
@@ -60,8 +61,9 @@ const bar = (visible: boolean) =>
     width('w-full'),
     height('h-full')
   )
+const separatorWrapper = classnames(display('flex'), alignSelf('self-stretch'))
 const separator = classnames(
-  height('h-9'),
+  height('h-full'),
   width('w-0.5'),
   borderRadius('rounded-xl'),
   backgroundColor('bg-primary-semi-dimmed')
@@ -75,19 +77,25 @@ export default function () {
       <PlainText position="text-right">
         <AccentText color="text-tertiary">Pseudonymous suit ready</AccentText>
       </PlainText>
-      <div className={separator} />
-      <div className={progress}>
-        <div className={progressBarWrapper}>
-          <div className={progressBar}>
+      <div className={separatorWrapper}>
+        <div className={separator} />
+      </div>
+      <div className={rightBlockWrapper}>
+        <div className={barAndStatusWrapper}>
+          <div className={barBox}>
             <div className={bar(inView)} />
           </div>
-          <div className={progressBar}>
-            <div className={bar(inView)} />
+          <div className={textBlockReveal(inView)}>
+            <PlainText>100% you / verified</PlainText>
           </div>
         </div>
-        <div className={textBlockWrapper(inView)}>
-          <PlainText>100% you / verified</PlainText>
-          <PlainText>100% anonymous</PlainText>
+        <div className={barAndStatusWrapper}>
+          <div className={barBox}>
+            <div className={bar(inView)} />
+          </div>
+          <div className={textBlockReveal(inView)}>
+            <PlainText>100% anonymous</PlainText>
+          </div>
         </div>
       </div>
     </div>

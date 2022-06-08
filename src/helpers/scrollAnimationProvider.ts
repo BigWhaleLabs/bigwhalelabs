@@ -3,9 +3,9 @@ import useScrollPercent from 'hooks/useScrollPercent'
 
 export default function (animationName: string) {
   const scroll = useScrollPercent()
-  const { onlyPhones } = useBreakpoints()
+  const { onlyPhones, tablet } = useBreakpoints()
 
-  if (onlyPhones) animationName = animationName + 'Mobile'
+  if (onlyPhones && tablet) animationName = animationName + 'Mobile'
 
   return {
     animationName,
