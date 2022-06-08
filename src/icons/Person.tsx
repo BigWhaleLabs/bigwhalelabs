@@ -1,13 +1,7 @@
-import classnames, {
-  fill,
-  margin,
-  stroke,
-  width,
-  zIndex,
-} from 'classnames/tailwind'
+import classnames, { fill, margin, stroke, zIndex } from 'classnames/tailwind'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 
-const svgWrapper = classnames(width('md:w-full', 'w-40'), margin('mx-auto'))
+const svgWrapper = margin('mx-auto')
 const personClasses = classnames(
   fill('fill-primary-dark'),
   stroke('stroke-accent'),

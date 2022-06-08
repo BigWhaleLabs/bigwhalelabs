@@ -98,7 +98,7 @@ const happySuit = (visible: boolean) =>
     transitionProperty('transition-opacity')
   )
 const personWithSpheres = display('flex')
-const personWrapper = width('w-44')
+const personWrapper = width('tiny:w-44', 'w-24')
 const spheresWrapper = (visible: boolean) =>
   classnames(
     display('flex'),
