@@ -3,7 +3,6 @@ module.exports = {
   content: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
     screens: {
-      fold: '20rem',
       mobile: '25rem',
       sm: '640px',
       md: '768px',
@@ -15,11 +14,21 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
+      animation: {
+        expand: 'expand 1s ease-in-out',
+      },
+      keyframes: {
+        expand: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+      },
       screens: {
         md: '37.5rem',
       },
       space: {
         '-2': '-0.5rem',
+        '-11': '-2.75rem',
         '-44': '-11rem',
       },
       width: {
@@ -31,6 +40,8 @@ module.exports = {
       },
       height: {
         500: '31.25rem',
+        suit: '41.1rem',
+        'suit-mobile': '28.6rem',
         'mobile-card': '22.813rem',
       },
       maxWidth: {
@@ -70,9 +81,9 @@ module.exports = {
         15: '10.438rem',
       },
       screens: {
-        fold: '17.5rem',
         tiny: '22.5rem',
         sm: '28.125rem',
+        tablet: '31.25rem',
         md: '37.5rem',
       },
       colors: {
