@@ -14,7 +14,7 @@ const navLinkContainer = classnames(
   flexDirection('flex-col', 'md:flex-row'),
   alignItems('items-center'),
   justifyContent('justify-center'),
-  space('space-y-10', 'md:space-y-0', 'md:space-x-4'),
+  space('space-y-10', 'md:space-y-0', 'md:space-x-4', 'lg:space-x-12'),
   padding('py-10', 'md:py-0')
 )
 
