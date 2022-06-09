@@ -7174,6 +7174,13 @@ export type TInset =
   | '-right-1/5'
   | '-bottom-1/5'
   | '-left-1/5'
+  | 'inset-1/5'
+  | 'inset-x-1/5'
+  | 'inset-y-1/5'
+  | 'top-1/5'
+  | 'right-1/5'
+  | 'bottom-1/5'
+  | 'left-1/5'
 
 export type TZIndex =
   | 'z-0'
