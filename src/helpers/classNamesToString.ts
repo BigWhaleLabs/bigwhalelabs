@@ -6,7 +6,6 @@ type AllowedExtraClassnames =
   | 'retro-text'
   | '-my-12'
   | 'outlined-button'
-  // built-in tailwind classname, not represented as helper in tailwindcss-classnames for some reasons
   | 'group'
 
 export default function (

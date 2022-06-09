@@ -165,8 +165,8 @@ module.exports = {
         retro: 'attr(data-text)',
       },
       translate: {
-        'negative-0.5': '-0.25rem',
-        'negative-7': '-1.75rem',
+        '-0.5': '-0.25rem',
+        '-7': '-1.75rem',
       },
       transitionProperty: {
         letters: 'transform 0.32s ease, box-shadow 0.32s ease',

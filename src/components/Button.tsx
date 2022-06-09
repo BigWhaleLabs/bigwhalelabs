@@ -6,7 +6,6 @@ import classnames, {
   borderRadius,
   boxShadow,
   boxShadowColor,
-  brightness,
   display,
   dropShadow,
   flexDirection,
@@ -18,7 +17,6 @@ import classnames, {
   padding,
   textColor,
   textDecoration,
-  transitionDelay,
   transitionProperty,
   translate,
   width,
@@ -45,7 +43,7 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         fontFamily('font-primary'),
         fontSize(small ? 'text-sm' : 'text-lg'),
         textColor('text-primary-dark'),
-        translate('hover:translate-y-negative-0.5')
+        translate('hover:-translate-y-0.5')
       )
     : classnames(
         fontWeight('font-normal'),
@@ -73,16 +71,14 @@ const animatedTextWrapper = classnames(
   overflow('overflow-hidden')
 )
 
-// we get a transition-delay for each character separately so that the letters move one after another
-const getTransitionDelay = (index: number) =>
-  `transition-delay: ${0.05 * index}s`
+const getCharacterTransitionDelay = (index: number) =>
+  `transition-delay: ${0.015 * index}s`
 
 const charWrapper = classnames(
   transitionProperty('transition-letters'),
-  translate('group-hover:translate-y-negative-7')
+  translate('group-hover:-translate-y-7')
 )
 
-// because we want to animate each letter separately, we need to put each letter in an individual span
 const renderLetters = (sentence: string) => {
   const whitepsace = ' '
   const unicodeWhitespace = '\u00A0'
@@ -94,7 +90,10 @@ const renderLetters = (sentence: string) => {
       .split('')
       .map((char, index) => {
         return (
-          <span className={charWrapper} style={getTransitionDelay(index)}>
+          <span
+            className={charWrapper}
+            style={getCharacterTransitionDelay(index)}
+          >
             {char}
           </span>
         )
