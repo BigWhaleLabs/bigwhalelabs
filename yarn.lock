@@ -3919,6 +3919,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bezier-easing@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "bezier-easing@npm:2.1.0"
+  checksum: ec22666b5385979b3e7a63eaf2631395b1be5beb3aed4f14cc70ae9eb09032082584f7e3eec045e4c122466987ed7e159f5b39f82b8a9870cd55e75b0d55a7d5
+  languageName: node
+  linkType: hard
+
 "bfj@npm:^7.0.2":
   version: 7.0.2
   resolution: "bfj@npm:7.0.2"
@@ -3963,6 +3970,7 @@ __metadata:
     prettier: ^2.6.2
     react-intersection-observer: ^9.2.2
     react-scripts: ^5.0.1
+    react-scroll-parallax: ^3.2.0
     rollup-plugin-visualizer: ^5.6.0
     tailwindcss: ^3.1.0
     tailwindcss-classnames: ^3.0.5
@@ -9518,6 +9526,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parallax-controller@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "parallax-controller@npm:1.5.0"
+  dependencies:
+    bezier-easing: ^2.1.0
+  checksum: 21f51143844ff61691595bdc74a26fa5a06eed96e50038b908a918eb0dbceeeb4c5d25b920c3c7421c33029020921125763546e28a6eb7e8bad2a3cecea7772f
+  languageName: node
+  linkType: hard
+
 "param-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "param-case@npm:3.0.4"
@@ -10900,6 +10917,18 @@ __metadata:
   bin:
     react-scripts: bin/react-scripts.js
   checksum: 92afa2f245c7092ccc97d5609dc7a2130616262e34da7f15072d9442e2d2e1d4909a91022abd1faac1336eb17c5525a10d9bd43e1ae374c7ec941ca20addca68
+  languageName: node
+  linkType: hard
+
+"react-scroll-parallax@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "react-scroll-parallax@npm:3.2.0"
+  dependencies:
+    parallax-controller: ^1.5.0
+  peerDependencies:
+    react: ^16.8.0-0 || >=17.0.1
+    react-dom: ^16.8.0-0 || >=17.0.1
+  checksum: 4674426f67cd14b71f70efbfad7b80d3e5a56a48d6967d119d4f6bc945a874fef20c035f0c26fc92dcfa7ae390b9d637630106844a1875de465aebf6d582f876
   languageName: node
   linkType: hard
 

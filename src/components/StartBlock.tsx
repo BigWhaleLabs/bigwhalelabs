@@ -1,4 +1,5 @@
 import { FoldText } from 'components/Text'
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import DownArrows from 'components/DownArrows'
 import IronSphere from 'icons/IronSphere'
 import classnames, {
@@ -86,23 +87,29 @@ const ironSphere = classnames(
 export default function () {
   return (
     <div className={wrapper}>
-      <img src="/img/gem.webp" className={leftGem} />
-      <img src="/img/gem.webp" className={rightGem} />
-      <div className={ironSphere}>
-        <IronSphere />
-      </div>
-
-      <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />
-
-      <div className={futureBoxWrapper}>
-        <div className={futureBox}>
-          <DownArrows />
-          <div className={textBlock}>
-            <FoldText>We’re building the future</FoldText>
-            <FoldText>of pseudonymity</FoldText>
+      <ParallaxProvider>
+        <Parallax speed={25}>
+          <img src="/img/gem.webp" className={leftGem} />
+          <img src="/img/gem.webp" className={rightGem} />
+          <div className={ironSphere}>
+            <IronSphere />
           </div>
-        </div>
-      </div>
+          <Parallax speed={-20}>
+            <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />{' '}
+          </Parallax>
+          <div className={futureBoxWrapper}>
+            <Parallax speed={-5}>
+              <div className={futureBox}>
+                <DownArrows />
+                <div className={textBlock}>
+                  <FoldText>We’re building the future</FoldText>
+                  <FoldText>of pseudonymity</FoldText>
+                </div>
+              </div>
+            </Parallax>
+          </div>
+        </Parallax>
+      </ParallaxProvider>
     </div>
   )
 }
