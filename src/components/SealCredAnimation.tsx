@@ -103,7 +103,7 @@ const spheresWrapper = (visible: boolean) =>
   classnames(
     display('flex'),
     position('absolute'),
-    inset('bottom-36', 'left-14'),
+    inset('bottom-36', 'md:left-14', 'left-8'),
     flexDirection('flex-col'),
     width('w-11'),
     space('space-y-3'),
