@@ -39,7 +39,7 @@ export default function () {
         <Button icon url="https://twitter.com/bigwhalelabs">
           <Twitter />
         </Button>
-      </div>{' '}
+      </div>
     </div>
   )
 }
