@@ -18,7 +18,6 @@ const wrapper = classnames(
   space('space-y-10'),
   margin('md:mt-116', 'mt-48')
 )
-
 const linksContainer = classnames(
   display('flex'),
   flexDirection('flex-row'),
