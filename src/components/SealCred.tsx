@@ -9,6 +9,7 @@ import SealCredAnimation from 'components/SealCredAnimation'
 import SealCredLogo from 'icons/SealCredLogo'
 import classnames, {
   alignItems,
+  alignSelf,
   display,
   flexDirection,
   height,
@@ -57,7 +58,8 @@ const card = classnames(
   space('space-y-2'),
   maxWidth('max-w-400'),
   position('lg:sticky'),
-  inset('lg:left-0', 'lg:bottom-0', 'lg:top-32')
+  inset('lg:top-1/5'),
+  alignSelf('lg:self-start')
 )
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
