@@ -19,23 +19,15 @@ import classnames, {
   inset,
   justifyContent,
   margin,
-  opacity,
   padding,
   position,
   space,
-  transitionDuration,
-  transitionProperty,
   width,
   zIndex,
 } from 'classnames/tailwind'
-import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
-
-const revealAnimation = (visible: boolean) =>
-  classnames(
-    opacity(visible ? 'opacity-100' : 'opacity-0'),
-    transitionProperty('transition-opacity'),
-    transitionDuration('duration-1000')
-  )
+import scrollAnimationProvider, {
+  revealAnimation,
+} from 'helpers/scrollAnimationProvider'
 
 const wrapper = classnames(
   display('flex'),

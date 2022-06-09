@@ -1,4 +1,5 @@
 import { AccentText, PlainText } from 'components/Text'
+import { revealAnimation } from 'helpers/scrollAnimationProvider'
 import { useInView } from 'react-intersection-observer'
 import classnames, {
   alignItems,
@@ -13,11 +14,8 @@ import classnames, {
   flexWrap,
   height,
   margin,
-  opacity,
   padding,
   space,
-  transitionDuration,
-  transitionProperty,
   whitespace,
   width,
 } from 'classnames/tailwind'
@@ -28,12 +26,6 @@ const wrapper = classnames(
   whitespace('whitespace-pre-line'),
   space('space-x-3')
 )
-const textBlockReveal = (visible: boolean) =>
-  classnames(
-    opacity(visible ? 'opacity-100' : 'opacity-0'),
-    transitionProperty('transition-opacity'),
-    transitionDuration('duration-1000')
-  )
 const rightBlockWrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
@@ -85,7 +77,7 @@ export default function () {
           <div className={barBox}>
             <div className={bar(inView)} />
           </div>
-          <div className={textBlockReveal(inView)}>
+          <div className={revealAnimation(inView)}>
             <PlainText>100% you / verified</PlainText>
           </div>
         </div>
@@ -93,7 +85,7 @@ export default function () {
           <div className={barBox}>
             <div className={bar(inView)} />
           </div>
-          <div className={textBlockReveal(inView)}>
+          <div className={revealAnimation(inView)}>
             <PlainText>100% anonymous</PlainText>
           </div>
         </div>
