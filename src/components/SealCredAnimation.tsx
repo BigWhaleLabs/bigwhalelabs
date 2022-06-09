@@ -30,6 +30,13 @@ import classnames, {
 } from 'classnames/tailwind'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 
+const revealAnimation = (visible: boolean) =>
+  classnames(
+    opacity(visible ? 'opacity-100' : 'opacity-0'),
+    transitionProperty('transition-opacity'),
+    transitionDuration('duration-1000')
+  )
+
 const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
@@ -93,9 +100,7 @@ const happySuit = (visible: boolean) =>
     display('flex'),
     position('relative'),
     justifyContent('justify-center'),
-    opacity(visible ? 'opacity-100' : 'opacity-0'),
-    transitionDuration('duration-1000'),
-    transitionProperty('transition-opacity')
+    revealAnimation(visible)
   )
 const personWithSpheres = display('flex')
 const personWrapper = width('tiny:w-44', 'w-24')
@@ -111,9 +116,7 @@ const spheresWrapper = (visible: boolean) =>
     borderRadius('rounded-4xl'),
     borderColor('border-primary-semi-dimmed'),
     borderWidth('border'),
-    opacity(visible ? 'opacity-100' : 'opacity-0'),
-    transitionProperty('transition-opacity'),
-    transitionDuration('duration-1000')
+    revealAnimation(visible)
   )
 
 type SpherePosition = 'left' | 'right'
