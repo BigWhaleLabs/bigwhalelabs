@@ -4308,6 +4308,7 @@ export type TTransitionProperty =
   | 'transition-opacity'
   | 'transition-shadow'
   | 'transition-transform'
+  | 'transition-letters'
 
 export type TTransitionDuration =
   | 'duration-75'
@@ -4342,6 +4343,7 @@ export type TAnimation =
   | 'animate-ping'
   | 'animate-pulse'
   | 'animate-bounce'
+  | 'animate-expand'
 
 export type TTransitionsAndAnimations =
   | TTransitionProperty
@@ -5532,6 +5534,7 @@ export type TSpace =
   | 'space-x-2.5'
   | 'space-x-3.5'
   | '-space-x-2'
+  | '-space-x-11'
   | '-space-x-44'
   | 'space-x-reverse'
   | 'space-y-0'
@@ -5571,6 +5574,7 @@ export type TSpace =
   | 'space-y-2.5'
   | 'space-y-3.5'
   | '-space-y-2'
+  | '-space-y-11'
   | '-space-y-44'
   | 'space-y-reverse'
 
@@ -7325,7 +7329,6 @@ export type TMaxWidth =
   | 'max-w-max'
   | 'max-w-fit'
   | 'max-w-prose'
-  | 'max-w-screen-fold'
   | 'max-w-screen-mobile'
   | 'max-w-screen-sm'
   | 'max-w-screen-md'
@@ -7333,6 +7336,7 @@ export type TMaxWidth =
   | 'max-w-screen-xl'
   | 'max-w-screen-2xl'
   | 'max-w-screen-tiny'
+  | 'max-w-screen-tablet'
 
 export type THeight =
   | 'h-0'
@@ -7393,6 +7397,8 @@ export type THeight =
   | 'h-min'
   | 'h-max'
   | 'h-fit'
+  | 'h-suit'
+  | 'h-suit-mobile'
   | 'h-mobile-card'
 
 export type TMinHeight =
@@ -7657,6 +7663,8 @@ export type TTranslate =
   | 'translate-x-2/4'
   | 'translate-x-3/4'
   | 'translate-x-full'
+  | '-translate-x-0.5'
+  | '-translate-x-7'
   | 'translate-y-0'
   | 'translate-y-1'
   | 'translate-y-2'
@@ -7700,6 +7708,8 @@ export type TTranslate =
   | 'translate-y-2/4'
   | 'translate-y-3/4'
   | 'translate-y-full'
+  | '-translate-y-0.5'
+  | '-translate-y-7'
 
 export type TSkew =
   | 'skew-x-0'
@@ -8765,7 +8775,6 @@ export type TPseudoClassVariants =
   | 'print:'
   | 'ltr:'
   | 'rtl:'
-  | 'fold:'
   | 'mobile:'
   | 'sm:'
   | 'md:'
@@ -8773,6 +8782,7 @@ export type TPseudoClassVariants =
   | 'xl:'
   | '2xl:'
   | 'tiny:'
+  | 'tablet:'
 
 //////////// Utility Function generic type
 

@@ -28,7 +28,7 @@ export default function () {
   return (
     <div className={wrapper}>
       <Logo large />
-      <Button outlined url="https://discord.gg/7frxHQdR">
+      <Button outlined url="https://discord.gg/NHk96pPZUV">
         Join our Discord
       </Button>
       <div className={linksContainer}>

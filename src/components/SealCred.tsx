@@ -5,16 +5,19 @@ import {
   PrimaryAccentText,
 } from 'components/Text'
 import Button from 'components/Button'
+import SealCredAnimation from 'components/SealCredAnimation'
 import SealCredLogo from 'icons/SealCredLogo'
 import classnames, {
   alignItems,
   display,
   flexDirection,
   height,
+  inset,
   justifyContent,
   margin,
   maxWidth,
   padding,
+  position,
   space,
   width,
 } from 'classnames/tailwind'
@@ -39,7 +42,7 @@ const PhoneGetStarted = () => (
   </div>
 )
 
-const cardWrapper = classnames(
+const blockWrapper = classnames(
   display('flex'),
   flexDirection('lg:flex-row', 'flex-col'),
   justifyContent('lg:justify-between'),
@@ -52,7 +55,9 @@ const cardWrapper = classnames(
 const card = classnames(
   margin('mx-4'),
   space('space-y-2'),
-  maxWidth('max-w-400')
+  maxWidth('max-w-400'),
+  position('lg:sticky'),
+  inset('lg:left-0', 'lg:bottom-0', 'lg:top-32')
 )
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
@@ -67,7 +72,7 @@ export default function () {
   const { onlyPhones } = useBreakpoints()
 
   return (
-    <div className={cardWrapper}>
+    <div className={blockWrapper}>
       <div className={card}>
         <div className={cardHeader}>
           <SealCredLogo />
@@ -88,8 +93,9 @@ export default function () {
           </Button>
         </div>
       </div>
+
       <div className={pseudoSuitWrapper}>
-        <img src="/img/robot.webp" />
+        <SealCredAnimation />
         {onlyPhones && <PhoneGetStarted />}
       </div>
     </div>

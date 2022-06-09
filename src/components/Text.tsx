@@ -1,5 +1,6 @@
 import {
   TDropShadow,
+  TTextAlign,
   TTextColor,
   backgroundClip,
   backgroundImage,
@@ -169,14 +170,19 @@ export function HeaderText({
   return <h2 className={headerText(textSize, center)}>{children}</h2>
 }
 
-const plainText = classnames(
-  fontFamily('font-primary'),
-  fontWeight('font-normal'),
-  fontSize('text-xs'),
-  lineHeight('leading-4')
-)
-export function PlainText({ children }: ChildrenProp) {
-  return <span className={plainText}>{children}</span>
+const plainText = (position: TTextAlign) =>
+  classnames(
+    fontFamily('font-primary'),
+    fontWeight('font-normal'),
+    fontSize('text-xs'),
+    lineHeight('leading-4'),
+    textAlign(position)
+  )
+export function PlainText({
+  position = 'text-left',
+  children,
+}: ChildrenProp & { position?: TTextAlign }) {
+  return <span className={plainText(position)}>{children}</span>
 }
 
 const extraBoldText = (
@@ -263,4 +269,14 @@ export function LinkText({
       {children}
     </a>
   )
+}
+
+const sphereText = classnames(
+  fontWeight('font-bold'),
+  textColor('text-primary-dark'),
+  textAlign('text-center'),
+  textTransform('uppercase')
+)
+export function SphereText({ children }: ChildrenProp) {
+  return <p className={sphereText}>{children}</p>
 }
