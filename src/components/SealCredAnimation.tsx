@@ -78,7 +78,7 @@ const secondStage = classnames(
 const orbGeneratorBlock = classnames(
   width('w-20'),
   height('h-20'),
-  margin('mt-14', 'sm:mb-44', 'mb-8'),
+  margin('mt-14', 'lg:mb-44', 'mb-8'),
   zIndex('z-40')
 )
 const thirdStage = classnames(
@@ -103,7 +103,7 @@ const spheresWrapper = (visible: boolean) =>
   classnames(
     display('flex'),
     position('absolute'),
-    inset('bottom-36', 'md:left-14', 'left-8'),
+    inset('bottom-36', 'lg:left-14', 'left-8'),
     flexDirection('flex-col'),
     width('w-11'),
     space('space-y-3'),
