@@ -1,11 +1,11 @@
 import { HTMLAttributes } from 'react'
+import classNamesToString from 'helpers/classNamesToString'
 import classnames, {
   alignItems,
   backgroundColor,
   borderRadius,
   boxShadow,
   boxShadowColor,
-  brightness,
   display,
   dropShadow,
   flexDirection,
@@ -13,9 +13,12 @@ import classnames, {
   fontSize,
   fontWeight,
   outlineStyle,
+  overflow,
   padding,
   textColor,
   textDecoration,
+  transitionProperty,
+  translate,
   width,
 } from 'classnames/tailwind'
 
@@ -33,19 +36,14 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         backgroundColor('bg-tertiary'),
         borderRadius('rounded-4xl'),
         boxShadow('shadow-button'),
-        boxShadowColor(
-          'shadow-tertiary',
-          'hover:shadow-tertiary',
-          'active:shadow-tertiary'
-        ),
-        brightness('hover:brightness-75', 'active:brightness-50'),
+        boxShadowColor('hover:shadow-tertiary', 'active:shadow-tertiary'),
         dropShadow('drop-shadow-tertiary'),
         padding(small ? 'py-2' : 'py-3', small ? 'px-4' : 'px-6'),
         fontWeight('font-bold'),
         fontFamily('font-primary'),
         fontSize(small ? 'text-sm' : 'text-lg'),
         textColor('text-primary-dark'),
-        brightness('hover:brightness-75', 'active:brightness-50')
+        translate('hover:-translate-y-0.5')
       )
     : classnames(
         fontWeight('font-normal'),
@@ -68,6 +66,41 @@ interface ButtonProps {
   url?: string
 }
 
+const animatedTextWrapper = classnames(
+  display('flex'),
+  overflow('overflow-hidden')
+)
+
+const getCharacterTransitionDelay = (index: number) =>
+  `transition-delay: ${0.015 * index}s`
+
+const charWrapper = classnames(
+  transitionProperty('transition-letters'),
+  translate('group-hover:-translate-y-7')
+)
+
+const renderLetters = (sentence: string) => {
+  const whitepsace = ' '
+  const unicodeWhitespace = '\u00A0'
+
+  return (
+    sentence
+      // replace plain text whitepsace to unicode whitespace, otherwise it won't be rendered in an individual span
+      .replaceAll(whitepsace, unicodeWhitespace)
+      .split('')
+      .map((char, index) => {
+        return (
+          <span
+            className={charWrapper}
+            style={getCharacterTransitionDelay(index)}
+          >
+            {char}
+          </span>
+        )
+      })
+  )
+}
+
 export default function ({
   outlined,
   children,
@@ -78,13 +111,21 @@ export default function ({
 }: Omit<HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
   return (
     <button
-      className={button({ outlined, small, icon })}
+      className={classNamesToString(
+        button({ outlined, small, icon }),
+        'outlined-button',
+        'group'
+      )}
       onClick={() => {
         if (url) window.open(url, '_blank')
       }}
       {...rest}
     >
-      {typeof children === 'string' ? <span>{children}</span> : children}
+      {typeof children === 'string' ? (
+        <div className={animatedTextWrapper}>{renderLetters(children)}</div>
+      ) : (
+        children
+      )}
     </button>
   )
 }

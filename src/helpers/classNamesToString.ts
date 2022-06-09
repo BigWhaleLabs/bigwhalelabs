@@ -5,6 +5,8 @@ type AllowedExtraClassnames =
   | 'stroke-text-small'
   | 'retro-text'
   | '-my-12'
+  | 'outlined-button'
+  | 'group'
 
 export default function (
   ...classNames: (AllowedExtraClassnames | TTailwindString | undefined | null)[]
