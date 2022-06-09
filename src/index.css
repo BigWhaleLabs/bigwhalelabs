@@ -82,3 +82,7 @@ body {
 .retro-text::before {
   -webkit-text-stroke: 4px transparent !important;
 }
+
+.outlined-button {
+  text-shadow: 0 1.75rem 0 #0d0030;
+}

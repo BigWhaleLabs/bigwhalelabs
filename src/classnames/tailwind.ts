@@ -4308,6 +4308,7 @@ export type TTransitionProperty =
   | 'transition-opacity'
   | 'transition-shadow'
   | 'transition-transform'
+  | 'transition-letters'
 
 export type TTransitionDuration =
   | 'duration-75'
@@ -7657,6 +7658,8 @@ export type TTranslate =
   | 'translate-x-2/4'
   | 'translate-x-3/4'
   | 'translate-x-full'
+  | 'translate-x-negative-0.5'
+  | 'translate-x-negative-7'
   | 'translate-y-0'
   | 'translate-y-1'
   | 'translate-y-2'
@@ -7700,6 +7703,8 @@ export type TTranslate =
   | 'translate-y-2/4'
   | 'translate-y-3/4'
   | 'translate-y-full'
+  | 'translate-y-negative-0.5'
+  | 'translate-y-negative-7'
 
 export type TSkew =
   | 'skew-x-0'

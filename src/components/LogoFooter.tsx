@@ -1,6 +1,6 @@
 import Button from 'components/Button'
 import Logo from 'components/Logo'
-import Twitter from 'icons/Twitter'
+import NavbarLinks from 'components/NavbarLinks'
 import classnames, {
   alignItems,
   display,
@@ -18,11 +18,6 @@ const wrapper = classnames(
   space('space-y-10'),
   margin('md:mt-116', 'mt-48')
 )
-const linksContainer = classnames(
-  display('flex'),
-  flexDirection('flex-row'),
-  space('space-x-8')
-)
 
 export default function () {
   return (
@@ -31,14 +26,7 @@ export default function () {
       <Button outlined url="https://discord.gg/7frxHQdR">
         Join our Discord
       </Button>
-      <div className={linksContainer}>
-        <Button url="https://dosu.io">Dosu</Button>
-        <Button url="https://sealcred.xyz">SealCred</Button>
-        <Button url="https://blog.bigwhalelabs.com">Blog</Button>
-        <Button icon url="https://twitter.com/bigwhalelabs">
-          <Twitter />
-        </Button>
-      </div>
+      <NavbarLinks />
     </div>
   )
 }

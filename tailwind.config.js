@@ -104,7 +104,7 @@ module.exports = {
         '2xl': '0rem 0.25rem 2.75rem 0rem rgb(0 0 0 / 0.25)',
         lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
         md: '0rem 0rem 0.375rem 0rem rgb(0 0 0 / 0.25)',
-        button: '0rem 0rem 1.625rem rgba(1, 254, 182, 1)',
+        button: '0rem 0rem 1.625rem rgb(0 0 0 / 1)',
         card: '0rem 1rem 11rem rgba(21, 161, 252, 0.15)',
       },
       dropShadow: {
@@ -163,6 +163,13 @@ module.exports = {
       },
       content: {
         retro: 'attr(data-text)',
+      },
+      translate: {
+        'negative-0.5': '-0.25rem',
+        'negative-7': '-1.75rem',
+      },
+      transitionProperty: {
+        letters: 'transform 0.32s ease, box-shadow 0.32s ease',
       },
     },
   },
