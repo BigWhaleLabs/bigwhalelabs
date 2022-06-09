@@ -1,4 +1,5 @@
 import { AccentText, BodyText, HeaderText } from 'components/Text'
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import Card from 'components/Card'
 import PrismOrb from 'icons/PrismOrb'
 import classnames, {
@@ -6,6 +7,7 @@ import classnames, {
   flexDirection,
   height,
   justifyContent,
+  margin,
   space,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
@@ -20,7 +22,8 @@ const text = space('space-y-6')
 const orb = classnames(
   display('flex'),
   flexDirection('flex-row'),
-  justifyContent('justify-end')
+  justifyContent('justify-end'),
+  margin('-mr-16', 'sm:mt-12', 'sm:-mb-12', 'md:mr-0')
 )
 export default function () {
   const { lg } = useBreakpoints()
@@ -36,9 +39,13 @@ export default function () {
             <AccentText color="text-primary">We're changing that</AccentText>
           </BodyText>
         </div>
-        <div className={orb}>
-          <PrismOrb />
-        </div>
+        <ParallaxProvider>
+          <Parallax speed={5}>
+            <div className={orb}>
+              <PrismOrb />
+            </div>
+          </Parallax>
+        </ParallaxProvider>
       </div>
     </Card>
   )
