@@ -2,6 +2,7 @@ import classnames, {
   dropShadow,
   height,
   margin,
+  scale,
   stroke,
   strokeWidth,
   width,
@@ -15,7 +16,8 @@ const svgClasses = classnames(
   height('h-auto'),
   width('w-40'),
   dropShadow('drop-shadow-formal-accent'),
-  margin('mt-4')
+  margin('mt-4'),
+  scale('scale-125')
 )
 
 export default function () {
