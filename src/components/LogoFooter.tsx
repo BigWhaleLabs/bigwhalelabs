@@ -1,3 +1,4 @@
+import { LinkText } from 'components/Text'
 import Button from 'components/Button'
 import Logo from 'components/Logo'
 import Twitter from 'icons/Twitter'
@@ -32,12 +33,12 @@ export default function () {
         Join our Discord
       </Button>
       <div className={linksContainer}>
-        <Button url="https://dosu.io">Dosu</Button>
-        <Button url="https://sealcred.xyz">SealCred</Button>
-        <Button url="https://blog.bigwhalelabs.com">Blog</Button>
-        <Button icon url="https://twitter.com/bigwhalelabs">
+        <LinkText url="https://dosu.io">Dosu</LinkText>
+        <LinkText url="https://sealcred.xyz">SealCred</LinkText>
+        <LinkText url="https://blog.bigwhalelabs.com">Blog</LinkText>
+        <LinkText tertiary url="https://twitter.com/bigwhalelabs">
           <Twitter />
-        </Button>
+        </LinkText>
       </div>
     </div>
   )
