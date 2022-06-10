@@ -60,7 +60,7 @@ body {
       transparent 2px
     ),
     -webkit-linear-gradient(left, var(--grid-color) 2px, transparent 2px);
-  background-size: 50px 50px, 80px 80px;
+  background-size: 25px 25px, 40px 40px;
   transform: rotateX(85deg);
   animation: moveDown 0.5s infinite linear;
 }
