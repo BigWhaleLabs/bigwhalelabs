@@ -1,4 +1,4 @@
-import LogoText from 'components/Text'
+import LogoText from 'icons/LogoText'
 import Whale from 'icons/Whale'
 import classnames, {
   alignItems,
@@ -23,9 +23,7 @@ export default function ({ large }: { large?: boolean }) {
 
   return (
     <span className={container}>
-      {large || !xs ? (
-        <LogoText large={large}>{`big\nwhale\nlabs`}</LogoText>
-      ) : null}
+      {large || !xs ? <LogoText large={large} /> : null}
       <Whale large={large} />
     </span>
   )

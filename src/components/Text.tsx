@@ -6,7 +6,6 @@ import {
   backgroundImage,
   classnames,
   content,
-  display,
   dropShadow,
   fontFamily,
   fontSize,
@@ -25,29 +24,6 @@ import {
 import ChildrenProp from 'models/ChildrenProp'
 import classNamesToString from 'helpers/classNamesToString'
 import useBreakpoints from 'hooks/useBreakpoints'
-
-const logoText = (large?: boolean) =>
-  classnames(
-    textColor('text-primary'),
-    fontWeight('font-bold'),
-    fontSize(
-      large ? 'text-5xl' : 'text-xl',
-      large ? 'sm:text-6xl' : 'sm:text-xl'
-    ),
-    display('flex'),
-    textAlign('text-right'),
-    lineHeight(
-      large ? 'leading-10' : 'leading-5',
-      large ? 'sm:leading-11' : 'sm:leading-5'
-    ),
-    dropShadow('drop-shadow-primary')
-  )
-export default function LogoText({
-  children,
-  large,
-}: ChildrenProp & { large?: boolean }) {
-  return <span className={logoText(large)}>{children}</span>
-}
 
 const foldText = classnames(
   fontFamily('font-primary'),
