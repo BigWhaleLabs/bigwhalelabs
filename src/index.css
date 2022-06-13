@@ -4,10 +4,13 @@
 
 html {
   scroll-behavior: smooth;
-  /* Grid and blurry background */
-  background: url('/img/blurry-shadows-lg.webp') top / cover,
-    conic-gradient(from 90deg at 0.06rem 0.06rem, #0d0030 90deg, #1a0259 0) 0 0/3rem
-      3rem;
+  /* Grid */
+  background: conic-gradient(
+      from 90deg at 0.06rem 0.06rem,
+      #0d0030 90deg,
+      #1a0259 0
+    )
+    0 0/3rem 3rem;
 }
 body {
   margin: 0;
@@ -20,10 +23,13 @@ body {
 
 @media screen and (max-width: 600px) {
   html {
-    /* Grid and blurry background */
-    background: url('/img/blurry-shadows-sm.webp') top / cover,
-      conic-gradient(from 90deg at 0.06rem 0.06rem, #0d0030 90deg, #1a0259 0) 0
-        0/2rem 2rem;
+    /* Grid */
+    background: conic-gradient(
+        from 90deg at 0.06rem 0.06rem,
+        #0d0030 90deg,
+        #1a0259 0
+      )
+      0 0/2rem 2rem;
   }
 }
 
@@ -176,6 +182,35 @@ body {
     opacity: 0;
   }
 }
+@keyframes bgFades {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 0;
+  }
+  59% {
+    opacity: 0;
+  }
+  62% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  84% {
+    opacity: 1;
+  }
+}
 
 /* Mobile scroll animations */
 @keyframes personAnimationMobile {
@@ -260,6 +295,35 @@ body {
     opacity: 0;
   }
 }
+@keyframes bgFadesMobile {
+  10% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  68% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  87% {
+    opacity: 1;
+  }
+}
 
 /* Tablet scroll animations */
 @keyframes personAnimationTablet {
@@ -342,6 +406,38 @@ body {
   52% {
     transform: translate(0, -1rem);
     opacity: 0;
+  }
+}
+@keyframes bgFadesTablet {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 1;
+  }
+  29% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  68% {
+    opacity: 1;
+  }
+  81% {
+    opacity: 0;
+  }
+  84% {
+    opacity: 0;
+  }
+  88% {
+    opacity: 1;
   }
 }
 

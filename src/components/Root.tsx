@@ -4,13 +4,15 @@ import classnames, {
   display,
   flexDirection,
   margin,
+  position,
 } from 'classnames/tailwind'
 
 const innerBody = classnames(
   display('flex'),
   flexDirection('flex-col'),
   alignItems('items-center'),
-  margin('mx-auto')
+  margin('mx-auto'),
+  position('relative')
 )
 
 export default function ({ children }: ChildrenProp) {
