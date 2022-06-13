@@ -26,6 +26,9 @@ const cardsOnRight = classnames(
   flexDirection('flex-col'),
   space('space-y-6')
 )
+const dosuCityIcon = classnames(
+  margin('mb-0', 'mr-0', 'sm:-mb-12', 'sm:-mr-10', 'lg:-mb-24')
+)
 
 export default function () {
   return (
@@ -40,7 +43,11 @@ export default function () {
         />
         <RightCard
           reverse
-          icon={<DosuCity />}
+          icon={
+            <div className={dosuCityIcon}>
+              <DosuCity />
+            </div>
+          }
           text="Socialize pseudonymously using ZK NFT badges"
           buttonText="Learn about Dosu"
           url="https://dosu.io"

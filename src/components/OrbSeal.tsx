@@ -8,8 +8,8 @@ export default function () {
   const { lg } = useBreakpoints()
   return (
     <svg
-      width={lg ? '471.6' : '262'}
-      height={lg ? '343.8' : '191'}
+      width={lg ? '125%' : '262'}
+      height={lg ? '125%' : '191'}
       viewBox="0 0 262 191"
       fill="none"
       className={classNamesToString(lg ? '-my-12' : undefined)}
