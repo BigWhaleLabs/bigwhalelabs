@@ -8,6 +8,7 @@ import classnames, {
   flexDirection,
   margin,
   maxWidth,
+  padding,
   space,
 } from 'classnames/tailwind'
 
@@ -17,7 +18,8 @@ const cardsTogether = classnames(
   space('lg:space-x-6', 'space-y-6', 'lg:space-y-0'),
   alignItems('items-stretch'),
   maxWidth('max-w-2xl', 'lg:max-w-6xl'),
-  margin('mx-6', 'lg:mx-0')
+  margin('mx-6', 'lg:mx-0'),
+  padding('lg:px-4')
 )
 const cardsOnRight = classnames(
   display('flex'),
