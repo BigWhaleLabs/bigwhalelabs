@@ -19,7 +19,6 @@ body {
   font-family: 'JetBrains Mono', monospace;
   color: #efecd6;
   min-height: 100vh;
-  background: url('/img/blurry-shadows-lg.svg') center / cover;
 }
 
 @media screen and (max-width: 600px) {
@@ -31,9 +30,6 @@ body {
         #1a0259 0
       )
       0 0/2rem 2rem;
-  }
-  body {
-    background: url('/img/blurry-shadows-sm.svg') center / cover;
   }
 }
 
