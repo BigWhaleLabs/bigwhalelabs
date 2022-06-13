@@ -17,5 +17,7 @@ export default function () {
     return () => window.removeEventListener('scroll', throttledCallback, true)
   }, [throttledCallback])
 
+  console.log(scroll)
+
   return scroll
 }
