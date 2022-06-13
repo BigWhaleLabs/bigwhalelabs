@@ -415,19 +415,25 @@ body {
   20% {
     opacity: 1;
   }
-  34% {
-    opacity: 0;
-  }
-  52% {
-    opacity: 0;
-  }
-  54% {
+  26% {
     opacity: 1;
   }
-  80% {
+  29% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  68% {
+    opacity: 1;
+  }
+  81% {
     opacity: 0;
   }
   84% {
+    opacity: 0;
+  }
+  88% {
     opacity: 1;
   }
 }

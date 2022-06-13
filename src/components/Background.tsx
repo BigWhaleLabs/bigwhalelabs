@@ -17,13 +17,11 @@ const bgFit = classnames(
 )
 
 export default function () {
-  const { onlyPhones } = useBreakpoints()
+  const { lg } = useBreakpoints()
 
   return (
     <img
-      src={
-        onlyPhones ? '/img/blurry-shadows-sm.svg' : '/img/blurry-shadows-lg.svg'
-      }
+      src={!lg ? '/img/blurry-shadows-sm.svg' : '/img/blurry-shadows-lg.svg'}
       className={bgFit}
       style={scrollAnimationProvider('bgFades')}
     />
