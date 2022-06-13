@@ -44,7 +44,7 @@ export default function ({
             {buttonText}
           </Button>
         </div>
-        {reverse && icon}
+        {reverse && <div>{icon}</div>}
       </div>
     </Card>
   )
