@@ -189,7 +189,10 @@ body {
   10% {
     opacity: 0;
   }
-  20% {
+  18% {
+    opacity: 0;
+  }
+  22% {
     opacity: 1;
   }
   34% {
