@@ -7,7 +7,6 @@ import classnames, {
   boxShadow,
   boxShadowColor,
   display,
-  dropShadow,
   flexDirection,
   fontFamily,
   fontSize,
