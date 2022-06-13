@@ -4319,6 +4319,7 @@ export type TTransitionDuration =
   | 'duration-500'
   | 'duration-700'
   | 'duration-1000'
+  | 'duration-2000'
   | 'duration'
 
 export type TTransitionTimingFunction =

@@ -23,6 +23,9 @@ module.exports = {
           '100%': { width: '100%' },
         },
       },
+      transitionDuration: {
+        2000: '2000ms',
+      },
       screens: {
         md: '37.5rem',
       },
