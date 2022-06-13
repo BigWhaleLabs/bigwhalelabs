@@ -1,3 +1,4 @@
+import Background from 'components/Background'
 import Dosu from 'components/Dosu'
 import Footer from 'components/Footer'
 import HiringBlock from 'components/HiringBlock'
@@ -15,6 +16,7 @@ const App = () => {
     <>
       <Navbar />
       <Root>
+        <Background />
         <StartBlock />
         <PrivacyWorld />
         <LearnBlock />
