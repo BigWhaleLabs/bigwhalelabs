@@ -57,7 +57,7 @@ const navbarWrapper = (small: boolean, show: boolean) =>
   classnames(
     position('absolute'),
     inset('left-0', 'right-0', small ? 'top-58.5' : 'tiny:top-76'),
-    height(show ? 'h-280' : 'h-0'),
+    height(show ? 'h-70' : 'h-0'),
     boxSizing('box-content'),
     overflow('overflow-hidden'),
     opacity(show ? 'opacity-100' : 'opacity-0'),
