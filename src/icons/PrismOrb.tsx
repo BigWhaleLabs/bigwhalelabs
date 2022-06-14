@@ -17,7 +17,7 @@ const svgClasses = classnames(
   width('w-40'),
   dropShadow('drop-shadow-formal-accent'),
   margin('mt-4'),
-  scale('scale-125')
+  scale('lg:scale-125')
 )
 
 export default function () {
