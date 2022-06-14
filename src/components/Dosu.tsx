@@ -13,6 +13,7 @@ import classnames, {
   margin,
   maxWidth,
   space,
+  zIndex,
 } from 'classnames/tailwind'
 
 const card = classnames(space('space-y-2'), maxWidth('max-w-400'))
@@ -22,7 +23,8 @@ const wrapper = classnames(
   flexDirection('flex-col', 'lg:flex-row'),
   justifyContent('justify-between'),
   space('space-y-32'),
-  margin('md:mt-64', 'mt-56', 'mx-4')
+  margin('md:mt-64', 'mt-56', 'mx-4'),
+  zIndex('z-10')
 )
 
 export default function () {

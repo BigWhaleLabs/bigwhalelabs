@@ -21,6 +21,7 @@ import classnames, {
   position,
   space,
   width,
+  zIndex,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 
@@ -50,7 +51,8 @@ const blockWrapper = classnames(
   width('lg:w-3/4', 'w-full'),
   margin('lg:mt-80', 'mt-36'),
   space('lg:space-y-0', 'space-y-32'),
-  alignItems('items-center')
+  alignItems('items-center'),
+  zIndex('z-10')
 )
 
 const card = classnames(
