@@ -7627,6 +7627,7 @@ export type TScale =
   | 'scale-110'
   | 'scale-125'
   | 'scale-150'
+  | 'scale-200'
   | 'scale-300'
   | 'scale-x-0'
   | 'scale-x-50'
@@ -7638,6 +7639,7 @@ export type TScale =
   | 'scale-x-110'
   | 'scale-x-125'
   | 'scale-x-150'
+  | 'scale-x-200'
   | 'scale-x-300'
   | 'scale-y-0'
   | 'scale-y-50'
@@ -7649,6 +7651,7 @@ export type TScale =
   | 'scale-y-110'
   | 'scale-y-125'
   | 'scale-y-150'
+  | 'scale-y-200'
   | 'scale-y-300'
 
 export type TRotate =
