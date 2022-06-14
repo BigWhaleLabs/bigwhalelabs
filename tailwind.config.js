@@ -179,6 +179,7 @@ module.exports = {
         76: '4.75rem',
       },
       scale: {
+        200: '2.0',
         300: '3.0',
       },
       zIndex: {
