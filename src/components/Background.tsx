@@ -4,6 +4,7 @@ import classnames, {
   transitionDuration,
   transitionProperty,
   width,
+  zIndex,
 } from 'classnames/tailwind'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 import useBreakpoints from 'hooks/useBreakpoints'
@@ -13,7 +14,8 @@ const bgFit = classnames(
   width('w-full'),
   height('h-full'),
   transitionProperty('transition-opacity'),
-  transitionDuration('duration-2000')
+  transitionDuration('duration-2000'),
+  zIndex('z-0')
 )
 
 export default function () {

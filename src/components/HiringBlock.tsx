@@ -17,13 +17,15 @@ import classnames, {
   padding,
   space,
   width,
+  zIndex,
 } from 'classnames/tailwind'
 
 const hiringWrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
   width('w-full'),
-  margin('mx-auto', 'md:mt-96', 'mt-44')
+  margin('mx-auto', 'md:mt-96', 'mt-44'),
+  zIndex('z-10')
 )
 const lineBlockWrapper = classnames(
   display('flex'),
