@@ -5,11 +5,12 @@ import useBreakpoints from 'hooks/useBreakpoints'
 const mainStroke = classnames(strokeWidth('stroke-1.5'))
 
 export default function () {
-  const { lg } = useBreakpoints()
+  const { lg, sm } = useBreakpoints()
+
   return (
     <svg
-      width={lg ? '125%' : '262'}
-      height={lg ? '125%' : '191'}
+      width={lg ? '125%' : sm ? '262' : '75%'}
+      height={lg ? '125%' : sm ? '191' : '75%'}
       viewBox="0 0 262 191"
       fill="none"
       className={classNamesToString(lg ? '-my-12' : undefined)}
