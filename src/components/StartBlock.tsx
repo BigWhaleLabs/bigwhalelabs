@@ -37,7 +37,8 @@ const futureBox = classnames(
   flexDirection('md:flex-row', 'flex-col-reverse'),
   alignItems('items-center'),
   justifyContent('justify-end'),
-  space('md:space-x-4')
+  space('md:space-x-4'),
+  margin('mt-32', 'sm:mt-40', 'lg:mt-0')
 )
 const textBlock = classnames(
   display('flex'),
