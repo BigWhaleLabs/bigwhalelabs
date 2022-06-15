@@ -9,6 +9,7 @@ import classnames, {
   justifyContent,
   margin,
   space,
+  zIndex,
 } from 'classnames/tailwind'
 
 const wrapper = classnames(
@@ -17,7 +18,8 @@ const wrapper = classnames(
   justifyContent('justify-center'),
   alignItems('items-center'),
   space('space-y-10'),
-  margin('md:mt-116', 'mt-48')
+  margin('md:mt-116', 'mt-48'),
+  zIndex('z-10')
 )
 const linksContainer = classnames(
   display('flex'),

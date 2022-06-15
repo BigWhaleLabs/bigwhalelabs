@@ -8,6 +8,7 @@ import classnames, {
   margin,
   maxWidth,
   space,
+  zIndex,
 } from 'classnames/tailwind'
 
 const textCard = classnames(
@@ -19,7 +20,8 @@ const textCard = classnames(
 const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col', 'md:flex-row'),
-  margin('ml-3', 'md:mt-116', 'mt-64')
+  margin('ml-3', 'md:mt-116', 'mt-64'),
+  zIndex('z-10')
 )
 
 export default function () {

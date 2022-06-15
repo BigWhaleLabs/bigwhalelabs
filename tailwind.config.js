@@ -42,6 +42,7 @@ module.exports = {
         'mobile-card': '92%',
       },
       height: {
+        70: '17.5rem',
         500: '31.25rem',
         suit: '41.1rem',
         'suit-mobile': '28.6rem',
@@ -174,8 +175,11 @@ module.exports = {
         '-96': '-24rem',
         '-1/5': '-20%',
         '1/5': '20%',
+        58.5: '3.66rem',
+        76: '4.75rem',
       },
       scale: {
+        200: '2.0',
         300: '3.0',
       },
       zIndex: {

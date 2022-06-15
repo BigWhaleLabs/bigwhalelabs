@@ -9,13 +9,20 @@ import classnames, {
   backdropBlur,
   backgroundClip,
   backgroundColor,
+  boxSizing,
   display,
   flexDirection,
+  height,
   inset,
   justifyContent,
+  opacity,
+  overflow,
   padding,
   position,
   space,
+  transitionDuration,
+  transitionProperty,
+  transitionTimingFunction,
   zIndex,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
@@ -46,9 +53,22 @@ const navbarInternalContainer = classnames(
   justifyContent('justify-between'),
   padding('py-2', 'lg:py-8', 'px-4', 'lg:px-25')
 )
+const navbarWrapper = (small: boolean, show: boolean) =>
+  classnames(
+    position('absolute'),
+    inset('left-0', 'right-0', small ? 'top-58.5' : 'tiny:top-76'),
+    height(show ? 'h-70' : 'h-0'),
+    boxSizing('box-content'),
+    overflow('overflow-hidden'),
+    opacity(show ? 'opacity-100' : 'opacity-0'),
+    backgroundColor('bg-navbar'),
+    transitionProperty('transition-all'),
+    transitionDuration('duration-500'),
+    transitionTimingFunction('ease-in-out')
+  )
 
 export default function () {
-  const { md } = useBreakpoints()
+  const { xs, md } = useBreakpoints()
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const scrollPosition = useScrollPosition()
@@ -79,7 +99,11 @@ export default function () {
           )}
         </div>
       </div>
-      {!md && isMenuOpen && <NavbarLinks />}
+      {!md && (
+        <div className={navbarWrapper(xs, isMenuOpen)}>
+          <NavbarLinks />
+        </div>
+      )}
     </nav>
   )
 }

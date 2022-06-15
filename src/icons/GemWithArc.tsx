@@ -17,8 +17,8 @@ const textStyle = classnames(
 )
 const svgBox = classnames(
   height('md:h-80', 'h-44'),
-  margin('mx-auto'),
-  scale('scale-150'),
+  margin('mx-auto', '-mb-4'),
+  scale('scale-200'),
   willChange('will-change-auto')
 )
 
