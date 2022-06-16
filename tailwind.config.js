@@ -2,16 +2,16 @@
 module.exports = {
   content: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
-    screens: {
-      mobile: '25rem',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
-    },
     fontFamily: {
       primary: ['"Space Grotesk"', 'sans-serif'],
+    },
+    screens: {
+      fold: '17.6rem',
+      md: '37.5rem',
+      sm: '40rem',
+      lg: '64rem',
+      xl: '80rem',
+      '2xl': '96rem',
     },
     extend: {
       animation: {
@@ -25,9 +25,6 @@ module.exports = {
       },
       transitionDuration: {
         2000: '2000ms',
-      },
-      screens: {
-        md: '37.5rem',
       },
       space: {
         '-2': '-0.5rem',
