@@ -78,7 +78,7 @@ export default function ({ text }: ArcTextProps) {
         y={(size - labelSize) / 2}
         width={labelSize}
         height={labelSize}
-        href="/img/comming-soon.svg"
+        href="/img/coming-soon.svg"
       />
     </svg>
   )
