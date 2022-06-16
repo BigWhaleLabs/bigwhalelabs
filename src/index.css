@@ -56,7 +56,7 @@ body {
 .grid {
   position: absolute;
   width: 300%;
-  left: -75%;
+  left: -100%;
   height: 130%;
   bottom: -30%;
   will-change: auto;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useMemo, useState } from 'preact/hooks'
 
 const xsSize = 279
 const smSize = 374
@@ -10,7 +10,7 @@ const twoXlSize = 1535
 export default function () {
   const [width, setWidth] = useState(window.innerWidth)
 
-  useEffect(() => {
+  useMemo(() => {
     function resizer() {
       setWidth(window.innerWidth)
     }

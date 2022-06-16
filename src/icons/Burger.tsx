@@ -1,14 +1,5 @@
-import classnames, {
-  boxShadow,
-  dropShadow,
-  stroke,
-  strokeWidth,
-} from 'classnames/tailwind'
+import classnames, { stroke, strokeWidth } from 'classnames/tailwind'
 
-const svgShadow = classnames(
-  boxShadow('shadow-2xl'),
-  dropShadow('drop-shadow-tertiary')
-)
 const lineClasses = classnames(
   stroke('stroke-tertiary'),
   strokeWidth('stroke-2')
@@ -21,7 +12,6 @@ export default function ({ open }: { open?: boolean }) {
       height="25"
       viewBox="0 0 25 25"
       fill="none"
-      className={svgShadow}
       xmlns="http://www.w3.org/2000/svg"
     >
       {open ? (

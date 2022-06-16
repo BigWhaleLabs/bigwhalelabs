@@ -1,9 +1,9 @@
 import classnames, {
   height,
   position,
-  transitionDuration,
   transitionProperty,
   width,
+  willChange,
   zIndex,
 } from 'classnames/tailwind'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
@@ -14,7 +14,7 @@ const bgFit = classnames(
   width('w-full'),
   height('h-full'),
   transitionProperty('transition-opacity'),
-  transitionDuration('duration-2000'),
+  willChange('will-change-auto'),
   zIndex('z-0')
 )
 
@@ -23,7 +23,7 @@ export default function () {
 
   return (
     <img
-      src={!lg ? '/img/blurry-shadows-sm.svg' : '/img/blurry-shadows-lg.svg'}
+      src={!lg ? '/img/blurry-shadows-sm.webp' : '/img/blurry-shadows-lg.webp'}
       className={bgFit}
       style={scrollAnimationProvider('bgFades')}
     />

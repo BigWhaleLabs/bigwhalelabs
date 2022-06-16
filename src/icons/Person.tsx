@@ -8,11 +8,11 @@ const personClasses = classnames(
   zIndex('z-20')
 )
 
-export default function () {
+export default function ({ isVisible }: { isVisible: boolean }) {
   return (
     <div className={svgWrapper}>
       <svg
-        style={scrollAnimationProvider('personAnimation')}
+        style={scrollAnimationProvider('personAnimation', isVisible)}
         viewBox="0 0 188 307"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

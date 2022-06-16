@@ -10,6 +10,7 @@ import classnames, {
   maxWidth,
   padding,
   space,
+  zIndex,
 } from 'classnames/tailwind'
 
 const cardsTogether = classnames(
@@ -19,7 +20,8 @@ const cardsTogether = classnames(
   alignItems('items-stretch'),
   maxWidth('max-w-2xl', 'lg:max-w-6xl'),
   margin('mx-6', 'lg:mx-0'),
-  padding('lg:px-4')
+  padding('lg:px-4'),
+  zIndex('z-10')
 )
 const cardsOnRight = classnames(
   display('flex'),

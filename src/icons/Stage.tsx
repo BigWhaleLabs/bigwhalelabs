@@ -19,7 +19,7 @@ const ellipseStyles = (xs: boolean) =>
     borderColor('border-primary-semi-dimmed')
   )
 
-export default function () {
+export default function ({ isVisible }: { isVisible: boolean }) {
   const { xs } = useBreakpoints()
 
   return (
@@ -27,7 +27,7 @@ export default function () {
       className={ellipseStyles(xs)}
       style={{
         borderRadius: '50%',
-        ...scrollAnimationProvider('walletAndStageAnimation'),
+        ...scrollAnimationProvider('walletAndStageAnimation', isVisible),
       }}
     />
   )

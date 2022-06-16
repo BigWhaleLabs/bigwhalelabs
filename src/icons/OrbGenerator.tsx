@@ -7,11 +7,11 @@ const imgWrapper = classnames(
   width('w-20')
 )
 
-export default function () {
+export default function ({ isVisible }: { isVisible: boolean }) {
   return (
     <div
       className={imgWrapper}
-      style={scrollAnimationProvider('superOrbTransformation')}
+      style={scrollAnimationProvider('superOrbTransformation', isVisible)}
     >
       <img src="/img/orb-generator.webp" />
     </div>

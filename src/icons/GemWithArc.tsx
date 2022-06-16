@@ -13,13 +13,13 @@ const textStyle = classnames(
   fill('fill-tertiary'),
   textTransform('uppercase'),
   fontWeight('font-semibold'),
-  fontSize('text-3xl', 'md:text-xl')
+  fontSize('text-3xl', 'md:text-xl'),
+  willChange('will-change-transform')
 )
 const svgBox = classnames(
   height('md:h-80', 'h-44'),
   margin('mx-auto', '-mb-4'),
-  scale('scale-200'),
-  willChange('will-change-auto')
+  scale('tiny:scale-175')
 )
 
 interface ArcTextProps {
@@ -78,7 +78,7 @@ export default function ({ text }: ArcTextProps) {
         y={(size - labelSize) / 2}
         width={labelSize}
         height={labelSize}
-        href="/img/comming-soon.svg"
+        href="/img/coming-soon.svg"
       />
     </svg>
   )

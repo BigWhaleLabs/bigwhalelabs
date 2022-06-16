@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'preact/hooks'
 import useThrottle from 'hooks/useThrottle'
 
 export default function () {

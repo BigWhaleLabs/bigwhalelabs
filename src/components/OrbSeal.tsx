@@ -1,8 +1,9 @@
+import { dropShadow, strokeWidth } from 'classnames/tailwind'
 import classNamesToString from 'helpers/classNamesToString'
-import classnames, { strokeWidth } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 
-const mainStroke = classnames(strokeWidth('stroke-1.5'))
+const mainStroke = strokeWidth('stroke-1.5')
+const orbShadow = dropShadow('drop-shadow-accent')
 
 export default function () {
   const { lg, sm } = useBreakpoints()
@@ -23,45 +24,8 @@ export default function () {
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-      <g filter="url(#filter0_d_33_22887)">
-        <circle cx="34" cy="99" r="15" fill="#FED823" />
-      </g>
+      <circle cx="34" cy="99" r="15" fill="#FED823" className={orbShadow} />
       <defs>
-        <filter
-          id="filter0_d_33_22887"
-          x="0"
-          y="65"
-          width="68"
-          height="68"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset />
-          <feGaussianBlur stdDeviation="9.5" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.996078 0 0 0 0 0.847059 0 0 0 0 0.137255 0 0 0 1 0"
-          />
-          <feBlend
-            mode="screen"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_33_22887"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_33_22887"
-            result="shape"
-          />
-        </filter>
         <linearGradient
           id="paint0_linear_33_22887"
           x1="58.9455"
