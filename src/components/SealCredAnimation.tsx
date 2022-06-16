@@ -154,9 +154,10 @@ const PairOfNfts = ({ colors, position, small }: PairOfNftsProps) => {
 export default function () {
   const { ref: zkWrapRef, inView: zkWrapVisible } = useInView()
   const { ref: suitWrapRef, inView: suitWrapVisible } = useInView()
+  const { ref: wrapperRef, inView: wrapperVisible } = useInView()
 
   return (
-    <div className={wrapper}>
+    <div className={wrapper} ref={wrapperRef}>
       <div className={firstStage}>
         <div className={personWithStage}>
           <div className={personWithSpheres}>
@@ -166,7 +167,7 @@ export default function () {
               small={true}
             />
             <div className={personWrapper}>
-              <Person />
+              <Person isVisible={wrapperVisible} />
             </div>
             <PairOfNfts
               position="right"
@@ -174,9 +175,14 @@ export default function () {
               small={true}
             />
           </div>
-          <Stage />
+          <Stage isVisible={wrapperVisible} />
         </div>
-        <div style={scrollAnimationProvider('walletAndStageAnimation')}>
+        <div
+          style={scrollAnimationProvider(
+            'walletAndStageAnimation',
+            wrapperVisible
+          )}
+        >
           <PlainText>
             Wallet NFT collection:{' '}
             <AccentText color="text-accent">04</AccentText>
@@ -185,9 +191,14 @@ export default function () {
       </div>
       <div className={secondStage}>
         <div className={orbGeneratorBlock}>
-          <OrbGenerator />
+          <OrbGenerator isVisible={wrapperVisible} />
         </div>
-        <div style={scrollAnimationProvider('generatingHideAnimation')}>
+        <div
+          style={scrollAnimationProvider(
+            'generatingHideAnimation',
+            wrapperVisible
+          )}
+        >
           <PlainText>Generating zk proof...</PlainText>
         </div>
       </div>
