@@ -14,7 +14,7 @@ const innerBody = classnames(
   alignItems('items-center'),
   margin('mx-auto'),
   position('relative'),
-  overflow('overflow-hidden')
+  overflow('md:overflow-visible', 'overflow-hidden')
 )
 
 export default function ({ children }: ChildrenProp) {
