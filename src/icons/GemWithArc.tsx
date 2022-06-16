@@ -19,7 +19,7 @@ const textStyle = classnames(
 const svgBox = classnames(
   height('md:h-80', 'h-44'),
   margin('mx-auto', '-mb-4'),
-  scale('tiny:scale-200')
+  scale('tiny:scale-175')
 )
 
 interface ArcTextProps {

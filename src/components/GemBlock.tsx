@@ -13,7 +13,7 @@ import classnames, {
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 
-const gemCard = space('-space-y-44')
+const gemCard = space('-space-y-48')
 const diamonTextWrapper = classnames(display('flex'), width('w-fit'))
 const wrapperBoldText = classnames(
   display('flex'),

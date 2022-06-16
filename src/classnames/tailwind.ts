@@ -5449,7 +5449,7 @@ export type TSpace =
   | 'space-x-3.5'
   | '-space-x-2'
   | '-space-x-11'
-  | '-space-x-44'
+  | '-space-x-48'
   | 'space-x-reverse'
   | 'space-y-0'
   | 'space-y-1'
@@ -5489,7 +5489,7 @@ export type TSpace =
   | 'space-y-3.5'
   | '-space-y-2'
   | '-space-y-11'
-  | '-space-y-44'
+  | '-space-y-48'
   | 'space-y-reverse'
 
 export type TSpacing = TPadding | TMargin | TSpace
@@ -7477,7 +7477,7 @@ export type TScale =
   | 'scale-110'
   | 'scale-125'
   | 'scale-150'
-  | 'scale-200'
+  | 'scale-175'
   | 'scale-x-0'
   | 'scale-x-50'
   | 'scale-x-75'
@@ -7488,7 +7488,7 @@ export type TScale =
   | 'scale-x-110'
   | 'scale-x-125'
   | 'scale-x-150'
-  | 'scale-x-200'
+  | 'scale-x-175'
   | 'scale-y-0'
   | 'scale-y-50'
   | 'scale-y-75'
@@ -7499,7 +7499,7 @@ export type TScale =
   | 'scale-y-110'
   | 'scale-y-125'
   | 'scale-y-150'
-  | 'scale-y-200'
+  | 'scale-y-175'
 
 export type TRotate =
   | 'rotate-0'
