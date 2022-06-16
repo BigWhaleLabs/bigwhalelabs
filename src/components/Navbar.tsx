@@ -1,5 +1,4 @@
-import { MutableRef } from 'preact/hooks'
-import { useRef, useState } from 'react'
+import { MutableRef, useRef, useState } from 'preact/hooks'
 import Burger from 'icons/Burger'
 import Button from 'components/Button'
 import Logo from 'components/Logo'

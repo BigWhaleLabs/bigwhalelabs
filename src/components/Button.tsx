@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'preact/compat'
 import classNamesToString from 'helpers/classNamesToString'
 import classnames, {
   alignItems,

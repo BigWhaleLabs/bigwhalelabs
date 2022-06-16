@@ -1,11 +1,11 @@
 import { MutableRef } from 'preact/hooks'
-import { useEffect } from 'react'
+import { useMemo } from 'preact/hooks'
 
 export default function useOutsideAlerter(
   ref: MutableRef<HTMLDivElement>,
   callback: () => void
 ) {
-  useEffect(() => {
+  useMemo(() => {
     function handleClickOutside(event: Event) {
       if (ref.current && !ref.current.contains(event.target as Node)) {
         callback()

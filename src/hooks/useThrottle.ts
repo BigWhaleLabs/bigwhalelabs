@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'preact/hooks'
 
 export default function (callback: (...args: unknown[]) => void, delayMs = 20) {
   const isThrottled = useRef(false)
