@@ -27,7 +27,7 @@ import classnames, {
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
 import useClickOutside from 'hooks/useClickOutside'
-import useScrollPosition from 'hooks/useScrollPosition'
+import useScrollPercent from 'hooks/useScrollPercent'
 
 const navbar = (backgroundVisible?: boolean) =>
   classnames(
@@ -71,7 +71,7 @@ export default function () {
   const { xs, md } = useBreakpoints()
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const scrollPosition = useScrollPosition()
+  const scrollpercent = useScrollPercent()
 
   const navbarRef = useRef() as MutableRef<HTMLDivElement>
   useClickOutside(navbarRef, () => setIsMenuOpen(false))
@@ -79,7 +79,7 @@ export default function () {
   return (
     <nav
       ref={navbarRef}
-      className={navbar(scrollPosition > 20)}
+      className={navbar(scrollpercent > 0.01)}
       style={{ backfaceVisibility: 'hidden' }}
     >
       <div className={navbarInternalContainer}>
