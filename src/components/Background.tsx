@@ -1,9 +1,9 @@
 import classnames, {
   height,
   position,
-  transitionDuration,
   transitionProperty,
   width,
+  willChange,
   zIndex,
 } from 'classnames/tailwind'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
@@ -14,7 +14,7 @@ const bgFit = classnames(
   width('w-full'),
   height('h-full'),
   transitionProperty('transition-opacity'),
-  transitionDuration('duration-2000'),
+  willChange('will-change-auto'),
   zIndex('z-0')
 )
 
