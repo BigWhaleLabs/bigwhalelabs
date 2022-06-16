@@ -4,9 +4,9 @@ const fillAndStroke = classnames(
   fill('fill-primary-dark'),
   stroke('stroke-primary-semi-dimmed')
 )
-const mainFill = classnames(fill('fill-primary-dark'))
-const mainStroke = classnames(stroke('stroke-primary-semi-dimmed'))
-const accentStroke = classnames(stroke('stroke-accent'))
+const mainFill = fill('fill-primary-dark')
+const mainStroke = stroke('stroke-primary-semi-dimmed')
+const accentStroke = stroke('stroke-accent')
 
 export default function () {
   return (

@@ -3,6 +3,7 @@ import Color from 'models/Color'
 import classnames, {
   alignItems,
   borderRadius,
+  boxShadow,
   display,
   fontWeight,
   height,
@@ -15,7 +16,7 @@ import classnames, {
   zIndex,
 } from 'classnames/tailwind'
 import colorToBackground from 'helpers/colorToBackground'
-import colorToDropShadow from 'helpers/colorToDropShadow'
+import colorToShadowColor from 'helpers/colorToShadowColor'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 
 const sphereStyles = classnames(
@@ -29,7 +30,8 @@ const sphereStyles = classnames(
   textAlign('text-center'),
   transitionProperty('transition-all'),
   willChange('will-change-transform'),
-  zIndex('z-10')
+  zIndex('z-10'),
+  boxShadow('shadow-lg')
 )
 const sphereSize = (small?: boolean) =>
   classnames(height(small ? 'h-4' : 'h-7'), width(small ? 'w-4' : 'w-7'))
@@ -48,7 +50,7 @@ export default function ({
   animated?: boolean
 }) {
   const bgColor = colorToBackground(color)
-  const shadowColor = colorToDropShadow(color)
+  const shadowColor = colorToShadowColor(color)
 
   return (
     <div
