@@ -3,7 +3,7 @@ import { useMemo, useState } from 'preact/hooks'
 const xsSize = 279
 const smSize = 374
 const mobileSize = 420
-const mdSize = 599
+const mdSize = 767
 const lgSize = 1023
 const twoXlSize = 1535
 
