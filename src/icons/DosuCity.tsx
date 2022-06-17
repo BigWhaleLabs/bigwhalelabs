@@ -15,8 +15,8 @@ export default function () {
   const { lg } = useBreakpoints()
   return (
     <svg
-      width={lg ? '300' : '200'}
-      height={lg ? '300' : '200'}
+      width={lg ? '300' : '100%'}
+      height={lg ? '300' : '100%'}
       viewBox="0 0 334 307"
       className={classNamesToString(lg ? '-my-12' : undefined)}
       fill="none"

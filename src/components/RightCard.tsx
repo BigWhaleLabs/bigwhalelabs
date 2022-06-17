@@ -25,26 +25,33 @@ export default function ({
   text,
   buttonText,
   url,
+  reverseBelowMedium,
 }: {
   reverse?: boolean
   icon: ComponentChild
   text: string
   buttonText: string
   url: string
+  reverseBelowMedium?: boolean
 }) {
-  const { lg } = useBreakpoints()
+  const { lg, md } = useBreakpoints()
+
+  const cardOnTop =
+    (!reverse && md) ||
+    (reverse && reverseBelowMedium && !md) ||
+    (!reverse && !reverseBelowMedium)
 
   return (
     <Card>
       <div className={container}>
-        {!reverse && icon}
+        {cardOnTop && icon}
         <div className={textAndButton}>
           <HeaderText textSize={lg ? 'base' : 'small'}>{text}</HeaderText>
           <Button outlined url={url}>
             {buttonText}
           </Button>
         </div>
-        {reverse && <div>{icon}</div>}
+        {!cardOnTop && <div>{icon}</div>}
       </div>
     </Card>
   )

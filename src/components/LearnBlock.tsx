@@ -29,7 +29,7 @@ const cardsOnRight = classnames(
   space('space-y-6')
 )
 const dosuCityIcon = classnames(
-  margin('mb-0', 'mr-0', 'sm:-mb-12', 'sm:-mr-10', 'lg:-mb-24')
+  margin('mb-0', 'mr-0', 'sm:-mb-10', 'sm:-mr-10', 'lg:-mb-24')
 )
 
 export default function () {
@@ -53,6 +53,7 @@ export default function () {
           text="Socialize pseudonymously using ZK NFT badges"
           buttonText="Learn about Dosu"
           url="https://dosu.io"
+          reverseBelowMedium
         />
       </div>
     </div>
