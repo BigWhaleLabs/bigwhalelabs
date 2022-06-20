@@ -62,13 +62,13 @@ body {
   }
 }
 @keyframes strokeScrollTablet {
-  7% {
+  5% {
     text-shadow: 0 -1rem 0 #15a1fc;
   }
-  9% {
+  7% {
     text-shadow: 0 0rem 0 #15a1fc;
   }
-  16% {
+  14% {
     text-shadow: 0 2rem 0 #15a1fc;
   }
 }
