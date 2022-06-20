@@ -53,6 +53,7 @@ module.exports = {
       },
       screens: {
         tiny: '22.5rem',
+        se: '23.5rem',
         tablet: '31.25rem',
         md: '37.5rem',
         sm: '40rem',

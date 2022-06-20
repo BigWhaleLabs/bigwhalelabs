@@ -5149,6 +5149,7 @@ export type TMargin =
   | '-m-4'
   | '-m-10'
   | '-m-12'
+  | '-m-14'
   | '-m-18'
   | '-m-24'
   | 'my-0'
@@ -5192,6 +5193,7 @@ export type TMargin =
   | '-my-4'
   | '-my-10'
   | '-my-12'
+  | '-my-14'
   | '-my-18'
   | '-my-24'
   | 'mx-0'
@@ -5235,6 +5237,7 @@ export type TMargin =
   | '-mx-4'
   | '-mx-10'
   | '-mx-12'
+  | '-mx-14'
   | '-mx-18'
   | '-mx-24'
   | 'mt-0'
@@ -5278,6 +5281,7 @@ export type TMargin =
   | '-mt-4'
   | '-mt-10'
   | '-mt-12'
+  | '-mt-14'
   | '-mt-18'
   | '-mt-24'
   | 'mr-0'
@@ -5321,6 +5325,7 @@ export type TMargin =
   | '-mr-4'
   | '-mr-10'
   | '-mr-12'
+  | '-mr-14'
   | '-mr-18'
   | '-mr-24'
   | 'mb-0'
@@ -5364,6 +5369,7 @@ export type TMargin =
   | '-mb-4'
   | '-mb-10'
   | '-mb-12'
+  | '-mb-14'
   | '-mb-18'
   | '-mb-24'
   | 'ml-0'
@@ -5407,6 +5413,7 @@ export type TMargin =
   | '-ml-4'
   | '-ml-10'
   | '-ml-12'
+  | '-ml-14'
   | '-ml-18'
   | '-ml-24'
 
@@ -7248,6 +7255,7 @@ export type TMaxWidth =
   | 'max-w-screen-xl'
   | 'max-w-screen-2xl'
   | 'max-w-screen-tiny'
+  | 'max-w-screen-se'
   | 'max-w-screen-tablet'
 
 export type THeight =
@@ -8649,6 +8657,7 @@ export type TPseudoClassVariants =
   | 'xl:'
   | '2xl:'
   | 'tiny:'
+  | 'se:'
   | 'tablet:'
 
 //////////// Utility Function generic type
