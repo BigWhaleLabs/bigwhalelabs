@@ -21,8 +21,10 @@ import {
   textTransform,
   zIndex,
 } from 'classnames/tailwind'
+import { useInView } from 'react-intersection-observer'
 import ChildrenProp from 'models/ChildrenProp'
 import classNamesToString from 'helpers/classNamesToString'
+import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 import useBreakpoints from 'hooks/useBreakpoints'
 
 const foldText = classnames(
@@ -53,12 +55,16 @@ export function LargeStrokeText({
   small,
   children,
 }: ChildrenProp & { small?: boolean }) {
+  const { ref, inView } = useInView()
+
   return (
     <h1
       className={classNamesToString(
         largeStrokeTextAccent,
         small ? 'stroke-text-small' : 'stroke-text'
       )}
+      style={scrollAnimationProvider('strokeScroll', inView)}
+      ref={ref}
     >
       {children}
     </h1>
