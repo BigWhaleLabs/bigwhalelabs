@@ -7319,6 +7319,7 @@ export type THeight =
   | 'h-fit'
   | 'h-suit'
   | 'h-suit-mobile'
+  | 'h-screen-1/2'
 
 export type TMinHeight =
   | 'min-h-0'

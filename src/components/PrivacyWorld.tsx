@@ -7,7 +7,7 @@ import classnames, {
 } from 'classnames/tailwind'
 
 const privacyWorld = classnames(
-  margin('md:my-60', 'my-32'),
+  margin('md:my-60', 'mb-32', 'mt-16'),
   wordBreak('break-words'),
   maxWidth('max-w-full'),
   zIndex('z-10')

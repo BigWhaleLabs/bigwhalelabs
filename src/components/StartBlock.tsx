@@ -26,7 +26,9 @@ import classnames, {
 const wrapper = classnames(
   position('relative'),
   overflow('md:overflow-visible', 'overflow-hidden'),
-  width('md:w-fit', 'w-screen')
+  width('md:w-fit', 'w-screen'),
+  height('lg:!h-screen', 'sm:h-screen-1/2', 'h-screen'),
+  margin('lg:-mt-24')
 )
 const futureBoxWrapper = classnames(
   position('md:absolute'),
@@ -38,7 +40,7 @@ const futureBox = classnames(
   alignItems('items-center'),
   justifyContent('justify-end'),
   space('md:space-x-4'),
-  margin('mt-32', 'sm:mt-40', 'lg:mt-0')
+  margin('mt-24', 'sm:mt-40', 'lg:!mt-0')
 )
 const textBlock = classnames(
   display('flex'),

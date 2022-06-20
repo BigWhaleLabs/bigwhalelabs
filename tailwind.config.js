@@ -27,6 +27,7 @@ module.exports = {
         70: '17.5rem',
         suit: '41.1rem',
         'suit-mobile': '28.6rem',
+        'screen-1/2': '50vh',
       },
       maxWidth: {
         270: '16.875rem',
