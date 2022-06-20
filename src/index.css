@@ -54,10 +54,10 @@ body {
   }
 }
 @keyframes strokeScrollMobile {
-  5% {
+  3% {
     text-shadow: 0 -0.5rem 0 #15a1fc;
   }
-  16% {
+  14% {
     text-shadow: 0 0.75rem 0 #15a1fc;
   }
 }

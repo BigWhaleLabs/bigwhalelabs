@@ -49,9 +49,9 @@ const textBlock = classnames(
 )
 const bigWhaleStyles = classnames(
   height('sm:h-auto', 'h-max'),
-  maxWidth('md:max-w-full', 'max-w-2xl'),
+  maxWidth('md:max-w-full', 'max-w-lg'),
   overflow('overflow-clip'),
-  margin('md:m-0', 'ml-24'),
+  margin('md:m-0', 'ml-24', '-mt-14', 'tablet:mt-0'),
   scale('md:scale-100', 'scale-125')
 )
 
@@ -96,7 +96,7 @@ export default function () {
             <IronSphere />
           </div>
           <Parallax speed={-20}>
-            <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />{' '}
+            <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />
           </Parallax>
           <div className={futureBoxWrapper}>
             <Parallax speed={-5}>
