@@ -44,26 +44,26 @@ body {
 }
 @keyframes strokeScroll {
   5% {
-    text-shadow: 0 -1rem 0 #15a1fc;
+    text-shadow: 0 -2rem 0 #15a1fc;
   }
   20% {
-    text-shadow: 0 1rem 0 #15a1fc;
+    text-shadow: 0 2rem 0 #15a1fc;
   }
 }
 @keyframes strokeScrollMobile {
   5% {
-    text-shadow: 0 -0.5rem 0 #15a1fc;
+    text-shadow: 0 -1rem 0 #15a1fc;
   }
   16% {
-    text-shadow: 0 0.5rem 0 #15a1fc;
+    text-shadow: 0 1rem 0 #15a1fc;
   }
 }
 @keyframes strokeScrollTablet {
   5% {
-    text-shadow: 0 -1rem 0 #15a1fc;
+    text-shadow: 0 -2rem 0 #15a1fc;
   }
-  15% {
-    text-shadow: 0 1rem 0 #15a1fc;
+  20% {
+    text-shadow: 0 2rem 0 #15a1fc;
   }
 }
 
