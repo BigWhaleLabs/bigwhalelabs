@@ -27,7 +27,7 @@ const wrapper = classnames(
   position('relative'),
   overflow('md:overflow-visible', 'overflow-hidden'),
   width('md:w-fit', 'w-screen'),
-  height('lg:!h-screen', 'sm:h-screen-1/2', 'h-screen'),
+  height('xl:!h-screen', 'sm:h-screen-1/2', 'h-screen'),
   margin('lg:-mt-24')
 )
 const futureBoxWrapper = classnames(
