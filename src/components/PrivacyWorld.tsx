@@ -1,10 +1,16 @@
 import { LargeStrokeText } from 'components/Text'
-import classnames, { margin, maxWidth, wordBreak } from 'classnames/tailwind'
+import classnames, {
+  margin,
+  maxWidth,
+  wordBreak,
+  zIndex,
+} from 'classnames/tailwind'
 
 const privacyWorld = classnames(
   margin('md:my-60', 'my-32'),
   wordBreak('break-words'),
-  maxWidth('max-w-full')
+  maxWidth('max-w-full'),
+  zIndex('z-10')
 )
 
 export default function () {
