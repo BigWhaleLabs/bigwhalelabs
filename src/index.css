@@ -429,11 +429,11 @@ body {
   }
 }
 @keyframes generatingHideAnimationTablet {
-  51% {
+  44% {
     transform: translate(0, 0);
     opacity: 1;
   }
-  52% {
+  45% {
     transform: translate(0, -1rem);
     opacity: 0;
   }
