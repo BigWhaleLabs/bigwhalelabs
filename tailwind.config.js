@@ -52,7 +52,7 @@ module.exports = {
         15: '10.438rem',
       },
       screens: {
-        tiny: '22.5rem',
+        tiny: '22.75rem',
         tablet: '31.25rem',
         md: '37.5rem',
         sm: '40rem',
