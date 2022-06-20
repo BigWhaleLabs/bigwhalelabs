@@ -23,7 +23,7 @@ const orb = classnames(
   display('flex'),
   flexDirection('flex-row'),
   justifyContent('justify-end'),
-  margin('-mr-18', 'sm:mt-12', 'sm:-mb-4', 'md:mr-0', 'lg:-mb-12')
+  margin('-mr-18', '-mt-10', 'sm:-mt-12', 'sm:-mb-4', 'md:mr-0', 'lg:-mb-12')
 )
 export default function () {
   const { lg } = useBreakpoints()
