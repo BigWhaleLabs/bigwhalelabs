@@ -48,7 +48,7 @@ const largeStrokeTextAccent = classnames(
   textAlign('text-justify'),
   textTransform('uppercase'),
   fontFamily('font-primary'),
-  fontSize('text-5xl', 'md:text-8xl'),
+  fontSize('text-3xl', 'tiny:text-5xl', 'md:!text-7xl', 'lg:!text-8xl'),
   lineHeight('leading-10', 'md:leading-12')
 )
 export function LargeStrokeText({
