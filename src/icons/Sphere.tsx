@@ -34,7 +34,10 @@ const sphereStyles = classnames(
   boxShadow('shadow-lg')
 )
 const sphereSize = (small?: boolean) =>
-  classnames(height(small ? 'h-4' : 'h-7'), width(small ? 'w-4' : 'w-7'))
+  classnames(
+    height(small ? 'h-4' : { 'tiny:h-7': true, 'h-6': true }),
+    width(small ? 'w-4' : { 'tiny:w-7': true, 'w-6': true })
+  )
 
 export default function ({
   color,
