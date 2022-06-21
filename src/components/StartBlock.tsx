@@ -30,7 +30,7 @@ const wrapper = classnames(
 )
 const futureBoxWrapper = classnames(
   position('md:absolute'),
-  inset('xl:-right-28', 'right-0', 'top-3/4')
+  inset('xl:-right-28', 'right-8', 'top-3/4')
 )
 const futureBox = classnames(
   display('flex'),
