@@ -30,7 +30,7 @@ const wrapper = classnames(
 )
 const futureBoxWrapper = classnames(
   position('md:absolute'),
-  inset('xl:-right-28', 'right-0', 'top-3/4')
+  inset('xl:-right-28', 'right-8', 'top-3/4')
 )
 const futureBox = classnames(
   display('flex'),
@@ -51,8 +51,8 @@ const bigWhaleStyles = classnames(
   height('sm:h-auto', 'h-max'),
   maxWidth('md:max-w-full', 'max-w-2xl'),
   overflow('overflow-clip'),
-  margin('md:m-0', 'ml-24'),
-  scale('md:scale-100', 'scale-125')
+  margin('md:!ml-0', 'se:ml-24', 'ml-0', 'lg:!-mt-16', 'se:mt-0', '-mt-24'),
+  scale('md:!scale-100', 'se:scale-125', 'scale-100')
 )
 
 const bgImage = classnames(position('absolute'), blur('blur-sm'))
@@ -96,10 +96,10 @@ export default function () {
             <IronSphere />
           </div>
           <Parallax speed={-20}>
-            <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />{' '}
+            <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />
           </Parallax>
           <div className={futureBoxWrapper}>
-            <Parallax speed={-5}>
+            <Parallax speed={-12}>
               <div className={futureBox}>
                 <DownArrows />
                 <div className={textBlock}>
