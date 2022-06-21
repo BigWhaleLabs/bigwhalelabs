@@ -12,7 +12,7 @@ import useBreakpoints from 'hooks/useBreakpoints'
 const ellipseStyles = (xs: boolean) =>
   classnames(
     height('h-20'),
-    width('w-64'),
+    width('tiny:w-64', 'w-48'),
     scale(xs ? 'scale-75' : 'scale-100'),
     borderStyle('border-dashed'),
     borderWidth('border-2'),
