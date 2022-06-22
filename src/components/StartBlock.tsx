@@ -31,13 +31,13 @@ const wrapper = classnames(
   height('h-screen'),
   display('flex'),
   flexDirection('flex-col'),
-  justifyContent('justify-end'),
+  justifyContent('md:justify-center', 'justify-end'),
   alignItems('items-center'),
   margin('-mt-24')
 )
 const futureBoxWrapper = classnames(
   position('2xl:absolute'),
-  inset('right-64', 'top-3/4')
+  inset('right-64', 'bottom-1/4')
 )
 const futureBox = classnames(
   display('flex'),
@@ -49,13 +49,13 @@ const futureBox = classnames(
 const textBlock = classnames(
   display('flex'),
   flexDirection('flex-col'),
-  alignItems('xl:items-start', 'items-center'),
+  alignItems('2xl:items-start', 'items-center'),
   wordBreak('break-words'),
-  textAlign('xl:text-left', 'text-center')
+  textAlign('2xl:text-left', 'text-center')
 )
 const bigWhaleStyles = classnames(
-  height('h-fit'),
-  width('w-fit'),
+  height('tablet:h-fit', 'h-full'),
+  width('tablet:w-fit', 'w-max'),
   overflow('overflow-clip'),
   margin('tablet:mr-0', '-mr-96'),
   scale('md:!scale-100', 'se:scale-125', 'scale-100')
