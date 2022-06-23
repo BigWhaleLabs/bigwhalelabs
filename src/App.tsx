@@ -16,7 +16,6 @@ const App = () => {
     <>
       <Navbar />
       <Root>
-        <Background />
         <StartBlock />
         <PrivacyWorld />
         <LearnBlock />
@@ -25,6 +24,7 @@ const App = () => {
         <HiringBlock />
         <Octocorp />
         <LogoFooter />
+        <Background />
         <Footer />
       </Root>
     </>
