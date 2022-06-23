@@ -29,39 +29,38 @@ const sectionWrapper = classnames(
 )
 const parallaxWrapper = classnames(
   position('relative'),
-  width('w-screen'),
   height('h-screen'),
   display('flex'),
   flexDirection('flex-col'),
   justifyContent('md:justify-center', 'justify-end'),
-  space('md:space-y-0', 'space-y-16'),
+  space('xl:space-y-0', 'space-y-16'),
   alignItems('items-center'),
   margin('md:-mt-16', 'mt-0')
 )
 const futureBoxWrapper = classnames(
-  position('2xl:absolute'),
-  inset('right-64', 'top-3/4')
+  position('lg:absolute'),
+  inset('2xl:right-64', 'lg:right-16', 'top-3/4')
 )
 const futureBox = classnames(
   display('flex'),
-  flexDirection('2xl:flex-row', 'flex-col-reverse'),
+  flexDirection('lg:flex-row', 'flex-col-reverse'),
   alignItems('items-center'),
   justifyContent('justify-end'),
-  space('2xl:space-x-4')
+  space('lg:space-x-4')
 )
 const textBlock = classnames(
   display('flex'),
   flexDirection('flex-col'),
-  alignItems('2xl:items-start', 'items-center'),
+  alignItems('lg:items-start', 'items-center'),
   wordBreak('break-words'),
-  textAlign('2xl:text-left', 'text-center')
+  textAlign('lg:text-left', 'text-center')
 )
 const bigWhaleStyles = classnames(
   height('md:h-fit', 'h-screen'),
   overflow('overflow-clip'),
-  maxWidth('max-w-2xl'),
-  margin('md:!mr-0', 'se:-mr-96', '-mr-80'),
-  scale('lg:!scale-125', 'se:scale-90', 'scale-75')
+  maxWidth('lg:!max-w-3xl', 'md:max-w-full', 'max-w-4xl'),
+  margin('md:!mr-0', 'se:-mr-96', '-mr-80', 'md:mt-0', 'mt-16'),
+  scale('lg:!scale-125', 'md:scale-100', 'scale-75')
 )
 
 const bgImage = classnames(position('absolute'), blur('blur-sm'))
