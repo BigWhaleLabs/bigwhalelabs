@@ -23,54 +23,56 @@ import classnames, {
   wordBreak,
 } from 'classnames/tailwind'
 
-const wrapper = classnames(
-  position('relative'),
+const sectionWrapper = classnames(
   overflow('md:overflow-visible', 'overflow-hidden'),
-  width('md:w-fit', 'w-screen')
+  width('w-full')
+)
+const parallaxWrapper = classnames(
+  position('relative'),
+  height('h-screen'),
+  display('flex'),
+  flexDirection('flex-col'),
+  justifyContent('md:justify-center', 'justify-end'),
+  space('xl:space-y-0', 'space-y-16'),
+  alignItems('items-center'),
+  margin('md:-mt-16', 'mt-0')
 )
 const futureBoxWrapper = classnames(
-  position('md:absolute'),
-  inset('xl:-right-28', 'right-8', 'top-3/4')
+  position('lg:absolute'),
+  inset('2xl:right-64', 'lg:right-16', 'top-3/4')
 )
 const futureBox = classnames(
   display('flex'),
-  flexDirection('md:flex-row', 'flex-col-reverse'),
+  flexDirection('lg:flex-row', 'flex-col-reverse'),
   alignItems('items-center'),
   justifyContent('justify-end'),
-  space('md:space-x-4'),
-  margin('mt-32', 'sm:mt-40', 'lg:mt-0')
+  space('lg:space-x-4')
 )
 const textBlock = classnames(
   display('flex'),
   flexDirection('flex-col'),
-  alignItems('md:items-start', 'items-center'),
+  alignItems('lg:items-start', 'items-center'),
   wordBreak('break-words'),
-  textAlign('md:text-left', 'text-center')
+  textAlign('lg:text-left', 'text-center')
 )
 const bigWhaleStyles = classnames(
-  height('sm:h-auto', 'h-max'),
-  maxWidth('md:max-w-full', 'max-w-2xl'),
+  height('md:h-fit', 'h-screen'),
   overflow('overflow-clip'),
-  margin('md:!ml-0', 'se:ml-24', 'ml-0', 'lg:!-mt-16', 'se:mt-0', '-mt-24'),
-  scale('md:!scale-100', 'se:scale-125', 'scale-100')
+  maxWidth('lg:!max-w-3xl', 'md:max-w-full', 'max-w-4xl'),
+  margin('md:!mr-0', 'se:-mr-96', '-mr-80', 'md:mt-0', 'mt-16'),
+  scale('lg:!scale-125', 'md:scale-100', 'scale-75')
 )
 
 const bgImage = classnames(position('absolute'), blur('blur-sm'))
 const leftGem = classnames(
   bgImage,
-  inset('md:top-1/3', 'md:-left-96'),
+  inset('md:top-1/3', 'xl:left-8', 'right-3'),
   brightness('brightness-75'),
   visibility('md:visible', 'invisible')
 )
 const rightGem = classnames(
   bgImage,
-  inset(
-    'xl:top-12',
-    'xl:!-right-1/5',
-    'md:right-2/3',
-    '-bottom-11',
-    '-right-44'
-  ),
+  inset('xl:top-12', 'xl:!right-3', 'md:right-2/3', '-bottom-11', '-right-44'),
   scale('scale-50'),
   brightness('brightness-75')
 )
@@ -87,9 +89,9 @@ const ironSphere = classnames(
 
 export default function () {
   return (
-    <div className={wrapper}>
+    <div className={sectionWrapper}>
       <ParallaxProvider>
-        <Parallax speed={25}>
+        <Parallax speed={25} className={parallaxWrapper}>
           <img src="/img/gem.webp" className={leftGem} />
           <img src="/img/gem.webp" className={rightGem} />
           <div className={ironSphere}>
