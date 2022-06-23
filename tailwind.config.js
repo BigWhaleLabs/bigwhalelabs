@@ -53,6 +53,7 @@ module.exports = {
       },
       screens: {
         tiny: '22.75rem',
+        se: '23.5rem',
         tablet: '31.25rem',
         md: '37.5rem',
         sm: '40rem',
@@ -106,8 +107,11 @@ module.exports = {
         '-4': '-1rem',
         '-10': '-2.5rem',
         '-12': '-3rem',
+        '-16': '-4rem',
         '-18': '-4.5rem',
         '-24': '-6rem',
+        '-80': '-20rem',
+        '-96': '-24rem',
       },
       padding: {
         25: '6.125rem',

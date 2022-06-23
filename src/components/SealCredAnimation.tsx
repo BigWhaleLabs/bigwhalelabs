@@ -95,14 +95,14 @@ const happySuit = (visible: boolean) =>
     revealAnimation(visible)
   )
 const personWithSpheres = display('flex')
-const personWrapper = width('tiny:w-44', 'w-24')
+const personWrapper = width('tiny:w-44', 'w-36')
 const spheresWrapper = (visible: boolean) =>
   classnames(
     display('flex'),
     position('absolute'),
-    inset('bottom-36', 'lg:left-14', 'left-8'),
+    inset('bottom-36', 'lg:!left-14', 'tiny:left-8', 'left-3'),
     flexDirection('flex-col'),
-    width('w-11'),
+    width('w-10', 'tiny:w-11'),
     space('space-y-3'),
     padding('p-2'),
     borderRadius('rounded-4xl'),
