@@ -12,6 +12,7 @@ import classnames, {
   inset,
   justifyContent,
   margin,
+  maxWidth,
   overflow,
   position,
   scale,
@@ -22,22 +23,24 @@ import classnames, {
   wordBreak,
 } from 'classnames/tailwind'
 
-// 280-400 -- whale nose
-
-const wrapper = classnames(
-  position('relative'),
+const sectionWrapper = classnames(
   overflow('md:overflow-visible', 'overflow-hidden'),
-  width('w-full'),
+  width('w-full')
+)
+const parallaxWrapper = classnames(
+  position('relative'),
+  width('w-screen'),
   height('h-screen'),
   display('flex'),
   flexDirection('flex-col'),
   justifyContent('md:justify-center', 'justify-end'),
+  space('md:space-y-0', 'space-y-16'),
   alignItems('items-center'),
-  margin('-mt-24')
+  margin('md:-mt-16', 'mt-0')
 )
 const futureBoxWrapper = classnames(
   position('2xl:absolute'),
-  inset('right-64', 'bottom-1/4')
+  inset('right-64', 'top-3/4')
 )
 const futureBox = classnames(
   display('flex'),
@@ -54,11 +57,11 @@ const textBlock = classnames(
   textAlign('2xl:text-left', 'text-center')
 )
 const bigWhaleStyles = classnames(
-  height('tablet:h-fit', 'h-full'),
-  width('tablet:w-fit', 'w-max'),
+  height('md:h-fit', 'h-screen'),
   overflow('overflow-clip'),
-  margin('tablet:mr-0', '-mr-96'),
-  scale('md:!scale-100', 'se:scale-125', 'scale-100')
+  maxWidth('max-w-2xl'),
+  margin('md:!mr-0', 'se:-mr-96', '-mr-80'),
+  scale('lg:!scale-125', 'se:scale-90', 'scale-75')
 )
 
 const bgImage = classnames(position('absolute'), blur('blur-sm'))
@@ -87,29 +90,29 @@ const ironSphere = classnames(
 
 export default function () {
   return (
-    <div className={wrapper}>
+    <div className={sectionWrapper}>
       <ParallaxProvider>
-        {/* <Parallax speed={25}> */}
-        <img src="/img/gem.webp" className={leftGem} />
-        <img src="/img/gem.webp" className={rightGem} />
-        <div className={ironSphere}>
-          <IronSphere />
-        </div>
-        {/* <Parallax speed={-20}> */}
-        <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />
-        {/* </Parallax> */}
-        <div className={futureBoxWrapper}>
-          {/* <Parallax speed={-12}> */}
-          <div className={futureBox}>
-            <DownArrows />
-            <div className={textBlock}>
-              <FoldText>We’re building the future</FoldText>
-              <FoldText>of pseudonymity</FoldText>
-            </div>
+        <Parallax speed={25} className={parallaxWrapper}>
+          <img src="/img/gem.webp" className={leftGem} />
+          <img src="/img/gem.webp" className={rightGem} />
+          <div className={ironSphere}>
+            <IronSphere />
           </div>
-          {/* </Parallax> */}
-        </div>
-        {/* </Parallax> */}
+          <Parallax speed={-20}>
+            <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />
+          </Parallax>
+          <div className={futureBoxWrapper}>
+            <Parallax speed={-12}>
+              <div className={futureBox}>
+                <DownArrows />
+                <div className={textBlock}>
+                  <FoldText>We’re building the future</FoldText>
+                  <FoldText>of pseudonymity</FoldText>
+                </div>
+              </div>
+            </Parallax>
+          </div>
+        </Parallax>
       </ParallaxProvider>
     </div>
   )
