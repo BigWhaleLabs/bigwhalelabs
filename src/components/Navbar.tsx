@@ -35,7 +35,7 @@ const navbar = (backgroundVisible?: boolean) =>
     zIndex('z-50'),
     backgroundClip('bg-clip-padding'),
     backgroundColor(backgroundVisible ? 'bg-navbar' : undefined),
-    backdropBlur(backgroundVisible ? 'backdrop-blur-3xl' : undefined),
+    backdropBlur(backgroundVisible ? 'backdrop-blur-lg' : undefined),
     display('flex'),
     flexDirection('flex-col'),
     alignItems('items-stretch')
