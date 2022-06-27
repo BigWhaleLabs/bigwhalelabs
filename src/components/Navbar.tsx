@@ -32,7 +32,6 @@ const navbar = classnames(
   position('sticky'),
   inset('top-0'),
   zIndex('z-50'),
-  backgroundClip('bg-clip-padding'),
   display('flex'),
   flexDirection('flex-col'),
   alignItems('items-stretch')
@@ -60,7 +59,7 @@ const bgCover = (
     inset('left-0', 'right-0', 'top-0'),
     backgroundColor(show || backgroundVisible ? 'bg-navbar' : undefined),
     backdropBlur(show || backgroundVisible ? 'backdrop-blur-lg' : undefined),
-    height(show ? 'h-88' : small ? 'h-tiny-menu' : 'h-15'),
+    height(show ? 'h-88' : small ? 'h-tiny-menu' : 'h-15', 'lg:h-large-menu'),
     transitionProperty('transition-all'),
     transitionDuration('duration-500'),
     transitionTimingFunction('ease-in-out')
