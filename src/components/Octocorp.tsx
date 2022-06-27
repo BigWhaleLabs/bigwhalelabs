@@ -20,7 +20,8 @@ const textCard = classnames(
 const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col', 'md:flex-row'),
-  margin('ml-3', 'md:mt-116', 'mt-64'),
+  margin('mx-3', 'md:mt-116', 'mt-64'),
+  space('space-y-6', 'space-x-0', 'md:space-y-0', 'md:space-x-12'),
   zIndex('z-10')
 )
 
