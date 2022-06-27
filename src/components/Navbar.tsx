@@ -49,14 +49,18 @@ const navbarInternalContainer = classnames(
   justifyContent('justify-between'),
   padding('py-2', 'lg:py-8', 'px-4', 'lg:px-25')
 )
-const bgCover = (backgroundVisible?: boolean, show?: boolean) =>
+const bgCover = (
+  backgroundVisible?: boolean,
+  show?: boolean,
+  small?: boolean
+) =>
   classnames(
     position('absolute'),
     backgroundClip('bg-clip-padding'),
     inset('left-0', 'right-0', 'top-0'),
     backgroundColor(show || backgroundVisible ? 'bg-navbar' : undefined),
     backdropBlur(show || backgroundVisible ? 'backdrop-blur-lg' : undefined),
-    height(show ? 'h-88' : 'h-20'),
+    height(show ? 'h-88' : small ? 'h-tiny-menu' : 'h-15'),
     transitionProperty('transition-all'),
     transitionDuration('duration-500'),
     transitionTimingFunction('ease-in-out')
@@ -88,7 +92,7 @@ export default function () {
       className={navbar}
       style={{ backfaceVisibility: 'hidden' }}
     >
-      <div className={bgCover(scrollpercent > 0.01, isMenuOpen)}></div>
+      <div className={bgCover(scrollpercent > 0.01, isMenuOpen, xs)}></div>
       <div className={navbarInternalContainer}>
         <Logo />
         <div className={buttonsContainer}>

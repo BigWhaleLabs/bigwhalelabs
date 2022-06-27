@@ -7287,6 +7287,7 @@ export type THeight =
   | 'h-11'
   | 'h-12'
   | 'h-14'
+  | 'h-15'
   | 'h-16'
   | 'h-20'
   | 'h-24'
@@ -7332,6 +7333,7 @@ export type THeight =
   | 'h-min'
   | 'h-max'
   | 'h-fit'
+  | 'h-tiny-menu'
   | 'h-suit'
   | 'h-suit-mobile'
 
