@@ -25,6 +25,7 @@ module.exports = {
       },
       height: {
         'tiny-menu': '3.656rem',
+        'large-menu': '7.735rem',
         15: '4.688rem',
         70: '17.5rem',
         88: '22.19rem',

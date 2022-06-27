@@ -7334,6 +7334,7 @@ export type THeight =
   | 'h-max'
   | 'h-fit'
   | 'h-tiny-menu'
+  | 'h-large-menu'
   | 'h-suit'
   | 'h-suit-mobile'
 
