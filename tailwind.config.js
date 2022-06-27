@@ -25,6 +25,7 @@ module.exports = {
       },
       height: {
         70: '17.5rem',
+        88: '22.19rem',
         suit: '41.1rem',
         'suit-mobile': '28.6rem',
       },

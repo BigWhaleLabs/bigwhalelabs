@@ -7304,6 +7304,7 @@ export type THeight =
   | 'h-70'
   | 'h-72'
   | 'h-80'
+  | 'h-88'
   | 'h-96'
   | 'h-auto'
   | 'h-px'

@@ -28,18 +28,15 @@ import useBreakpoints from 'hooks/useBreakpoints'
 import useClickOutside from 'hooks/useClickOutside'
 import useScrollPercent from 'hooks/useScrollPercent'
 
-const navbar = (backgroundVisible?: boolean) =>
-  classnames(
-    position('sticky'),
-    inset('top-0'),
-    zIndex('z-50'),
-    backgroundClip('bg-clip-padding'),
-    backgroundColor(backgroundVisible ? 'bg-navbar' : undefined),
-    backdropBlur(backgroundVisible ? 'backdrop-blur-lg' : undefined),
-    display('flex'),
-    flexDirection('flex-col'),
-    alignItems('items-stretch')
-  )
+const navbar = classnames(
+  position('sticky'),
+  inset('top-0'),
+  zIndex('z-50'),
+  backgroundClip('bg-clip-padding'),
+  display('flex'),
+  flexDirection('flex-col'),
+  alignItems('items-stretch')
+)
 const buttonsContainer = classnames(
   display('flex'),
   alignItems('items-center'),
@@ -52,15 +49,25 @@ const navbarInternalContainer = classnames(
   justifyContent('justify-between'),
   padding('py-2', 'lg:py-8', 'px-4', 'lg:px-25')
 )
+const bgCover = (backgroundVisible?: boolean, show?: boolean) =>
+  classnames(
+    position('absolute'),
+    backgroundClip('bg-clip-padding'),
+    inset('left-0', 'right-0', 'top-0'),
+    backgroundColor(show || backgroundVisible ? 'bg-navbar' : undefined),
+    backdropBlur(show || backgroundVisible ? 'backdrop-blur-lg' : undefined),
+    height(show ? 'h-88' : 'h-20'),
+    transitionProperty('transition-all'),
+    transitionDuration('duration-500'),
+    transitionTimingFunction('ease-in-out')
+  )
 const navbarWrapper = (small: boolean, show: boolean) =>
   classnames(
     position('absolute'),
     inset('left-0', 'right-0', small ? 'top-58.5' : 'tiny:top-76'),
-    height(show ? 'h-70' : 'h-0'),
     boxSizing('box-content'),
     overflow('overflow-hidden'),
     opacity(show ? 'opacity-100' : 'opacity-0'),
-    backgroundColor('bg-navbar'),
     transitionProperty('transition-all'),
     transitionDuration('duration-500'),
     transitionTimingFunction('ease-in-out')
@@ -78,9 +85,10 @@ export default function () {
   return (
     <nav
       ref={navbarRef}
-      className={navbar(scrollpercent > 0.01)}
+      className={navbar}
       style={{ backfaceVisibility: 'hidden' }}
     >
+      <div className={bgCover(scrollpercent > 0.01, isMenuOpen)}></div>
       <div className={navbarInternalContainer}>
         <Logo />
         <div className={buttonsContainer}>
