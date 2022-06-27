@@ -24,7 +24,10 @@ module.exports = {
         '-48': '-12rem',
       },
       height: {
+        'tiny-menu': '3.656rem',
+        15: '4.688rem',
         70: '17.5rem',
+        88: '22.19rem',
         suit: '41.1rem',
         'suit-mobile': '28.6rem',
       },
