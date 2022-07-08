@@ -21,6 +21,13 @@ body {
   min-height: 100vh;
 }
 
+::selection {
+  background: #ff7bed35;
+}
+::-moz-selection {
+  background: #ff7bed35;
+}
+
 @media screen and (max-width: 600px) {
   html {
     /* Grid */
