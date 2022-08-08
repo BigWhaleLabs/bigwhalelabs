@@ -2,13 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --orb: #ffffff;
+  --accent: #fed823;
+  --primary: #15a1fc;
+  --secondary: #ff7bed;
+  --tertiary: #01feb6;
+
+  --formal-accent: #efecd6;
+  --tertiary-dark: #00cb91;
+  --primary-dark: #0d0030;
+  --primary-light: #bff5fa;
+  --primary-dimmed: #3a00d6;
+  --primary-semi-dimmed: #4b61d5;
+  --primary-background: #1a0259;
+
+  --navbar: rgba(13, 0, 48, 0.3);
+  --card: rgba(13, 0, 48, 0.8);
+
+  --semi-secondary: rgba(255, 123, 237, 0.5);
+
+  --retro-shadow-color: rgba(10, 132, 255, 0.7);
+  --card-shadow-color: rgba(21, 161, 252, 0.15);
+
+  --selection-color: #ff7bed35;
+}
+
 html {
   scroll-behavior: smooth;
   /* Grid */
   background: conic-gradient(
       from 90deg at 0.06rem 0.06rem,
-      #0d0030 90deg,
-      #1a0259 0
+      var(--primary-dark) 90deg,
+      var(--primary-background) 0
     )
     0 0/3rem 3rem;
 }
@@ -17,15 +43,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'JetBrains Mono', monospace;
-  color: #efecd6;
+  color: var(--formal-accent);
   min-height: 100vh;
 }
 
 ::selection {
-  background: #ff7bed35;
+  background: var(--selection-color);
 }
 ::-moz-selection {
-  background: #ff7bed35;
+  background: var(--selection-color);
 }
 
 @media screen and (max-width: 600px) {
@@ -33,8 +59,8 @@ body {
     /* Grid */
     background: conic-gradient(
         from 90deg at 0.06rem 0.06rem,
-        #0d0030 90deg,
-        #1a0259 0
+        var(--primary-dark) 90deg,
+        var(--primary-background) 0
       )
       0 0/2rem 2rem;
   }
@@ -42,41 +68,41 @@ body {
 
 /* Large text with stroke */
 .stroke-text {
-  -webkit-text-stroke: 1px rgba(255, 123, 237, 0.5);
-  text-shadow: 0 -1rem 0 #15a1fc;
+  -webkit-text-stroke: 1px var(--semi-secondary);
+  text-shadow: 0 -1rem 0 var(--primary);
 }
 .stroke-text-small {
-  -webkit-text-stroke: 1px rgba(255, 123, 237, 0.5);
-  text-shadow: 0 -0.5rem 0 #15a1fc;
+  -webkit-text-stroke: 1px var(--semi-secondary);
+  text-shadow: 0 -0.5rem 0 var(--primary);
 }
 @keyframes strokeScroll {
   9% {
-    text-shadow: 0 -1rem 0 #15a1fc;
+    text-shadow: 0 -1rem 0 var(--primary);
   }
   11% {
-    text-shadow: 0 0rem 0 #15a1fc;
+    text-shadow: 0 0rem 0 var(--primary);
   }
   16% {
-    text-shadow: 0 2rem 0 #15a1fc;
+    text-shadow: 0 2rem 0 var(--primary);
   }
 }
 @keyframes strokeScrollMobile {
   5% {
-    text-shadow: 0 -0.5rem 0 #15a1fc;
+    text-shadow: 0 -0.5rem 0 var(--primary);
   }
   16% {
-    text-shadow: 0 0.75rem 0 #15a1fc;
+    text-shadow: 0 0.75rem 0 var(--primary);
   }
 }
 @keyframes strokeScrollTablet {
   7% {
-    text-shadow: 0 -1rem 0 #15a1fc;
+    text-shadow: 0 -1rem 0 var(--primary);
   }
   9% {
-    text-shadow: 0 0rem 0 #15a1fc;
+    text-shadow: 0 0rem 0 var(--primary);
   }
   16% {
-    text-shadow: 0 2rem 0 #15a1fc;
+    text-shadow: 0 2rem 0 var(--primary);
   }
 }
 
@@ -487,5 +513,5 @@ body {
 }
 
 .outlined-button {
-  text-shadow: 0 1.75rem 0 #0d0030;
+  text-shadow: 0 1.75rem 0 var(--primary-dark);
 }
