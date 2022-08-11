@@ -45,7 +45,7 @@ const buttonsContainer = classnames(
 const buttonsGroup = classnames(
   display('flex'),
   alignItems('items-center'),
-  space('space-x-6')
+  space('space-x-4', 'sm:space-x-6')
 )
 const navbarInternalContainer = classnames(
   display('flex'),
