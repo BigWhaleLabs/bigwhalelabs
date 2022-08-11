@@ -39,8 +39,13 @@ const navbar = classnames(
 const buttonsContainer = classnames(
   display('flex'),
   alignItems('items-center'),
-  space('space-x-6'),
+  space('md:space-x-4', 'lg:space-x-12'),
   zIndex('z-20')
+)
+const buttonsGroup = classnames(
+  display('flex'),
+  alignItems('items-center'),
+  space('space-x-6')
 )
 const navbarInternalContainer = classnames(
   display('flex'),
@@ -95,18 +100,18 @@ export default function () {
       <div className={navbarInternalContainer}>
         <Logo />
         <div className={buttonsContainer}>
-          {md && <NavbarLinks />}
+          <>{md && <NavbarLinks />}</>
 
-          <Button outlined small={!md} url="https://discord.gg/NHk96pPZUV">
-            Join our Discord
-          </Button>
-          {!md && (
-            <>
+          <div className={buttonsGroup}>
+            <Button outlined small={!md} url="https://discord.gg/NHk96pPZUV">
+              Join our Discord
+            </Button>
+            {!md && (
               <Button onClick={() => setIsMenuOpen(!isMenuOpen)} icon>
                 <Burger open={isMenuOpen} />
               </Button>
-            </>
-          )}
+            )}
+          </div>
         </div>
       </div>
       {!md && (
