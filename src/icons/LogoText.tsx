@@ -8,7 +8,11 @@ import classnames, {
 const pathFill = fill('fill-primary')
 const svgWrapper = (large?: boolean) =>
   classnames(
-    width(large ? 'w-60' : 'w-16'),
+    width(
+      large
+        ? { 'w-32': true, 'sm:w-60': true }
+        : { 'w-14': true, 'sm:w-20': true }
+    ),
     height('h-full'),
     dropShadow('drop-shadow-primary')
   )
