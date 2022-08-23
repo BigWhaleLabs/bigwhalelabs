@@ -36,6 +36,9 @@ module.exports = {
         270: '16.875rem',
         400: '25rem',
       },
+      minWidth: {
+        xs: '18.75rem',
+      },
       fontSize: {
         '2.5xl': '1.625rem',
         '3xl': '2rem',

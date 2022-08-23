@@ -7241,6 +7241,7 @@ export type TMinWidth =
   | 'min-w-min'
   | 'min-w-max'
   | 'min-w-fit'
+  | 'min-w-xs'
 
 export type TMaxWidth =
   | 'max-w-0'
