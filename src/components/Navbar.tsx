@@ -22,6 +22,7 @@ import classnames, {
   transitionDuration,
   transitionProperty,
   transitionTimingFunction,
+  visibility,
   zIndex,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
@@ -75,7 +76,8 @@ const navbarWrapper = (small: boolean, show: boolean) =>
     inset('left-0', 'right-0', small ? 'top-58.5' : 'tiny:top-76'),
     boxSizing('box-content'),
     overflow('overflow-hidden'),
-    opacity(show ? 'opacity-100' : 'opacity-0'),
+    visibility({ visible: show }),
+    opacity({ 'opacity-0': !show }),
     transitionProperty('transition-all'),
     transitionDuration('duration-500'),
     transitionTimingFunction('ease-in-out')
@@ -116,7 +118,7 @@ export default function () {
       </div>
       {!md && (
         <div className={navbarWrapper(xs, isMenuOpen)}>
-          <NavbarLinks />
+          {isMenuOpen && <NavbarLinks />}
         </div>
       )}
     </nav>
