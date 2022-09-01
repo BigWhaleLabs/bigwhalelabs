@@ -1,5 +1,6 @@
 import { FoldText } from 'components/Text'
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
+import { createRef } from 'preact'
 import DownArrows from 'components/DownArrows'
 import IronSphere from 'icons/IronSphere'
 import classnames, {
@@ -21,11 +22,14 @@ import classnames, {
   visibility,
   width,
   wordBreak,
+  zIndex,
 } from 'classnames/tailwind'
+import useBreakpoints from 'hooks/useBreakpoints'
 
 const sectionWrapper = classnames(
   overflow('md:overflow-visible', 'overflow-hidden'),
-  width('w-full')
+  width('w-full'),
+  zIndex('z-10')
 )
 const parallaxWrapper = classnames(
   position('relative'),
@@ -59,8 +63,7 @@ const bigWhaleStyles = classnames(
   height('md:h-fit', 'h-screen'),
   overflow('overflow-clip'),
   maxWidth('lg:!max-w-3xl', 'md:max-w-full', 'max-w-4xl'),
-  margin('md:!mr-0', 'se:-mr-96', '-mr-80', 'md:mt-0', 'mt-16'),
-  scale('lg:!scale-125', 'md:scale-100', 'scale-75')
+  margin('md:!mr-0', 'se:-mr-96', '-mr-80', 'md:mt-0', 'mt-16')
 )
 
 const bgImage = classnames(position('absolute'), blur('blur-sm'))
@@ -88,6 +91,18 @@ const ironSphere = classnames(
 )
 
 export default function () {
+  const { defaultMd, lg } = useBreakpoints()
+  const whale = createRef<HTMLImageElement>()
+
+  const increaseWhaleSize = () => {
+    const image = whale.current
+    if (!image) return
+    const scaleStyle = image.style.transform
+    const match = scaleStyle.match(/\d+/gm)?.join('.')
+
+    image.style.transform = `scale(${Number(match) + 0.01})`
+  }
+
   return (
     <div className={sectionWrapper}>
       <ParallaxProvider>
@@ -98,14 +113,26 @@ export default function () {
             <IronSphere />
           </div>
           <Parallax speed={-20}>
-            <img src="/img/colorful-whale.webp" className={bigWhaleStyles} />
+            <img
+              ref={whale}
+              src="/img/colorful-whale.webp"
+              className={bigWhaleStyles}
+              style={{
+                transform: `scale(${
+                  !defaultMd && !lg ? 0.75 : !lg ? 1.0 : 1.25
+                })`,
+              }}
+            />
           </Parallax>
           <div className={futureBoxWrapper}>
             <Parallax speed={-12}>
               <div className={futureBox}>
                 <DownArrows />
                 <div className={textBlock}>
-                  <FoldText>We’re building the future</FoldText>
+                  <FoldText>
+                    <span onClick={() => increaseWhaleSize()}>W</span>
+                    e’re building the future
+                  </FoldText>
                   <FoldText>of pseudonymity</FoldText>
                 </div>
               </div>

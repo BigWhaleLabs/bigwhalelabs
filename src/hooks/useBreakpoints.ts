@@ -4,6 +4,7 @@ const xsSize = 279
 const smSize = 374
 const mobileSize = 420
 const mdSize = 599
+const defaultMd = 768
 const lgSize = 1023
 const twoXlSize = 1535
 
@@ -30,6 +31,7 @@ export default function () {
     expandedTablet: width > mobileSize && width < lgSize,
     mobile: width > mobileSize,
     md: width > mdSize,
+    defaultMd: width > defaultMd,
     lg: width > lgSize,
     twoXl: width > twoXlSize,
   }
