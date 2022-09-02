@@ -25,6 +25,7 @@ import classnames, {
   zIndex,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
+import usePressKey from 'hooks/usePressKey'
 
 const sectionWrapper = classnames(
   overflow('md:overflow-visible', 'overflow-hidden'),
@@ -93,6 +94,10 @@ const ironSphere = classnames(
 export default function () {
   const { defaultMd, lg } = useBreakpoints()
   const whale = createRef<HTMLImageElement>()
+  usePressKey((e) => {
+    if (e.key !== 'w') return
+    increaseWhaleSize()
+  })
 
   const increaseWhaleSize = () => {
     const image = whale.current
@@ -100,7 +105,7 @@ export default function () {
     const scaleStyle = image.style.transform
     const match = scaleStyle.match(/\d+/gm)?.join('.')
 
-    image.style.transform = `scale(${Number(match) + 0.01})`
+    image.style.transform = `scale(${Number(match) + 0.0075})`
   }
 
   return (
