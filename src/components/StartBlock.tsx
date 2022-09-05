@@ -104,8 +104,7 @@ export default function () {
     if (!image) return
     const scaleStyle = image.style.transform
     const match = scaleStyle.match(/\d+/gm)?.join('.')
-
-    image.style.transform = `scale(${Number(match) + 0.0075})`
+    image.style.transform = `scale(${Number(match) * 1.025})`
   }
 
   return (
