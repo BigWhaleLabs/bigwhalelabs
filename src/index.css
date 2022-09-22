@@ -10,6 +10,7 @@
   --tertiary: #01feb6;
   --tertiary-dark: #00cb91;
   --formal-accent: #efecd6;
+  --quaternary: #cf6aff;
 
   --primary-dark: #0d0030;
   --primary-background: #1a0259;
@@ -35,6 +36,10 @@
   --card-shadow: rgba(21, 161, 252, 0.15);
 }
 
+* {
+  -webkit-tap-highlight-color: var(--transparent);
+}
+
 html {
   scroll-behavior: smooth;
   /* Grid */
@@ -45,6 +50,7 @@ html {
     )
     0 0/3rem 3rem;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -52,6 +58,15 @@ body {
   font-family: 'JetBrains Mono', monospace;
   color: var(--formal-accent);
   min-height: 100vh;
+}
+
+svg:not() {
+  fill: none;
+}
+path:not(),
+circle {
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 ::selection {

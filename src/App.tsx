@@ -1,5 +1,4 @@
 import Background from 'components/Background'
-import Dosu from 'components/Dosu'
 import Footer from 'components/Footer'
 import HiringBlock from 'components/HiringBlock'
 import LearnBlock from 'components/LearnBlock'
@@ -7,6 +6,7 @@ import LogoFooter from 'components/LogoFooter'
 import Navbar from 'components/Navbar'
 import Octocorp from 'components/Octocorp'
 import PrivacyWorld from 'components/PrivacyWorld'
+import Projects from 'components/Projects'
 import Root from 'components/Root'
 import SealCred from 'components/SealCred'
 import StartBlock from 'components/StartBlock'
@@ -20,7 +20,7 @@ const App = () => {
         <PrivacyWorld />
         <LearnBlock />
         <SealCred />
-        <Dosu />
+        <Projects />
         <HiringBlock />
         <Octocorp />
         <LogoFooter />

@@ -73,6 +73,7 @@ module.exports = {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
         tertiary: 'var(--tertiary)',
+        quaternary: 'var(--quaternary)',
         'formal-accent': 'var(--formal-accent)',
 
         'tertiary-dark': 'var(--tertiary-dark)',
@@ -93,6 +94,8 @@ module.exports = {
         accent: '0rem 0rem 0.625rem var(--accent)',
         secondary: '0rem 0rem 0.625rem var(--secondary)',
         primary: '0rem 0rem 1.5rem var(--primary)',
+        'secondary-semi-transparent':
+          '0px 0px 7rem var(--secondary-semi-transparent)',
         'formal-accent': '0rem 0rem 0.625rem var(--formal-accent)',
         retro: '0 0 4rem var(--retro-shadow)',
       },
@@ -110,6 +113,7 @@ module.exports = {
         4: '0.25rem',
       },
       margin: {
+        136: '34rem',
         116: '29rem',
         '-4': '-1rem',
         '-10': '-2.5rem',
