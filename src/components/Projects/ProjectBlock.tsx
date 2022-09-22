@@ -1,6 +1,8 @@
 import { BodyText, HeaderText, PrimaryAccentText } from 'components/Text'
 import { JSX } from 'preact/jsx-runtime'
+import { useRef } from 'preact/hooks'
 import Button from 'components/Button'
+import Tilt from 'react-parallax-tilt'
 import classnames, {
   TTextColor,
   alignItems,
@@ -65,6 +67,8 @@ export default function ({
   imageSource?: string
   wrapReverse?: boolean
 }) {
+  const imgRef = useRef<HTMLImageElement>(null)
+
   return (
     <div className={wrapper(wrapReverse)}>
       <div className={descriptionBlock}>
@@ -81,10 +85,31 @@ export default function ({
         </div>
       </div>
       {imageElement}
-      <img
-        src={imageSource}
-        className={dropShadow('drop-shadow-secondary-semi-transparent')}
-      />
+      <Tilt
+        glareEnable
+        glareMaxOpacity={0.4}
+        glareBorderRadius="9999px"
+        tiltReverse
+        perspective={500}
+        scale={1.15}
+        onMove={(onMove) => {
+          if (!imgRef.current) return
+          imgRef.current.style.filter = `hue-rotate(${
+            -onMove.tiltAngleX * 2
+          }deg)`
+        }}
+        onLeave={() => {
+          console.log('leave')
+          if (!imgRef.current) return
+          imgRef.current.style.filter = ''
+        }}
+      >
+        <img
+          src={imageSource}
+          ref={imgRef}
+          className={dropShadow('drop-shadow-secondary-semi-transparent')}
+        />
+      </Tilt>
     </div>
   )
 }
