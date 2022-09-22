@@ -1,0 +1,27 @@
+import { AccentText, BodyText } from 'components/Text'
+import EchoLogo from 'icons/EchoLogo'
+import ProjectBlock from 'components/Projects/ProjectBlock'
+
+export default function () {
+  return (
+    <ProjectBlock
+      logo={<EchoLogo />}
+      titleColor="text-secondary"
+      titleText="Echo"
+      subtitle="Tweet anonymously using your ZK badges"
+      description={
+        <BodyText>
+          <AccentText color="text-accent">SealCred</AccentText>{' '}
+          <AccentText color="text-secondary">| Echo</AccentText> allows you to
+          spill the tea using a pseudonymous identity built from your ZK badges.
+          Imagine creating a ZK badge of your work email and tweeting 100%
+          anonymously O_O
+        </BodyText>
+      }
+      buttonTitle="Create an Echo"
+      buttonUrl="https://echo.sealcred.xyz/"
+      imageSource="img/echo-badge.png"
+      wrapReverse
+    />
+  )
+}
