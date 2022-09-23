@@ -19,7 +19,7 @@ import classnames, {
 
 type Element = JSX.Element
 
-const wrapper = (reverse?: boolean) =>
+const wrapper = (reverse?: boolean, centered?: boolean) =>
   classnames(
     display('flex'),
     gap('gap-8'),
@@ -29,7 +29,7 @@ const wrapper = (reverse?: boolean) =>
       'lg:flex-row'
     ),
     alignItems('items-center'),
-    justifyContent('justify-evenly'),
+    justifyContent(centered ? 'justify-center' : 'justify-evenly'),
     width('w-auto', 'md:w-full'),
     margin('mx-4'),
     zIndex('z-10')
@@ -56,6 +56,7 @@ export default function ({
   imageSource,
   wrapReverse,
   customGlareBorderRadius,
+  centered,
 }: {
   logo?: Element
   titleColor: TTextColor
@@ -68,11 +69,12 @@ export default function ({
   imageSource?: string
   wrapReverse?: boolean
   customGlareBorderRadius?: string
+  centered?: boolean
 }) {
   const imgRef = useRef<HTMLImageElement>(null)
 
   return (
-    <div className={wrapper(wrapReverse)}>
+    <div className={wrapper(wrapReverse, centered)}>
       <div className={descriptionBlock}>
         <div className={cardHeader}>
           {logo}

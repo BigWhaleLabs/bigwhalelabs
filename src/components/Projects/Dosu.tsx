@@ -18,6 +18,7 @@ export default function () {
       buttonTitle="Join Discord for updates"
       buttonUrl="https://discord.gg/NHk96pPZUV"
       imageElement={<DosuGraphicsBlock />}
+      centered
       wrapReverse
     />
   )

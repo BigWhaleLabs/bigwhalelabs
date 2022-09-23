@@ -15,7 +15,6 @@ import StartBlock from 'components/StartBlock'
 // 1) Add glow effects for badges
 // 2) Remake animation provider to calculate mobile and tablet animations automatically
 // 3) Re-define start and end points for animations
-// 4) Fix positioning of the projects
 
 const App = () => {
   return (

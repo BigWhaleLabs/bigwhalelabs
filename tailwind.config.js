@@ -120,6 +120,7 @@ module.exports = {
       margin: {
         136: '34rem',
         116: '29rem',
+        84: '21rem',
         '-4': '-1rem',
         '-10': '-2.5rem',
         '-12': '-3rem',
