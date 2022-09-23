@@ -22,7 +22,7 @@ type Element = JSX.Element
 const wrapper = (reverse?: boolean) =>
   classnames(
     display('flex'),
-    gap('gap-4'),
+    gap('gap-8'),
     flexDirection(
       { 'lg:flex-row-reverse': reverse, 'flex-col-reverse': reverse },
       'flex-col',
@@ -55,6 +55,7 @@ export default function ({
   imageElement,
   imageSource,
   wrapReverse,
+  customGlareBorderRadius,
 }: {
   logo?: Element
   titleColor: TTextColor
@@ -66,6 +67,7 @@ export default function ({
   imageElement?: Element
   imageSource?: string
   wrapReverse?: boolean
+  customGlareBorderRadius?: string
 }) {
   const imgRef = useRef<HTMLImageElement>(null)
 
@@ -88,20 +90,14 @@ export default function ({
       <Tilt
         glareEnable
         glareMaxOpacity={0.4}
-        glareBorderRadius="9999px"
+        glareBorderRadius={customGlareBorderRadius || '100%'}
         tiltReverse
         perspective={500}
-        scale={1.15}
         onMove={(onMove) => {
           if (!imgRef.current) return
           imgRef.current.style.filter = `hue-rotate(${
             -onMove.tiltAngleX * 2
           }deg)`
-        }}
-        onLeave={() => {
-          console.log('leave')
-          if (!imgRef.current) return
-          imgRef.current.style.filter = ''
         }}
       >
         <img

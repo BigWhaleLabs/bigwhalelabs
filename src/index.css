@@ -60,10 +60,10 @@ body {
   min-height: 100vh;
 }
 
-svg:not() {
+svg {
   fill: none;
 }
-path:not(),
+path,
 circle {
   stroke-linecap: round;
   stroke-linejoin: round;

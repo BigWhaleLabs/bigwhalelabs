@@ -17,7 +17,7 @@ export default function () {
       }
       buttonTitle="Build your burner wallet"
       buttonUrl="https://sealcaster.xyz/"
-      imageSource="img/sealcaster-badge.png"
+      imageSource="img/sealcaster-badge.svg"
     />
   )
 }

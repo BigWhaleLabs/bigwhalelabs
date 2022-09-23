@@ -4,7 +4,6 @@ export default function () {
       width="96"
       height="96"
       viewBox="0 0 96 96"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <line
@@ -14,7 +13,6 @@ export default function () {
         y2="49.4456"
         stroke="url(#paint0_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <line
         x1="88.1288"
@@ -23,7 +21,6 @@ export default function () {
         y2="44.5544"
         stroke="url(#paint1_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <line
         x1="2.53809"
@@ -32,7 +29,6 @@ export default function () {
         y2="49.4456"
         stroke="url(#paint2_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <line
         x1="2.53809"
@@ -41,7 +37,6 @@ export default function () {
         y2="44.5544"
         stroke="url(#paint3_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <line
         x1="60.3442"
@@ -50,7 +45,6 @@ export default function () {
         y2="12.0695"
         stroke="url(#paint4_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <line
         x1="55.6215"
@@ -59,7 +53,6 @@ export default function () {
         y2="10.8036"
         stroke="url(#paint5_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <line
         x1="39.7895"
@@ -68,7 +61,6 @@ export default function () {
         y2="79.3185"
         stroke="url(#paint6_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <line
         x1="35.0668"
@@ -77,49 +69,41 @@ export default function () {
         y2="78.0529"
         stroke="url(#paint7_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M54.1144 40.5586C54.1144 36.9689 56.9459 34.0589 60.4387 34.0589C63.9316 34.0589 66.7631 36.9689 66.7631 40.5586C66.7631 44.1483 63.9316 40.5587 60.4387 40.5587C56.9459 40.5587 54.1144 44.1483 54.1144 40.5586Z"
         stroke="url(#paint8_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M48.0001 52.3995C50.3636 52.3995 52.2796 52.6828 52.2796 49.9718C52.2796 47.2609 50.3636 45.0632 48.0001 45.0632C45.6366 45.0632 43.7207 47.2609 43.7207 49.9718C43.7207 52.6828 45.6366 52.3995 48.0001 52.3995ZM48.0001 52.3995C48.0001 54.0297 48.0001 57.6571 48.0001 59.1243M48.0001 59.1243C48.0001 64.0152 54.1136 64.0152 54.1136 59.1243M48.0001 59.1243C48.0001 64.0152 41.8866 64.0152 41.8866 59.1244"
         stroke="url(#paint9_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M29.6657 40.5586C29.6657 36.9689 32.4972 34.0589 35.99 34.0589C39.4828 34.0589 42.3143 36.9689 42.3143 40.5586C42.3143 44.1483 39.4828 40.5587 35.99 40.5587C32.4972 40.5587 29.6657 44.1483 29.6657 40.5586Z"
         stroke="url(#paint10_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M67.5636 52.3997L60.2274 53.6224"
         stroke="url(#paint11_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M60.2306 57.29L67.5668 58.5127"
         stroke="url(#paint12_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M28.4362 52.3987L35.7725 53.6214"
         stroke="url(#paint13_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M35.7727 57.2896L28.4365 58.5123"
         stroke="url(#paint14_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <circle
         cx="48.0008"
@@ -127,19 +111,16 @@ export default function () {
         r="46.4627"
         stroke="url(#paint15_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M58.1436 85.8564C47.826 88.621 37.3664 86.9997 28.7445 82.1354C19.8949 77.1427 12.9811 68.7335 10.1436 58.1436C7.30599 47.5537 9.08889 36.8142 14.2565 28.0656M37.8564 10.1436C48.4463 7.30603 59.1857 9.08893 67.9343 14.2565C76.4579 19.2912 83.0918 27.5388 85.8564 37.8564C88.621 48.174 86.9997 58.6335 82.1354 67.2555"
         stroke="url(#paint16_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <path
         d="M17.8348 39.9159C20.0961 31.4767 25.6057 24.7753 32.658 20.7966C39.529 16.9202 47.8642 15.6282 56.0864 17.8313C64.3085 20.0344 70.8811 25.321 74.8933 32.1135M20.8006 63.3444C24.7793 70.3967 31.4807 75.9063 39.9199 78.1676C48.3591 80.4288 56.9174 79.008 63.8892 74.8899C70.6818 70.8777 75.9683 64.3052 78.1714 56.083"
         stroke="url(#paint17_linear_1305_512)"
         stroke-width="2"
-        stroke-linecap="round"
       />
       <defs>
         <linearGradient

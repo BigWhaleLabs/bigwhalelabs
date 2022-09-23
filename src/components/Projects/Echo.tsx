@@ -20,7 +20,8 @@ export default function () {
       }
       buttonTitle="Create an Echo"
       buttonUrl="https://echo.sealcred.xyz/"
-      imageSource="img/echo-badge.png"
+      imageSource="img/echo-badge.svg"
+      customGlareBorderRadius="5% 5% 46% 46%"
       wrapReverse
     />
   )
