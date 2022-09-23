@@ -98,8 +98,8 @@ export default function ({
         onMove={(onMove) => {
           if (!imgRef.current) return
           imgRef.current.style.filter = `hue-rotate(${
-            -onMove.tiltAngleX * 2
-          }deg)`
+            onMove.tiltAngleX + onMove.tiltAngleY
+          }deg) drop-shadow(0px 0px 7rem var(--secondary-semi-transparent))`
         }}
       >
         <img
