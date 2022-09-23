@@ -12,7 +12,7 @@ const arcTextWrapper = classnames(
   inset('right-3', '-bottom-11', 'md:left-14', 'md:right-auto')
 )
 const smallGem = classnames(display('block', 'md:hidden'), margin('ml-32'))
-const wrapper = classnames(position('relative'), margin('md:mr-84'))
+const wrapper = classnames(position('relative'), margin('lg:mr-32', 'xl:mr-84'))
 
 export default function () {
   const { md } = useBreakpoints()
