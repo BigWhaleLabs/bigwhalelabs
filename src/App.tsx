@@ -11,10 +11,6 @@ import Root from 'components/Root'
 import SealCred from 'components/SealCred'
 import StartBlock from 'components/StartBlock'
 
-// TODO:
-// 2) Remake animation provider to calculate mobile and tablet animations automatically
-// 3) Re-define start and end points for animations
-
 const App = () => {
   return (
     <>
