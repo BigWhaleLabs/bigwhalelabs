@@ -10,8 +10,6 @@ export default function (animationName: string, blockVisible = true) {
   const scroll = useScrollPercent()
   const { mobile, expandedTablet } = useBreakpoints()
 
-  console.log(scroll)
-
   if (expandedTablet) animationName = animationName + 'Tablet'
   if (!mobile) animationName = animationName + 'Mobile'
 
