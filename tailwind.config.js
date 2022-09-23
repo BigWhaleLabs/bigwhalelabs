@@ -6,9 +6,6 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
-      letterSpacing: {
-        arc: '1rem',
-      },
       animation: {
         expand: 'expand 1s ease-in-out',
         'rotate-slow': 'rotate 18s linear infinite',

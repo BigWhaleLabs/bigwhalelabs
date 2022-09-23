@@ -1,7 +1,6 @@
 import classnames, {
   animation,
   fontWeight,
-  letterSpacing,
   textColor,
   textTransform,
   transformOrigin,
@@ -10,7 +9,6 @@ import classnames, {
 const textBox = classnames(
   textTransform('uppercase'),
   fontWeight('font-semibold'),
-  letterSpacing('tracking-arc'),
   textColor('text-tertiary'),
   transformOrigin('origin-left')
 )
