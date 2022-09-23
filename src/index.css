@@ -268,7 +268,7 @@ circle {
 }
 @keyframes bgFades {
   0% {
-    opacity: 1;
+    opacity: 0.6;
   }
   10% {
     opacity: 0;
@@ -277,7 +277,7 @@ circle {
     opacity: 0;
   }
   22% {
-    opacity: 1;
+    opacity: 0.6;
   }
   34% {
     opacity: 0;
@@ -286,13 +286,13 @@ circle {
     opacity: 0;
   }
   62% {
-    opacity: 1;
+    opacity: 0.6;
   }
   80% {
     opacity: 0;
   }
   84% {
-    opacity: 1;
+    opacity: 0.6;
   }
 }
 
@@ -384,10 +384,10 @@ circle {
     opacity: 0;
   }
   14% {
-    opacity: 1;
+    opacity: 0.6;
   }
   30% {
-    opacity: 1;
+    opacity: 0.6;
   }
   32% {
     opacity: 0;
@@ -396,7 +396,7 @@ circle {
     opacity: 0;
   }
   68% {
-    opacity: 1;
+    opacity: 0.6;
   }
   75% {
     opacity: 0;
@@ -405,7 +405,7 @@ circle {
     opacity: 0;
   }
   87% {
-    opacity: 1;
+    opacity: 0.6;
   }
 }
 
@@ -494,16 +494,16 @@ circle {
 }
 @keyframes bgFadesTablet {
   0% {
-    opacity: 1;
+    opacity: 0.6;
   }
   10% {
     opacity: 0;
   }
   20% {
-    opacity: 1;
+    opacity: 0.6;
   }
   26% {
-    opacity: 1;
+    opacity: 0.6;
   }
   29% {
     opacity: 0;
@@ -512,7 +512,7 @@ circle {
     opacity: 0;
   }
   68% {
-    opacity: 1;
+    opacity: 0.6;
   }
   81% {
     opacity: 0;
@@ -521,7 +521,7 @@ circle {
     opacity: 0;
   }
   88% {
-    opacity: 1;
+    opacity: 0.6;
   }
 }
 
