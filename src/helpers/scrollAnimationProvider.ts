@@ -13,8 +13,6 @@ export default function (animationName: string, blockVisible = true) {
   if (expandedTablet) animationName = animationName + 'Tablet'
   if (!mobile) animationName = animationName + 'Mobile'
 
-  console.log(scroll)
-
   return blockVisible
     ? {
         animationName,
