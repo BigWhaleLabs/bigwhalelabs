@@ -10,8 +10,12 @@ import classnames, {
   dropShadow,
   flexDirection,
   gap,
+  inset,
   justifyContent,
   margin,
+  position,
+  rotate,
+  scale,
   space,
   width,
   zIndex,
@@ -21,6 +25,7 @@ type Element = JSX.Element
 
 const wrapper = (reverse?: boolean, centered?: boolean) =>
   classnames(
+    position('relative'),
     display('flex'),
     gap('gap-8'),
     flexDirection(
@@ -43,6 +48,13 @@ const descriptionBlock = classnames(
 )
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
+
+const tiltWrapper = classnames(
+  scale('scale-50', 'tiny:scale-65', 'sm:!scale-100'),
+  position('absolute', 'sm:static'),
+  rotate('-rotate-20', 'sm:rotate-0'),
+  inset('-right-36', 'tiny:-right-28', 'bottom-80', 'tiny:bottom-64')
+)
 
 export default function ({
   logo,
@@ -89,25 +101,24 @@ export default function ({
         </div>
       </div>
       {imageElement}
-      <Tilt
-        glareEnable
-        glareMaxOpacity={0.4}
-        glareBorderRadius={customGlareBorderRadius || '100%'}
-        tiltReverse
-        perspective={500}
-        onMove={(onMove) => {
-          if (!imgRef.current) return
-          imgRef.current.style.filter = `hue-rotate(${
-            onMove.tiltAngleX + onMove.tiltAngleY
-          }deg) drop-shadow(0px 0px 7rem var(--secondary-semi-transparent))`
-        }}
-      >
-        <img
-          src={imageSource}
-          ref={imgRef}
+      <div className={tiltWrapper}>
+        <Tilt
+          glareEnable
+          glareMaxOpacity={0.4}
+          glareBorderRadius={customGlareBorderRadius || '100%'}
+          tiltReverse
+          perspective={500}
+          onMove={(onMove) => {
+            if (!imgRef.current) return
+            imgRef.current.style.filter = `hue-rotate(${
+              onMove.tiltAngleX + onMove.tiltAngleY
+            }deg) drop-shadow(0px 0px 7rem var(--secondary-semi-transparent))`
+          }}
           className={dropShadow('drop-shadow-secondary-semi-transparent')}
-        />
-      </Tilt>
+        >
+          <img src={imageSource} ref={imgRef} />
+        </Tilt>
+      </div>
     </div>
   )
 }

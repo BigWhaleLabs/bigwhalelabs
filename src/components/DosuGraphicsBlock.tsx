@@ -11,7 +11,10 @@ const arcTextWrapper = classnames(
   position('absolute'),
   inset('right-3', '-bottom-11', 'md:left-14', 'md:right-auto')
 )
-const smallGem = classnames(display('block', 'md:hidden'), margin('ml-32'))
+const smallGem = classnames(
+  display('block', 'md:hidden'),
+  margin('ml-16', 'tiny:ml-32')
+)
 const wrapper = classnames(position('relative'), margin('lg:mr-32', 'xl:mr-84'))
 
 export default function () {

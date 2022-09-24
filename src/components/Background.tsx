@@ -25,7 +25,7 @@ export default function () {
 
   return (
     <img
-      src={lg ? '/img/blurry-shadows-lg.svg' : '/img/blurry-shadows-sm.webp'}
+      src={lg ? '/img/blurry-shadows-lg.svg' : '/img/blurry-shadows-sm.svg'}
       className={bgFit}
       style={scrollAnimationProvider('bgFades')}
     />

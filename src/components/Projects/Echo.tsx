@@ -18,8 +18,8 @@ export default function () {
           anonymously O_O
         </BodyText>
       }
-      buttonTitle="Create an Echo"
       buttonUrl="https://echo.sealcred.xyz/"
+      buttonTitle="Create an Echo"
       imageSource="img/echo-badge.svg"
       customGlareBorderRadius="5% 5% 46% 46%"
       wrapReverse
