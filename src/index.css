@@ -309,83 +309,83 @@ circle {
 
 /* Mobile scroll animations */
 @keyframes personAnimationMobile {
-  33% {
+  37% {
     transform: translate(0, 0rem);
   }
-  37% {
+  41% {
     transform: translate(0, 28rem);
   }
-  40% {
+  44% {
     transform: translate(0, 28rem);
   }
-  42% {
+  46% {
     transform: translate(0, 42rem) scale(0.8);
     opacity: 1;
   }
-  46% {
+  50% {
     transform: translate(0, 58rem) scale(0.4);
     opacity: 0.75;
   }
 }
 @keyframes sphereAnimationLeftMobile {
-  33% {
+  37% {
     transform: translate(0, 0rem);
   }
-  36% {
+  40% {
     transform: translate(0, 32rem);
     opacity: 1;
   }
-  38.5% {
+  42.5% {
     transform: translate(2rem, 32rem);
     opacity: 0;
   }
 }
 @keyframes sphereAnimationRightMobile {
-  33% {
+  37% {
     transform: translate(0, 0rem);
   }
-  36% {
+  40% {
     transform: translate(0, 32rem);
     opacity: 1;
   }
-  38.5% {
+  42.5% {
     transform: translate(-2rem, 32rem);
     opacity: 0;
   }
 }
 @keyframes superOrbTransformationMobile {
-  33% {
+  37% {
     transform: translate(0, 5rem);
     opacity: 0;
   }
-  39% {
+  43% {
     transform: translate(0, -5rem) rotate(0deg);
     opacity: 100;
   }
-  40% {
+  44% {
     transform: translate(0, -5rem) rotate(360deg);
   }
-  43% {
+  47% {
     transform: translate(0, -10rem) rotate(360deg);
     opacity: 0;
   }
 }
 @keyframes walletAndStageAnimationMobile {
-  33% {
+  37% {
     transform: translate(0, 0);
     opacity: 1;
   }
-  34% {
+  38% {
     transform: translate(0, -1rem);
     opacity: 0;
   }
 }
 @keyframes generatingHideAnimationMobile {
-  38% {
+  42% {
     transform: translate(0, 0);
     opacity: 1;
   }
-  39% {
+  43% {
     transform: translate(0, -1rem);
     opacity: 0;
   }
@@ -394,6 +394,7 @@ circle {
   10% {
     opacity: 0;
   }
+  16%,
   26% {
     opacity: 0.6;
   }
@@ -416,7 +417,7 @@ circle {
 
 /* Tablet scroll animations */
 @keyframes personAnimationTablet {
-  29% {
+  30% {
     transform: translate(0, 0rem);
   }
   35% {
@@ -425,74 +426,74 @@ circle {
   36% {
     transform: translate(0, 28rem);
   }
-  38% {
+  39% {
     transform: translate(0, 42rem) scale(1);
     opacity: 1;
   }
-  42% {
+  41% {
     transform: translate(0, 64rem) scale(0.8);
     opacity: 0.75;
   }
 }
 @keyframes sphereAnimationLeftTablet {
-  29% {
+  30% {
     transform: translate(0, 0rem);
   }
-  32% {
+  33% {
     transform: translate(0, 32rem);
     opacity: 1;
   }
-  34.5% {
+  35.5% {
     transform: translate(2rem, 32rem);
     opacity: 0;
   }
 }
 @keyframes sphereAnimationRightTablet {
-  29% {
+  30% {
     transform: translate(0, 0rem);
   }
-  32% {
+  33% {
     transform: translate(0, 32rem);
     opacity: 1;
   }
-  34.5% {
+  35.5% {
     transform: translate(-2rem, 32rem);
     opacity: 0;
   }
 }
 @keyframes superOrbTransformationTablet {
-  29% {
+  30% {
     transform: translate(0, 5rem);
     opacity: 0;
   }
-  35% {
+  36% {
     transform: translate(0, -5rem) rotate(0deg);
     opacity: 100;
   }
-  36% {
+  37% {
     transform: translate(0, -5rem) rotate(360deg);
   }
-  39% {
+  40% {
     transform: translate(0, -10rem) rotate(360deg);
     opacity: 0;
   }
 }
 @keyframes walletAndStageAnimationTablet {
-  29% {
+  30% {
     transform: translate(0, 0);
     opacity: 1;
   }
-  30% {
+  31% {
     transform: translate(0, -1rem);
     opacity: 0;
   }
 }
 @keyframes generatingHideAnimationTablet {
-  36% {
+  37% {
     transform: translate(0, 0);
     opacity: 1;
   }
-  37% {
+  38% {
     transform: translate(0, -1rem);
     opacity: 0;
   }
@@ -515,7 +516,7 @@ circle {
   78% {
     opacity: 0.6;
   }
-  80%,
+  82%,
   86% {
     opacity: 0;
   }
