@@ -70,7 +70,11 @@ export default function ({
   centered,
 }: {
   logo?: Element
-  titleColor: 'text-accent' | 'text-primary' | 'text-secondary'
+  titleColor:
+    | 'text-accent'
+    | 'text-primary'
+    | 'text-secondary'
+    | 'text-quaternary'
   titleText: string
   subtitle: string
   description: Element

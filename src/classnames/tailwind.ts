@@ -7528,6 +7528,7 @@ export type TStrokeWidth =
   | 'stroke-2'
   | 'stroke-4'
   | 'stroke-1.5'
+  | 'stroke-2.5'
 
 export type TSVG = TFill | TStroke | TStrokeWidth
 

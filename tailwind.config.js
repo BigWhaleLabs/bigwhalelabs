@@ -118,6 +118,7 @@ module.exports = {
       },
       strokeWidth: {
         1.5: '0.09375rem',
+        2.5: '2.5',
         4: '0.25rem',
       },
       margin: {
