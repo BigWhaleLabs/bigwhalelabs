@@ -4,7 +4,6 @@ import { useRef } from 'preact/hooks'
 import Button from 'components/Button'
 import Tilt from 'react-parallax-tilt'
 import classnames, {
-  TTextColor,
   alignItems,
   display,
   dropShadow,
@@ -71,7 +70,7 @@ export default function ({
   centered,
 }: {
   logo?: Element
-  titleColor: TTextColor
+  titleColor: 'text-accent' | 'text-primary' | 'text-secondary'
   titleText: string
   subtitle: string
   description: Element
