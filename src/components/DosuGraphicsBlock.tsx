@@ -1,11 +1,11 @@
-import ArcText from 'icons/ArcText'
+import { displayFrom } from 'helpers/visibilityClassnames'
+import DosuGraphicsArcText from 'components/DosuGraphicsArcText'
 import classnames, {
   display,
   inset,
   margin,
   position,
 } from 'classnames/tailwind'
-import useBreakpoints from 'hooks/useBreakpoints'
 
 const arcTextWrapper = classnames(
   position('absolute'),
@@ -18,20 +18,12 @@ const smallGem = classnames(
 const wrapper = classnames(position('relative'), margin('lg:mr-32', 'xl:mr-84'))
 
 export default function () {
-  const { md } = useBreakpoints()
-
   return (
     <div className={wrapper}>
       <div className={arcTextWrapper}>
-        <ArcText
-          text="We are hard at work • Stay tuned!"
-          diameter={md ? 400 : 200}
-        />
+        <DosuGraphicsArcText />
       </div>
-      <img
-        src="img/dosu-coming-soon-lg.png"
-        className={display('hidden', 'md:block')}
-      />
+      <img src="img/dosu-coming-soon-lg.png" className={displayFrom('md')} />
       <img src="img/dosu-coming-soon-sm.png" className={smallGem} width="125" />
     </div>
   )
