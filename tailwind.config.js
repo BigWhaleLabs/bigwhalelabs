@@ -117,9 +117,9 @@ module.exports = {
           'linear-gradient(180deg, var(--metallic-1) 0%, var(--metallic-2) 15.1%, var(--metallic-3) 34.9%, var(--metallic-4) 50%, var(--metallic-5) 66.15%, var(--metallic-6) 100%) ',
       },
       strokeWidth: {
-        1.5: '0.09375rem',
-        2.5: '2.5',
-        4: '0.25rem',
+        1.5: 1.5,
+        2.5: 2.5,
+        4: 4,
       },
       margin: {
         136: '34rem',
