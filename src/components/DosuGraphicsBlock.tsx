@@ -15,7 +15,10 @@ const smallGem = classnames(
   display('block', 'md:hidden'),
   margin('ml-16', 'tiny:ml-32')
 )
-const wrapper = classnames(position('relative'), margin('lg:mr-32', 'xl:mr-84'))
+const wrapper = classnames(
+  position('relative'),
+  margin('md:ml-9', 'lg:mr-32', 'xl:!mr-84')
+)
 
 export default function () {
   return (
