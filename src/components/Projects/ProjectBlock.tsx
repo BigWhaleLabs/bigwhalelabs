@@ -55,6 +55,9 @@ const tiltWrapper = classnames(
   inset('-right-36', 'tiny:-right-28', 'bottom-80', 'tiny:bottom-64')
 )
 
+const imageFilter = (hueAngle: number) =>
+  `hue-rotate(${hueAngle}deg) drop-shadow(0px 0px 7rem var(--secondary-semi-transparent))`
+
 export default function ({
   logo,
   titleText,
@@ -111,11 +114,9 @@ export default function ({
           glareBorderRadius={customGlareBorderRadius || '100%'}
           tiltReverse
           perspective={500}
-          onMove={(onMove) => {
+          onMove={({ tiltAngleX, tiltAngleY }) => {
             if (!imgRef.current) return
-            imgRef.current.style.filter = `hue-rotate(${
-              onMove.tiltAngleX + onMove.tiltAngleY
-            }deg) drop-shadow(0px 0px 7rem var(--secondary-semi-transparent))`
+            imgRef.current.style.filter = imageFilter(tiltAngleX + tiltAngleY)
           }}
           className={dropShadow('drop-shadow-secondary-semi-transparent')}
         >
