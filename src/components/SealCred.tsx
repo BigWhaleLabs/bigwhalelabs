@@ -1,10 +1,6 @@
-import {
-  AccentText,
-  BodyText,
-  HeaderText,
-  PrimaryAccentText,
-} from 'components/Text'
+import { AccentText, BodyText } from 'components/Text'
 import Button from 'components/Button'
+import ProjectBlock from 'components/Projects/ProjectBlock'
 import SealCredAnimation from 'components/SealCredAnimation'
 import SealCredLogo from 'icons/SealCredLogo'
 import classnames, {
@@ -63,13 +59,20 @@ const card = classnames(
   inset('lg:top-1/5'),
   alignSelf('lg:self-start')
 )
-const cardHeader = space('space-y-4')
-const cardBody = space('space-y-6')
 const pseudoSuitWrapper = classnames(
   width('w-auto'),
   maxWidth('max-w-400'),
   height('h-auto'),
   margin('lg:mt-0', 'mt-32')
+)
+
+const SealCredDescription = () => (
+  <>
+    <AccentText color="text-accent">SealCred</AccentText> allows you to
+    experience the world pseudonymously with zero knowledge verified NFTs. This
+    means you can prove credentials, ownership, or facts without them tracing
+    back to you.
+  </>
 )
 
 export default function () {
@@ -78,24 +81,16 @@ export default function () {
   return (
     <div className={blockWrapper}>
       <div className={card}>
-        <div className={cardHeader}>
-          <SealCredLogo />
-          <PrimaryAccentText color="text-accent">SealCred</PrimaryAccentText>
-        </div>
-        <div className={cardBody}>
-          <HeaderText>
-            Privacy-preserving social protocol built with ZK soul-bound NFTs
-          </HeaderText>
-          <BodyText>
-            <AccentText color="text-accent">SealCred</AccentText> allows you to
-            experience the world pseudonymously with zero knowledge verified
-            NFTs. This means you can prove credentials, ownership, or facts
-            without them tracing back to you.
-          </BodyText>
-          <Button outlined url="https://sealcred.xyz/">
-            Get started
-          </Button>
-        </div>
+        <ProjectBlock
+          logo={<SealCredLogo />}
+          titleColor="text-accent"
+          titleText="SealCred"
+          subtitle="Privacy-preserving social protocol built with ZK soul-bound NFTs"
+          description={<SealCredDescription />}
+          buttonTitle="Get started"
+          buttonUrl="https://sealcred.xyz/"
+          wrapReverse
+        />
       </div>
 
       <div className={pseudoSuitWrapper}>

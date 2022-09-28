@@ -6,13 +6,21 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
+      rotate: {
+        '-20': '-20deg',
+      },
       animation: {
         expand: 'expand 1s ease-in-out',
+        'rotate-slow': 'rotate 18s linear infinite',
       },
       keyframes: {
         expand: {
           '0%': { width: '0%' },
           '100%': { width: '100%' },
+        },
+        rotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
       transitionDuration: {
@@ -73,6 +81,7 @@ module.exports = {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
         tertiary: 'var(--tertiary)',
+        quaternary: 'var(--quaternary)',
         'formal-accent': 'var(--formal-accent)',
 
         'tertiary-dark': 'var(--tertiary-dark)',
@@ -93,6 +102,8 @@ module.exports = {
         accent: '0rem 0rem 0.625rem var(--accent)',
         secondary: '0rem 0rem 0.625rem var(--secondary)',
         primary: '0rem 0rem 1.5rem var(--primary)',
+        'secondary-semi-transparent':
+          '0px 0px 7rem var(--secondary-semi-transparent)',
         'formal-accent': '0rem 0rem 0.625rem var(--formal-accent)',
         retro: '0 0 4rem var(--retro-shadow)',
       },
@@ -106,11 +117,14 @@ module.exports = {
           'linear-gradient(180deg, var(--metallic-1) 0%, var(--metallic-2) 15.1%, var(--metallic-3) 34.9%, var(--metallic-4) 50%, var(--metallic-5) 66.15%, var(--metallic-6) 100%) ',
       },
       strokeWidth: {
-        1.5: '0.09375rem',
-        4: '0.25rem',
+        1.5: 1.5,
+        2.5: 2.5,
+        4: 4,
       },
       margin: {
+        136: '34rem',
         116: '29rem',
+        84: '21rem',
         '-4': '-1rem',
         '-10': '-2.5rem',
         '-12': '-3rem',
@@ -129,6 +143,7 @@ module.exports = {
         '-11': '-2.75rem',
         '-20': '-5rem',
         '-28': '-7rem',
+        '-36': '-9rem',
         '-44': '-11rem',
         '-60': '-15rem',
         '-96': '-24rem',
@@ -138,6 +153,7 @@ module.exports = {
         76: '4.75rem',
       },
       scale: {
+        65: '0.65',
         175: '1.75',
       },
       zIndex: {

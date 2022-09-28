@@ -11,7 +11,6 @@ export default function ({ open }: { open?: boolean }) {
       width="25"
       height="25"
       viewBox="0 0 25 25"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       {open ? (
@@ -22,7 +21,6 @@ export default function ({ open }: { open?: boolean }) {
             x2="18.0141"
             y2="17.8137"
             className={lineClasses}
-            stroke-linecap="round"
           />
           <line
             x1="6.28613"
@@ -30,7 +28,6 @@ export default function ({ open }: { open?: boolean }) {
             x2="17.5998"
             y2="6.50011"
             className={lineClasses}
-            stroke-linecap="round"
           />
         </>
       ) : (
@@ -41,7 +38,6 @@ export default function ({ open }: { open?: boolean }) {
             x2="20.2859"
             y2="6.5"
             className={lineClasses}
-            stroke-linecap="round"
           />
           <line
             x1="4.28589"
@@ -49,7 +45,6 @@ export default function ({ open }: { open?: boolean }) {
             x2="20.2859"
             y2="12.5"
             className={lineClasses}
-            stroke-linecap="round"
           />
           <line
             x1="4.28589"
@@ -57,7 +52,6 @@ export default function ({ open }: { open?: boolean }) {
             x2="20.2859"
             y2="18.5"
             className={lineClasses}
-            stroke-linecap="round"
           />
         </>
       )}

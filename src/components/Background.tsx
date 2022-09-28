@@ -1,5 +1,6 @@
 import classnames, {
   height,
+  opacity,
   position,
   transitionProperty,
   width,
@@ -15,6 +16,7 @@ const bgFit = classnames(
   height('h-full'),
   transitionProperty('transition-opacity'),
   willChange('will-change-auto'),
+  opacity('opacity-60'),
   zIndex('z-0')
 )
 
@@ -23,7 +25,7 @@ export default function () {
 
   return (
     <img
-      src={!lg ? '/img/blurry-shadows-sm.webp' : '/img/blurry-shadows-lg.webp'}
+      src={lg ? '/img/blurry-shadows-lg.svg' : '/img/blurry-shadows-sm.svg'}
       className={bgFit}
       style={scrollAnimationProvider('bgFades')}
     />

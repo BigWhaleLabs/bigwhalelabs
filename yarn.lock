@@ -4419,6 +4419,7 @@ __metadata:
     preact: ^10.11.0
     prettier: ^2.7.1
     react-intersection-observer: ^9.4.0
+    react-parallax-tilt: ^1.7.67
     react-scripts: ^5.0.1
     react-scroll-parallax: ^3.3.1
     rollup-plugin-visualizer: ^5.8.1
@@ -11408,6 +11409,16 @@ __metadata:
   version: 18.1.0
   resolution: "react-is@npm:18.1.0"
   checksum: d206a0fe6790851bff168727bfb896de02c5591695afb0c441163e8630136a3e13ee1a7ddd59fdccddcc93968b4721ae112c10f790b194b03b35a3dc13a355ef
+  languageName: node
+  linkType: hard
+
+"react-parallax-tilt@npm:^1.7.67":
+  version: 1.7.67
+  resolution: "react-parallax-tilt@npm:1.7.67"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: ca212b97a0cf57bfd64a429d929a6063354c37bad0e5a0e49df3e9db9384f3fcdf2580d3350c9020a8b62356f544df31262e9f26df7e53f9b1ad796be218aec3
   languageName: node
   linkType: hard
 
