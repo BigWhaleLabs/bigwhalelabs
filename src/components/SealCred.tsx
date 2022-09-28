@@ -66,6 +66,15 @@ const pseudoSuitWrapper = classnames(
   margin('lg:mt-0', 'mt-32')
 )
 
+const SealCredDescription = () => (
+  <>
+    <AccentText color="text-accent">SealCred</AccentText> allows you to
+    experience the world pseudonymously with zero knowledge verified NFTs. This
+    means you can prove credentials, ownership, or facts without them tracing
+    back to you.
+  </>
+)
+
 export default function () {
   const { onlyPhones } = useBreakpoints()
 
@@ -77,14 +86,7 @@ export default function () {
           titleColor="text-accent"
           titleText="SealCred"
           subtitle="Privacy-preserving social protocol built with ZK soul-bound NFTs"
-          description={
-            <>
-              <AccentText color="text-accent">SealCred</AccentText> allows you
-              to experience the world pseudonymously with zero knowledge
-              verified NFTs. This means you can prove credentials, ownership, or
-              facts without them tracing back to you.
-            </>
-          }
+          description={<SealCredDescription />}
           buttonTitle="Get started"
           buttonUrl="https://sealcred.xyz/"
           wrapReverse

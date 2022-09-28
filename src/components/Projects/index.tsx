@@ -7,7 +7,7 @@ const wrapper = classnames(
   space('space-y-64', 'md:space-y-96'),
   zIndex('z-10'),
   width('w-full'),
-  margin('mt-80', 'mt-136')
+  margin('mt-80', 'lg:mt-136')
 )
 
 export default function () {

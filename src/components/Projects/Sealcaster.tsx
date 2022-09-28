@@ -1,6 +1,13 @@
-import { AccentText, BodyText } from 'components/Text'
+import { AccentText } from 'components/Text'
 import ProjectBlock from 'components/Projects/ProjectBlock'
 import SealcasterLogo from 'icons/SealcasterLogo'
+
+const SealcasterDescription = () => (
+  <>
+    <AccentText color="text-quaternary">Sealcaster</AccentText> allows users of
+    Farcaster to cast on the platform 100% anonymously.
+  </>
+)
 
 export default function () {
   return (
@@ -9,12 +16,7 @@ export default function () {
       titleColor="text-quaternary"
       titleText="Sealcaster"
       subtitle="Cast anonymously on Farcaster using a ZK burner wallet"
-      description={
-        <BodyText>
-          <AccentText color="text-quaternary">Sealcaster</AccentText> allows
-          users of Farcaster to cast on the platform 100% anonymously.
-        </BodyText>
-      }
+      description={<SealcasterDescription />}
       buttonTitle="Build your burner wallet"
       buttonUrl="https://sealcaster.xyz/"
       imageSource="img/sealcaster-badge.svg"
