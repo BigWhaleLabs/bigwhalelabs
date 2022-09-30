@@ -49,6 +49,9 @@ html {
       var(--primary-background) 0
     )
     0 0/3rem 3rem;
+  background-color: var(--primary-dark);
+  scrollbar-color: var(--accent) transparent;
+  scrollbar-width: thin;
 }
 
 body {
@@ -74,6 +77,32 @@ circle {
 }
 ::-moz-selection {
   background: var(--selection);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 25px;
+}
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    90deg,
+    transparent 47%,
+    var(--accent) 47%,
+    var(--accent) 51%,
+    transparent 52%
+  );
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 20px;
+  background-clip: content-box;
+  border: 8px solid transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+  border-radius: 20px;
+  background-clip: content-box;
+  border: 7.5px solid transparent;
 }
 
 @media screen and (max-width: 600px) {
