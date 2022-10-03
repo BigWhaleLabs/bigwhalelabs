@@ -29,7 +29,7 @@ export default function ({
         rotate: rotate ? `${rotate}deg` : undefined,
         filter: 'blur(175px)',
         borderRadius: '100%',
-        opacity: reversedAppear ? (inView ? 0 : 0.7) : inView ? 0.7 : 0,
+        opacity: reversedAppear ? (inView ? 0 : 0.6) : inView ? 0.6 : 0,
         transitionDuration: '4s',
         transitionProperty: 'opacity',
         zIndex: -1,
