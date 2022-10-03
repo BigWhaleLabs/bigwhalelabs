@@ -7,6 +7,7 @@ export default function ({
   rotate = 0,
   reversedAppear,
   inView,
+  blur = 0,
 }: {
   width: number
   height: number
@@ -16,6 +17,7 @@ export default function ({
   rotate?: number
   reversedAppear?: boolean
   inView?: boolean
+  blur?: number
 }) {
   return (
     <div
@@ -28,6 +30,7 @@ export default function ({
         background: `radial-gradient(50% 50% at 50% 50%, ${background} 0%, ${background}00 100%)`,
         rotate: `${rotate}deg`,
         borderRadius: '100%',
+        filter: `blur(${blur}px)`,
         opacity: reversedAppear ? (inView ? 0 : 0.6) : inView ? 0.6 : 0,
         transitionDuration: '4s',
         transitionProperty: 'opacity',

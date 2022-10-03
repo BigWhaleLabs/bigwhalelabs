@@ -36,6 +36,26 @@ export default function () {
         inView={inView}
         reversedAppear
       />
+      <Background
+        width={1000}
+        height={250}
+        background="#81FFD9"
+        bottom={100}
+        left={20}
+        inView={inView}
+        blur={60}
+        reversedAppear
+      />
+      <Background
+        width={2000}
+        height={600}
+        background="#0A34CD"
+        bottom={100}
+        left={-10}
+        rotate={23}
+        inView={inView}
+        reversedAppear
+      />
     </div>
   )
 }
