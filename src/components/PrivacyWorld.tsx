@@ -1,4 +1,5 @@
 import { LargeStrokeText } from 'components/Text'
+import { useInView } from 'react-intersection-observer'
 import Background from 'components/Background'
 import classnames, {
   margin,
@@ -17,8 +18,10 @@ const privacyWorld = classnames(
 )
 
 export default function () {
+  const { ref, inView } = useInView({ threshold: 0.4 })
+
   return (
-    <div className={privacyWorld}>
+    <div className={privacyWorld} ref={ref}>
       <LargeStrokeText>
         We’re dedicated to building a pseudonymous WORLD WHERE privacy and
         identity are owned by the human, not the corporation.
@@ -30,6 +33,7 @@ export default function () {
         bottom={0}
         left={-50}
         rotate={23}
+        inView={inView}
       />
     </div>
   )

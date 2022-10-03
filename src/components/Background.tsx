@@ -1,5 +1,3 @@
-import { useInView } from 'react-intersection-observer'
-
 export default function ({
   width,
   height,
@@ -8,6 +6,7 @@ export default function ({
   left,
   rotate,
   reversedAppear,
+  inView,
 }: {
   width: number
   height: number
@@ -16,9 +15,8 @@ export default function ({
   left: number
   rotate?: number
   reversedAppear?: boolean
+  inView?: boolean
 }) {
-  const { ref, inView } = useInView({ threshold: 0.3 })
-
   return (
     <div
       style={{
@@ -36,7 +34,6 @@ export default function ({
         transitionProperty: 'opacity',
         zIndex: -1,
       }}
-      ref={ref}
     />
   )
 }
