@@ -24,7 +24,7 @@ const App = () => {
         <HiringBlock />
         <Octocorp />
         <LogoFooter />
-        <Background />
+        {/* <Background /> */}
         <Footer />
       </Root>
     </>
