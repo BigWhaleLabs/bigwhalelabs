@@ -1,4 +1,3 @@
-import Background from 'components/Background'
 import Footer from 'components/Footer'
 import HiringBlock from 'components/HiringBlock'
 import LearnBlock from 'components/LearnBlock'
@@ -24,7 +23,6 @@ const App = () => {
         <HiringBlock />
         <Octocorp />
         <LogoFooter />
-        {/* <Background /> */}
         <Footer />
       </Root>
     </>

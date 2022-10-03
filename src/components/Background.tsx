@@ -1,33 +1,42 @@
-import classnames, {
-  height,
-  opacity,
-  position,
-  transitionProperty,
+import { useInView } from 'react-intersection-observer'
+
+export default function ({
   width,
-  willChange,
-  zIndex,
-} from 'classnames/tailwind'
-import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
-import useBreakpoints from 'hooks/useBreakpoints'
-
-const bgFit = classnames(
-  position('absolute'),
-  width('w-full'),
-  height('h-full'),
-  transitionProperty('transition-opacity'),
-  willChange('will-change-auto'),
-  opacity('opacity-60'),
-  zIndex('z-0')
-)
-
-export default function () {
-  const { lg } = useBreakpoints()
+  height,
+  background,
+  bottom,
+  left,
+  rotate,
+  reversedAppear,
+}: {
+  width: number
+  height: number
+  background: string
+  bottom: number
+  left: number
+  rotate?: number
+  reversedAppear?: boolean
+}) {
+  const { ref, inView } = useInView({ threshold: 0.3 })
 
   return (
-    <img
-      src={lg ? '/img/blurry-shadows-lg.svg' : '/img/blurry-shadows-sm.svg'}
-      className={bgFit}
-      style={scrollAnimationProvider('bgFades')}
+    <div
+      style={{
+        position: 'absolute',
+        bottom: `${bottom}%`,
+        left: `${left}%`,
+        width: `${width}px`,
+        height: `${height}px`,
+        background,
+        rotate: rotate ? `${rotate}deg` : undefined,
+        filter: 'blur(175px)',
+        borderRadius: '100%',
+        opacity: reversedAppear ? (inView ? 0 : 0.7) : inView ? 0.7 : 0,
+        transitionDuration: '4s',
+        transitionProperty: 'opacity',
+        zIndex: -1,
+      }}
+      ref={ref}
     />
   )
 }
