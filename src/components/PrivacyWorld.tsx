@@ -27,13 +27,14 @@ export default function () {
         identity are owned by the human, not the corporation.
       </LargeStrokeText>
       <Background
-        width={2759}
-        height={744}
+        width={3000}
+        height={1000}
         background="#00F3F9"
         bottom={0}
         left={-50}
         rotate={23}
         inView={inView}
+        reversedAppear
       />
     </div>
   )
