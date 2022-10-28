@@ -1,3 +1,5 @@
+import { useInView } from 'react-intersection-observer'
+import Background from 'components/Background'
 import DosuCity from 'icons/DosuCity'
 import OrbSeal from 'components/OrbSeal'
 import RightCard from 'components/RightCard'
@@ -9,6 +11,7 @@ import classnames, {
   margin,
   maxWidth,
   padding,
+  position,
   space,
   zIndex,
 } from 'classnames/tailwind'
@@ -16,6 +19,7 @@ import classnames, {
 const cardsTogether = classnames(
   display('flex'),
   flexDirection('flex-col', 'lg:flex-row'),
+  position('relative'),
   space('lg:space-x-6', 'space-y-6', 'lg:space-y-0'),
   alignItems('items-stretch'),
   maxWidth('max-w-2xl', 'lg:max-w-6xl'),
@@ -32,9 +36,42 @@ const dosuCityIcon = classnames(
   margin('mb-0', 'mr-0', 'sm:-mb-10', 'sm:-mr-10', 'lg:-mb-24')
 )
 
+const Backgrounds = ({ inView }: { inView: boolean }) => (
+  <>
+    <Background
+      width={2000}
+      height={1200}
+      background="#280075"
+      bottom={-30}
+      left={-50}
+      rotate={0}
+      inView={inView}
+    />
+    <Background
+      width={2000}
+      height={1200}
+      background="#CF00A3"
+      bottom={-30}
+      left={-50}
+      inView={inView}
+    />
+    <Background
+      width={1200}
+      height={500}
+      background="#FF8993"
+      bottom={10}
+      left={-50}
+      rotate={-10}
+      inView={inView}
+    />
+  </>
+)
+
 export default function () {
+  const { ref, inView } = useInView({ threshold: 0.4 })
+
   return (
-    <div className={cardsTogether}>
+    <div className={cardsTogether} ref={ref}>
       <WeLiveInAWorld />
       <div className={cardsOnRight}>
         <RightCard
@@ -56,6 +93,7 @@ export default function () {
           reverseBelowMedium
         />
       </div>
+      <Backgrounds inView={inView} />
     </div>
   )
 }
