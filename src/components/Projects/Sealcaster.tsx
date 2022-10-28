@@ -30,7 +30,6 @@ export default function () {
           left={30}
           rotate={10}
           blur={50}
-          inView={true}
         />
       }
     />

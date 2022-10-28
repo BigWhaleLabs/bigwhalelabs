@@ -6,7 +6,7 @@ export default function ({
   left,
   rotate = 0,
   reversedAppear,
-  inView,
+  inView = true,
   blur = 0,
 }: {
   width: number

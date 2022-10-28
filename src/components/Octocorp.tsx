@@ -37,7 +37,6 @@ const Backgrounds = () => (
       bottom={-85}
       left={-150}
       blur={150}
-      inView={true}
     />
     <Background
       width={500}
@@ -46,7 +45,6 @@ const Backgrounds = () => (
       bottom={65}
       left={-50}
       blur={100}
-      inView={true}
     />
     <Background
       width={1000}
@@ -56,7 +54,6 @@ const Backgrounds = () => (
       left={-30}
       rotate={0}
       blur={150}
-      inView={true}
     />
   </>
 )

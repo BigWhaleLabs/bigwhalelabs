@@ -1,4 +1,5 @@
 import { LinkText } from 'components/Text'
+import Background from 'components/Background'
 import Button from 'components/Button'
 import Logo from 'components/Logo'
 import Twitter from 'icons/Twitter'
@@ -8,13 +9,35 @@ import classnames, {
   flexDirection,
   justifyContent,
   margin,
+  position,
   space,
   zIndex,
 } from 'classnames/tailwind'
 
+const Backgrounds = () => (
+  <>
+    <Background
+      width={1200}
+      height={500}
+      background="#0034EB"
+      bottom={-100}
+      left={-100}
+    />
+    <Background
+      width={1900}
+      height={750}
+      background="#00F3F9"
+      bottom={-105}
+      left={-350}
+      blur={100}
+    />
+  </>
+)
+
 const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
+  position('relative'),
   justifyContent('justify-center'),
   alignItems('items-center'),
   space('space-y-10'),
@@ -42,6 +65,7 @@ export default function () {
           <Twitter />
         </LinkText>
       </div>
+      <Backgrounds />
     </div>
   )
 }
