@@ -56,7 +56,7 @@ const tiltWrapper = classnames(
 )
 
 const imageFilter = (hueAngle: number) =>
-  `hue-rotate(${hueAngle}deg) drop-shadow(0px 0px 7rem var(--secondary-semi-transparent))`
+  `hue-rotate(${hueAngle}deg) drop-shadow(0px 0px 1rem var(--secondary-semi-transparent))`
 
 export default function ({
   logo,
