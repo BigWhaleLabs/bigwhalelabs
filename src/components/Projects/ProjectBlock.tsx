@@ -71,6 +71,7 @@ export default function ({
   wrapReverse,
   customGlareBorderRadius,
   centered,
+  additionalBackground,
 }: {
   logo?: Element
   titleColor:
@@ -88,6 +89,7 @@ export default function ({
   wrapReverse?: boolean
   customGlareBorderRadius?: string
   centered?: boolean
+  additionalBackground?: Element
 }) {
   const imgRef = useRef<HTMLImageElement>(null)
 
@@ -123,6 +125,7 @@ export default function ({
           <img src={imageSource} ref={imgRef} />
         </Tilt>
       </div>
+      {additionalBackground}
     </div>
   )
 }

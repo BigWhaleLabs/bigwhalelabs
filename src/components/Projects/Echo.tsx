@@ -1,6 +1,52 @@
 import { AccentText } from 'components/Text'
+import Background from 'components/Background'
 import EchoLogo from 'icons/EchoLogo'
 import ProjectBlock from 'components/Projects/ProjectBlock'
+
+const Backgrounds = () => (
+  <>
+    <Background
+      width={750}
+      height={500}
+      background="#0013FF"
+      bottom={-20}
+      left={0}
+      rotate={-30}
+      blur={40}
+      inView={true}
+    />
+
+    <Background
+      width={900}
+      height={500}
+      background="#8349FF"
+      bottom={30}
+      left={10}
+      rotate={-30}
+      blur={40}
+      inView={true}
+    />
+    <Background
+      width={500}
+      height={300}
+      background="#FFCDFF"
+      bottom={70}
+      left={40}
+      blur={80}
+      inView={true}
+    />
+    <Background
+      width={800}
+      height={550}
+      background="#FF0095"
+      bottom={20}
+      left={50}
+      rotate={30}
+      blur={120}
+      inView={true}
+    />
+  </>
+)
 
 const EchoDescription = () => (
   <>
@@ -23,6 +69,7 @@ export default function () {
       buttonTitle="Create an Echo"
       imageSource="img/echo-badge.svg"
       customGlareBorderRadius="5% 5% 46% 46%"
+      additionalBackground={<Backgrounds />}
       wrapReverse
     />
   )
