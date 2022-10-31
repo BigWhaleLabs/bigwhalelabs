@@ -1,5 +1,7 @@
 import { BodyText, HeaderText, PrimaryAccentText } from 'components/Text'
-import Background from 'components/Background'
+import { displayFrom } from 'helpers/visibilityClassnames'
+import { useInView } from 'react-intersection-observer'
+import Background, { BackgroundsAnimated } from 'components/Background'
 import Button from 'components/Button'
 import Octocorp from 'icons/OctocorpLogo'
 import classnames, {
@@ -28,16 +30,18 @@ const wrapper = classnames(
   zIndex('z-10')
 )
 
-const Backgrounds = () => (
-  <>
-    <Background
-      width={2100}
-      height={700}
-      background="#FF90BA"
-      bottom={-85}
-      left={-150}
-      blur={150}
-    />
+const Backgrounds = ({ inView }: { inView: boolean }) => (
+  <BackgroundsAnimated inView={inView}>
+    <div className={displayFrom('md')}>
+      <Background
+        width={2100}
+        height={700}
+        background="#FF90BA"
+        bottom={-85}
+        left={-150}
+        blur={150}
+      />
+    </div>
     <Background
       width={500}
       height={250}
@@ -55,12 +59,14 @@ const Backgrounds = () => (
       rotate={0}
       blur={150}
     />
-  </>
+  </BackgroundsAnimated>
 )
 
 export default function () {
+  const { ref, inView } = useInView({ threshold: 0.4 })
+
   return (
-    <div className={wrapper}>
+    <div className={wrapper} ref={ref}>
       <Octocorp />
       <div className={textCard}>
         <PrimaryAccentText color="text-secondary">OCTO-CORP</PrimaryAccentText>
@@ -87,7 +93,7 @@ Check out @bigwhalelabs and spin up a pseudonym with their new protocol @sealcre
           Endorse now
         </Button>
       </div>
-      <Backgrounds />
+      <Backgrounds inView={inView} />
     </div>
   )
 }

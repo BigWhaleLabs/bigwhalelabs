@@ -1,5 +1,7 @@
 import { LinkText } from 'components/Text'
-import Background from 'components/Background'
+import { displayFrom, displayTo } from 'helpers/visibilityClassnames'
+import { useInView } from 'react-intersection-observer'
+import Background, { BackgroundsAnimated } from 'components/Background'
 import Button from 'components/Button'
 import Logo from 'components/Logo'
 import Twitter from 'icons/Twitter'
@@ -14,24 +16,43 @@ import classnames, {
   zIndex,
 } from 'classnames/tailwind'
 
-const Backgrounds = () => (
-  <>
-    <Background
-      width={1200}
-      height={500}
-      background="#0034EB"
-      bottom={-100}
-      left={-100}
-    />
-    <Background
-      width={1900}
-      height={750}
-      background="#00F3F9"
-      bottom={-105}
-      left={-350}
-      blur={100}
-    />
-  </>
+const Backgrounds = ({ inView }: { inView: boolean }) => (
+  <BackgroundsAnimated inView={inView}>
+    <div className={displayFrom('md')}>
+      <Background
+        width={1200}
+        height={500}
+        background="#0034EB"
+        bottom={-80}
+        left={-100}
+      />
+      <Background
+        width={1900}
+        height={750}
+        background="#00F3F9"
+        bottom={-80}
+        left={-350}
+        blur={100}
+      />
+    </div>
+    <div className={displayTo('md')}>
+      <Background
+        width={800}
+        height={800}
+        background="#0034EB"
+        bottom={-150}
+        left={20}
+      />
+      <Background
+        width={1000}
+        height={750}
+        background="#00F3F9"
+        bottom={-175}
+        left={-150}
+        blur={100}
+      />
+    </div>
+  </BackgroundsAnimated>
 )
 
 const wrapper = classnames(
@@ -51,8 +72,10 @@ const linksContainer = classnames(
 )
 
 export default function () {
+  const { ref, inView } = useInView({ threshold: 0.4 })
+
   return (
-    <div className={wrapper}>
+    <div className={wrapper} ref={ref}>
       <Logo large />
       <Button outlined url="https://discord.gg/NHk96pPZUV">
         Join our Discord
@@ -65,7 +88,7 @@ export default function () {
           <Twitter />
         </LinkText>
       </div>
-      <Backgrounds />
+      <Backgrounds inView={inView} />
     </div>
   )
 }

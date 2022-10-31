@@ -127,6 +127,7 @@ circle {
   perspective: 180px;
   perspective-origin: 50% 40%;
   overflow: hidden;
+  z-index: 20;
 }
 .grid {
   position: absolute;
