@@ -1,70 +1,7 @@
 import { AccentText } from 'components/Text'
-import { displayFrom, displayTo } from 'helpers/visibilityClassnames'
-import Background from 'components/Background'
+import { EchoBackground } from 'components/Backgrounds'
 import EchoLogo from 'icons/EchoLogo'
 import ProjectBlock from 'components/Projects/ProjectBlock'
-
-const Backgrounds = () => (
-  <>
-    <div className={displayFrom('md')}>
-      <Background
-        width={750}
-        height={500}
-        background="#0013FF"
-        bottom={-20}
-        left={0}
-        rotate={-30}
-        blur={40}
-      />
-      <Background
-        width={900}
-        height={500}
-        background="#8349FF"
-        bottom={30}
-        left={10}
-        rotate={-30}
-        blur={40}
-      />
-      <Background
-        width={500}
-        height={300}
-        background="#FFCDFF"
-        bottom={70}
-        left={40}
-        blur={80}
-      />
-      <Background
-        width={800}
-        height={550}
-        background="#FF0095"
-        bottom={20}
-        left={50}
-        rotate={30}
-        blur={120}
-      />
-    </div>
-    <div className={displayTo('md')}>
-      <Background
-        width={600}
-        height={400}
-        background="#FF0095"
-        bottom={20}
-        left={0}
-        rotate={-30}
-        blur={80}
-      />
-      <Background
-        width={600}
-        height={400}
-        background="#8349FF"
-        bottom={0}
-        left={-50}
-        rotate={30}
-        blur={40}
-      />
-    </div>
-  </>
-)
 
 const EchoDescription = () => (
   <>
@@ -87,7 +24,7 @@ export default function () {
       buttonTitle="Create an Echo"
       imageSource="img/echo-badge.svg"
       customGlareBorderRadius="5% 5% 46% 46%"
-      additionalBackground={<Backgrounds />}
+      additionalBackground={<EchoBackground />}
       wrapReverse
     />
   )

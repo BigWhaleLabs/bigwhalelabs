@@ -1,6 +1,5 @@
-import { displayFrom, displayTo } from 'helpers/visibilityClassnames'
+import { LearnBlockBackground } from 'components/Backgrounds'
 import { useInView } from 'react-intersection-observer'
-import Background, { BackgroundsAnimated } from 'components/Background'
 import DosuCity from 'icons/DosuCity'
 import OrbSeal from 'components/OrbSeal'
 import RightCard from 'components/RightCard'
@@ -37,58 +36,6 @@ const dosuCityIcon = classnames(
   margin('mb-0', 'mr-0', 'sm:-mb-10', 'sm:-mr-10', 'lg:-mb-24')
 )
 
-const Backgrounds = ({ inView }: { inView: boolean }) => (
-  <BackgroundsAnimated inView={inView}>
-    <div className={displayTo('md')}>
-      <Background
-        width={1500}
-        height={1000}
-        background="#FF8993"
-        bottom={60}
-        left={-10}
-        rotate={-20}
-        saturate={2}
-      />
-      <Background
-        width={2200}
-        height={650}
-        background="#CF00A3"
-        bottom={40}
-        left={-275}
-        rotate={-80}
-        blur={10}
-        saturate={2}
-      />
-    </div>
-
-    <div className={displayFrom('md')}>
-      <Background
-        width={2000}
-        height={1200}
-        background="#280075"
-        bottom={-30}
-        left={-50}
-        rotate={0}
-      />
-      <Background
-        width={2000}
-        height={1200}
-        background="#CF00A3"
-        bottom={-30}
-        left={-50}
-      />
-      <Background
-        width={1200}
-        height={500}
-        background="#FF8993"
-        bottom={10}
-        left={-50}
-        rotate={-10}
-      />
-    </div>
-  </BackgroundsAnimated>
-)
-
 export default function () {
   const { ref, inView } = useInView({ threshold: 0.4 })
 
@@ -115,7 +62,7 @@ export default function () {
           reverseBelowMedium
         />
       </div>
-      <Backgrounds inView={inView} />
+      <LearnBlockBackground inView={inView} />
     </div>
   )
 }
