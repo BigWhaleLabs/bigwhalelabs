@@ -1,4 +1,5 @@
 import { LargeStrokeText } from 'components/Text'
+import { displayFrom } from 'helpers/visibilityClassnames'
 import { useInView } from 'react-intersection-observer'
 import Background from 'components/Background'
 import classnames, {
@@ -18,7 +19,7 @@ const privacyWorld = classnames(
 )
 
 const Backgrounds = ({ inView }: { inView: boolean }) => (
-  <>
+  <div className={displayFrom('md')}>
     <Background
       width={3000}
       height={1000}
@@ -49,7 +50,7 @@ const Backgrounds = ({ inView }: { inView: boolean }) => (
       inView={inView}
       reversedAppear
     />
-  </>
+  </div>
 )
 
 export default function () {
