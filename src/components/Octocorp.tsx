@@ -10,6 +10,7 @@ import classnames, {
   justifyContent,
   margin,
   maxWidth,
+  opacity,
   position,
   space,
   zIndex,
@@ -32,33 +33,35 @@ const wrapper = classnames(
 
 const Backgrounds = ({ inView }: { inView: boolean }) => (
   <BackgroundsAnimated inView={inView}>
-    <div className={displayFrom('md')}>
+    <div className={opacity('opacity-75')}>
+      <div className={displayFrom('md')}>
+        <Background
+          width={2100}
+          height={700}
+          background="#FF90BA"
+          bottom={-85}
+          left={-150}
+          blur={150}
+        />
+      </div>
       <Background
-        width={2100}
+        width={500}
+        height={250}
+        background="#FFB39B"
+        bottom={65}
+        left={-50}
+        blur={100}
+      />
+      <Background
+        width={1000}
         height={700}
-        background="#FF90BA"
-        bottom={-85}
-        left={-150}
+        background="#FF4161"
+        bottom={10}
+        left={-30}
+        rotate={0}
         blur={150}
       />
     </div>
-    <Background
-      width={500}
-      height={250}
-      background="#FFB39B"
-      bottom={65}
-      left={-50}
-      blur={100}
-    />
-    <Background
-      width={1000}
-      height={700}
-      background="#FF4161"
-      bottom={10}
-      left={-30}
-      rotate={0}
-      blur={150}
-    />
   </BackgroundsAnimated>
 )
 
