@@ -1,4 +1,5 @@
 import { AccentText } from 'components/Text'
+import { EchoBackground } from 'components/Backgrounds'
 import EchoLogo from 'icons/EchoLogo'
 import ProjectBlock from 'components/Projects/ProjectBlock'
 
@@ -23,6 +24,7 @@ export default function () {
       buttonTitle="Create an Echo"
       imageSource="img/echo-badge.svg"
       customGlareBorderRadius="5% 5% 46% 46%"
+      additionalBackground={<EchoBackground />}
       wrapReverse
     />
   )

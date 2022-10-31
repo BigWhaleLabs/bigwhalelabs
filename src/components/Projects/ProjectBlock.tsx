@@ -1,5 +1,7 @@
+import { BackgroundsAnimated } from 'components/Background'
 import { BodyText, HeaderText, PrimaryAccentText } from 'components/Text'
 import { JSX } from 'preact/jsx-runtime'
+import { useInView } from 'react-intersection-observer'
 import { useRef } from 'preact/hooks'
 import Button from 'components/Button'
 import Tilt from 'react-parallax-tilt'
@@ -56,7 +58,7 @@ const tiltWrapper = classnames(
 )
 
 const imageFilter = (hueAngle: number) =>
-  `hue-rotate(${hueAngle}deg) drop-shadow(0px 0px 7rem var(--secondary-semi-transparent))`
+  `hue-rotate(${hueAngle}deg) drop-shadow(0px 0px 1rem var(--secondary-semi-transparent))`
 
 export default function ({
   logo,
@@ -71,6 +73,7 @@ export default function ({
   wrapReverse,
   customGlareBorderRadius,
   centered,
+  additionalBackground,
 }: {
   logo?: Element
   titleColor:
@@ -88,11 +91,13 @@ export default function ({
   wrapReverse?: boolean
   customGlareBorderRadius?: string
   centered?: boolean
+  additionalBackground?: Element
 }) {
+  const { ref, inView } = useInView({ threshold: 0.4 })
   const imgRef = useRef<HTMLImageElement>(null)
 
   return (
-    <div className={wrapper(wrapReverse, centered)}>
+    <div className={wrapper(wrapReverse, centered)} ref={ref}>
       <div className={descriptionBlock}>
         <div className={cardHeader}>
           {logo}
@@ -123,6 +128,9 @@ export default function ({
           <img src={imageSource} ref={imgRef} />
         </Tilt>
       </div>
+      <BackgroundsAnimated inView={inView}>
+        {additionalBackground}
+      </BackgroundsAnimated>
     </div>
   )
 }

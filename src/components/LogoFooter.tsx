@@ -1,4 +1,6 @@
 import { LinkText } from 'components/Text'
+import { LogoFooterBackground } from 'components/Backgrounds'
+import { useInView } from 'react-intersection-observer'
 import Button from 'components/Button'
 import Logo from 'components/Logo'
 import Twitter from 'icons/Twitter'
@@ -8,6 +10,7 @@ import classnames, {
   flexDirection,
   justifyContent,
   margin,
+  position,
   space,
   zIndex,
 } from 'classnames/tailwind'
@@ -15,6 +18,7 @@ import classnames, {
 const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col'),
+  position('relative'),
   justifyContent('justify-center'),
   alignItems('items-center'),
   space('space-y-10'),
@@ -28,8 +32,10 @@ const linksContainer = classnames(
 )
 
 export default function () {
+  const { ref, inView } = useInView({ threshold: 0.4 })
+
   return (
-    <div className={wrapper}>
+    <div className={wrapper} ref={ref}>
       <Logo large />
       <Button outlined url="https://discord.gg/NHk96pPZUV">
         Join our Discord
@@ -42,6 +48,7 @@ export default function () {
           <Twitter />
         </LinkText>
       </div>
+      <LogoFooterBackground inView={inView} />
     </div>
   )
 }

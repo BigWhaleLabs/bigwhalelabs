@@ -1,3 +1,5 @@
+import { LearnBlockBackground } from 'components/Backgrounds'
+import { useInView } from 'react-intersection-observer'
 import DosuCity from 'icons/DosuCity'
 import OrbSeal from 'components/OrbSeal'
 import RightCard from 'components/RightCard'
@@ -9,6 +11,7 @@ import classnames, {
   margin,
   maxWidth,
   padding,
+  position,
   space,
   zIndex,
 } from 'classnames/tailwind'
@@ -16,6 +19,7 @@ import classnames, {
 const cardsTogether = classnames(
   display('flex'),
   flexDirection('flex-col', 'lg:flex-row'),
+  position('relative'),
   space('lg:space-x-6', 'space-y-6', 'lg:space-y-0'),
   alignItems('items-stretch'),
   maxWidth('max-w-2xl', 'lg:max-w-6xl'),
@@ -33,8 +37,10 @@ const dosuCityIcon = classnames(
 )
 
 export default function () {
+  const { ref, inView } = useInView({ threshold: 0.4 })
+
   return (
-    <div className={cardsTogether}>
+    <div className={cardsTogether} ref={ref}>
       <WeLiveInAWorld />
       <div className={cardsOnRight}>
         <RightCard
@@ -56,6 +62,7 @@ export default function () {
           reverseBelowMedium
         />
       </div>
+      <LearnBlockBackground inView={inView} />
     </div>
   )
 }

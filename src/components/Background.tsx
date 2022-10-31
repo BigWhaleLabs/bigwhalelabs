@@ -1,33 +1,71 @@
+import ChildrenProp from 'models/ChildrenProp'
 import classnames, {
   height,
   opacity,
   position,
+  transitionDuration,
   transitionProperty,
   width,
-  willChange,
   zIndex,
 } from 'classnames/tailwind'
-import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
-import useBreakpoints from 'hooks/useBreakpoints'
 
-const bgFit = classnames(
-  position('absolute'),
-  width('w-full'),
-  height('h-full'),
-  transitionProperty('transition-opacity'),
-  willChange('will-change-auto'),
-  opacity('opacity-60'),
-  zIndex('z-0')
-)
-
-export default function () {
-  const { lg } = useBreakpoints()
-
+export default function ({
+  width,
+  height,
+  background,
+  bottom,
+  left,
+  rotate = 0,
+  reversedAppear,
+  inView = true,
+  blur = 0,
+  saturate = 1,
+}: {
+  width: number
+  height: number
+  background: string
+  bottom: number
+  left: number
+  rotate?: number
+  reversedAppear?: boolean
+  inView?: boolean
+  blur?: number
+  saturate?: number
+}) {
   return (
-    <img
-      src={lg ? '/img/blurry-shadows-lg.svg' : '/img/blurry-shadows-sm.svg'}
-      className={bgFit}
-      style={scrollAnimationProvider('bgFades')}
+    <div
+      style={{
+        position: 'absolute',
+        bottom: `${bottom}%`,
+        left: `${left}%`,
+        width: `${width}px`,
+        height: `${height}px`,
+        background: `radial-gradient(50% 50% at 50% 50%, ${background} 0%, ${background}00 100%)`,
+        rotate: `${rotate}deg`,
+        borderRadius: '100%',
+        filter: `blur(${blur}px) saturate(${saturate})`,
+        opacity: reversedAppear ? (inView ? 0 : 0.6) : inView ? 0.6 : 0,
+        transitionDuration: '4s',
+        transitionProperty: 'opacity',
+        zIndex: -1,
+      }}
     />
   )
 }
+
+const appearAnimation = (inView: boolean) =>
+  classnames(
+    transitionProperty('transition-opacity'),
+    transitionDuration('duration-2000'),
+    opacity({ 'opacity-0': !inView }),
+    zIndex('-z-10'),
+    width('w-full'),
+    height('h-full'),
+    position('absolute')
+  )
+export const BackgroundsAnimated = ({
+  inView,
+  children,
+}: {
+  inView: boolean
+} & ChildrenProp) => <div className={appearAnimation(inView)}>{children}</div>

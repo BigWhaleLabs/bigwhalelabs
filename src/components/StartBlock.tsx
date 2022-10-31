@@ -30,7 +30,7 @@ import usePressKey from 'hooks/usePressKey'
 const sectionWrapper = classnames(
   overflow('md:overflow-visible', 'overflow-hidden'),
   width('w-full'),
-  zIndex('z-10')
+  zIndex('z-20')
 )
 const parallaxWrapper = classnames(
   position('relative'),

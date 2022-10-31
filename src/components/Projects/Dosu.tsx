@@ -1,4 +1,5 @@
 import { AccentText } from 'components/Text'
+import { DosuBackground } from 'components/Backgrounds'
 import DosuGraphicsBlock from 'components/DosuGraphicsBlock'
 import ProjectBlock from 'components/Projects/ProjectBlock'
 
@@ -19,6 +20,7 @@ export default function () {
       buttonTitle="Join Discord for updates"
       buttonUrl="https://discord.gg/NHk96pPZUV"
       imageElement={<DosuGraphicsBlock />}
+      additionalBackground={<DosuBackground />}
       centered
       wrapReverse
     />

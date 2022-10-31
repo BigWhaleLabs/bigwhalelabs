@@ -1,4 +1,6 @@
 import { BodyText, HeaderText, PrimaryAccentText } from 'components/Text'
+import { OctoBackground } from 'components/Backgrounds'
+import { useInView } from 'react-intersection-observer'
 import Button from 'components/Button'
 import Octocorp from 'icons/OctocorpLogo'
 import classnames, {
@@ -7,6 +9,7 @@ import classnames, {
   justifyContent,
   margin,
   maxWidth,
+  position,
   space,
   zIndex,
 } from 'classnames/tailwind'
@@ -20,14 +23,17 @@ const textCard = classnames(
 const wrapper = classnames(
   display('flex'),
   flexDirection('flex-col', 'md:flex-row'),
+  position('relative'),
   margin('mx-3', 'md:mt-116', 'mt-64'),
   space('space-y-6', 'space-x-0', 'md:space-y-0', 'md:space-x-12'),
   zIndex('z-10')
 )
 
 export default function () {
+  const { ref, inView } = useInView({ threshold: 0.4 })
+
   return (
-    <div className={wrapper}>
+    <div className={wrapper} ref={ref}>
       <Octocorp />
       <div className={textCard}>
         <PrimaryAccentText color="text-secondary">OCTO-CORP</PrimaryAccentText>
@@ -54,6 +60,7 @@ Check out @bigwhalelabs and spin up a pseudonym with their new protocol @sealcre
           Endorse now
         </Button>
       </div>
+      <OctoBackground inView={inView} />
     </div>
   )
 }

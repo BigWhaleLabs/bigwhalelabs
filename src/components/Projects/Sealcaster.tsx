@@ -1,4 +1,5 @@
 import { AccentText } from 'components/Text'
+import { SealcasterBackground } from 'components/Backgrounds'
 import ProjectBlock from 'components/Projects/ProjectBlock'
 import SealcasterLogo from 'icons/SealcasterLogo'
 
@@ -20,6 +21,7 @@ export default function () {
       buttonTitle="Build your burner wallet"
       buttonUrl="https://sealcaster.xyz/"
       imageSource="img/sealcaster-badge.svg"
+      additionalBackground={<SealcasterBackground />}
     />
   )
 }
