@@ -1,6 +1,6 @@
 import { displayFrom, displayTo } from 'helpers/visibilityClassnames'
 import { useInView } from 'react-intersection-observer'
-import Background from 'components/Background'
+import Background, { BackgroundsAnimated } from 'components/Background'
 import DosuCity from 'icons/DosuCity'
 import OrbSeal from 'components/OrbSeal'
 import RightCard from 'components/RightCard'
@@ -38,7 +38,7 @@ const dosuCityIcon = classnames(
 )
 
 const Backgrounds = ({ inView }: { inView: boolean }) => (
-  <>
+  <BackgroundsAnimated inView={inView}>
     <div className={displayTo('md')}>
       <Background
         width={1500}
@@ -48,7 +48,6 @@ const Backgrounds = ({ inView }: { inView: boolean }) => (
         left={-10}
         rotate={-20}
         saturate={2}
-        inView={inView}
       />
       <Background
         width={2200}
@@ -59,7 +58,6 @@ const Backgrounds = ({ inView }: { inView: boolean }) => (
         rotate={-80}
         blur={10}
         saturate={2}
-        inView={inView}
       />
     </div>
 
@@ -71,7 +69,6 @@ const Backgrounds = ({ inView }: { inView: boolean }) => (
         bottom={-30}
         left={-50}
         rotate={0}
-        inView={inView}
       />
       <Background
         width={2000}
@@ -79,7 +76,6 @@ const Backgrounds = ({ inView }: { inView: boolean }) => (
         background="#CF00A3"
         bottom={-30}
         left={-50}
-        inView={inView}
       />
       <Background
         width={1200}
@@ -88,10 +84,9 @@ const Backgrounds = ({ inView }: { inView: boolean }) => (
         bottom={10}
         left={-50}
         rotate={-10}
-        inView={inView}
       />
     </div>
-  </>
+  </BackgroundsAnimated>
 )
 
 export default function () {

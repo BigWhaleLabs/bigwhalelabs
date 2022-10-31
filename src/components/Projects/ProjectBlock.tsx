@@ -1,5 +1,7 @@
+import { BackgroundsAnimated } from 'components/Background'
 import { BodyText, HeaderText, PrimaryAccentText } from 'components/Text'
 import { JSX } from 'preact/jsx-runtime'
+import { useInView } from 'react-intersection-observer'
 import { useRef } from 'preact/hooks'
 import Button from 'components/Button'
 import Tilt from 'react-parallax-tilt'
@@ -91,10 +93,11 @@ export default function ({
   centered?: boolean
   additionalBackground?: Element
 }) {
+  const { ref, inView } = useInView({ threshold: 0.4 })
   const imgRef = useRef<HTMLImageElement>(null)
 
   return (
-    <div className={wrapper(wrapReverse, centered)}>
+    <div className={wrapper(wrapReverse, centered)} ref={ref}>
       <div className={descriptionBlock}>
         <div className={cardHeader}>
           {logo}
@@ -125,7 +128,9 @@ export default function ({
           <img src={imageSource} ref={imgRef} />
         </Tilt>
       </div>
-      {additionalBackground}
+      <BackgroundsAnimated inView={inView}>
+        {additionalBackground}
+      </BackgroundsAnimated>
     </div>
   )
 }
