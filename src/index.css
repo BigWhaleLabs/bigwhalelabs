@@ -97,18 +97,6 @@ circle {
   border: 4px solid transparent;
 }
 
-@media screen and (max-width: 600px) {
-  html {
-    /* Grid */
-    background: conic-gradient(
-        from 90deg at 0.06rem 0.06rem,
-        var(--primary-dark) 90deg,
-        var(--primary-background) 0
-      )
-      0 0/2rem 2rem;
-  }
-}
-
 /* Large text with stroke */
 .stroke-text {
   -webkit-text-stroke: 1px var(--secondary-semi-transparent);
@@ -144,7 +132,6 @@ circle {
     -webkit-linear-gradient(left, var(--secondary) 2px, transparent 2px);
   background-size: 25px 25px, 40px 40px;
   transform: rotateX(85deg);
-  animation: moveDown 0.5s infinite linear;
 }
 /* Grid fade */
 .grid:after {
@@ -497,5 +484,22 @@ circle {
   38% {
     transform: translate(0, -1rem);
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    /* Grid */
+    background: conic-gradient(
+        from 90deg at 0.06rem 0.06rem,
+        var(--primary-dark) 90deg,
+        var(--primary-background) 0
+      )
+      0 0/2rem 2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .grid {
+    animation: moveDown 0.5s infinite linear;
   }
 }
