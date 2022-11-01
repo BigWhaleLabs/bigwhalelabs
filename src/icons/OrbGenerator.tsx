@@ -1,19 +1,28 @@
-import classnames, { height, transformOrigin, width } from 'classnames/tailwind'
+import {
+  borderRadius,
+  boxShadow,
+  dropShadow,
+  padding,
+} from 'classnames/tailwind'
+import GeneratorLines from 'icons/GeneratorLines'
+import classNamesToString from 'helpers/classNamesToString'
 import scrollAnimationProvider from 'helpers/scrollAnimationProvider'
 
-const imgWrapper = classnames(
-  transformOrigin('origin-center'),
-  height('h-20'),
-  width('w-20')
+const sphere = classNamesToString(
+  dropShadow('drop-shadow-formal-accent'),
+  boxShadow('shadow-orb-generator'),
+  borderRadius('rounded-full'),
+  padding('p-2'),
+  'orb-generator-background'
 )
 
 export default function ({ isVisible }: { isVisible: boolean }) {
   return (
     <div
-      className={imgWrapper}
+      className={sphere}
       style={scrollAnimationProvider('superOrbTransformation', isVisible)}
     >
-      <img src="/img/orb-generator.webp" />
+      <GeneratorLines />
     </div>
   )
 }

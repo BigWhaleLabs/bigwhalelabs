@@ -15,7 +15,6 @@ import classnames, {
   borderWidth,
   display,
   flexDirection,
-  height,
   inset,
   justifyContent,
   margin,
@@ -75,8 +74,6 @@ const secondStage = classnames(
   space('space-y-7')
 )
 const orbGeneratorBlock = classnames(
-  width('w-20'),
-  height('h-20'),
   margin('mt-14', 'lg:mb-44', 'mb-8'),
   zIndex('z-40')
 )

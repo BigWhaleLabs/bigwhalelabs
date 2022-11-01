@@ -20,7 +20,6 @@ export default function () {
       description={<SealcasterDescription />}
       buttonTitle="Build your burner wallet"
       buttonUrl="https://sealcaster.xyz/"
-      imageSource="img/sealcaster-badge.svg"
       additionalBackground={<SealcasterBackground />}
     />
   )

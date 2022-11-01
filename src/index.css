@@ -190,6 +190,14 @@ circle {
   background-blend-mode: screen, normal;
   mix-blend-mode: normal;
 }
+.orb-generator-background {
+  background: radial-gradient(circle at 89.97% 7.98%, #7e75ff, transparent 67%),
+    radial-gradient(circle at 48.76% 46.64%, #73ffab, transparent 61%),
+    radial-gradient(circle at 8.98% 17.51%, #ffff4a, transparent 58%),
+    radial-gradient(circle at 3.97% 89.92%, #ff94fb, transparent 67%),
+    radial-gradient(circle at 92.97% 92.02%, #ff722b, transparent 61%),
+    radial-gradient(circle at 50% 50%, #ffffff, #ffffff 100%);
+}
 
 @keyframes moveDown {
   0% {

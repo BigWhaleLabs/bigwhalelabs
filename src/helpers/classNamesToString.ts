@@ -8,6 +8,7 @@ type AllowedExtraClassnames =
   | 'outlined-button'
   | 'group'
   | 'echo-badge-background'
+  | 'orb-generator-background'
 
 export default function (
   ...classNames: (AllowedExtraClassnames | TTailwindString | undefined | null)[]

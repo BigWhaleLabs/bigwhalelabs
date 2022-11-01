@@ -101,7 +101,9 @@ module.exports = {
         button: '0 0 1.625rem rgb(0 0 0 / 1)',
         card: '0 1rem 11rem var(--card-shadow)',
         'iron-sphere':
-          'inset 0 -0.5em 1rem rgba(0, 0, 0, 0.6) , -0.5rem -0.8rem 1rem rgba(255, 255, 255, 0.2)',
+          'inset 0 -0.5rem 1rem rgba(0, 0, 0, 0.6), inset 0 0.5rem 1rem rgba(255, 255, 255, 0.2)',
+        'orb-generator':
+          'inset 0 0 0.7rem rgba(255, 255, 255, 1), inset 0 0 0.2rem rgba(255, 255, 255, 1)',
       },
       dropShadow: {
         accent: '0rem 0rem 0.625rem var(--accent)',
@@ -111,6 +113,9 @@ module.exports = {
           '0px 0px 7rem var(--secondary-semi-transparent)',
         'formal-accent': '0rem 0rem 0.625rem var(--formal-accent)',
         retro: '0 0 4rem var(--retro-shadow)',
+      },
+      borderWidth: {
+        3: '3px',
       },
       borderRadius: {
         '4xl': '2.5rem',
