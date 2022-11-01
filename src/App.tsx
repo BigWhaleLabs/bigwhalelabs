@@ -15,6 +15,9 @@ const App = () => {
     <>
       <Navbar />
       <Root>
+        <div className="flex flex-col space-y-4 border-t-3xl border-b-full echo-badge-background">
+          <span className="font-bold "></span>
+        </div>
         <StartBlock />
         <PrivacyWorld />
         <LearnBlock />

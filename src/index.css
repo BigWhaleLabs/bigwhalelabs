@@ -169,6 +169,29 @@ circle {
   text-shadow: 0 1.75rem 0 var(--primary-dark);
 }
 
+.echo-badge-background {
+  background: conic-gradient(
+      from 180deg at 50% 50%,
+      #000000 0deg,
+      rgba(255, 255, 255, 0.72) 17deg,
+      #000000 88.12deg,
+      rgba(255, 255, 255, 0.72) 152deg,
+      #000000 225deg,
+      rgba(255, 255, 255, 0.72) 289deg,
+      #000000 360deg
+    ),
+    radial-gradient(
+        79.8% 80.3% at 10.1% 28.2%,
+        #6e7cfb 7.61%,
+        #fb42ff 35.1%,
+        #fed823 63.5%,
+        #3a00d6 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background-blend-mode: screen, normal;
+  mix-blend-mode: normal;
+}
+
 @keyframes moveDown {
   0% {
     background-position: -50px -50px, -1px -1px;

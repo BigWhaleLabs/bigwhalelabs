@@ -288,6 +288,7 @@ export type TBackgroundColor =
   | 'bg-primary-light'
   | 'bg-primary-dimmed'
   | 'bg-primary-semi-dimmed'
+  | 'bg-primary-background'
   | 'bg-navbar'
   | 'bg-card'
 
@@ -1029,6 +1030,9 @@ export type TGradientColorStops =
   | 'from-primary-semi-dimmed'
   | 'via-primary-semi-dimmed'
   | 'to-primary-semi-dimmed'
+  | 'from-primary-background'
+  | 'via-primary-background'
+  | 'to-primary-background'
   | 'from-navbar'
   | 'via-navbar'
   | 'to-navbar'
@@ -2697,6 +2701,11 @@ export type TBorderColor =
   | 'border-r-primary-semi-dimmed'
   | 'border-b-primary-semi-dimmed'
   | 'border-l-primary-semi-dimmed'
+  | 'border-primary-background'
+  | 'border-t-primary-background'
+  | 'border-r-primary-background'
+  | 'border-b-primary-background'
+  | 'border-l-primary-background'
   | 'border-navbar'
   | 'border-t-navbar'
   | 'border-r-navbar'
@@ -3350,6 +3359,7 @@ export type TRingColor =
   | 'ring-primary-light'
   | 'ring-primary-dimmed'
   | 'ring-primary-semi-dimmed'
+  | 'ring-primary-background'
   | 'ring-navbar'
   | 'ring-card'
 
@@ -3618,6 +3628,7 @@ export type TRingOffsetColor =
   | 'ring-offset-primary-light'
   | 'ring-offset-primary-dimmed'
   | 'ring-offset-primary-semi-dimmed'
+  | 'ring-offset-primary-background'
   | 'ring-offset-navbar'
   | 'ring-offset-card'
 
@@ -3880,6 +3891,7 @@ export type TOutlineColor =
   | 'outline-primary-light'
   | 'outline-primary-dimmed'
   | 'outline-primary-semi-dimmed'
+  | 'outline-primary-background'
   | 'outline-navbar'
   | 'outline-card'
 
@@ -3956,6 +3968,7 @@ export type TBoxShadow =
   | 'shadow-none'
   | 'shadow-button'
   | 'shadow-card'
+  | 'shadow-iron-sphere'
 
 export type TBoxShadowColor =
   | 'shadow-inherit'
@@ -4195,6 +4208,7 @@ export type TBoxShadowColor =
   | 'shadow-primary-light'
   | 'shadow-primary-dimmed'
   | 'shadow-primary-semi-dimmed'
+  | 'shadow-primary-background'
   | 'shadow-navbar'
   | 'shadow-card'
 
@@ -5860,6 +5874,7 @@ export type TCaretColor =
   | 'caret-primary-light'
   | 'caret-primary-dimmed'
   | 'caret-primary-semi-dimmed'
+  | 'caret-primary-background'
   | 'caret-navbar'
   | 'caret-card'
 
@@ -6108,6 +6123,7 @@ export type TAccentColor =
   | 'accent-primary-light'
   | 'accent-primary-dimmed'
   | 'accent-primary-semi-dimmed'
+  | 'accent-primary-background'
   | 'accent-navbar'
   | 'accent-card'
 
@@ -7476,6 +7492,7 @@ export type TFill =
   | 'fill-primary-light'
   | 'fill-primary-dimmed'
   | 'fill-primary-semi-dimmed'
+  | 'fill-primary-background'
   | 'fill-navbar'
   | 'fill-card'
 
@@ -7519,6 +7536,7 @@ export type TStroke =
   | 'stroke-primary-light'
   | 'stroke-primary-dimmed'
   | 'stroke-primary-semi-dimmed'
+  | 'stroke-primary-background'
   | 'stroke-navbar'
   | 'stroke-card'
 
@@ -8065,6 +8083,7 @@ export type TPlaceholderColor =
   | 'placeholder-primary-light'
   | 'placeholder-primary-dimmed'
   | 'placeholder-primary-semi-dimmed'
+  | 'placeholder-primary-background'
   | 'placeholder-navbar'
   | 'placeholder-card'
 
@@ -8323,6 +8342,7 @@ export type TTextColor =
   | 'text-primary-light'
   | 'text-primary-dimmed'
   | 'text-primary-semi-dimmed'
+  | 'text-primary-background'
   | 'text-navbar'
   | 'text-card'
 
@@ -8621,6 +8641,7 @@ export type TTextDecorationColor =
   | 'decoration-primary-light'
   | 'decoration-primary-dimmed'
   | 'decoration-primary-semi-dimmed'
+  | 'decoration-primary-background'
   | 'decoration-navbar'
   | 'decoration-card'
 

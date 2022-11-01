@@ -89,14 +89,17 @@ module.exports = {
         'primary-light': 'var(--primary-light)',
         'primary-dimmed': 'var(--primary-dimmed)',
         'primary-semi-dimmed': 'var(--primary-semi-dimmed)',
+        'primary-background': 'var(--primary-background)',
 
         navbar: 'var(--navbar)',
         card: 'var(--card)',
       },
       boxShadow: {
-        lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
-        button: '0rem 0rem 1.625rem rgb(0 0 0 / 1)',
-        card: '0rem 1rem 11rem var(--card-shadow)',
+        lg: '0 0 1rem 0 rgb(0 0 0 / 0.25)',
+        button: '0 0 1.625rem rgb(0 0 0 / 1)',
+        card: '0 1rem 11rem var(--card-shadow)',
+        'iron-sphere':
+          'inset 0 -0.5em 1rem rgba(0, 0, 0, 0.6) , -0.5rem -0.8rem 1rem rgba(255, 255, 255, 0.2)',
       },
       dropShadow: {
         accent: '0rem 0rem 0.625rem var(--accent)',
