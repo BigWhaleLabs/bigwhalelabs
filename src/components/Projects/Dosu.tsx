@@ -21,6 +21,7 @@ export default function () {
       buttonUrl="https://discord.gg/NHk96pPZUV"
       imageElement={<DosuGraphicsBlock />}
       additionalBackground={<DosuBackground />}
+      shouldAnimate={false}
       centered
       wrapReverse
     />

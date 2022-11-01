@@ -2825,6 +2825,15 @@ export type TBorderRadius =
   | 'rounded-br-4xl'
   | 'rounded-bl-4xl'
   | 'rounded-4xl'
+  | 'rounded-t-22xl'
+  | 'rounded-r-22xl'
+  | 'rounded-b-22xl'
+  | 'rounded-l-22xl'
+  | 'rounded-tr-22xl'
+  | 'rounded-tl-22xl'
+  | 'rounded-br-22xl'
+  | 'rounded-bl-22xl'
+  | 'rounded-22xl'
 
 export type TBorderWidth =
   | 'border-t-0'
@@ -7072,6 +7081,13 @@ export type TInset =
   | 'right-full'
   | 'bottom-full'
   | 'left-full'
+  | '-inset-2'
+  | '-inset-x-2'
+  | '-inset-y-2'
+  | '-top-2'
+  | '-right-2'
+  | '-bottom-2'
+  | '-left-2'
   | '-inset-6'
   | '-inset-x-6'
   | '-inset-y-6'
@@ -7601,6 +7617,7 @@ export type TRotate =
   | 'rotate-90'
   | 'rotate-180'
   | '-rotate-20'
+  | '-rotate-90'
 
 export type TTranslate =
   | 'translate-x-0'

@@ -7,6 +7,7 @@ type AllowedExtraClassnames =
   | '-my-12'
   | 'outlined-button'
   | 'group'
+  | 'echo-badge-background'
 
 export default function (
   ...classNames: (AllowedExtraClassnames | TTailwindString | undefined | null)[]

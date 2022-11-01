@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       rotate: {
         '-20': '-20deg',
+        '-90': '-90deg',
       },
       animation: {
         expand: 'expand 1s ease-in-out',
@@ -52,6 +53,7 @@ module.exports = {
         '3xl': '2rem',
         '4xl': '2.5rem',
         '5xl': '2.875rem',
+        '6xl': '3.5rem',
         '7xl': '4.75rem',
         '8xl': '5.625rem',
       },
@@ -112,6 +114,7 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2.5rem',
+        '22xl': '11rem',
       },
       backgroundImage: {
         retro:
@@ -141,6 +144,7 @@ module.exports = {
         25: '6.125rem',
       },
       inset: {
+        '-2': '-0.5rem',
         '-6': '-1.5rem',
         '-9': '-2.25rem',
         '-11': '-2.75rem',

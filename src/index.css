@@ -181,13 +181,12 @@ circle {
       #000000 360deg
     ),
     radial-gradient(
-        79.8% 80.3% at 10.1% 28.2%,
-        #6e7cfb 7.61%,
-        #fb42ff 35.1%,
-        #fed823 63.5%,
-        #3a00d6 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      79.8% 80.3% at 10.1% 28.2%,
+      #6e7cfb 7.61%,
+      #fb42ff 35.1%,
+      #fed823 63.5%,
+      #3a00d6 100%
+    );
   background-blend-mode: screen, normal;
   mix-blend-mode: normal;
 }

@@ -50,12 +50,14 @@ const descriptionBlock = classnames(
 const cardHeader = space('space-y-4')
 const cardBody = space('space-y-6')
 
-const tiltWrapper = classnames(
-  scale('scale-50', 'tiny:scale-65', 'sm:!scale-100'),
-  position('absolute', 'sm:static'),
-  rotate('-rotate-20', 'sm:rotate-0'),
-  inset('-right-36', 'tiny:-right-28', 'bottom-80', 'tiny:bottom-64')
-)
+const tiltWrapper = (shouldAnimate?: boolean) =>
+  classnames(
+    display({ hidden: !shouldAnimate }),
+    scale('scale-50', 'tiny:scale-65', 'sm:!scale-100'),
+    position('absolute', 'sm:static'),
+    rotate('-rotate-20', 'sm:rotate-0'),
+    inset('-right-36', 'tiny:-right-28', 'bottom-80', 'tiny:bottom-64')
+  )
 
 const imageFilter = (hueAngle: number) =>
   `hue-rotate(${hueAngle}deg) drop-shadow(0px 0px 1rem var(--secondary-semi-transparent))`
@@ -69,7 +71,7 @@ export default function ({
   buttonTitle,
   buttonUrl,
   imageElement,
-  imageSource,
+  shouldAnimate = true,
   wrapReverse,
   customGlareBorderRadius,
   centered,
@@ -87,7 +89,7 @@ export default function ({
   buttonTitle: string
   buttonUrl: string
   imageElement?: Element
-  imageSource?: string
+  shouldAnimate?: boolean
   wrapReverse?: boolean
   customGlareBorderRadius?: string
   centered?: boolean
@@ -111,8 +113,10 @@ export default function ({
           </Button>
         </div>
       </div>
-      {imageElement}
-      <div className={tiltWrapper}>
+
+      {!shouldAnimate && imageElement}
+
+      <div className={tiltWrapper(shouldAnimate)}>
         <Tilt
           glareEnable
           glareMaxOpacity={0.4}
@@ -125,7 +129,7 @@ export default function ({
           }}
           className={dropShadow('drop-shadow-secondary-semi-transparent')}
         >
-          <img src={imageSource} ref={imgRef} />
+          <div ref={imgRef}>{imageElement}</div>
         </Tilt>
       </div>
       <BackgroundsAnimated inView={inView}>
