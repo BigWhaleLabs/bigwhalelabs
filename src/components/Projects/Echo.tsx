@@ -24,7 +24,7 @@ export default function () {
       buttonUrl="https://echo.sealcred.xyz/"
       buttonTitle="Create an Echo"
       imageElement={<EchoBadge />}
-      customGlareBorderRadius="5% 5% 46% 46%"
+      customGlareBorderRadius="10% 10% 45% 45%"
       additionalBackground={<EchoBackground />}
       wrapReverse
     />
