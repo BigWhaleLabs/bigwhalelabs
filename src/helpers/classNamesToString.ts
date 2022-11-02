@@ -9,6 +9,7 @@ type AllowedExtraClassnames =
   | 'group'
   | 'echo-badge-background'
   | 'orb-generator-background'
+  | 'grid'
 
 export default function (
   ...classNames: (AllowedExtraClassnames | TTailwindString | undefined | null)[]

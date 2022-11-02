@@ -18,6 +18,7 @@ export default function () {
       titleText="Sealcaster"
       subtitle="Cast anonymously on Farcaster using a ZK burner wallet"
       description={<SealcasterDescription />}
+      imageElement={<img src="img/sealcaster-badge.svg" />}
       buttonTitle="Build your burner wallet"
       buttonUrl="https://sealcaster.xyz/"
       additionalBackground={<SealcasterBackground />}

@@ -10,9 +10,6 @@ import Root from 'components/Root'
 import SealCred from 'components/SealCred'
 import StartBlock from 'components/StartBlock'
 
-// TODO: remake sealcaster badge
-// TODO: Re-use gem.webp and resize it
-
 const App = () => {
   return (
     <>
