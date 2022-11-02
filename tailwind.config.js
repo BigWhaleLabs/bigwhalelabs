@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       rotate: {
         '-20': '-20deg',
+        '-90': '-90deg',
       },
       animation: {
         expand: 'expand 1s ease-in-out',
@@ -52,6 +53,7 @@ module.exports = {
         '3xl': '2rem',
         '4xl': '2.5rem',
         '5xl': '2.875rem',
+        '6xl': '3.5rem',
         '7xl': '4.75rem',
         '8xl': '5.625rem',
       },
@@ -87,16 +89,22 @@ module.exports = {
         'tertiary-dark': 'var(--tertiary-dark)',
         'primary-dark': 'var(--primary-dark)',
         'primary-light': 'var(--primary-light)',
+        'primary-burned': 'var(--primary-burned)',
         'primary-dimmed': 'var(--primary-dimmed)',
         'primary-semi-dimmed': 'var(--primary-semi-dimmed)',
+        'primary-background': 'var(--primary-background)',
 
         navbar: 'var(--navbar)',
         card: 'var(--card)',
       },
       boxShadow: {
-        lg: '0rem 0rem 1rem 0rem rgb(0 0 0 / 0.25)',
-        button: '0rem 0rem 1.625rem rgb(0 0 0 / 1)',
-        card: '0rem 1rem 11rem var(--card-shadow)',
+        lg: '0 0 1rem 0 rgb(0 0 0 / 0.25)',
+        button: '0 0 1.625rem rgb(0 0 0 / 1)',
+        card: '0 1rem 11rem var(--card-shadow)',
+        'iron-sphere':
+          'inset 0 -0.5rem 1rem rgba(0, 0, 0, 0.6), inset 0 0.5rem 1rem rgba(255, 255, 255, 0.2)',
+        'orb-generator':
+          'inset 0 0 0.7rem rgba(255, 255, 255, 1), inset 0 0 0.2rem rgba(255, 255, 255, 1)',
       },
       dropShadow: {
         accent: '0rem 0rem 0.625rem var(--accent)',
@@ -107,8 +115,12 @@ module.exports = {
         'formal-accent': '0rem 0rem 0.625rem var(--formal-accent)',
         retro: '0 0 4rem var(--retro-shadow)',
       },
+      borderWidth: {
+        3: '3px',
+      },
       borderRadius: {
         '4xl': '2.5rem',
+        '22xl': '11rem',
       },
       backgroundImage: {
         retro:
@@ -138,6 +150,7 @@ module.exports = {
         25: '6.125rem',
       },
       inset: {
+        '-2': '-0.5rem',
         '-6': '-1.5rem',
         '-9': '-2.25rem',
         '-11': '-2.75rem',
@@ -147,6 +160,8 @@ module.exports = {
         '-44': '-11rem',
         '-60': '-15rem',
         '-96': '-24rem',
+        '-full-125': '-125%',
+        '-full-180': '-180%',
         '-1/5': '-20%',
         '1/5': '20%',
         58.5: '3.66rem',

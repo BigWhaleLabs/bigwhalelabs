@@ -18,6 +18,7 @@
   --primary-light: #bff5fa;
   --primary-dimmed: #3a00d6;
   --primary-semi-dimmed: #4b61d5;
+  --primary-burned: #01f6ff;
 
   --retro-1: #4300f5;
   --retro-2: #263db4;
@@ -97,18 +98,6 @@ circle {
   border: 4px solid transparent;
 }
 
-@media screen and (max-width: 600px) {
-  html {
-    /* Grid */
-    background: conic-gradient(
-        from 90deg at 0.06rem 0.06rem,
-        var(--primary-dark) 90deg,
-        var(--primary-background) 0
-      )
-      0 0/2rem 2rem;
-  }
-}
-
 /* Large text with stroke */
 .stroke-text {
   -webkit-text-stroke: 1px var(--secondary-semi-transparent);
@@ -144,7 +133,6 @@ circle {
     -webkit-linear-gradient(left, var(--secondary) 2px, transparent 2px);
   background-size: 25px 25px, 40px 40px;
   transform: rotateX(85deg);
-  animation: moveDown 0.5s infinite linear;
 }
 /* Grid fade */
 .grid:after {
@@ -167,6 +155,36 @@ circle {
 
 .outlined-button {
   text-shadow: 0 1.75rem 0 var(--primary-dark);
+}
+
+.echo-badge-background {
+  background: conic-gradient(
+      from 180deg at 50% 50%,
+      #000000 0deg,
+      rgba(255, 255, 255, 0.72) 17deg,
+      #000000 88.12deg,
+      rgba(255, 255, 255, 0.72) 152deg,
+      #000000 225deg,
+      rgba(255, 255, 255, 0.72) 289deg,
+      #000000 360deg
+    ),
+    radial-gradient(
+      79.8% 80.3% at 10.1% 28.2%,
+      #6e7cfb 7.61%,
+      #fb42ff 35.1%,
+      #fed823 63.5%,
+      #3a00d6 100%
+    );
+  background-blend-mode: screen, normal;
+  mix-blend-mode: normal;
+}
+.orb-generator-background {
+  background: radial-gradient(circle at 89.97% 7.98%, #7e75ff, transparent 67%),
+    radial-gradient(circle at 48.76% 46.64%, #73ffab, transparent 61%),
+    radial-gradient(circle at 8.98% 17.51%, #ffff4a, transparent 58%),
+    radial-gradient(circle at 3.97% 89.92%, #ff94fb, transparent 67%),
+    radial-gradient(circle at 92.97% 92.02%, #ff722b, transparent 61%),
+    radial-gradient(circle at 50% 50%, #ffffff, #ffffff 100%);
 }
 
 @keyframes moveDown {
@@ -467,5 +485,22 @@ circle {
   38% {
     transform: translate(0, -1rem);
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    /* Grid */
+    background: conic-gradient(
+        from 90deg at 0.06rem 0.06rem,
+        var(--primary-dark) 90deg,
+        var(--primary-background) 0
+      )
+      0 0/2rem 2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .grid {
+    animation: moveDown 0.5s infinite linear;
   }
 }

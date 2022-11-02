@@ -1,5 +1,6 @@
 import { AccentText } from 'components/Text'
 import { EchoBackground } from 'components/Backgrounds'
+import EchoBadge from 'components/Badges/EchoBadge'
 import EchoLogo from 'icons/EchoLogo'
 import ProjectBlock from 'components/Projects/ProjectBlock'
 
@@ -22,8 +23,8 @@ export default function () {
       description={<EchoDescription />}
       buttonUrl="https://echo.sealcred.xyz/"
       buttonTitle="Create an Echo"
-      imageSource="img/echo-badge.svg"
-      customGlareBorderRadius="5% 5% 46% 46%"
+      imageElement={<EchoBadge />}
+      customGlareBorderRadius="10% 10% 45% 45%"
       additionalBackground={<EchoBackground />}
       wrapReverse
     />
