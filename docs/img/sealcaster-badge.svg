@@ -52,14 +52,14 @@
 <defs>
 <linearGradient id="paint0_linear_1304_4614" x1="174.6" y1="-1.71425e-05" x2="174.6" y2="360" gradientUnits="userSpaceOnUse">
 <stop stop-color="#386285"/>
-<stop offset="0.0738106" stop-color="#4C89A6"/>
-<stop offset="0.215669" stop-color="#9FC2D4"/>
-<stop offset="0.356282" stop-color="#EAEAF5"/>
-<stop offset="0.492351" stop-color="#FBFBFD"/>
-<stop offset="0.492451" stop-color="#3D1F37"/>
-<stop offset="0.661145" stop-color="#8B2FAC"/>
-<stop offset="0.7739" stop-color="#D951FF"/>
-<stop offset="0.934446" stop-color="#CFDCF6"/>
+<stop offset="0.074" stop-color="#4C89A6"/>
+<stop offset="0.22" stop-color="#9FC2D4"/>
+<stop offset="0.36" stop-color="#EAEAF5"/>
+<stop offset="0.49" stop-color="#FBFBFD"/>
+<stop offset="0.49" stop-color="#3D1F37"/>
+<stop offset="0.66" stop-color="#8B2FAC"/>
+<stop offset="0.77" stop-color="#D951FF"/>
+<stop offset="0.94" stop-color="#CFDCF6"/>
 <stop offset="1" stop-color="#D2F9FA"/>
 </linearGradient>
 </defs>
