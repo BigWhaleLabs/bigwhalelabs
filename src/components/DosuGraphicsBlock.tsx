@@ -1,10 +1,12 @@
 import { displayFrom } from 'helpers/visibilityClassnames'
+import ComingSoon from 'components/ComingSoon'
 import DosuGraphicsArcText from 'components/DosuGraphicsArcText'
 import classnames, {
   display,
   inset,
   margin,
   position,
+  width,
 } from 'classnames/tailwind'
 
 const arcTextWrapper = classnames(
@@ -13,7 +15,8 @@ const arcTextWrapper = classnames(
 )
 const smallGem = classnames(
   display('block', 'md:hidden'),
-  margin('ml-16', 'tiny:ml-32')
+  margin('mb-8', 'ml-16', 'tiny:ml-32'),
+  width('w-32')
 )
 const wrapper = classnames(
   position('relative'),
@@ -27,7 +30,9 @@ export default function () {
         <DosuGraphicsArcText />
       </div>
       <img src="img/dosu-coming-soon-lg.png" className={displayFrom('md')} />
-      <img src="img/dosu-coming-soon-sm.png" className={smallGem} width="125" />
+      <div className={smallGem}>
+        <ComingSoon />
+      </div>
     </div>
   )
 }
