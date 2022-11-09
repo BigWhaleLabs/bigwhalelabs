@@ -1,12 +1,27 @@
 import { displayFrom } from 'helpers/visibilityClassnames'
+import { useInView } from 'react-intersection-observer'
 import ComingSoon from 'components/ComingSoon'
 import DosuGraphicsArcText from 'components/DosuGraphicsArcText'
-import classnames, { inset, margin, position, width } from 'classnames/tailwind'
+import classnames, {
+  inset,
+  margin,
+  opacity,
+  position,
+  transitionDuration,
+  transitionProperty,
+  width,
+  willChange,
+} from 'classnames/tailwind'
 
-const arcTextWrapper = classnames(
-  position('absolute'),
-  inset('right-3', '-bottom-11', 'md:left-14', 'md:right-auto')
-)
+const arcTextWrapper = (visible: boolean) =>
+  classnames(
+    position('absolute'),
+    inset('right-3', '-bottom-11', 'md:left-14', 'md:right-auto'),
+    opacity({ 'opacity-0': !visible }),
+    willChange('will-change-auto'),
+    transitionDuration('duration-200'),
+    transitionProperty('transition-opacity')
+  )
 const gem = classnames(
   margin('mb-8', 'md:mb-32', 'ml-16', 'md:ml-9'),
   width('w-32', 'md:w-64')
@@ -17,9 +32,11 @@ const wrapper = classnames(
 )
 
 export default function () {
+  const { ref, inView } = useInView()
   return (
-    <div className={wrapper}>
-      <div className={arcTextWrapper}>
+    <div className={wrapper} ref={ref}>
+      {/* Hide block to prevent jumping */}
+      <div className={arcTextWrapper(inView)}>
         <DosuGraphicsArcText />
       </div>
       <div></div>

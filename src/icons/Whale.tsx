@@ -13,22 +13,20 @@ const secondaryStroke = classnames(
   strokeWidth('stroke-2')
 )
 const svgWrapper = (large?: boolean) =>
-  width(
-    large
-      ? { 'w-32': true, 'sm:w-40': true }
-      : { 'w-12': true, 'sm:w-16': true }
+  classnames(
+    dropShadow('drop-shadow-primary'),
+    width(
+      large
+        ? { 'w-32': true, 'sm:w-40': true }
+        : { 'w-12': true, 'sm:w-16': true }
+    )
   )
-const svgClasses = dropShadow('drop-shadow-primary')
 const circleFill = fill('fill-primary')
 
 export default function ({ large }: { large?: boolean }) {
   return (
     <div className={svgWrapper(large)}>
-      <svg
-        viewBox="0 0 62 55"
-        className={svgClasses}
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 62 55" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M35.6875 45.2882C37.8173 47.844 46.6289 57.0666 58.2149 50.9329C56.0851 49.0871 52.0734 44.2143 52.0734 41.4882"
           className={mainStroke}

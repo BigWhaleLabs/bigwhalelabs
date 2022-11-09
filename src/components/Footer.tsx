@@ -1,11 +1,11 @@
-import { display } from 'classnames/tailwind'
+import { opacity } from 'classnames/tailwind'
 import { useInView } from 'react-intersection-observer'
 import classNamesToString from 'helpers/classNamesToString'
 
 export default function () {
   const { ref, inView } = useInView()
 
-  const grid = classNamesToString(display({ hidden: !inView }), 'grid')
+  const grid = classNamesToString(opacity({ 'opacity-0': !inView }), 'grid')
 
   return (
     <div className="grid-wrapper" ref={ref}>
