@@ -184,6 +184,9 @@ module.exports = {
       transitionProperty: {
         letters: 'transform 0.32s ease, box-shadow 0.32s ease',
       },
+      willChange: {
+        opacity: 'opacity',
+      },
     },
   },
 }

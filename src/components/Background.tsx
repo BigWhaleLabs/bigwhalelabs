@@ -43,6 +43,7 @@ export default function ({
         background: `radial-gradient(50% 50% at 50% 50%, ${background} 0%, ${background}00 100%)`,
         rotate: `${rotate}deg`,
         borderRadius: '100%',
+        willChange: 'opacity',
         filter: `blur(${blur}px) saturate(${saturate})`,
         opacity: reversedAppear ? (inView ? 0 : 0.6) : inView ? 0.6 : 0,
         transitionDuration: '4s',

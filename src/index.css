@@ -150,6 +150,8 @@ circle {
 }
 
 .retro-text::before {
+  isolation: isolate;
+  will-change: filter;
   -webkit-text-stroke: 4px transparent !important;
 }
 
