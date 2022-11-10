@@ -18,7 +18,7 @@ const arcTextWrapper = (visible: boolean) =>
     position('absolute'),
     inset('right-3', '-bottom-11', 'md:left-14', 'md:right-auto'),
     opacity({ 'opacity-0': !visible }),
-    willChange('will-change-auto'),
+    willChange('will-change-opacity'),
     transitionDuration('duration-200'),
     transitionProperty('transition-opacity')
   )
@@ -33,9 +33,9 @@ const wrapper = classnames(
 
 export default function () {
   const { ref, inView } = useInView()
+
   return (
     <div className={wrapper} ref={ref}>
-      {/* Hide block to prevent jumping */}
       <div className={arcTextWrapper(inView)}>
         <DosuGraphicsArcText />
       </div>

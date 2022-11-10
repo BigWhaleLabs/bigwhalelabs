@@ -5916,6 +5916,7 @@ export type TWillChange =
   | 'will-change-scroll'
   | 'will-change-contents'
   | 'will-change-transform'
+  | 'will-change-opacity'
 
 export type TAccentColor =
   | 'accent-inherit'
