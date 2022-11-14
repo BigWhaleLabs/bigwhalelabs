@@ -19,6 +19,7 @@ import classnames, {
   transitionProperty,
   translate,
   width,
+  willChange,
 } from 'classnames/tailwind'
 
 const commonClasses = classnames(
@@ -41,7 +42,8 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         fontFamily('font-primary'),
         fontSize(small ? 'text-sm' : 'text-lg'),
         textColor('text-primary-dark'),
-        translate('hover:-translate-y-0.5')
+        translate('hover:-translate-y-0.5'),
+        willChange('will-change-transform')
       )
     : classnames(
         fontWeight('font-normal'),
