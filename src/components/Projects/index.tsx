@@ -1,5 +1,5 @@
-import Dosu from 'components/Projects/Dosu'
 import Echo from 'components/Projects/Echo'
+import Ketl from 'components/Projects/Ketl'
 import Sealcaster from 'components/Projects/Sealcaster'
 import classnames, {
   display,
@@ -24,7 +24,7 @@ export default function () {
     <div className={wrapper}>
       <Echo />
       <Sealcaster />
-      <Dosu />
+      <Ketl />
     </div>
   )
 }

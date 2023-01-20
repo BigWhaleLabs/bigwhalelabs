@@ -1,11 +1,11 @@
 import { AccentText } from 'components/Text'
-import { DosuBackground } from 'components/Backgrounds'
-import DosuGraphicsBlock from 'components/DosuGraphicsBlock'
+import { KetlBackground } from 'components/Backgrounds'
+import KetlGraphicsBlock from 'components/KetlGraphicsBlock'
 import ProjectBlock from 'components/Projects/ProjectBlock'
 
-const DosuDescription = () => (
+const KetlDescription = () => (
   <>
-    <AccentText color="text-primary">Dosu</AccentText> will be a pseudonymous
+    <AccentText color="text-primary">Ketl</AccentText> will be a pseudonymous
     social network where you can share your thoughts with the world.
   </>
 )
@@ -14,13 +14,13 @@ export default function () {
   return (
     <ProjectBlock
       titleColor="text-primary"
-      titleText="Dosu"
+      titleText="Ketl"
       subtitle="Socialize pseudonymously with ZK badges"
-      description={<DosuDescription />}
+      description={<KetlDescription />}
       buttonTitle="Join Discord for updates"
       buttonUrl="https://discord.gg/NHk96pPZUV"
-      imageElement={<DosuGraphicsBlock />}
-      additionalBackground={<DosuBackground />}
+      imageElement={<KetlGraphicsBlock />}
+      additionalBackground={<KetlBackground />}
       shouldAnimate={false}
       centered
       wrapReverse

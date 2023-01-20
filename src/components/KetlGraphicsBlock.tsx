@@ -1,7 +1,7 @@
 import { displayFrom } from 'helpers/visibilityClassnames'
 import { useInView } from 'react-intersection-observer'
 import ComingSoon from 'components/ComingSoon'
-import DosuGraphicsArcText from 'components/DosuGraphicsArcText'
+import KetlGraphicsArcText from 'components/KetlGraphicsArcText'
 import classnames, {
   inset,
   margin,
@@ -37,7 +37,7 @@ export default function () {
   return (
     <div className={wrapper} ref={ref}>
       <div className={arcTextWrapper(inView)}>
-        <DosuGraphicsArcText />
+        <KetlGraphicsArcText />
       </div>
       <div></div>
       <img src="img/coming-soon-city.png" className={displayFrom('md')} />

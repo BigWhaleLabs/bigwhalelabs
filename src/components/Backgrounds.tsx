@@ -99,7 +99,7 @@ export function EchoBackground() {
   )
 }
 
-export function DosuBackground() {
+export function KetlBackground() {
   return (
     <>
       <Background

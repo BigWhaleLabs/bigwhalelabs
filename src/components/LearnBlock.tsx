@@ -1,6 +1,6 @@
 import { LearnBlockBackground } from 'components/Backgrounds'
 import { useInView } from 'react-intersection-observer'
-import DosuCity from 'icons/DosuCity'
+import KetlCity from 'icons/KetlCity'
 import OrbSeal from 'components/OrbSeal'
 import RightCard from 'components/RightCard'
 import WeLiveInAWorld from 'components/WeLiveInAWorld'
@@ -32,7 +32,7 @@ const cardsOnRight = classnames(
   flexDirection('flex-col'),
   space('space-y-6')
 )
-const dosuCityIcon = classnames(
+const ketlCityIcon = classnames(
   margin('mb-0', 'mr-0', 'sm:-mb-10', 'sm:-mr-10', 'lg:-mb-24')
 )
 
@@ -52,13 +52,13 @@ export default function () {
         <RightCard
           reverse
           icon={
-            <div className={dosuCityIcon}>
-              <DosuCity />
+            <div className={ketlCityIcon}>
+              <KetlCity />
             </div>
           }
           text="Socialize pseudonymously using ZK NFT badges"
-          buttonText="Learn about Dosu"
-          url="https://dosu.io"
+          buttonText="Learn about Ketl"
+          url="https://ketl.xyz"
           reverseBelowMedium
         />
       </div>

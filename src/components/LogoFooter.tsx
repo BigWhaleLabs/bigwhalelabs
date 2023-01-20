@@ -41,7 +41,7 @@ export default function () {
         Join our Discord
       </Button>
       <div className={linksContainer}>
-        <LinkText url="https://dosu.io">Dosu</LinkText>
+        <LinkText url="https://ketl.xyz">Ketl</LinkText>
         <LinkText url="https://sealcred.xyz">SealCred</LinkText>
         <LinkText url="https://blog.bigwhalelabs.com">Blog</LinkText>
         <LinkText tertiary url="https://twitter.com/bigwhalelabs">

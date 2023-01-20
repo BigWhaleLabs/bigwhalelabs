@@ -21,7 +21,7 @@ const navLinkContainer = classnames(
 export default function () {
   return (
     <div className={navLinkContainer}>
-      <LinkText url="https://dosu.io">Dosu</LinkText>
+      <LinkText url="https://ketl.xyz">Ketl</LinkText>
       <LinkText url="https://sealcred.xyz">SealCred</LinkText>
       <LinkText url="https://blog.bigwhalelabs.com/">Blog</LinkText>
       <LinkText url="https://twitter.com/bigwhalelabs" tertiary>
