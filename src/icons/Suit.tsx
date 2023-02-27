@@ -10,7 +10,7 @@ import classnames, {
 const wrapperStyles = classnames(
   zIndex('z-10'),
   height('h-suit-mobile', 'md:h-suit'),
-  maxWidth('tiny:max-w-max', 'max-w-270'),
+  maxWidth('max-w-max', 'tiny:max-w-lg'),
   dropShadow('drop-shadow-primary')
 )
 const suitStyles = classnames(
