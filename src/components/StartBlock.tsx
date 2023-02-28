@@ -61,7 +61,7 @@ const textBlock = classnames(
   textAlign('lg:text-left', 'text-center')
 )
 const bigWhaleStyles = classnames(
-  height('md:h-fit', 'h-screen'),
+  height('md:h-full', 'h-screen'),
   overflow('overflow-clip'),
   maxWidth('lg:!max-w-3xl', 'md:max-w-full', 'max-w-4xl'),
   margin('md:!mr-0', 'se:-mr-96', '-mr-80', 'md:mt-0', 'mt-16')
