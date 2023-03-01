@@ -63,7 +63,7 @@ const textBlock = classnames(
 const bigWhaleStyles = classnames(
   height('md:h-full', 'h-screen'),
   overflow('overflow-clip'),
-  width('w-screen', 'md:w-full'),
+  width('md:w-full'),
   maxWidth('lg:!max-w-3xl', 'md:max-w-3xl', 'sm:max-w-full', 'max-w-4xl'),
   margin('md:!mr-0', 'se:-mr-96', '-mr-80', 'md:mt-0', 'mt-16')
 )
