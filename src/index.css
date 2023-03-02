@@ -180,6 +180,7 @@ circle {
   background-blend-mode: screen, normal;
   mix-blend-mode: normal;
 }
+
 .orb-generator-background {
   background: radial-gradient(circle at 89.97% 7.98%, #7e75ff, transparent 67%),
     radial-gradient(circle at 48.76% 46.64%, #73ffab, transparent 61%),
