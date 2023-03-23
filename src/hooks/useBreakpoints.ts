@@ -23,16 +23,16 @@ export default function () {
   }, [])
 
   return {
-    xxs: width > xsSize,
-    xs: width > xsSize && width < smSize,
-    sm: width > smSize,
-    onlyPhones: width < mdSize,
-    tablet: width > xsSize && width < mdSize,
-    expandedTablet: width > mobileSize && width < lgSize,
-    mobile: width > mobileSize,
-    md: width > mdSize,
     defaultMd: width > defaultMd,
+    expandedTablet: width > mobileSize && width < lgSize,
     lg: width > lgSize,
+    md: width > mdSize,
+    mobile: width > mobileSize,
+    onlyPhones: width < mdSize,
+    sm: width > smSize,
+    tablet: width > xsSize && width < mdSize,
     twoXl: width > twoXlSize,
+    xs: width > xsSize && width < smSize,
+    xxs: width > xsSize,
   }
 }

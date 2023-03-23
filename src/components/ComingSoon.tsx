@@ -49,7 +49,7 @@ export default function () {
   return (
     <div className={wrapperStyles}>
       <div className={plate}>Coming soon</div>
-      <img src="img/gem.webp" className={gemStyle} />
+      <img className={gemStyle} src="img/gem.webp" />
     </div>
   )
 }

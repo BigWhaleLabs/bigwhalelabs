@@ -16,17 +16,17 @@ const EchoDescription = () => (
 export default function () {
   return (
     <ProjectBlock
+      wrapReverse
+      additionalBackground={<EchoBackground />}
+      buttonTitle="Create an Echo"
+      buttonUrl="https://echo.sealcred.xyz/"
+      customGlareBorderRadius="10% 10% 45% 45%"
+      description={<EchoDescription />}
+      imageElement={<EchoBadge />}
       logo={<EchoLogo />}
+      subtitle="Tweet anonymously using your ZK badges"
       titleColor="text-secondary"
       titleText="Echo"
-      subtitle="Tweet anonymously using your ZK badges"
-      description={<EchoDescription />}
-      buttonUrl="https://echo.sealcred.xyz/"
-      buttonTitle="Create an Echo"
-      imageElement={<EchoBadge />}
-      customGlareBorderRadius="10% 10% 45% 45%"
-      additionalBackground={<EchoBackground />}
-      wrapReverse
     />
   )
 }

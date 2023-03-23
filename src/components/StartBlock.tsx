@@ -111,17 +111,17 @@ export default function () {
   return (
     <div className={sectionWrapper}>
       <ParallaxProvider>
-        <Parallax speed={25} className={parallaxWrapper}>
-          <img src="/img/gem.webp" className={leftGem} />
-          <img src="/img/gem.webp" className={rightGem} />
+        <Parallax className={parallaxWrapper} speed={25}>
+          <img className={leftGem} src="/img/gem.webp" />
+          <img className={rightGem} src="/img/gem.webp" />
           <div className={ironSphere}>
             <IronSphere />
           </div>
           <Parallax speed={-20}>
             <img
+              className={bigWhaleStyles}
               ref={whale}
               src="/img/colorful-whale.webp"
-              className={bigWhaleStyles}
               style={{
                 transform: `scale(${
                   !defaultMd && !lg ? 0.75 : !lg ? 1.0 : 1.25

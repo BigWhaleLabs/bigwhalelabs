@@ -10,16 +10,16 @@ import classnames, {
 } from 'classnames/tailwind'
 
 export default function ({
-  width,
-  height,
   background,
-  bottom,
-  left,
-  rotate = 0,
-  reversedAppear,
-  inView = true,
   blur = 0,
+  bottom,
+  height,
+  inView = true,
+  left,
+  reversedAppear,
+  rotate = 0,
   saturate = 1,
+  width,
 }: {
   width: number
   height: number
@@ -35,19 +35,19 @@ export default function ({
   return (
     <div
       style={{
-        position: 'absolute',
-        bottom: `${bottom}%`,
-        left: `${left}%`,
-        width: `${width}px`,
-        height: `${height}px`,
         background: `radial-gradient(50% 50% at 50% 50%, ${background} 0%, ${background}00 100%)`,
-        rotate: `${rotate}deg`,
         borderRadius: '100%',
-        willChange: 'opacity',
+        bottom: `${bottom}%`,
         filter: `blur(${blur}px) saturate(${saturate})`,
+        height: `${height}px`,
+        left: `${left}%`,
         opacity: reversedAppear ? (inView ? 0 : 0.6) : inView ? 0.6 : 0,
+        position: 'absolute',
+        rotate: `${rotate}deg`,
         transitionDuration: '4s',
         transitionProperty: 'opacity',
+        width: `${width}px`,
+        willChange: 'opacity',
         zIndex: -1,
       }}
     />
@@ -65,8 +65,8 @@ const appearAnimation = (inView: boolean) =>
     position('absolute')
   )
 export const BackgroundsAnimated = ({
-  inView,
   children,
+  inView,
 }: {
   inView: boolean
 } & ChildrenProp) => <div className={appearAnimation(inView)}>{children}</div>

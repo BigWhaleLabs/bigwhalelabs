@@ -82,14 +82,14 @@ export default function () {
     <div className={blockWrapper}>
       <div className={card}>
         <ProjectBlock
-          logo={<SealCredLogo />}
-          titleColor="text-accent"
-          titleText="SealCred"
-          subtitle="Privacy-preserving social protocol built with ZK soul-bound NFTs"
-          description={<SealCredDescription />}
+          wrapReverse
           buttonTitle="Get started"
           buttonUrl="https://sealcred.xyz/"
-          wrapReverse
+          description={<SealCredDescription />}
+          logo={<SealCredLogo />}
+          subtitle="Privacy-preserving social protocol built with ZK soul-bound NFTs"
+          titleColor="text-accent"
+          titleText="SealCred"
         />
       </div>
 

@@ -37,29 +37,29 @@ const ketlCityIcon = classnames(
 )
 
 export default function () {
-  const { ref, inView } = useInView({ threshold: 0.4 })
+  const { inView, ref } = useInView({ threshold: 0.4 })
 
   return (
     <div className={cardsTogether} ref={ref}>
       <WeLiveInAWorld />
       <div className={cardsOnRight}>
         <RightCard
+          buttonText="Do this with SealCred"
           icon={<OrbSeal />}
           text="Verify credentials through zk NFTs while remaining anonymous"
-          buttonText="Do this with SealCred"
           url="https://sealcred.xyz"
         />
         <RightCard
           reverse
+          reverseBelowMedium
+          buttonText="Learn about Ketl"
+          text="Socialize pseudonymously using ZK NFT badges"
+          url="https://ketl.xyz"
           icon={
             <div className={ketlCityIcon}>
               <KetlCity />
             </div>
           }
-          text="Socialize pseudonymously using ZK NFT badges"
-          buttonText="Learn about Ketl"
-          url="https://ketl.xyz"
-          reverseBelowMedium
         />
       </div>
       <LearnBlockBackground inView={inView} />

@@ -23,8 +23,8 @@ const line = (gradientDirection: 'to-left' | 'to-right', small?: boolean) => {
 
 export default ({
   color,
-  gradientDirection,
   fromLight,
+  gradientDirection,
   small,
 }: {
   color: Color

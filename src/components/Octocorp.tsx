@@ -30,7 +30,7 @@ const wrapper = classnames(
 )
 
 export default function () {
-  const { ref, inView } = useInView({ threshold: 0.4 })
+  const { inView, ref } = useInView({ threshold: 0.4 })
 
   return (
     <div className={wrapper} ref={ref}>

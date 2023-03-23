@@ -8,50 +8,50 @@ const lineClasses = classnames(
 export default function ({ open }: { open?: boolean }) {
   return (
     <svg
-      width="25"
       height="25"
       viewBox="0 0 25 25"
+      width="25"
       xmlns="http://www.w3.org/2000/svg"
     >
       {open ? (
         <>
           <line
-            x1="6.70035"
-            y1="6.5"
-            x2="18.0141"
-            y2="17.8137"
             className={lineClasses}
+            x1="6.70035"
+            x2="18.0141"
+            y1="6.5"
+            y2="17.8137"
           />
           <line
-            x1="6.28613"
-            y1="17.8138"
-            x2="17.5998"
-            y2="6.50011"
             className={lineClasses}
+            x1="6.28613"
+            x2="17.5998"
+            y1="17.8138"
+            y2="6.50011"
           />
         </>
       ) : (
         <>
           <line
+            className={lineClasses}
             x1="4.28589"
+            x2="20.2859"
             y1="6.5"
-            x2="20.2859"
             y2="6.5"
-            className={lineClasses}
           />
           <line
+            className={lineClasses}
             x1="4.28589"
+            x2="20.2859"
             y1="12.5"
-            x2="20.2859"
             y2="12.5"
-            className={lineClasses}
           />
           <line
-            x1="4.28589"
-            y1="18.5"
-            x2="20.2859"
-            y2="18.5"
             className={lineClasses}
+            x1="4.28589"
+            x2="20.2859"
+            y1="18.5"
+            y2="18.5"
           />
         </>
       )}

@@ -84,7 +84,7 @@ const navbarWrapper = (small: boolean, show: boolean) =>
   )
 
 export default function () {
-  const { xs, md } = useBreakpoints()
+  const { md, xs } = useBreakpoints()
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const scrollpercent = useScrollPercent()
@@ -94,8 +94,8 @@ export default function () {
 
   return (
     <nav
-      ref={navbarRef}
       className={navbar}
+      ref={navbarRef}
       style={{ backfaceVisibility: 'hidden' }}
     >
       <div className={bgCover(scrollpercent > 0.01, isMenuOpen, xs)} />
@@ -109,7 +109,7 @@ export default function () {
               Join our Discord
             </Button>
             {!md && (
-              <Button onClick={() => setIsMenuOpen(!isMenuOpen)} icon>
+              <Button icon onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <Burger open={isMenuOpen} />
               </Button>
             )}

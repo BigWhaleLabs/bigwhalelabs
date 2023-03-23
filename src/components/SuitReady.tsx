@@ -62,7 +62,7 @@ const separator = classnames(
 )
 
 export default function () {
-  const { ref, inView } = useInView()
+  const { inView, ref } = useInView()
 
   return (
     <div className={wrapper} ref={ref}>

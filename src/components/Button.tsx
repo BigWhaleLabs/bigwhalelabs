@@ -30,7 +30,7 @@ const commonClasses = classnames(
   width('w-fit')
 )
 
-const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
+const fontClasses = ({ icon, outlined, small }: ButtonProps) =>
   outlined
     ? classnames(
         backgroundColor('bg-tertiary'),
@@ -56,8 +56,8 @@ const fontClasses = ({ outlined, small, icon }: ButtonProps) =>
         textDecoration('hover:underline')
       )
 
-const button = ({ outlined, small, icon }: ButtonProps) =>
-  classnames(commonClasses, fontClasses({ outlined, small, icon }))
+const button = ({ icon, outlined, small }: ButtonProps) =>
+  classnames(commonClasses, fontClasses({ icon, outlined, small }))
 
 interface ButtonProps {
   outlined?: boolean
@@ -102,17 +102,17 @@ const renderLetters = (sentence: string) => {
 }
 
 export default function ({
-  outlined,
   children,
-  small,
   icon,
+  outlined,
+  small,
   url,
   ...rest
 }: Omit<HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
   return (
     <button
       className={classNamesToString(
-        button({ outlined, small, icon }),
+        button({ icon, outlined, small }),
         'outlined-button',
         'group'
       )}

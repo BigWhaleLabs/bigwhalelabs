@@ -7,11 +7,11 @@ export default function () {
   return (
     <>
       <div className={displayFrom('md')}>
-        <ArcText text={text} diameter={400} />
+        <ArcText diameter={400} text={text} />
       </div>
 
       <div className={displayTo('md')}>
-        <ArcText text={text} diameter={200} />
+        <ArcText diameter={200} text={text} />
       </div>
     </>
   )

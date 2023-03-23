@@ -115,19 +115,19 @@ interface NftBlockProps {
   color: Color
 }
 
-const NftBlock = ({ position, small, color }: NftBlockProps) => {
+const NftBlock = ({ color, position, small }: NftBlockProps) => {
   return (
     <div className={nftSphereIcon}>
       {position === 'left' && (
         <div className={nftLine}>
           <PlainText>NFT</PlainText>
-          <Line small fromLight gradientDirection="to-right" color={color} />
+          <Line fromLight small color={color} gradientDirection="to-right" />
         </div>
       )}
-      <Sphere small={small} color={color} onLeft={position === 'left'} />
+      <Sphere color={color} small={small} onLeft={position === 'left'} />
       {position === 'right' && (
         <div className={nftLine}>
-          <Line small fromLight gradientDirection="to-left" color={color} />
+          <Line fromLight small color={color} gradientDirection="to-left" />
           <PlainText>NFT</PlainText>
         </div>
       )}
@@ -143,15 +143,15 @@ interface PairOfNftsProps {
 const PairOfNfts = ({ colors, position, small }: PairOfNftsProps) => {
   return (
     <div className={spheresBlock}>
-      {colors.map((color) => NftBlock({ position, small, color }))}
+      {colors.map((color) => NftBlock({ color, position, small }))}
     </div>
   )
 }
 
 export default function () {
-  const { ref: zkWrapRef, inView: zkWrapVisible } = useInView()
-  const { ref: suitWrapRef, inView: suitWrapVisible } = useInView()
-  const { ref: wrapperRef, inView: wrapperVisible } = useInView()
+  const { inView: zkWrapVisible, ref: zkWrapRef } = useInView()
+  const { inView: suitWrapVisible, ref: suitWrapRef } = useInView()
+  const { inView: wrapperVisible, ref: wrapperRef } = useInView()
 
   return (
     <div className={wrapper} ref={wrapperRef}>
@@ -159,16 +159,16 @@ export default function () {
         <div className={personWithStage}>
           <div className={personWithSpheres}>
             <PairOfNfts
-              position="left"
               colors={['primary', 'tertiary']}
+              position="left"
               small={true}
             />
             <div className={personWrapper}>
               <Person isVisible={wrapperVisible} />
             </div>
             <PairOfNfts
-              position="right"
               colors={['accent', 'secondary']}
+              position="right"
               small={true}
             />
           </div>

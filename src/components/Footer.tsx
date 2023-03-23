@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer'
 import classNamesToString from 'helpers/classNamesToString'
 
 export default function () {
-  const { ref, inView } = useInView()
+  const { inView, ref } = useInView()
 
   const grid = classNamesToString(
     opacity({ 'opacity-0': !inView }),
