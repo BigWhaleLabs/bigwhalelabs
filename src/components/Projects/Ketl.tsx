@@ -13,17 +13,17 @@ const KetlDescription = () => (
 export default function () {
   return (
     <ProjectBlock
-      titleColor="text-primary"
-      titleText="Ketl"
-      subtitle="Socialize pseudonymously with ZK badges"
-      description={<KetlDescription />}
-      buttonTitle="Join Discord for updates"
-      buttonUrl="https://discord.gg/NHk96pPZUV"
-      imageElement={<KetlGraphicsBlock />}
-      additionalBackground={<KetlBackground />}
-      shouldAnimate={false}
       centered
       wrapReverse
+      additionalBackground={<KetlBackground />}
+      buttonTitle="Join Discord for updates"
+      buttonUrl="https://discord.gg/NHk96pPZUV"
+      description={<KetlDescription />}
+      imageElement={<KetlGraphicsBlock />}
+      shouldAnimate={false}
+      subtitle="Socialize pseudonymously with ZK badges"
+      titleColor="text-primary"
+      titleText="Ketl"
     />
   )
 }

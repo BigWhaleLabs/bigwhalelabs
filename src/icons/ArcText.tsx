@@ -16,8 +16,8 @@ const textBox = classnames(
 const animate = animation('animate-rotate-slow')
 
 export default function ({
-  text,
   diameter = 200,
+  text,
 }: {
   text: string
   diameter?: number
@@ -33,20 +33,20 @@ export default function ({
     <div className={animate}>
       <div
         // using diameter/2 prevents overflow
-        style={{
-          width: diameter / 2,
-          height: diameter,
-          fontSize: `${diameter / 10}px`,
-          transform: 'translateX(45%)',
-        }}
         className={textBox}
+        style={{
+          fontSize: `${diameter / 10}px`,
+          height: diameter,
+          transform: 'translateX(45%)',
+          width: diameter / 2,
+        }}
       >
         {chars.map((char, index) => (
           <span
             style={{
               height: `${diameter}px`,
-              transform: `rotate(${(360 / textLength) * index}deg)`,
               position: 'absolute',
+              transform: `rotate(${(360 / textLength) * index}deg)`,
             }}
           >
             {char}

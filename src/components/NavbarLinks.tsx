@@ -24,7 +24,7 @@ export default function () {
       <LinkText url="https://ketl.xyz">Ketl</LinkText>
       <LinkText url="https://sealcred.xyz">SealCred</LinkText>
       <LinkText url="https://blog.bigwhalelabs.com/">Blog</LinkText>
-      <LinkText url="https://twitter.com/bigwhalelabs" tertiary>
+      <LinkText tertiary url="https://twitter.com/bigwhalelabs">
         <Twitter />
       </LinkText>
     </div>

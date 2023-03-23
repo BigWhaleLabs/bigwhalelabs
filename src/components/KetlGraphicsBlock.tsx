@@ -32,7 +32,7 @@ const wrapper = classnames(
 )
 
 export default function () {
-  const { ref, inView } = useInView()
+  const { inView, ref } = useInView()
 
   return (
     <div className={wrapper} ref={ref}>
@@ -40,7 +40,7 @@ export default function () {
         <KetlGraphicsArcText />
       </div>
       <div></div>
-      <img src="img/coming-soon-city.png" className={displayFrom('md')} />
+      <img className={displayFrom('md')} src="img/coming-soon-city.png" />
       <div className={gem}>
         <ComingSoon />
       </div>

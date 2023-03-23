@@ -13,15 +13,15 @@ const SealcasterDescription = () => (
 export default function () {
   return (
     <ProjectBlock
-      logo={<SealcasterLogo />}
-      titleColor="text-quaternary"
-      titleText="Sealcaster"
-      subtitle="Cast anonymously on Farcaster using a ZK burner wallet"
-      description={<SealcasterDescription />}
-      imageElement={<img src="img/sealcaster-badge.svg" />}
+      additionalBackground={<SealcasterBackground />}
       buttonTitle="Build your burner wallet"
       buttonUrl="https://sealcaster.xyz/"
-      additionalBackground={<SealcasterBackground />}
+      description={<SealcasterDescription />}
+      imageElement={<img src="img/sealcaster-badge.svg" />}
+      logo={<SealcasterLogo />}
+      subtitle="Cast anonymously on Farcaster using a ZK burner wallet"
+      titleColor="text-quaternary"
+      titleText="Sealcaster"
     />
   )
 }

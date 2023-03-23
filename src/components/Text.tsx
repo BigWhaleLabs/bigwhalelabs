@@ -52,19 +52,19 @@ const largeStrokeTextAccent = classnames(
   lineHeight('leading-10', 'md:leading-12')
 )
 export function LargeStrokeText({
-  small,
   children,
+  small,
 }: ChildrenProp & { small?: boolean }) {
-  const { ref, inView } = useInView()
+  const { inView, ref } = useInView()
 
   return (
     <h1
+      ref={ref}
+      style={scrollAnimationProvider('strokeScroll', inView)}
       className={classNamesToString(
         largeStrokeTextAccent,
         small ? 'stroke-text-small' : 'stroke-text'
       )}
-      style={scrollAnimationProvider('strokeScroll', inView)}
-      ref={ref}
     >
       {children}
     </h1>
@@ -80,10 +80,10 @@ const bodyText = (large?: boolean, bold?: boolean, center?: boolean) =>
     textAlign(center ? 'text-center' : 'text-left')
   )
 export function BodyText({
-  large,
   bold,
   center,
   children,
+  large,
 }: ChildrenProp & {
   large?: boolean
   bold?: boolean
@@ -102,8 +102,8 @@ const primaryAccentText = (color: TTextColor) =>
     fontSize('text-4xl')
   )
 export function PrimaryAccentText({
-  color,
   children,
+  color,
 }: ChildrenProp & {
   color: TTextColor
 }) {
@@ -113,9 +113,9 @@ export function PrimaryAccentText({
 const accentText = (color: TTextColor, shadow?: TDropShadow) =>
   classnames(textColor(color), dropShadow(shadow))
 export function AccentText({
+  children,
   color,
   shadow,
-  children,
 }: ChildrenProp & {
   color: TTextColor
   shadow?: TDropShadow
@@ -145,9 +145,9 @@ const headerText = (textSize?: string, center?: boolean) =>
     textAlign(center ? 'text-center' : undefined)
   )
 export function HeaderText({
-  textSize,
   center,
   children,
+  textSize,
 }: ChildrenProp & { textSize?: string; center?: boolean }) {
   return <h2 className={headerText(textSize, center)}>{children}</h2>
 }
@@ -161,8 +161,8 @@ const plainText = (position: TTextAlign) =>
     textAlign(position)
   )
 export function PlainText({
-  position = 'text-left',
   children,
+  position = 'text-left',
 }: ChildrenProp & { position?: TTextAlign }) {
   return <span className={plainText(position)}>{children}</span>
 }
@@ -187,10 +187,10 @@ const extraBoldText = (
     letterSpacing(trackingExtra ? 'tracking-extra' : undefined)
   )
 export function ExtraBoldText({
-  small,
-  extraLeading,
-  trackingExtra,
   children,
+  extraLeading,
+  small,
+  trackingExtra,
 }: ChildrenProp & {
   small?: boolean
   extraLeading?: boolean
@@ -223,8 +223,8 @@ export function RetroText({ children }: ChildrenProp) {
   const { xs } = useBreakpoints()
   return (
     <span
-      data-text={children}
       className={classNamesToString(retroText(xs), 'retro-text')}
+      data-text={children}
     >
       {children}
     </span>
@@ -242,9 +242,9 @@ const linkText = (tertiary?: boolean) =>
     )
   )
 export function LinkText({
-  url,
-  tertiary,
   children,
+  tertiary,
+  url,
 }: ChildrenProp & { url: string; tertiary?: boolean }) {
   return (
     <a className={linkText(tertiary)} href={url} target="_blank">

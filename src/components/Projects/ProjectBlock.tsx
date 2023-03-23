@@ -30,7 +30,7 @@ const wrapper = (reverse?: boolean, centered?: boolean) =>
     display('flex'),
     gap('gap-8'),
     flexDirection(
-      { 'lg:flex-row-reverse': reverse, 'flex-col-reverse': reverse },
+      { 'flex-col-reverse': reverse, 'lg:flex-row-reverse': reverse },
       'flex-col',
       'lg:flex-row'
     ),
@@ -63,19 +63,19 @@ const imageFilter = (hueAngle: number) =>
   `hue-rotate(${hueAngle}deg) drop-shadow(0px 0px 1rem var(--secondary-semi-transparent))`
 
 export default function ({
-  logo,
-  titleText,
-  titleColor,
-  subtitle,
-  description,
+  additionalBackground,
   buttonTitle,
   buttonUrl,
-  imageElement,
-  shouldAnimate = true,
-  wrapReverse,
-  customGlareBorderRadius,
   centered,
-  additionalBackground,
+  customGlareBorderRadius,
+  description,
+  imageElement,
+  logo,
+  shouldAnimate = true,
+  subtitle,
+  titleColor,
+  titleText,
+  wrapReverse,
 }: {
   logo?: Element
   titleColor:
@@ -95,7 +95,7 @@ export default function ({
   centered?: boolean
   additionalBackground?: Element
 }) {
-  const { ref, inView } = useInView({ threshold: 0.4 })
+  const { inView, ref } = useInView({ threshold: 0.4 })
   const imgRef = useRef<HTMLImageElement>(null)
 
   return (
@@ -119,15 +119,15 @@ export default function ({
       <div className={tiltWrapper(shouldAnimate)}>
         <Tilt
           glareEnable
-          glareMaxOpacity={0.4}
-          glareBorderRadius={customGlareBorderRadius || '100%'}
           tiltReverse
+          className={dropShadow('drop-shadow-secondary-semi-transparent')}
+          glareBorderRadius={customGlareBorderRadius || '100%'}
+          glareMaxOpacity={0.4}
           perspective={500}
           onMove={({ tiltAngleX, tiltAngleY }) => {
             if (!imgRef.current) return
             imgRef.current.style.filter = imageFilter(tiltAngleX + tiltAngleY)
           }}
-          className={dropShadow('drop-shadow-secondary-semi-transparent')}
         >
           <div ref={imgRef}>{imageElement}</div>
         </Tilt>

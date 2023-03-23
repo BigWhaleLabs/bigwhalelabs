@@ -35,16 +35,16 @@ const sphereStyles = classnames(
 )
 const sphereSize = (small?: boolean) =>
   classnames(
-    height(small ? 'h-4' : { 'tiny:h-7': true, 'h-6': true }),
+    height(small ? 'h-4' : { 'h-6': true, 'tiny:h-7': true }),
     width(small ? 'w-4' : { 'tiny:w-7': true, 'w-6': true })
   )
 
 export default function ({
+  animated = true,
   color,
+  onLeft,
   small,
   text,
-  onLeft,
-  animated = true,
 }: {
   color: Color
   small?: boolean
@@ -57,6 +57,12 @@ export default function ({
 
   return (
     <div
+      className={classnames(
+        sphereSize(small),
+        sphereStyles,
+        bgColor,
+        shadowColor
+      )}
       style={
         animated
           ? scrollAnimationProvider(
@@ -64,12 +70,6 @@ export default function ({
             )
           : undefined
       }
-      className={classnames(
-        sphereSize(small),
-        sphereStyles,
-        bgColor,
-        shadowColor
-      )}
     >
       <SphereText>{text}</SphereText>
     </div>

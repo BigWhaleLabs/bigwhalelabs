@@ -8,21 +8,21 @@ import useScrollPercent from 'hooks/useScrollPercent'
 
 export default function (animationName: string, blockVisible = true) {
   const scroll = useScrollPercent()
-  const { mobile, expandedTablet } = useBreakpoints()
+  const { expandedTablet, mobile } = useBreakpoints()
 
   if (expandedTablet) animationName = animationName + 'Tablet'
   if (!mobile) animationName = animationName + 'Mobile'
 
   return blockVisible
     ? {
-        animationName,
-        animationTimingFunction: 'ease-in-out',
-        animationDuration: '1s',
-        animationDirection: 'linear',
-        animationPlayState: 'paused',
         animationDelay: `calc(${scroll} * -1s)`,
-        animationIterationCount: 1,
+        animationDirection: 'linear',
+        animationDuration: '1s',
         animationFillMode: 'both',
+        animationIterationCount: 1,
+        animationName,
+        animationPlayState: 'paused',
+        animationTimingFunction: 'ease-in-out',
       }
     : {}
 }

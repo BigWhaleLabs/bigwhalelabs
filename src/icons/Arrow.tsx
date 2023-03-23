@@ -1,9 +1,9 @@
 export default function () {
   return (
     <svg
-      width="47"
       height="32"
       viewBox="0 0 47 32"
+      width="47"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -12,12 +12,12 @@ export default function () {
         stroke-width="2"
       />
       <linearGradient
+        gradientUnits="userSpaceOnUse"
         id="paint0_linear_44_35929"
         x1="15.3809"
-        y1="8.47485"
         x2="15.3809"
+        y1="8.47485"
         y2="23.6116"
-        gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="#FF7BED" />
         <stop offset="1" stop-color="#FED823" />

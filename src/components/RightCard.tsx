@@ -20,12 +20,12 @@ const container = classnames(
 )
 const textAndButton = space('space-y-6')
 export default function ({
-  reverse,
-  icon,
-  text,
   buttonText,
-  url,
+  icon,
+  reverse,
   reverseBelowMedium,
+  text,
+  url,
 }: {
   reverse?: boolean
   icon: ComponentChild

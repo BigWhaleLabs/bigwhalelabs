@@ -60,7 +60,7 @@ export default function () {
       </div>
       <RetroText>FUTURE</RetroText>
       <div className={bottomWrapper}>
-        <HeaderText textSize="small" center>
+        <HeaderText center textSize="small">
           Interested in joining the team or want to reach out?
         </HeaderText>
         <Button outlined url="mailto:hi@bwl.gg">
