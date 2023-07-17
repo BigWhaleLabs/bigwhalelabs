@@ -6,13 +6,13 @@ export default function () {
 
   const handleScroll = useCallback(() => {
     setScroll(
-      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+      window.scrollY / (document.body.offsetHeight - window.innerHeight)
     )
   }, [])
   const throttledCallback = useThrottle(handleScroll, 10)
 
   useMemo(() => {
-    window.addEventListener('scroll', throttledCallback, true)
+    window.addEventListener('scroll', throttledCallback, { passive: true })
 
     return () => window.removeEventListener('scroll', throttledCallback, true)
   }, [throttledCallback])
