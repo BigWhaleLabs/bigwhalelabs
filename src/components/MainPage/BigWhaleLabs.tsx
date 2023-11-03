@@ -2,6 +2,8 @@ import classNamesToString from 'helpers/classNamesToString'
 import classnames, {
   alignItems,
   animation,
+  aspectRatio,
+  backgroundColor,
   borderRadius,
   display,
   height,
@@ -34,8 +36,10 @@ const videoStyles = classnames(
   position('absolute'),
   inset('-right-2', 'top-4', 'md:right-2', 'md:top-8'),
   width('w-40', 'sm:w-48', 'md:w-60'),
+  aspectRatio('aspect-square'),
   borderRadius('rounded-full'),
-  animation('animate-float')
+  animation('animate-float'),
+  backgroundColor('bg-purple-700')
 )
 
 export default function () {
@@ -43,6 +47,7 @@ export default function () {
     <div className={wrapper}>
       <div className={position('relative')}>
         <img className={imageStyles} src="/img/bigWhaleLabs.png" />
+
         <video
           autoPlay
           loop
