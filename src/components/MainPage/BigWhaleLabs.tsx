@@ -49,7 +49,7 @@ export default function () {
         <img
           alt="big-whale-labs"
           className={imageStyles}
-          src="/img/bigWhaleLabs.webp"
+          src="/img/big-whale-labs.webp"
         />
 
         <video
