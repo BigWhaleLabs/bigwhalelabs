@@ -46,7 +46,11 @@ export default function () {
   return (
     <div className={wrapper}>
       <div className={position('relative')}>
-        <img className={imageStyles} src="/img/bigWhaleLabs.png" />
+        <img
+          alt="big-whale-labs"
+          className={imageStyles}
+          src="/img/bigWhaleLabs.png"
+        />
 
         <video
           autoPlay
