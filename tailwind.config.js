@@ -85,7 +85,8 @@ module.exports = {
         navbar: 'var(--navbar)',
       },
       boxShadow: {
-        button: '0 0 2rem rgb(0 0 0 / 1)',
+        lg: '0 0 1rem 0 rgb(0 0 0 / 0.25)',
+        button: '0px 0px 2.25rem 0px rgba(191, 254, 143, 0.50)',
       },
       borderRadius: {
         '4xl': '2.5rem',

@@ -7,6 +7,7 @@ import classnames, {
   flexDirection,
   gap,
   height,
+  padding,
   width,
 } from 'classnames/tailwind'
 
@@ -15,7 +16,8 @@ const wrapper = (small?: boolean) =>
     display('flex'),
     flexDirection('flex-row'),
     gap('gap-x-6'),
-    width(small ? 'w-1/3' : 'w-1/4'),
+    width(small ? 'lg:w-1/3' : 'lg:w-1/4'),
+    padding('px-8', 'md:px-0'),
     height('h-full'),
     alignItems('items-center')
   )

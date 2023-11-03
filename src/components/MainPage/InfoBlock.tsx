@@ -14,13 +14,13 @@ import classnames, {
 
 const wrapper = classnames(
   display('flex'),
-  flexDirection('flex-row'),
+  flexDirection('flex-col', 'lg:flex-row'),
   alignItems('items-center'),
   justifyContent('justify-center'),
   width('w-full'),
-  gap('gap-x-20'),
-  padding('py-4'),
-  margin('mb-16')
+  gap('gap-y-8', 'md:gap-x-20'),
+  padding('md:px-8'),
+  margin('md:mb-8', 'md:mb-16', 'mt-16', 'md:mt-8')
 )
 
 export default function () {

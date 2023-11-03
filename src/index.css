@@ -90,3 +90,15 @@ circle {
 .no-text-shadow {
   text-shadow: none;
 }
+
+@media only screen and (max-width: 600px) {
+  html {
+    padding: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  html {
+    padding: 0;
+  }
+}

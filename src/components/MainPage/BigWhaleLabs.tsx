@@ -8,6 +8,7 @@ import classnames, {
   inset,
   justifyContent,
   margin,
+  padding,
   position,
   width,
   zIndex,
@@ -18,7 +19,8 @@ const wrapper = classnames(
   height('h-full'),
   display('flex'),
   alignItems('items-center'),
-  justifyContent('justify-center')
+  justifyContent('justify-center'),
+  padding('px-6', 'md:px-0')
 )
 const imageStyles = classNamesToString(
   position('relative'),
@@ -30,8 +32,8 @@ const imageStyles = classNamesToString(
 )
 const videoStyles = classnames(
   position('absolute'),
-  inset('right-2', 'top-8'),
-  width('w-60'),
+  inset('-right-2', 'top-4', 'md:right-2', 'md:top-8'),
+  width('w-40', 'sm:w-48', 'md:w-60'),
   borderRadius('rounded-full'),
   animation('animate-float')
 )

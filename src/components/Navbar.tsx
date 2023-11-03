@@ -47,7 +47,7 @@ const navbarInternalContainer = classnames(
   alignItems('items-center'),
   justifyContent('justify-between'),
   zIndex('z-10'),
-  padding('py-8', 'lg:py-10', 'px-4', 'lg:px-16')
+  padding('p-6', 'lg:py-10', 'lg:px-16')
 )
 const bgCover = (backgroundVisible?: boolean) =>
   classnames(
@@ -56,7 +56,7 @@ const bgCover = (backgroundVisible?: boolean) =>
     inset('inset-0'),
     backgroundColor(backgroundVisible ? 'bg-navbar' : undefined),
     backdropBlur(backgroundVisible ? 'backdrop-blur-lg' : undefined),
-    height('h-88', 'md:h-auto'),
+    height('h-auto'),
     transitionProperty('transition-all'),
     transitionDuration('duration-500'),
     transitionTimingFunction('ease-in-out')

@@ -1,5 +1,4 @@
-import { LinkText } from 'components/Text'
-import { bwlBlog, bwlGitHub, contactUs } from 'helpers/constants'
+import BwlLinks from 'components/BwlLinks'
 import classnames, {
   alignItems,
   display,
@@ -21,9 +20,7 @@ const navLinkContainer = classnames(
 export default function () {
   return (
     <div className={navLinkContainer}>
-      <LinkText url={bwlBlog}>Blog</LinkText>
-      <LinkText url={bwlGitHub}>GitHub</LinkText>
-      <LinkText url={contactUs}>Contact</LinkText>
+      <BwlLinks />
     </div>
   )
 }

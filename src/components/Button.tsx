@@ -5,7 +5,6 @@ import classnames, {
   backgroundColor,
   borderRadius,
   boxShadow,
-  boxShadowColor,
   display,
   flexDirection,
   fontFamily,
@@ -33,14 +32,11 @@ const fontClasses = classnames(
   backgroundColor('bg-accent'),
   borderRadius('rounded-4xl'),
   boxShadow('shadow-button'),
-  boxShadowColor('shadow-accent'),
   padding('py-2', 'px-4'),
   fontWeight('font-bold'),
   fontFamily('font-primary'),
   fontSize('text-sm'),
-  textColor('text-primary-dark'),
-  translate('hover:-translate-y-0.5'),
-  willChange('will-change-transform')
+  textColor('text-primary-dark')
 )
 const button = classnames(commonClasses, fontClasses)
 
@@ -60,7 +56,8 @@ const getCharacterTransitionDelay = (index: number) =>
 
 const charWrapper = classnames(
   transitionProperty('transition-letters'),
-  translate('group-hover:-translate-y-7')
+  translate('group-hover:-translate-y-7'),
+  willChange('will-change-transform')
 )
 
 const renderLetters = (sentence: string) => {
