@@ -1,30 +1,26 @@
-import { MutableRef, useRef, useState } from 'preact/hooks'
+import { MutableRef, useRef } from 'preact/hooks'
+import { ketlTwitter } from 'helpers/constants'
 import Button from 'components/Button'
-import Logo from 'components/Logo'
+import BwlLogo from 'icons/BwlLogo'
 import NavbarLinks from 'components/NavbarLinks'
 import classnames, {
   alignItems,
   backdropBlur,
   backgroundClip,
   backgroundColor,
-  boxSizing,
   display,
   flexDirection,
   height,
   inset,
   justifyContent,
-  opacity,
-  overflow,
   padding,
   position,
   space,
   transitionDuration,
   transitionProperty,
   transitionTimingFunction,
-  visibility,
   zIndex,
 } from 'classnames/tailwind'
-import useBreakpoints from 'hooks/useBreakpoints'
 import useScrollPercent from 'hooks/useScrollPercent'
 
 const navbar = classnames(
@@ -50,7 +46,8 @@ const navbarInternalContainer = classnames(
   display('flex'),
   alignItems('items-center'),
   justifyContent('justify-between'),
-  padding('py-2', 'lg:py-8', 'px-4', 'lg:px-25')
+  zIndex('z-10'),
+  padding('py-8', 'lg:py-10', 'px-4', 'lg:px-16')
 )
 const bgCover = (backgroundVisible?: boolean) =>
   classnames(
@@ -64,24 +61,9 @@ const bgCover = (backgroundVisible?: boolean) =>
     transitionDuration('duration-500'),
     transitionTimingFunction('ease-in-out')
   )
-const navbarWrapper = (small: boolean, show: boolean) =>
-  classnames(
-    position('absolute'),
-    inset('left-0', 'right-0', small ? 'top-58.5' : 'tiny:top-76'),
-    boxSizing('box-content'),
-    overflow('overflow-hidden'),
-    visibility({ visible: show }),
-    opacity({ 'opacity-0': !show }),
-    transitionProperty('transition-all'),
-    transitionDuration('duration-500'),
-    transitionTimingFunction('ease-in-out')
-  )
 
 export default function () {
-  const { md } = useBreakpoints()
-
-  const scrollpercent = useScrollPercent()
-
+  const scrollPercent = useScrollPercent()
   const navbarRef = useRef() as MutableRef<HTMLDivElement>
 
   return (
@@ -90,16 +72,14 @@ export default function () {
       ref={navbarRef}
       style={{ backfaceVisibility: 'hidden' }}
     >
-      <div className={bgCover(scrollpercent > 0.01)} />
+      <div className={bgCover(scrollPercent > 0.01)} />
       <div className={navbarInternalContainer}>
-        <Logo />
+        <BwlLogo />
         <div className={buttonsContainer}>
-          <>{md && <NavbarLinks />}</>
+          <NavbarLinks />
 
           <div className={buttonsGroup}>
-            <Button outlined small={!md} url="https://discord.gg/NHk96pPZUV">
-              Join our Discord
-            </Button>
+            <Button url={ketlTwitter}>Follow us</Button>
           </div>
         </div>
       </div>

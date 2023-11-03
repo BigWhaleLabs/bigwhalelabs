@@ -1,6 +1,10 @@
 import { TTailwindString } from 'classnames/tailwind'
 
-type AllowedExtraClassnames = '-my-12' | 'outlined-button' | 'group'
+type AllowedExtraClassnames =
+  | 'outlined-button'
+  | 'group'
+  | 'no-text-shadow'
+  | 'animation-delay-300'
 
 export default function (
   ...classNames: (AllowedExtraClassnames | TTailwindString | undefined | null)[]

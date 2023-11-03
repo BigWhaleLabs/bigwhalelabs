@@ -1,37 +1,46 @@
 import {
   TDropShadow,
+  TFontSize,
+  TFontWeight,
   TTextColor,
   classnames,
   dropShadow,
   fontSize,
+  fontStyle,
   fontWeight,
   lineHeight,
-  textAlign,
   textColor,
   textDecoration,
+  transitionProperty,
 } from 'classnames/tailwind'
 import ChildrenProp from 'models/ChildrenProp'
 
-const bodyText = (large?: boolean, bold?: boolean, center?: boolean) =>
+interface BodyTextStyles {
+  weight?: TFontWeight
+  textSize?: TFontSize
+  snugLeading?: boolean
+  center?: boolean
+  italic?: boolean
+}
+
+const bodyText = ({
+  italic,
+  snugLeading,
+  textSize,
+  weight = 'font-medium',
+}: BodyTextStyles) =>
   classnames(
-    textColor('text-formal-accent'),
-    lineHeight('leading-6'),
-    fontSize(large ? 'text-lg' : 'text-base'),
-    fontWeight(bold ? 'font-bold' : 'font-normal'),
-    textAlign(center ? 'text-center' : 'text-left')
+    fontStyle({ italic }),
+    textColor('text-primary'),
+    lineHeight(snugLeading ? 'leading-snug' : 'leading-6'),
+    fontWeight(weight),
+    fontSize(textSize)
   )
 export function BodyText({
-  bold,
-  center,
   children,
-  large,
-}: ChildrenProp & {
-  large?: boolean
-  bold?: boolean
-  textSize?: string
-  center?: boolean
-}) {
-  return <p className={bodyText(large, bold, center)}>{children}</p>
+  ...styles
+}: ChildrenProp & BodyTextStyles) {
+  return <p className={bodyText(styles)}>{children}</p>
 }
 
 const accentText = (color: TTextColor, shadow?: TDropShadow) =>
@@ -47,23 +56,22 @@ export function AccentText({
   return <span className={accentText(color, shadow)}>{children}</span>
 }
 
-const linkText = (tertiary?: boolean) =>
+interface LinkTextProps extends ChildrenProp {
+  url: string
+  inline?: boolean
+}
+
+const linkText = (inline?: boolean) =>
   classnames(
     lineHeight('leading-6'),
-    fontSize('text-base'),
+    fontSize(inline ? undefined : 'text-base'),
     textDecoration('no-underline', 'hover:underline'),
-    textColor(
-      tertiary ? 'hover:text-tertiary' : 'text-formal-accent',
-      tertiary ? 'focus:text-tertiary-dark' : 'focus:text-primary'
-    )
+    textColor('hover:text-accent-hover', 'text-accent'),
+    transitionProperty('transition-colors')
   )
-export function LinkText({
-  children,
-  tertiary,
-  url,
-}: ChildrenProp & { url: string; tertiary?: boolean }) {
+export function LinkText({ children, inline, url }: LinkTextProps) {
   return (
-    <a className={linkText(tertiary)} href={url} target="_blank">
+    <a className={linkText(inline)} href={url} target="_blank">
       {children}
     </a>
   )
