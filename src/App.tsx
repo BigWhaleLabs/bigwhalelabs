@@ -1,29 +1,17 @@
-import Footer from 'components/Footer'
-import HiringBlock from 'components/HiringBlock'
-import LearnBlock from 'components/LearnBlock'
-import LogoFooter from 'components/LogoFooter'
+import BigWhaleLabs from 'components/MainPage/BigWhaleLabs'
+import InfoBlock from 'components/MainPage/InfoBlock'
+import MobileInfoBlock from 'components/MainPage/MobileInfoBlock'
 import Navbar from 'components/Navbar'
-import Octocorp from 'components/Octocorp'
-import PrivacyWorld from 'components/PrivacyWorld'
-import Projects from 'components/Projects'
 import Root from 'components/Root'
-import SealCred from 'components/SealCred'
-import StartBlock from 'components/StartBlock'
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Root>
-        <StartBlock />
-        <PrivacyWorld />
-        <LearnBlock />
-        <SealCred />
-        <Projects />
-        <HiringBlock />
-        <Octocorp />
-        <LogoFooter />
-        <Footer />
+        <BigWhaleLabs />
+        <InfoBlock />
+        <MobileInfoBlock />
       </Root>
     </>
   )

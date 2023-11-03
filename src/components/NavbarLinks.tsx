@@ -1,5 +1,5 @@
 import { LinkText } from 'components/Text'
-import Twitter from 'icons/Twitter'
+import Twitter from 'icons/TwitterX'
 import classnames, {
   alignItems,
   display,

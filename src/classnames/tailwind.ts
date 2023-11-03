@@ -276,7 +276,6 @@ export type TBackgroundColor =
   | 'bg-rose-700'
   | 'bg-rose-800'
   | 'bg-rose-900'
-  | 'bg-orb'
   | 'bg-accent'
   | 'bg-primary'
   | 'bg-secondary'
@@ -316,8 +315,6 @@ export type TBackgroundImage =
   | 'bg-gradient-to-bl'
   | 'bg-gradient-to-l'
   | 'bg-gradient-to-tl'
-  | 'bg-retro'
-  | 'bg-metallic'
 
 export type TGradientColorStops =
   | 'from-inherit'
@@ -995,9 +992,6 @@ export type TGradientColorStops =
   | 'from-rose-900'
   | 'via-rose-900'
   | 'to-rose-900'
-  | 'from-orb'
-  | 'via-orb'
-  | 'to-orb'
   | 'from-accent'
   | 'via-accent'
   | 'to-accent'
@@ -2645,11 +2639,6 @@ export type TBorderColor =
   | 'border-l-rose-900'
   | 'border-x-rose-900'
   | 'border-y-rose-900'
-  | 'border-orb'
-  | 'border-t-orb'
-  | 'border-r-orb'
-  | 'border-b-orb'
-  | 'border-l-orb'
   | 'border-accent'
   | 'border-t-accent'
   | 'border-r-accent'
@@ -3374,7 +3363,6 @@ export type TRingColor =
   | 'ring-rose-700'
   | 'ring-rose-800'
   | 'ring-rose-900'
-  | 'ring-orb'
   | 'ring-accent'
   | 'ring-primary'
   | 'ring-secondary'
@@ -3644,7 +3632,6 @@ export type TRingOffsetColor =
   | 'ring-offset-rose-700'
   | 'ring-offset-rose-800'
   | 'ring-offset-rose-900'
-  | 'ring-offset-orb'
   | 'ring-offset-accent'
   | 'ring-offset-primary'
   | 'ring-offset-secondary'
@@ -3908,7 +3895,6 @@ export type TOutlineColor =
   | 'outline-rose-700'
   | 'outline-rose-800'
   | 'outline-rose-900'
-  | 'outline-orb'
   | 'outline-accent'
   | 'outline-primary'
   | 'outline-secondary'
@@ -3998,8 +3984,6 @@ export type TBoxShadow =
   | 'shadow-none'
   | 'shadow-button'
   | 'shadow-card'
-  | 'shadow-iron-sphere'
-  | 'shadow-orb-generator'
 
 export type TBoxShadowColor =
   | 'shadow-inherit'
@@ -4227,7 +4211,6 @@ export type TBoxShadowColor =
   | 'shadow-rose-700'
   | 'shadow-rose-800'
   | 'shadow-rose-900'
-  | 'shadow-orb'
   | 'shadow-accent'
   | 'shadow-primary'
   | 'shadow-secondary'
@@ -4287,7 +4270,6 @@ export type TTransitionDuration =
   | 'duration-500'
   | 'duration-700'
   | 'duration-1000'
-  | 'duration-2000'
   | 'duration'
 
 export type TTransitionTimingFunction =
@@ -4313,7 +4295,7 @@ export type TAnimation =
   | 'animate-pulse'
   | 'animate-bounce'
   | 'animate-expand'
-  | 'animate-rotate-slow'
+  | 'animate-float'
 
 export type TTransitionsAndAnimations =
   | TTransitionProperty
@@ -4372,7 +4354,6 @@ export type TDropShadow =
   | 'drop-shadow-primary'
   | 'drop-shadow-secondary-semi-transparent'
   | 'drop-shadow-formal-accent'
-  | 'drop-shadow-retro'
 
 export type TGrayscale = 'grayscale-0' | 'grayscale'
 
@@ -5900,7 +5881,6 @@ export type TCaretColor =
   | 'caret-rose-700'
   | 'caret-rose-800'
   | 'caret-rose-900'
-  | 'caret-orb'
   | 'caret-accent'
   | 'caret-primary'
   | 'caret-secondary'
@@ -6151,7 +6131,6 @@ export type TAccentColor =
   | 'accent-rose-800'
   | 'accent-rose-900'
   | 'accent-auto'
-  | 'accent-orb'
   | 'accent-accent'
   | 'accent-primary'
   | 'accent-secondary'
@@ -7452,8 +7431,6 @@ export type THeight =
   | 'h-fit'
   | 'h-tiny-menu'
   | 'h-large-menu'
-  | 'h-suit'
-  | 'h-suit-mobile'
 
 export type TMinHeight =
   | 'min-h-0'
@@ -7542,7 +7519,6 @@ export type TFill =
   | 'fill-fuchsia'
   | 'fill-pink'
   | 'fill-rose'
-  | 'fill-orb'
   | 'fill-accent'
   | 'fill-primary'
   | 'fill-secondary'
@@ -7587,7 +7563,6 @@ export type TStroke =
   | 'stroke-fuchsia'
   | 'stroke-pink'
   | 'stroke-rose'
-  | 'stroke-orb'
   | 'stroke-accent'
   | 'stroke-primary'
   | 'stroke-secondary'
@@ -8136,7 +8111,6 @@ export type TPlaceholderColor =
   | 'placeholder-rose-700'
   | 'placeholder-rose-800'
   | 'placeholder-rose-900'
-  | 'placeholder-orb'
   | 'placeholder-accent'
   | 'placeholder-primary'
   | 'placeholder-secondary'
@@ -8396,7 +8370,6 @@ export type TTextColor =
   | 'text-rose-700'
   | 'text-rose-800'
   | 'text-rose-900'
-  | 'text-orb'
   | 'text-accent'
   | 'text-primary'
   | 'text-secondary'
@@ -8430,7 +8403,7 @@ export type TTextOpacity =
   | 'text-opacity-95'
   | 'text-opacity-100'
 
-export type TContent = 'content-none' | 'content-retro'
+export type TContent = 'content-none'
 
 export type TTextIndent =
   | 'indent-0'
@@ -8696,7 +8669,6 @@ export type TTextDecorationColor =
   | 'decoration-rose-700'
   | 'decoration-rose-800'
   | 'decoration-rose-900'
-  | 'decoration-orb'
   | 'decoration-accent'
   | 'decoration-primary'
   | 'decoration-secondary'

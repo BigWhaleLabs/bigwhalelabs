@@ -1,5 +1,4 @@
 import { MutableRef, useRef, useState } from 'preact/hooks'
-import Burger from 'icons/Burger'
 import Button from 'components/Button'
 import Logo from 'components/Logo'
 import NavbarLinks from 'components/NavbarLinks'
@@ -26,7 +25,6 @@ import classnames, {
   zIndex,
 } from 'classnames/tailwind'
 import useBreakpoints from 'hooks/useBreakpoints'
-import useClickOutside from 'hooks/useClickOutside'
 import useScrollPercent from 'hooks/useScrollPercent'
 
 const navbar = classnames(
@@ -54,18 +52,14 @@ const navbarInternalContainer = classnames(
   justifyContent('justify-between'),
   padding('py-2', 'lg:py-8', 'px-4', 'lg:px-25')
 )
-const bgCover = (
-  backgroundVisible?: boolean,
-  show?: boolean,
-  small?: boolean
-) =>
+const bgCover = (backgroundVisible?: boolean) =>
   classnames(
     position('absolute'),
     backgroundClip('bg-clip-padding'),
     inset('inset-0'),
-    backgroundColor(show || backgroundVisible ? 'bg-navbar' : undefined),
-    backdropBlur(show || backgroundVisible ? 'backdrop-blur-lg' : undefined),
-    height(show ? 'h-88' : small ? 'h-tiny-menu' : 'h-15', 'md:h-auto'),
+    backgroundColor(backgroundVisible ? 'bg-navbar' : undefined),
+    backdropBlur(backgroundVisible ? 'backdrop-blur-lg' : undefined),
+    height('h-88', 'md:h-auto'),
     transitionProperty('transition-all'),
     transitionDuration('duration-500'),
     transitionTimingFunction('ease-in-out')
@@ -84,13 +78,11 @@ const navbarWrapper = (small: boolean, show: boolean) =>
   )
 
 export default function () {
-  const { md, xs } = useBreakpoints()
+  const { md } = useBreakpoints()
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const scrollpercent = useScrollPercent()
 
   const navbarRef = useRef() as MutableRef<HTMLDivElement>
-  useClickOutside(navbarRef, () => setIsMenuOpen(false))
 
   return (
     <nav
@@ -98,7 +90,7 @@ export default function () {
       ref={navbarRef}
       style={{ backfaceVisibility: 'hidden' }}
     >
-      <div className={bgCover(scrollpercent > 0.01, isMenuOpen, xs)} />
+      <div className={bgCover(scrollpercent > 0.01)} />
       <div className={navbarInternalContainer}>
         <Logo />
         <div className={buttonsContainer}>
@@ -108,19 +100,9 @@ export default function () {
             <Button outlined small={!md} url="https://discord.gg/NHk96pPZUV">
               Join our Discord
             </Button>
-            {!md && (
-              <Button icon onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <Burger open={isMenuOpen} />
-              </Button>
-            )}
           </div>
         </div>
       </div>
-      {!md && (
-        <div className={navbarWrapper(xs, isMenuOpen)}>
-          {isMenuOpen && <NavbarLinks />}
-        </div>
-      )}
     </nav>
   )
 }

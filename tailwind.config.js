@@ -12,20 +12,20 @@ module.exports = {
       },
       animation: {
         expand: 'expand 1s ease-in-out',
-        'rotate-slow': 'rotate 18s linear infinite',
+        float: 'float 18s ease-in-out infinite',
       },
       keyframes: {
         expand: {
           '0%': { width: '0%' },
           '100%': { width: '100%' },
         },
-        rotate: {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
+        float: {
+          '0%': { transform: 'translateY(0px)' },
+          '100%': { transform: 'translateY(10px)' },
         },
       },
-      transitionDuration: {
-        2000: '2000ms',
+      transitionProperty: {
+        letters: 'transform 0.32s ease, box-shadow 0.32s ease',
       },
       space: {
         '-2': '-0.5rem',
@@ -38,8 +38,6 @@ module.exports = {
         15: '4.688rem',
         70: '17.5rem',
         88: '22.19rem',
-        suit: '41.1rem',
-        'suit-mobile': '28.6rem',
       },
       maxWidth: {
         270: '16.875rem',
@@ -78,7 +76,6 @@ module.exports = {
         xl: '80rem',
       },
       colors: {
-        orb: 'var(--orb)',
         accent: 'var(--accent)',
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
@@ -101,10 +98,6 @@ module.exports = {
         lg: '0 0 1rem 0 rgb(0 0 0 / 0.25)',
         button: '0 0 1.625rem rgb(0 0 0 / 1)',
         card: '0 1rem 11rem var(--card-shadow)',
-        'iron-sphere':
-          'inset 0 -0.5rem 1rem rgba(0, 0, 0, 0.6), inset 0 0.5rem 1rem rgba(255, 255, 255, 0.2)',
-        'orb-generator':
-          'inset 0 0 0.7rem rgba(255, 255, 255, 1), inset 0 0 0.2rem rgba(255, 255, 255, 1)',
       },
       dropShadow: {
         accent: '0rem 0rem 0.625rem var(--accent)',
@@ -113,7 +106,6 @@ module.exports = {
         'secondary-semi-transparent':
           '0px 0px 7rem var(--secondary-semi-transparent)',
         'formal-accent': '0rem 0rem 0.625rem var(--formal-accent)',
-        retro: '0 0 4rem var(--retro-shadow)',
       },
       borderWidth: {
         3: '3px',
@@ -121,12 +113,6 @@ module.exports = {
       borderRadius: {
         '4xl': '2.5rem',
         '22xl': '11rem',
-      },
-      backgroundImage: {
-        retro:
-          'linear-gradient(180deg, var(--secondary) 20.43%, var(--formal-accent) 25.48%, var(--formal-accent) 41.4%, var(--retro-1) 46.3%, var(--retro-2) 61.69%, var(--primary) 77.42%)',
-        metallic:
-          'linear-gradient(180deg, var(--metallic-1) 0%, var(--metallic-2) 15.1%, var(--metallic-3) 34.9%, var(--metallic-4) 50%, var(--metallic-5) 66.15%, var(--metallic-6) 100%) ',
       },
       strokeWidth: {
         1.5: 1.5,
@@ -174,15 +160,9 @@ module.exports = {
       zIndex: {
         '-10': '-10',
       },
-      content: {
-        retro: 'attr(data-text)',
-      },
       translate: {
         '-0.5': '-0.25rem',
         '-7': '-1.75rem',
-      },
-      transitionProperty: {
-        letters: 'transform 0.32s ease, box-shadow 0.32s ease',
       },
       willChange: {
         opacity: 'opacity',
