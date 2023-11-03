@@ -1,15 +1,10 @@
 import { TTailwindString } from 'classnames/tailwind'
 
 type AllowedExtraClassnames =
-  | 'stroke-text'
-  | 'stroke-text-small'
-  | 'retro-text'
-  | '-my-12'
   | 'outlined-button'
   | 'group'
-  | 'echo-badge-background'
-  | 'orb-generator-background'
-  | 'grid'
+  | 'no-text-shadow'
+  | 'animation-delay-300'
 
 export default function (
   ...classNames: (AllowedExtraClassnames | TTailwindString | undefined | null)[]

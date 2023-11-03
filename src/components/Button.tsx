@@ -5,7 +5,6 @@ import classnames, {
   backgroundColor,
   borderRadius,
   boxShadow,
-  boxShadowColor,
   display,
   flexDirection,
   fontFamily,
@@ -15,7 +14,6 @@ import classnames, {
   overflow,
   padding,
   textColor,
-  textDecoration,
   transitionProperty,
   translate,
   width,
@@ -30,39 +28,21 @@ const commonClasses = classnames(
   width('w-fit')
 )
 
-const fontClasses = ({ icon, outlined, small }: ButtonProps) =>
-  outlined
-    ? classnames(
-        backgroundColor('bg-tertiary'),
-        borderRadius('rounded-4xl'),
-        boxShadow('shadow-button'),
-        boxShadowColor('shadow-tertiary'),
-        padding(small ? 'py-2' : 'py-3', small ? 'px-4' : 'px-6'),
-        fontWeight('font-bold'),
-        fontFamily('font-primary'),
-        fontSize(small ? 'text-sm' : 'text-lg'),
-        textColor('text-primary-dark'),
-        translate('hover:-translate-y-0.5'),
-        willChange('will-change-transform')
-      )
-    : classnames(
-        fontWeight('font-normal'),
-        fontSize('text-base'),
-        textColor(
-          icon ? 'active:text-tertiary-dark' : 'active:text-primary',
-          icon ? 'hover:text-tertiary' : undefined,
-          'text-formal-accent'
-        ),
-        textDecoration('hover:underline')
-      )
+const fontClasses = classnames(
+  backgroundColor('bg-accent'),
+  borderRadius('rounded-4xl'),
+  boxShadow('shadow-button'),
+  padding('py-2', 'px-4'),
+  fontWeight('font-bold'),
+  fontFamily('font-primary'),
+  fontSize('text-sm'),
+  textColor('text-primary-dark')
+)
+const button = classnames(commonClasses, fontClasses)
 
-const button = ({ icon, outlined, small }: ButtonProps) =>
-  classnames(commonClasses, fontClasses({ icon, outlined, small }))
+const xTwitter = classNamesToString(padding('pl-1.5'), 'no-text-shadow')
 
 interface ButtonProps {
-  outlined?: boolean
-  small?: boolean
-  icon?: boolean
   url?: string
 }
 
@@ -76,7 +56,8 @@ const getCharacterTransitionDelay = (index: number) =>
 
 const charWrapper = classnames(
   transitionProperty('transition-letters'),
-  translate('group-hover:-translate-y-7')
+  translate('group-hover:-translate-y-7'),
+  willChange('will-change-transform')
 )
 
 const renderLetters = (sentence: string) => {
@@ -103,19 +84,12 @@ const renderLetters = (sentence: string) => {
 
 export default function ({
   children,
-  icon,
-  outlined,
-  small,
   url,
   ...rest
-}: Omit<HTMLAttributes<HTMLButtonElement>, 'icon'> & ButtonProps) {
+}: HTMLAttributes<HTMLButtonElement> & ButtonProps) {
   return (
     <button
-      className={classNamesToString(
-        button({ icon, outlined, small }),
-        'outlined-button',
-        'group'
-      )}
+      className={classNamesToString(button, 'outlined-button', 'group')}
       onClick={() => {
         if (url) window.open(url, '_blank')
       }}
@@ -126,6 +100,7 @@ export default function ({
       ) : (
         children
       )}
+      <span className={xTwitter}>𝕏</span>
     </button>
   )
 }

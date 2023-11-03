@@ -1,5 +1,4 @@
-import { LinkText } from 'components/Text'
-import Twitter from 'icons/Twitter'
+import BwlLinks from 'components/BwlLinks'
 import classnames, {
   alignItems,
   display,
@@ -10,8 +9,8 @@ import classnames, {
 } from 'classnames/tailwind'
 
 const navLinkContainer = classnames(
-  display('flex'),
-  flexDirection('flex-col', 'md:flex-row'),
+  display('hidden', 'md:flex'),
+  flexDirection('flex-row'),
   alignItems('items-center'),
   justifyContent('justify-center'),
   space('space-y-10', 'md:space-y-0', 'md:space-x-4', 'lg:space-x-12'),
@@ -21,12 +20,7 @@ const navLinkContainer = classnames(
 export default function () {
   return (
     <div className={navLinkContainer}>
-      <LinkText url="https://ketl.xyz">Ketl</LinkText>
-      <LinkText url="https://sealcred.xyz">SealCred</LinkText>
-      <LinkText url="https://blog.bigwhalelabs.com/">Blog</LinkText>
-      <LinkText tertiary url="https://twitter.com/bigwhalelabs">
-        <Twitter />
-      </LinkText>
+      <BwlLinks />
     </div>
   )
 }

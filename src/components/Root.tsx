@@ -1,20 +1,16 @@
 import ChildrenProp from 'models/ChildrenProp'
 import classnames, {
-  alignItems,
   display,
+  flex,
   flexDirection,
-  margin,
-  overflow,
   position,
 } from 'classnames/tailwind'
 
 const innerBody = classnames(
   display('flex'),
+  flex('flex-1'),
   flexDirection('flex-col'),
-  alignItems('items-center'),
-  margin('mx-auto'),
-  position('relative'),
-  overflow('md:overflow-y-visible', 'md:overflow-x-clip', 'overflow-hidden')
+  position('relative')
 )
 
 export default function ({ children }: ChildrenProp) {

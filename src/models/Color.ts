@@ -1,2 +1,2 @@
-type Color = 'accent' | 'secondary' | 'tertiary' | 'primary'
+type Color = 'accent' | 'secondary' | 'primary'
 export default Color

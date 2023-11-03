@@ -11,21 +11,17 @@ module.exports = {
         '-90': '-90deg',
       },
       animation: {
-        expand: 'expand 1s ease-in-out',
-        'rotate-slow': 'rotate 18s linear infinite',
+        float: 'float 18s ease-in-out infinite',
       },
       keyframes: {
-        expand: {
-          '0%': { width: '0%' },
-          '100%': { width: '100%' },
-        },
-        rotate: {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
+        float: {
+          '0%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(15px)' },
+          '100%': { transform: 'translateY(0px)' },
         },
       },
-      transitionDuration: {
-        2000: '2000ms',
+      transitionProperty: {
+        letters: 'transform 0.32s ease, box-shadow 0.32s ease',
       },
       space: {
         '-2': '-0.5rem',
@@ -38,8 +34,10 @@ module.exports = {
         15: '4.688rem',
         70: '17.5rem',
         88: '22.19rem',
-        suit: '41.1rem',
-        'suit-mobile': '28.6rem',
+        'screen-80': '80vh',
+      },
+      width: {
+        114: '28.5rem',
       },
       maxWidth: {
         270: '16.875rem',
@@ -78,55 +76,21 @@ module.exports = {
         xl: '80rem',
       },
       colors: {
-        orb: 'var(--orb)',
         accent: 'var(--accent)',
+        'accent-hover': 'var(--accent-hover)',
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
-        tertiary: 'var(--tertiary)',
-        quaternary: 'var(--quaternary)',
-        'formal-accent': 'var(--formal-accent)',
-
-        'tertiary-dark': 'var(--tertiary-dark)',
         'primary-dark': 'var(--primary-dark)',
-        'primary-light': 'var(--primary-light)',
-        'primary-burned': 'var(--primary-burned)',
-        'primary-dimmed': 'var(--primary-dimmed)',
-        'primary-semi-dimmed': 'var(--primary-semi-dimmed)',
         'primary-background': 'var(--primary-background)',
-
         navbar: 'var(--navbar)',
-        card: 'var(--card)',
       },
       boxShadow: {
         lg: '0 0 1rem 0 rgb(0 0 0 / 0.25)',
-        button: '0 0 1.625rem rgb(0 0 0 / 1)',
-        card: '0 1rem 11rem var(--card-shadow)',
-        'iron-sphere':
-          'inset 0 -0.5rem 1rem rgba(0, 0, 0, 0.6), inset 0 0.5rem 1rem rgba(255, 255, 255, 0.2)',
-        'orb-generator':
-          'inset 0 0 0.7rem rgba(255, 255, 255, 1), inset 0 0 0.2rem rgba(255, 255, 255, 1)',
-      },
-      dropShadow: {
-        accent: '0rem 0rem 0.625rem var(--accent)',
-        secondary: '0rem 0rem 0.625rem var(--secondary)',
-        primary: '0rem 0rem 1.5rem var(--primary)',
-        'secondary-semi-transparent':
-          '0px 0px 7rem var(--secondary-semi-transparent)',
-        'formal-accent': '0rem 0rem 0.625rem var(--formal-accent)',
-        retro: '0 0 4rem var(--retro-shadow)',
-      },
-      borderWidth: {
-        3: '3px',
+        button: '0px 0px 2.25rem 0px rgba(191, 254, 143, 0.50)',
       },
       borderRadius: {
         '4xl': '2.5rem',
         '22xl': '11rem',
-      },
-      backgroundImage: {
-        retro:
-          'linear-gradient(180deg, var(--secondary) 20.43%, var(--formal-accent) 25.48%, var(--formal-accent) 41.4%, var(--retro-1) 46.3%, var(--retro-2) 61.69%, var(--primary) 77.42%)',
-        metallic:
-          'linear-gradient(180deg, var(--metallic-1) 0%, var(--metallic-2) 15.1%, var(--metallic-3) 34.9%, var(--metallic-4) 50%, var(--metallic-5) 66.15%, var(--metallic-6) 100%) ',
       },
       strokeWidth: {
         1.5: 1.5,
@@ -167,22 +131,12 @@ module.exports = {
         58.5: '3.66rem',
         76: '4.75rem',
       },
-      scale: {
-        65: '0.65',
-        175: '1.75',
-      },
       zIndex: {
         '-10': '-10',
-      },
-      content: {
-        retro: 'attr(data-text)',
       },
       translate: {
         '-0.5': '-0.25rem',
         '-7': '-1.75rem',
-      },
-      transitionProperty: {
-        letters: 'transform 0.32s ease, box-shadow 0.32s ease',
       },
       willChange: {
         opacity: 'opacity',
