@@ -11,8 +11,8 @@ import classnames, {
   width,
 } from 'classnames/tailwind'
 
-const hideOnBig = display('md:hidden')
-const wrapper = classnames(hideOnBig, margin('mb-8'))
+const hideOnBig = display('sm:hidden')
+const wrapper = classnames(hideOnBig, margin('mb-8', 'md:mx-8'))
 const crystal = classnames(
   width('w-full'),
   display('flex'),

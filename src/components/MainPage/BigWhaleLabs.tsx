@@ -22,7 +22,7 @@ const wrapper = classnames(
   display('flex'),
   alignItems('items-center'),
   justifyContent('justify-center'),
-  padding('px-6', 'md:px-0')
+  padding('px-6', 'sm:px-0')
 )
 const imageStyles = classNamesToString(
   position('relative'),
@@ -34,7 +34,7 @@ const imageStyles = classNamesToString(
 )
 const videoStyles = classnames(
   position('absolute'),
-  inset('-right-2', 'top-4', 'md:right-2', 'md:top-8'),
+  inset('-right-2', 'top-4', 'sm:right-2', 'sm:top-8'),
   width('w-40', 'sm:w-48', 'md:w-60'),
   aspectRatio('aspect-square'),
   borderRadius('rounded-full'),

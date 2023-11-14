@@ -20,7 +20,7 @@ const wrapper = classnames(
   width('w-full'),
   gap('gap-y-8', 'md:gap-x-20'),
   padding('md:px-8'),
-  margin('md:mb-8', 'md:mb-16', 'mt-16', 'md:mt-8')
+  margin('sm:mb-8', 'sm:mb-16', 'mt-16', 'md:mt-8')
 )
 
 export default function () {

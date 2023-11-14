@@ -9,7 +9,7 @@ import classnames, {
 } from 'classnames/tailwind'
 
 const navLinkContainer = classnames(
-  display('hidden', 'md:flex'),
+  display('hidden', 'sm:flex'),
   flexDirection('flex-row'),
   alignItems('items-center'),
   justifyContent('justify-center'),
