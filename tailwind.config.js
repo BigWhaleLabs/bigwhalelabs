@@ -6,10 +6,6 @@ module.exports = {
       primary: ['"Space Grotesk"', 'sans-serif'],
     },
     extend: {
-      rotate: {
-        '-20': '-20deg',
-        '-90': '-90deg',
-      },
       animation: {
         float: 'float 18s ease-in-out infinite',
       },
@@ -71,7 +67,7 @@ module.exports = {
         se: '23.5rem',
         tablet: '31.25rem',
         md: '37.5rem',
-        sm: '40rem',
+        sm: '42.1875rem',
         lg: '64rem',
         xl: '80rem',
       },

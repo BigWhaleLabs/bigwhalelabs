@@ -7483,8 +7483,6 @@ export type TRotate =
   | 'rotate-45'
   | 'rotate-90'
   | 'rotate-180'
-  | '-rotate-20'
-  | '-rotate-90'
 
 export type TTranslate =
   | 'translate-x-0'
