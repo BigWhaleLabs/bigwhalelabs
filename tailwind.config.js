@@ -64,7 +64,8 @@ module.exports = {
       },
       screens: {
         tiny: '22.75rem',
-        se: '23.5rem',
+        se: '23.75rem',
+        s: '27.5rem',
         tablet: '31.25rem',
         md: '37.5rem',
         sm: '42.1875rem',
@@ -132,6 +133,7 @@ module.exports = {
       },
       translate: {
         '-0.5': '-0.25rem',
+        '-3': '-0.75rem',
         '-7': '-1.75rem',
       },
       willChange: {

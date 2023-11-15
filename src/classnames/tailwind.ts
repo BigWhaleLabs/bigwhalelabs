@@ -7231,6 +7231,7 @@ export type TMaxWidth =
   | 'max-w-screen-2xl'
   | 'max-w-screen-tiny'
   | 'max-w-screen-se'
+  | 'max-w-screen-s'
   | 'max-w-screen-tablet'
 
 export type THeight =
@@ -7529,6 +7530,7 @@ export type TTranslate =
   | 'translate-x-3/4'
   | 'translate-x-full'
   | '-translate-x-0.5'
+  | '-translate-x-3'
   | '-translate-x-7'
   | 'translate-y-0'
   | 'translate-y-1'
@@ -7574,6 +7576,7 @@ export type TTranslate =
   | 'translate-y-3/4'
   | 'translate-y-full'
   | '-translate-y-0.5'
+  | '-translate-y-3'
   | '-translate-y-7'
 
 export type TSkew =
@@ -8604,6 +8607,7 @@ export type TPseudoClassVariants =
   | '2xl:'
   | 'tiny:'
   | 'se:'
+  | 's:'
   | 'tablet:'
 
 //////////// Utility Function generic type
