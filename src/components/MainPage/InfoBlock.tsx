@@ -1,5 +1,3 @@
-import { LinkText } from 'components/Text'
-import { ketlUrl } from 'helpers/constants'
 import QuoteBlock from 'components/QuoteBlock'
 import classnames, {
   alignItems,
@@ -26,17 +24,11 @@ const wrapper = classnames(
 export default function () {
   return (
     <div className={wrapper}>
+      <QuoteBlock>Ask about our current project, Lunchbreak</QuoteBlock>
       <QuoteBlock small>
-        We eliminate information asymmetry by creating open-source distributed,
-        anonymous communities of verified individuals using
-        cryptographically-secure credentials.
-      </QuoteBlock>
-      <QuoteBlock>
-        Check out our current product:{' '}
-        <LinkText inline url={ketlUrl}>
-          ketl.xyz
-        </LinkText>{' '}
-        for founders and vcs.
+        A Professional network worth your time. Vouch for colleagues. Earn real
+        money from your expertise. Reach out to the best and brightest in your
+        field.
       </QuoteBlock>
     </div>
   )
