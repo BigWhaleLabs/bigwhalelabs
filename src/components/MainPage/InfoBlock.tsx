@@ -1,3 +1,4 @@
+import { LinkText } from 'components/Text'
 import QuoteBlock from 'components/QuoteBlock'
 import classnames, {
   alignItems,
@@ -9,7 +10,6 @@ import classnames, {
   padding,
   width,
 } from 'classnames/tailwind'
-import { LinkText } from 'components/Text'
 
 const wrapper = classnames(
   display('flex'),
