@@ -1,3 +1,4 @@
+import { LinkText } from 'components/Text'
 import QuoteBlock from 'components/QuoteBlock'
 import classnames, {
   alignItems,
@@ -24,7 +25,13 @@ const wrapper = classnames(
 export default function () {
   return (
     <div className={wrapper}>
-      <QuoteBlock>Ask about our current project, Lunchbreak!</QuoteBlock>
+      <QuoteBlock>
+        Ask about our current project,{' '}
+        <LinkText inline url="https://lunchbreak.com">
+          Lunchbreak
+        </LinkText>
+        !
+      </QuoteBlock>
       <QuoteBlock small>
         A Professional network worth your time. Vouch for colleagues. Earn real
         money from your expertise. Reach out to the best and brightest in your
