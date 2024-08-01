@@ -1,5 +1,5 @@
 import { MutableRef, useRef } from 'preact/hooks'
-import { ketlTwitter } from 'helpers/constants'
+import { LunchbreakTwitter } from 'helpers/constants'
 import Button from 'components/Button'
 import BwlLogo from 'icons/BwlLogo'
 import NavbarLinks from 'components/NavbarLinks'
@@ -79,7 +79,7 @@ export default function () {
           <NavbarLinks />
 
           <div className={buttonsGroup}>
-            <Button url={ketlTwitter}>Follow us</Button>
+            <Button url={LunchbreakTwitter}>Follow us</Button>
           </div>
         </div>
       </div>
