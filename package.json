@@ -36,8 +36,10 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^18.11.9",
     "autoprefixer": "^10.4.13",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "eslint": "~8.7.0",
+    "morgan": "^1.10.0",
     "postcss": "^8.4.19",
     "prettier": "^2.8.0",
     "react-scripts": "^5.0.1",
@@ -46,6 +48,7 @@
     "tailwindcss-classnames": "^3.0.7",
     "typescript": "^4.9.3",
     "vite": "^3.2.4",
+    "vite-express": "^0.20.0",
     "vite-tsconfig-paths": "^3.6.0"
   },
   "packageManager": "yarn@3.3.0"
