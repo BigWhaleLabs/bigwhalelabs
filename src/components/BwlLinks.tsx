@@ -7,6 +7,7 @@ export default function () {
       <LinkText url={bwlBlog}>Blog</LinkText>
       <LinkText url={bwlGitHub}>GitHub</LinkText>
       <LinkText url={contactUs}>Contact</LinkText>
+      <LinkText url="https://eggs.fun">Eggs?</LinkText>
     </>
   )
 }
