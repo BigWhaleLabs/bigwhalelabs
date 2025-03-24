@@ -1,0 +1,5 @@
+[phases.build]
+cmd = 'yarn build'
+
+[start]
+cmd = 'yarn preview'
