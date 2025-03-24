@@ -2,4 +2,4 @@
 cmd = 'yarn build'
 
 [start]
-cmd = 'yarn preview --host'
+cmd = 'yarn start-server'
