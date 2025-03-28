@@ -1,4 +1,4 @@
-export const LunchbreakTwitter = 'https://twitter.com/heylunchbreak'
+export const LunchbreakTwitter = 'https://x.com/bigwhalelabs'
 export const contactUs =
   "mailto:hello@bwl.gg?subject=Hello%20BigWhaleLabs%2C%20it's%20..."
 export const bwlGitHub = 'https://github.com/BigWhaleLabs'
